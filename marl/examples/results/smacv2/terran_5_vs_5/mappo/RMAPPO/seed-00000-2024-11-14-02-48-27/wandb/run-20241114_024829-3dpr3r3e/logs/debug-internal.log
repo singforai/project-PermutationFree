@@ -1,0 +1,17 @@
+{"time":"2024-11-14T02:48:29.266949847+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-14T02:48:29.267005975+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/terran_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-14-02-48-27/wandb/run-20241114_024829-3dpr3r3e/logs/debug-core.log"}
+{"time":"2024-11-14T02:48:29.376403087+09:00","level":"INFO","msg":"created new stream","id":"3dpr3r3e"}
+{"time":"2024-11-14T02:48:29.376449658+09:00","level":"INFO","msg":"stream: started","id":"3dpr3r3e"}
+{"time":"2024-11-14T02:48:29.376486251+09:00","level":"INFO","msg":"sender: started","stream_id":"3dpr3r3e"}
+{"time":"2024-11-14T02:48:29.376477644+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"3dpr3r3e"}}
+{"time":"2024-11-14T02:48:29.376471644+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"3dpr3r3e"}}
+{"time":"2024-11-14T02:48:29.811950663+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-14T08:42:53.31170622+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-14T08:42:53.312199215+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-14T08:42:54.272856873+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.520356796},{"desc":"uploading output.log","runtime_seconds":0.276024103,"progress":"91.4KB/91.4KB"}],"total_operations":2}}
+{"time":"2024-11-14T08:42:54.522505788+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-14T08:42:55.875351313+09:00","level":"INFO","msg":"stream: closing","id":"3dpr3r3e"}
+{"time":"2024-11-14T08:42:55.875378351+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"3dpr3r3e"}}
+{"time":"2024-11-14T08:42:55.875414157+09:00","level":"INFO","msg":"sender: closed","stream_id":"3dpr3r3e"}
+{"time":"2024-11-14T08:42:55.875403211+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"3dpr3r3e"}}
+{"time":"2024-11-14T08:42:55.875576229+09:00","level":"INFO","msg":"stream: closed","id":"3dpr3r3e"}

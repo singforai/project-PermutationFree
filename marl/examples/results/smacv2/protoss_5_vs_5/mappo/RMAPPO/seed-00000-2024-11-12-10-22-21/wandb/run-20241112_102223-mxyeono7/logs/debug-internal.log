@@ -1,0 +1,17 @@
+{"time":"2024-11-12T10:22:23.116292282+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T10:22:23.116340615+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-12-10-22-21/wandb/run-20241112_102223-mxyeono7/logs/debug-core.log"}
+{"time":"2024-11-12T10:22:23.230834683+09:00","level":"INFO","msg":"created new stream","id":"mxyeono7"}
+{"time":"2024-11-12T10:22:23.230877206+09:00","level":"INFO","msg":"stream: started","id":"mxyeono7"}
+{"time":"2024-11-12T10:22:23.230924458+09:00","level":"INFO","msg":"sender: started","stream_id":"mxyeono7"}
+{"time":"2024-11-12T10:22:23.230915193+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mxyeono7"}}
+{"time":"2024-11-12T10:22:23.230921713+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"mxyeono7"}}
+{"time":"2024-11-12T10:22:25.083053233+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-12T15:46:40.630039663+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-12T15:46:40.630776662+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-12T15:46:41.622589708+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.272702107},{"desc":"uploading wandb-summary.json","runtime_seconds":0.24933216,"progress":"462B/462B"},{"desc":"uploading config.yaml","runtime_seconds":0.022737181,"progress":"2.2KB/2.2KB"},{"desc":"uploading output.log","runtime_seconds":0.022718714,"progress":"126.6KB/126.6KB"}],"total_operations":4}}
+{"time":"2024-11-12T15:46:42.096826519+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-12T15:46:43.453363764+09:00","level":"INFO","msg":"stream: closing","id":"mxyeono7"}
+{"time":"2024-11-12T15:46:43.453388561+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"mxyeono7"}}
+{"time":"2024-11-12T15:46:43.453408518+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mxyeono7"}}
+{"time":"2024-11-12T15:46:43.4534243+09:00","level":"INFO","msg":"sender: closed","stream_id":"mxyeono7"}
+{"time":"2024-11-12T15:46:43.458805519+09:00","level":"INFO","msg":"stream: closed","id":"mxyeono7"}

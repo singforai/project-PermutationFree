@@ -1,0 +1,17 @@
+{"time":"2024-11-13T17:40:41.00416079+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-13T17:40:41.004213282+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mast/MAST/seed-00001-2024-11-13-17-40-39/wandb/run-20241113_174040-bew77qql/logs/debug-core.log"}
+{"time":"2024-11-13T17:40:41.118386368+09:00","level":"INFO","msg":"created new stream","id":"bew77qql"}
+{"time":"2024-11-13T17:40:41.118447062+09:00","level":"INFO","msg":"stream: started","id":"bew77qql"}
+{"time":"2024-11-13T17:40:41.118496127+09:00","level":"INFO","msg":"sender: started","stream_id":"bew77qql"}
+{"time":"2024-11-13T17:40:41.11847271+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"bew77qql"}}
+{"time":"2024-11-13T17:40:41.118489226+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"bew77qql"}}
+{"time":"2024-11-13T17:40:41.492678459+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-13T21:24:19.38333273+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-13T21:24:19.38426917+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-13T21:24:20.383735548+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.553510673},{"desc":"uploading config.yaml","runtime_seconds":0.305279631,"progress":"2.3KB/2.3KB"},{"desc":"uploading output.log","runtime_seconds":0.305270775,"progress":"90.4KB/90.4KB"}],"total_operations":3}}
+{"time":"2024-11-13T21:24:22.295083587+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-13T21:24:23.598163502+09:00","level":"INFO","msg":"stream: closing","id":"bew77qql"}
+{"time":"2024-11-13T21:24:23.598181481+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"bew77qql"}}
+{"time":"2024-11-13T21:24:23.598197566+09:00","level":"INFO","msg":"sender: closed","stream_id":"bew77qql"}
+{"time":"2024-11-13T21:24:23.598192657+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"bew77qql"}}
+{"time":"2024-11-13T21:24:23.599693525+09:00","level":"INFO","msg":"stream: closed","id":"bew77qql"}

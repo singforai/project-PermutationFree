@@ -1,0 +1,8 @@
+{"time":"2024-11-12T16:30:47.551852849+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T16:30:47.551904198+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-12-16-30-46/wandb/run-20241112_163047-hrg52dpb/logs/debug-core.log"}
+{"time":"2024-11-12T16:30:47.660455351+09:00","level":"INFO","msg":"created new stream","id":"hrg52dpb"}
+{"time":"2024-11-12T16:30:47.660508507+09:00","level":"INFO","msg":"stream: started","id":"hrg52dpb"}
+{"time":"2024-11-12T16:30:47.66054928+09:00","level":"INFO","msg":"sender: started","stream_id":"hrg52dpb"}
+{"time":"2024-11-12T16:30:47.660528463+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"hrg52dpb"}}
+{"time":"2024-11-12T16:30:47.660533769+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"hrg52dpb"}}
+{"time":"2024-11-12T16:30:48.113935715+09:00","level":"INFO","msg":"Starting system monitor"}

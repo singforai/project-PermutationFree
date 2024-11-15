@@ -1,0 +1,1309 @@
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: singfor7012. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.18.6
+wandb: Run data is saved locally in ../../../examples/results/smacv2/terran_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-13-20-43-27/wandb/run-20241113_204328-579cbl3p
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run mappo-RMAPPO-seed0
+wandb: ⭐️ View project at https://wandb.ai/singfor7012/smacv2_terran_5_vs_5
+wandb: 🚀 View run at https://wandb.ai/singfor7012/smacv2_terran_5_vs_5/runs/579cbl3p
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 39245 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-koxyzcs4/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 43195 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-z09jybg1/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 39077 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-f17o1cnh/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 39775 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-idqh6dmd/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 41889 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-feuvvfoa/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 45831 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-l5wkmg1f/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 44759 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-r64xmomk/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 46505 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-fnlgw7sj/
+INFO:absl:Connecting to: ws://127.0.0.1:39245/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+INFO:absl:Connecting to: ws://127.0.0.1:44759/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46505/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:43195/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39775/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39077/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45831/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41889/sc2api, attempt: 0, running: True
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 39245 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-koxyzcs4/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 44759 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-r64xmomk/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 46505 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-fnlgw7sj/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 43195 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-z09jybg1/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 39775 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-idqh6dmd/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 41889 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-feuvvfoa/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 45831 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-l5wkmg1f/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 39077 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-f17o1cnh/'
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+INFO:absl:Connecting to: ws://127.0.0.1:39245/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39775/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44759/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46505/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:43195/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39077/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45831/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41889/sc2api, attempt: 1, running: True
+Startup Phase 2 complete
+Startup Phase 2 complete
+Creating stub renderer...
+Creating stub renderer...
+Startup Phase 2 complete
+Startup Phase 2 complete
+Startup Phase 2 complete
+Startup Phase 2 complete
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Creating stub renderer...
+Creating stub renderer...
+Creating stub renderer...
+Creating stub renderer...
+Listening on: 127.0.0.1:43195
+Listening on: 127.0.0.1:44759
+Listening on: 127.0.0.1:39077
+Listening on: 127.0.0.1:41889
+Listening on: 127.0.0.1:46505
+Listening on: 127.0.0.1:39775
+Listening on: 127.0.0.1:39245
+Listening on: 127.0.0.1:45831
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+INFO:absl:Connecting to: ws://127.0.0.1:39245/sc2api, attempt: 2, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:39775/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44759/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46505/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:43195/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39077/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45831/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41889/sc2api, attempt: 2, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Entering load game phase.
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Next launch phase started: 4
+Launching next game.
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Next launch phase started: 2
+Next launch phase started: 3
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 46155 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-yuu07i_k/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 38897 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-kctm5kke/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 33805 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-1uggdvhy/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 41169 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-5ka4t2jm/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 36373 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-3vlp0p9o/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 42835 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-5fjofnjw/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 35933 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-u4pfhbhj/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 45719 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-lpufc_z1/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 40499 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-2u6stmeb/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 36417 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-9x36hpw_/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 37141 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-ziat7o9s/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 33267 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-ouh4vj17/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 42831 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-v1cc0gqv/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 34345 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-y9tl3hnv/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 42099 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-_alpq5mv/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 42623 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-o0gzrm04/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 44849 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-beiis56z/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 45847 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-21y2yuu5/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 41987 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-nsg8me2n/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 42267 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-x26kmc0j/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 38863 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-9u8rvjui/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 36005 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-l1llh4lf/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 44517 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-7qq0sp5u/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 39155 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-z76j5mqx/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 37367 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-6fziglox/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 46535 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-mf4p4xgv/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 39301 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-60cexa9u/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 33909 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-kn4kvp89/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 33759 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-v5elem7j/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 46347 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-f83d6qgo/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 46155 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-iyvd1fsd/
+INFO:absl:Launching SC2: /home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 43263 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-e8p_6l_l/
+INFO:absl:Connecting to: ws://127.0.0.1:33805/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 33805 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-1uggdvhy/'
+INFO:absl:Connecting to: ws://127.0.0.1:46155/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:34345/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42835/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38897/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44849/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45719/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 44849 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-beiis56z/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 46155 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-iyvd1fsd/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 34345 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-y9tl3hnv/'
+Version: B69232 (SC2.4.6-Publish)
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 45719 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-lpufc_z1/'
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 42835 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-5fjofnjw/'
+INFO:absl:Connecting to: ws://127.0.0.1:46347/sc2api, attempt: 0, running: True
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 38897 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-kctm5kke/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 46347 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-f83d6qgo/'
+INFO:absl:Connecting to: ws://127.0.0.1:33267/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41169/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 33267 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-ouh4vj17/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 41169 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-5ka4t2jm/'
+INFO:absl:Connecting to: ws://127.0.0.1:37141/sc2api, attempt: 0, running: True
+Starting up...
+INFO:absl:Connecting to: ws://127.0.0.1:46155/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 37141 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-ziat7o9s/'
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+INFO:absl:Connecting to: ws://127.0.0.1:45847/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 45847 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-21y2yuu5/'
+Starting up...
+Starting up...
+INFO:absl:Connecting to: ws://127.0.0.1:42623/sc2api, attempt: 0, running: True
+Starting up...
+INFO:absl:Connecting to: ws://127.0.0.1:46535/sc2api, attempt: 0, running: True
+Starting up...
+INFO:absl:Connecting to: ws://127.0.0.1:33759/sc2api, attempt: 0, running: True
+Startup Phase 1 complete
+Startup Phase 1 complete
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Startup Phase 1 complete
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 46535 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-mf4p4xgv/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 33759 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-v5elem7j/'
+INFO:absl:Connecting to: ws://127.0.0.1:42267/sc2api, attempt: 0, running: True
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Starting up...
+Startup Phase 1 complete
+INFO:absl:Connecting to: ws://127.0.0.1:39155/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:37367/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 39155 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-z76j5mqx/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 37367 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-6fziglox/'
+INFO:absl:Connecting to: ws://127.0.0.1:36005/sc2api, attempt: 0, running: True
+Startup Phase 1 complete
+Startup Phase 1 complete
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 36005 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-l1llh4lf/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+INFO:absl:Connecting to: ws://127.0.0.1:36417/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39301/sc2api, attempt: 0, running: True
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 42267 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-x26kmc0j/'
+INFO:absl:Connecting to: ws://127.0.0.1:40499/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 36417 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-9x36hpw_/'
+INFO:absl:Connecting to: ws://127.0.0.1:38863/sc2api, attempt: 0, running: True
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 39301 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-60cexa9u/'
+INFO:absl:Connecting to: ws://127.0.0.1:41987/sc2api, attempt: 0, running: True
+Startup Phase 1 complete
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+INFO:absl:Connecting to: ws://127.0.0.1:42099/sc2api, attempt: 0, running: True
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 40499 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-2u6stmeb/'
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+INFO:absl:Connecting to: ws://127.0.0.1:43263/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44517/sc2api, attempt: 0, running: True
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 41987 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-nsg8me2n/'
+Starting up...
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+INFO:absl:Connecting to: ws://127.0.0.1:42831/sc2api, attempt: 0, running: True
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 38863 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-9u8rvjui/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 42099 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-_alpq5mv/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 44517 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-7qq0sp5u/'
+Starting up...
+INFO:absl:Connecting to: ws://127.0.0.1:33909/sc2api, attempt: 0, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36373/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+INFO:absl:Connecting to: ws://127.0.0.1:35933/sc2api, attempt: 0, running: True
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 46155 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-yuu07i_k/'
+Version: B69232 (SC2.4.6-Publish)
+Starting up...
+Build: Oct 23 2018 01:43:04
+Starting up...
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 42623 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-o0gzrm04/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 42831 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-v1cc0gqv/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Starting up...
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 33909 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-kn4kvp89/'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Starting up...
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Starting up...
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 43263 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-e8p_6l_l/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 36373 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-3vlp0p9o/'
+Command Line: '"/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 35933 -dataDir /home1/sizz1997/StarCraftII/ -tempDir /home1/sizz1997//MARL/marl/examples/trash/sc-u4pfhbhj/'
+Startup Phase 1 complete
+Startup Phase 1 complete
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Starting up...
+Startup Phase 1 complete
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Starting up...
+Startup Phase 1 complete
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+INFO:absl:Connecting to: ws://127.0.0.1:33805/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46155/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44849/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42835/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45719/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38897/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:34345/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46347/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33267/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41169/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:37141/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46155/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45847/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42623/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46535/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33759/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42267/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39155/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:37367/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36005/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39301/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36417/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:40499/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41987/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38863/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42099/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:43263/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44517/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33909/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42831/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36373/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:35933/sc2api, attempt: 1, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33805/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46155/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38897/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44849/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:34345/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42835/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45719/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46347/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41169/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33267/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:37141/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46155/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45847/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42623/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46535/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33759/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42267/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39155/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:37367/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36005/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39301/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36417/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:40499/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41987/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42099/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38863/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44517/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:43263/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36373/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42831/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33909/sc2api, attempt: 2, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:35933/sc2api, attempt: 2, running: True
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Listening on: 127.0.0.1:46155
+Listening on: 127.0.0.1:33805
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+cannot bind to 127.0.0.1:46155: 98 (Address already in use)
+Error creating listener on: 127.0.0.1:46155
+Failed to initialize port
+Listening on: 127.0.0.1:42623
+Startup Phase 3 complete. Ready for commands.
+Error signal: '11'
+Backtrace:
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x65d583]
+/lib64/libc.so.6(+0x4e5b0)[0x7f3ec542d5b0]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x65f653]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x65f5b9]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x1353899]
+/lib64/libc.so.6(+0x50ccc)[0x7f3ec542fccc]
+/lib64/libc.so.6(on_exit+0x0)[0x7f3ec542fe00]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x6841fe]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x10319cc]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x1b363de]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x1b3b91d]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x5f6efa]
+/lib64/libc.so.6(__libc_start_main+0xe5)[0x7f3ec54197e5]
+/home1/sizz1997/StarCraftII/Versions/Base69232/SC2_x64[0x5f6649]
+INFO:absl:Connecting to: ws://127.0.0.1:33805/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+INFO:absl:Connecting to: ws://127.0.0.1:46155/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38897/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:34345/sc2api, attempt: 3, running: True
+Next launch phase started: 2
+Next launch phase started: 3
+INFO:absl:Connecting to: ws://127.0.0.1:44849/sc2api, attempt: 3, running: True
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:42835/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46347/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45719/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:41169/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33267/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:37141/sc2api, attempt: 3, running: True
+WARNING:absl:SC2 isn't running, so bailing early on the websocket connection.
+INFO:absl:Shutdown gracefully.
+INFO:absl:Shutdown with return code: -6
+INFO:absl:Connecting to: ws://127.0.0.1:45847/sc2api, attempt: 3, running: True
+Process Process-17:
+Traceback (most recent call last):
+  File "/home1/sizz1997/miniconda3/envs/smacv2/lib/python3.8/multiprocessing/process.py", line 313, in _bootstrap
+    self.run()
+  File "/home1/sizz1997/miniconda3/envs/smacv2/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/gpfs/home1/sizz1997/MARL/marl/envs/env_wrappers.py", line 192, in shareworker
+    ob, s_ob, available_actions = env.reset()
+  File "/gpfs/home1/sizz1997/MARL/marl/envs/smacv2/smacv2_env.py", line 52, in reset
+    self.env.reset()
+  File "/gpfs/home1/sizz1997/MARL/marl/envs/smacv2/wrapper.py", line 35, in reset
+    return self.env.reset(reset_config)
+  File "/gpfs/home1/sizz1997/MARL/marl/envs/smacv2/starcraft2.py", line 527, in reset
+    self._launch()
+  File "/gpfs/home1/sizz1997/MARL/marl/envs/smacv2/starcraft2.py", line 441, in _launch
+    self._sc2_proc = self._run_config.start(
+  File "/home1/sizz1997/miniconda3/envs/smacv2/lib/python3.8/site-packages/pysc2/run_configs/platforms.py", line 204, in start
+    return super(Linux, self).start(
+  File "/home1/sizz1997/miniconda3/envs/smacv2/lib/python3.8/site-packages/pysc2/run_configs/platforms.py", line 87, in start
+    return sc_process.StarcraftProcess(
+  File "/home1/sizz1997/miniconda3/envs/smacv2/lib/python3.8/site-packages/pysc2/lib/sc_process.py", line 142, in __init__
+    self._controller = remote_controller.RemoteController(
+  File "/home1/sizz1997/miniconda3/envs/smacv2/lib/python3.8/site-packages/pysc2/lib/remote_controller.py", line 146, in __init__
+    sock = self._connect(host, port, proc, timeout_seconds)
+  File "/home1/sizz1997/miniconda3/envs/smacv2/lib/python3.8/site-packages/pysc2/lib/stopwatch.py", line 212, in _stopwatch
+    return func(*args, **kwargs)
+  File "/home1/sizz1997/miniconda3/envs/smacv2/lib/python3.8/site-packages/pysc2/lib/remote_controller.py", line 180, in _connect
+    raise ConnectError("Failed to connect to the SC2 websocket. Is it up?")
+pysc2.lib.remote_controller.ConnectError: Failed to connect to the SC2 websocket. Is it up?
+INFO:absl:Connecting to: ws://127.0.0.1:42623/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46535/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33759/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42267/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:39155/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:37367/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36005/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36417/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39301/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:40499/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:41987/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42099/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38863/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:43263/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:44517/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33909/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36373/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42831/sc2api, attempt: 3, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:35933/sc2api, attempt: 3, running: True
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Listening on: 127.0.0.1:44849
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:42835
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:37367
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:33759
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:45719
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:37141
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:39301
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:41169
+Listening on: 127.0.0.1:36417
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:45847
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:40499
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:44517
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:33267
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:43263
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:33909
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:46535
+Startup Phase 3 complete. Ready for commands.
+INFO:absl:Connecting to: ws://127.0.0.1:44849/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:34345/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38897/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42835/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46347/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:45719/sc2api, attempt: 4, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:41169/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33267/sc2api, attempt: 4, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:37141/sc2api, attempt: 4, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+INFO:absl:Connecting to: ws://127.0.0.1:45847/sc2api, attempt: 4, running: True
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Listening on: 127.0.0.1:38897
+Startup Phase 3 complete. Ready for commands.
+INFO:absl:Connecting to: ws://127.0.0.1:46535/sc2api, attempt: 4, running: True
+Listening on: 127.0.0.1:36373
+Startup Phase 3 complete. Ready for commands.
+INFO:absl:Connecting to: ws://127.0.0.1:42267/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33759/sc2api, attempt: 4, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:39155/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:37367/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36005/sc2api, attempt: 4, running: True
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:39301/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:40499/sc2api, attempt: 4, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+INFO:absl:Connecting to: ws://127.0.0.1:42099/sc2api, attempt: 4, running: True
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+INFO:absl:Connecting to: ws://127.0.0.1:36417/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38863/sc2api, attempt: 4, running: True
+Listening on: 127.0.0.1:41987
+INFO:absl:Connecting to: ws://127.0.0.1:41987/sc2api, attempt: 4, running: True
+Startup Phase 3 complete. Ready for commands.
+INFO:absl:Connecting to: ws://127.0.0.1:44517/sc2api, attempt: 4, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+INFO:absl:Connecting to: ws://127.0.0.1:35933/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:43263/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36373/sc2api, attempt: 4, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:33909/sc2api, attempt: 4, running: True
+Next launch phase started: 2
+Next launch phase started: 3
+INFO:absl:Connecting to: ws://127.0.0.1:42831/sc2api, attempt: 4, running: True
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Listening on: 127.0.0.1:42267
+Startup Phase 3 complete. Ready for commands.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Listening on: 127.0.0.1:34345
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:35933
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:46347
+Startup Phase 3 complete. Ready for commands.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Listening on: 127.0.0.1:36005
+Listening on: 127.0.0.1:42831
+Startup Phase 3 complete. Ready for commands.
+Next launch phase started: 2
+Next launch phase started: 3
+Startup Phase 3 complete. Ready for commands.
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Listening on: 127.0.0.1:38863
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:42099
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:39155
+Startup Phase 3 complete. Ready for commands.
+INFO:absl:Connecting to: ws://127.0.0.1:38897/sc2api, attempt: 5, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:34345/sc2api, attempt: 5, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:46347/sc2api, attempt: 5, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42267/sc2api, attempt: 5, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:39155/sc2api, attempt: 5, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:36005/sc2api, attempt: 5, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:42099/sc2api, attempt: 5, running: True
+INFO:absl:Connecting to: ws://127.0.0.1:38863/sc2api, attempt: 5, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+INFO:absl:Connecting to: ws://127.0.0.1:42831/sc2api, attempt: 5, running: True
+Next launch phase started: 2
+Next launch phase started: 3
+INFO:absl:Connecting to: ws://127.0.0.1:35933/sc2api, attempt: 5, running: True
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame

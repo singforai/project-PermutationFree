@@ -1,0 +1,17 @@
+{"time":"2024-11-12T22:12:41.456060033+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T22:12:41.456109678+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-12-22-12-39/wandb/run-20241112_221241-dc0t6ho5/logs/debug-core.log"}
+{"time":"2024-11-12T22:12:41.572717103+09:00","level":"INFO","msg":"created new stream","id":"dc0t6ho5"}
+{"time":"2024-11-12T22:12:41.572761435+09:00","level":"INFO","msg":"stream: started","id":"dc0t6ho5"}
+{"time":"2024-11-12T22:12:41.57281318+09:00","level":"INFO","msg":"sender: started","stream_id":"dc0t6ho5"}
+{"time":"2024-11-12T22:12:41.572799188+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"dc0t6ho5"}}
+{"time":"2024-11-12T22:12:41.572815619+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"dc0t6ho5"}}
+{"time":"2024-11-12T22:12:43.484754678+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-13T03:37:58.761346461+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-13T03:37:58.789944692+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-13T03:37:59.721727168+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.499987581},{"desc":"uploading config.yaml","runtime_seconds":0.260822402,"progress":"2.2KB/2.2KB"},{"desc":"uploading output.log","runtime_seconds":0.260816043,"progress":"106.3KB/106.3KB"}],"total_operations":3}}
+{"time":"2024-11-13T03:38:00.089961526+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-13T03:38:01.408832833+09:00","level":"INFO","msg":"stream: closing","id":"dc0t6ho5"}
+{"time":"2024-11-13T03:38:01.408854722+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"dc0t6ho5"}}
+{"time":"2024-11-13T03:38:01.408890243+09:00","level":"INFO","msg":"sender: closed","stream_id":"dc0t6ho5"}
+{"time":"2024-11-13T03:38:01.408880087+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"dc0t6ho5"}}
+{"time":"2024-11-13T03:38:01.416650344+09:00","level":"INFO","msg":"stream: closed","id":"dc0t6ho5"}

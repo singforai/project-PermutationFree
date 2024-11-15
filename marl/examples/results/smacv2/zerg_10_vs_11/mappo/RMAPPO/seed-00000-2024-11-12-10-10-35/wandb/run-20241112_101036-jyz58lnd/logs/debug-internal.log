@@ -1,0 +1,17 @@
+{"time":"2024-11-12T10:10:36.65207393+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T10:10:36.652123561+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/zerg_10_vs_11/mappo/RMAPPO/seed-00000-2024-11-12-10-10-35/wandb/run-20241112_101036-jyz58lnd/logs/debug-core.log"}
+{"time":"2024-11-12T10:10:36.768441907+09:00","level":"INFO","msg":"created new stream","id":"jyz58lnd"}
+{"time":"2024-11-12T10:10:36.768486313+09:00","level":"INFO","msg":"stream: started","id":"jyz58lnd"}
+{"time":"2024-11-12T10:10:36.768518433+09:00","level":"INFO","msg":"sender: started","stream_id":"jyz58lnd"}
+{"time":"2024-11-12T10:10:36.768503602+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jyz58lnd"}}
+{"time":"2024-11-12T10:10:36.768528089+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"jyz58lnd"}}
+{"time":"2024-11-12T10:10:37.183803444+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-12T18:48:26.121713809+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-12T18:48:26.122439844+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-12T18:48:27.122838102+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.396192605},{"desc":"uploading wandb-summary.json","runtime_seconds":0.378735937,"progress":"460B/460B"},{"desc":"uploading output.log","runtime_seconds":0.143697989,"progress":"126.5KB/126.5KB"},{"desc":"uploading config.yaml","runtime_seconds":0.143687682,"progress":"2.2KB/2.2KB"}],"total_operations":4}}
+{"time":"2024-11-12T18:48:27.623974959+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-12T18:48:29.006431812+09:00","level":"INFO","msg":"stream: closing","id":"jyz58lnd"}
+{"time":"2024-11-12T18:48:29.006447064+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"jyz58lnd"}}
+{"time":"2024-11-12T18:48:29.006465577+09:00","level":"INFO","msg":"sender: closed","stream_id":"jyz58lnd"}
+{"time":"2024-11-12T18:48:29.006462108+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"jyz58lnd"}}
+{"time":"2024-11-12T18:48:29.014319263+09:00","level":"INFO","msg":"stream: closed","id":"jyz58lnd"}

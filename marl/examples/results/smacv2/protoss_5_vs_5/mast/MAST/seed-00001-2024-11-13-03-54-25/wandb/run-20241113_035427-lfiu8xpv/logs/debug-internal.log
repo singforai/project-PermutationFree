@@ -1,0 +1,8 @@
+{"time":"2024-11-13T03:54:27.15606266+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-13T03:54:27.156112065+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mast/MAST/seed-00001-2024-11-13-03-54-25/wandb/run-20241113_035427-lfiu8xpv/logs/debug-core.log"}
+{"time":"2024-11-13T03:54:27.271467917+09:00","level":"INFO","msg":"created new stream","id":"lfiu8xpv"}
+{"time":"2024-11-13T03:54:27.271534969+09:00","level":"INFO","msg":"stream: started","id":"lfiu8xpv"}
+{"time":"2024-11-13T03:54:27.27158063+09:00","level":"INFO","msg":"sender: started","stream_id":"lfiu8xpv"}
+{"time":"2024-11-13T03:54:27.271577885+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"lfiu8xpv"}}
+{"time":"2024-11-13T03:54:27.271589664+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"lfiu8xpv"}}
+{"time":"2024-11-13T03:54:27.663360264+09:00","level":"INFO","msg":"Starting system monitor"}

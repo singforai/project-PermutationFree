@@ -1,0 +1,8 @@
+{"time":"2024-11-13T01:29:08.364256472+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-13T01:29:08.364302635+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mast/MAST/seed-00000-2024-11-13-01-29-06/wandb/run-20241113_012908-6nepfekg/logs/debug-core.log"}
+{"time":"2024-11-13T01:29:08.481881643+09:00","level":"INFO","msg":"created new stream","id":"6nepfekg"}
+{"time":"2024-11-13T01:29:08.481926576+09:00","level":"INFO","msg":"stream: started","id":"6nepfekg"}
+{"time":"2024-11-13T01:29:08.481984949+09:00","level":"INFO","msg":"sender: started","stream_id":"6nepfekg"}
+{"time":"2024-11-13T01:29:08.481966786+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"6nepfekg"}}
+{"time":"2024-11-13T01:29:08.481978708+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"6nepfekg"}}
+{"time":"2024-11-13T01:29:08.920200923+09:00","level":"INFO","msg":"Starting system monitor"}

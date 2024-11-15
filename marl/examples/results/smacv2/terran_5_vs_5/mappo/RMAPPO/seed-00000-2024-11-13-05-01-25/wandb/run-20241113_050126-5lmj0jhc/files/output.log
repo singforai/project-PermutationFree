@@ -1,0 +1,3753 @@
+share_observation_space:  [Box(120,), Box(120,), Box(120,), Box(120,), Box(120,)]
+observation_space:  [Box(82,), Box(82,), Box(82,), Box(82,), Box(82,)]
+action_space:  [Discrete(11), Discrete(11), Discrete(11), Discrete(11), Discrete(11)]
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 0/3125 episodes, total num timesteps 3200/1e7, FPS 217.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10, 11, 11, 11, 8, 8, 11, 9] [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] [10.0, 11.0, 11.0, 11.0, 8.0, 8.0, 11.0, 9.0]
+eval win rate is 0.0.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 5/3125 episodes, total num timesteps 19200/1e7, FPS 279.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [61, 62, 60, 61, 58, 62, 61, 63] [0, 0, 0, 0, 0, 0, 0, 0] [51, 51, 49, 50, 50, 54, 50, 54]
+eval win rate is 0.030303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 10/3125 episodes, total num timesteps 35200/1e7, FPS 307.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [105, 112, 111, 115, 110, 111, 106, 112] [0, 0, 0, 0, 0, 0, 0, 0] [44, 50, 51, 54, 52, 49, 45, 49]
+eval win rate is 0.0.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 15/3125 episodes, total num timesteps 51200/1e7, FPS 321.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [155, 155, 160, 157, 160, 159, 149, 161] [0, 0, 0, 0, 0, 0, 0, 0] [50, 43, 49, 42, 50, 48, 43, 49]
+eval win rate is 0.0.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 20/3125 episodes, total num timesteps 67200/1e7, FPS 340.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [204, 198, 208, 201, 205, 207, 193, 208] [0, 0, 0, 0, 0, 0, 0, 0] [49, 43, 48, 44, 45, 48, 44, 47]
+eval win rate is 0.030303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 25/3125 episodes, total num timesteps 83200/1e7, FPS 352.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [249, 244, 253, 247, 254, 254, 244, 256] [0, 0, 0, 0, 0, 0, 0, 0] [45, 46, 45, 46, 49, 47, 51, 48]
+eval win rate is 0.06060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 30/3125 episodes, total num timesteps 99200/1e7, FPS 362.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [289, 293, 295, 295, 298, 306, 285, 301] [0, 0, 0, 0, 0, 0, 0, 0] [40, 49, 42, 48, 44, 52, 41, 45]
+eval win rate is 0.027777777777777776.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 35/3125 episodes, total num timesteps 115200/1e7, FPS 370.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [334, 339, 344, 338, 338, 349, 333, 347] [0, 0, 0, 0, 0, 0, 0, 0] [45, 46, 49, 43, 40, 43, 48, 46]
+eval win rate is 0.06060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 40/3125 episodes, total num timesteps 131200/1e7, FPS 375.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [379, 387, 394, 385, 382, 398, 375, 394] [0, 0, 0, 0, 0, 0, 0, 0] [45, 48, 50, 47, 44, 49, 42, 47]
+eval win rate is 0.0.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 45/3125 episodes, total num timesteps 147200/1e7, FPS 380.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [423, 428, 430, 431, 428, 440, 416, 440] [0, 0, 0, 0, 0, 0, 0, 0] [44, 41, 36, 46, 46, 42, 41, 46]
+eval win rate is 0.09090909090909091.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 50/3125 episodes, total num timesteps 163200/1e7, FPS 384.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [467, 474, 474, 475, 474, 490, 462, 483] [0, 0, 0, 0, 0, 0, 0, 0] [44, 46, 44, 44, 46, 50, 46, 43]
+eval win rate is 0.06060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 55/3125 episodes, total num timesteps 179200/1e7, FPS 388.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [506, 521, 520, 516, 516, 536, 499, 527] [0, 0, 0, 0, 0, 0, 0, 0] [39, 47, 46, 41, 42, 46, 37, 44]
+eval win rate is 0.12121212121212122.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 60/3125 episodes, total num timesteps 195200/1e7, FPS 392.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [551, 561, 565, 559, 561, 583, 532, 574] [0, 0, 0, 0, 0, 0, 0, 0] [45, 40, 45, 43, 45, 47, 33, 47]
+eval win rate is 0.09090909090909091.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 65/3125 episodes, total num timesteps 211200/1e7, FPS 394.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [595, 608, 614, 604, 606, 621, 576, 615] [0, 0, 0, 0, 0, 0, 0, 0] [44, 47, 49, 45, 45, 38, 44, 41]
+eval win rate is 0.0.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 70/3125 episodes, total num timesteps 227200/1e7, FPS 396.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [637, 652, 662, 644, 649, 663, 618, 660] [0, 0, 0, 0, 0, 0, 0, 0] [42, 44, 48, 40, 43, 42, 42, 45]
+eval win rate is 0.06060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 75/3125 episodes, total num timesteps 243200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [679, 692, 702, 691, 690, 705, 666, 705] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 40, 47, 41, 42, 48, 45]
+eval win rate is 0.08571428571428572.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 80/3125 episodes, total num timesteps 259200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [723, 738, 749, 734, 739, 749, 711, 746] [0, 0, 0, 0, 0, 0, 0, 0] [44, 46, 47, 43, 49, 44, 45, 41]
+eval win rate is 0.058823529411764705.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 85/3125 episodes, total num timesteps 275200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [766, 790, 796, 784, 778, 798, 758, 793] [0, 0, 0, 0, 0, 0, 0, 0] [43, 52, 47, 50, 39, 49, 47, 47]
+eval win rate is 0.029411764705882353.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 90/3125 episodes, total num timesteps 291200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [804, 833, 837, 830, 816, 839, 798, 834] [0, 0, 0, 0, 0, 0, 0, 0] [38, 43, 41, 46, 38, 41, 40, 41]
+eval win rate is 0.030303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 95/3125 episodes, total num timesteps 307200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [845, 876, 881, 878, 863, 887, 845, 882] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 44, 48, 47, 48, 47, 48]
+eval win rate is 0.2.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 100/3125 episodes, total num timesteps 323200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [892, 916, 925, 925, 909, 928, 886, 939] [0, 0, 0, 0, 0, 0, 0, 0] [47, 40, 44, 47, 46, 41, 41, 57]
+eval win rate is 0.09090909090909091.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 105/3125 episodes, total num timesteps 339200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [938, 961, 975, 968, 957, 969, 934, 988] [0, 0, 0, 0, 0, 0, 0, 0] [46, 45, 50, 43, 48, 41, 48, 49]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 110/3125 episodes, total num timesteps 355200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [987, 1012, 1022, 1012, 1004, 1015, 977, 1036] [0, 0, 0, 0, 0, 0, 0, 0] [49, 51, 47, 44, 47, 46, 43, 48]
+eval win rate is 0.09090909090909091.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 115/3125 episodes, total num timesteps 371200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1037, 1061, 1064, 1060, 1055, 1062, 1021, 1085] [0, 0, 0, 0, 0, 0, 0, 0] [50, 49, 42, 48, 51, 47, 44, 49]
+eval win rate is 0.14285714285714285.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 120/3125 episodes, total num timesteps 387200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1080, 1108, 1114, 1108, 1108, 1109, 1067, 1133] [0, 0, 0, 0, 0, 0, 0, 0] [43, 47, 50, 48, 53, 47, 46, 48]
+eval win rate is 0.15151515151515152.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 125/3125 episodes, total num timesteps 403200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1127, 1160, 1158, 1148, 1150, 1154, 1114, 1176] [0, 0, 0, 0, 0, 0, 0, 0] [47, 52, 44, 40, 42, 45, 47, 43]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 130/3125 episodes, total num timesteps 419200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1167, 1212, 1202, 1199, 1198, 1199, 1159, 1225] [0, 0, 0, 0, 0, 0, 0, 0] [40, 52, 44, 51, 48, 45, 45, 49]
+eval win rate is 0.20588235294117646.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 135/3125 episodes, total num timesteps 435200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1216, 1261, 1249, 1242, 1247, 1244, 1207, 1274] [0, 0, 0, 0, 0, 0, 0, 0] [49, 49, 47, 43, 49, 45, 48, 49]
+eval win rate is 0.08571428571428572.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 140/3125 episodes, total num timesteps 451200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1260, 1306, 1298, 1287, 1291, 1290, 1253, 1314] [0, 0, 0, 0, 0, 0, 0, 0] [44, 45, 49, 45, 44, 46, 46, 40]
+eval win rate is 0.18181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 145/3125 episodes, total num timesteps 467200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1301, 1351, 1346, 1333, 1335, 1342, 1300, 1356] [0, 0, 0, 0, 0, 0, 0, 0] [41, 45, 48, 46, 44, 52, 47, 42]
+eval win rate is 0.18181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 150/3125 episodes, total num timesteps 483200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1352, 1395, 1391, 1379, 1379, 1386, 1344, 1408] [0, 0, 0, 0, 0, 0, 0, 0] [51, 44, 45, 46, 44, 44, 44, 52]
+eval win rate is 0.15151515151515152.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 155/3125 episodes, total num timesteps 499200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1397, 1441, 1440, 1428, 1427, 1428, 1390, 1453] [0, 0, 0, 0, 0, 0, 0, 0] [45, 46, 49, 49, 48, 42, 46, 45]
+eval win rate is 0.23529411764705882.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 160/3125 episodes, total num timesteps 515200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1440, 1485, 1485, 1474, 1475, 1479, 1437, 1502] [0, 0, 0, 0, 0, 0, 0, 0] [43, 44, 45, 46, 48, 51, 47, 49]
+eval win rate is 0.09090909090909091.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 165/3125 episodes, total num timesteps 531200/1e7, FPS 397.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1486, 1526, 1524, 1519, 1519, 1523, 1489, 1548] [0, 0, 0, 0, 0, 0, 0, 0] [46, 41, 39, 45, 44, 44, 52, 46]
+eval win rate is 0.12121212121212122.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 170/3125 episodes, total num timesteps 547200/1e7, FPS 397.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1534, 1579, 1568, 1569, 1570, 1571, 1536, 1599] [0, 0, 0, 0, 0, 0, 0, 0] [48, 53, 44, 50, 51, 48, 47, 51]
+eval win rate is 0.2857142857142857.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 175/3125 episodes, total num timesteps 563200/1e7, FPS 397.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1583, 1625, 1616, 1609, 1617, 1616, 1587, 1648] [0, 0, 0, 0, 0, 0, 0, 0] [49, 46, 48, 40, 47, 45, 51, 49]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 180/3125 episodes, total num timesteps 579200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1633, 1668, 1657, 1658, 1669, 1657, 1638, 1697] [0, 0, 0, 0, 0, 0, 0, 0] [50, 43, 41, 49, 52, 41, 51, 49]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 185/3125 episodes, total num timesteps 595200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1677, 1711, 1703, 1703, 1717, 1701, 1685, 1745] [0, 0, 0, 0, 0, 0, 0, 0] [44, 43, 46, 45, 48, 44, 47, 48]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 190/3125 episodes, total num timesteps 611200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1725, 1761, 1744, 1745, 1762, 1744, 1738, 1787] [0, 0, 0, 0, 0, 0, 0, 0] [48, 50, 41, 42, 45, 43, 53, 42]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 195/3125 episodes, total num timesteps 627200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1767, 1801, 1793, 1786, 1805, 1790, 1783, 1831] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 49, 41, 43, 46, 45, 44]
+eval win rate is 0.24242424242424243.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 200/3125 episodes, total num timesteps 643200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1814, 1853, 1848, 1831, 1853, 1837, 1830, 1879] [0, 0, 0, 0, 0, 0, 0, 0] [47, 52, 55, 45, 48, 47, 47, 48]
+eval win rate is 0.18181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 205/3125 episodes, total num timesteps 659200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1860, 1897, 1894, 1878, 1900, 1881, 1876, 1925] [0, 0, 0, 0, 0, 0, 0, 0] [46, 44, 46, 47, 47, 44, 46, 46]
+eval win rate is 0.2647058823529412.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 210/3125 episodes, total num timesteps 675200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1910, 1946, 1941, 1924, 1943, 1928, 1920, 1975] [0, 0, 0, 0, 0, 0, 0, 0] [50, 49, 47, 46, 43, 47, 44, 50]
+eval win rate is 0.2647058823529412.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 215/3125 episodes, total num timesteps 691200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [1959, 1993, 1974, 1974, 1988, 1977, 1971, 2025] [0, 0, 0, 0, 0, 0, 0, 0] [49, 47, 33, 50, 45, 49, 51, 50]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 220/3125 episodes, total num timesteps 707200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2007, 2042, 2016, 2021, 2040, 2014, 2017, 2071] [0, 0, 0, 0, 0, 0, 0, 0] [48, 49, 42, 47, 52, 37, 46, 46]
+eval win rate is 0.2857142857142857.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 225/3125 episodes, total num timesteps 723200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2056, 2087, 2065, 2067, 2083, 2058, 2062, 2112] [0, 0, 0, 0, 0, 0, 0, 0] [49, 45, 49, 46, 43, 44, 45, 41]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 230/3125 episodes, total num timesteps 739200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2105, 2134, 2114, 2116, 2131, 2104, 2106, 2158] [0, 0, 0, 0, 0, 0, 0, 0] [49, 47, 49, 49, 48, 46, 44, 46]
+eval win rate is 0.24242424242424243.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 235/3125 episodes, total num timesteps 755200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2152, 2182, 2162, 2162, 2181, 2149, 2150, 2206] [0, 0, 0, 0, 0, 0, 0, 0] [47, 48, 48, 46, 50, 45, 44, 48]
+eval win rate is 0.15151515151515152.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 240/3125 episodes, total num timesteps 771200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2196, 2224, 2209, 2209, 2232, 2195, 2195, 2249] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 47, 47, 51, 46, 45, 43]
+eval win rate is 0.18181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 245/3125 episodes, total num timesteps 787200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2245, 2266, 2255, 2258, 2276, 2238, 2243, 2297] [0, 0, 0, 0, 0, 0, 0, 0] [49, 42, 46, 49, 44, 43, 48, 48]
+eval win rate is 0.15151515151515152.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 250/3125 episodes, total num timesteps 803200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2293, 2315, 2302, 2302, 2326, 2283, 2290, 2339] [0, 0, 0, 0, 0, 0, 0, 0] [48, 49, 47, 44, 50, 45, 47, 42]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 255/3125 episodes, total num timesteps 819200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2331, 2360, 2344, 2349, 2372, 2327, 2329, 2381] [0, 0, 0, 0, 0, 0, 0, 0] [38, 45, 42, 47, 46, 44, 39, 42]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 260/3125 episodes, total num timesteps 835200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2371, 2410, 2390, 2395, 2413, 2373, 2370, 2429] [0, 0, 0, 0, 0, 0, 0, 0] [40, 50, 46, 46, 41, 46, 41, 48]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 265/3125 episodes, total num timesteps 851200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2414, 2451, 2438, 2443, 2459, 2422, 2415, 2472] [0, 0, 0, 0, 0, 0, 0, 0] [43, 41, 48, 48, 46, 49, 45, 43]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 270/3125 episodes, total num timesteps 867200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2464, 2494, 2480, 2487, 2505, 2470, 2463, 2518] [0, 0, 0, 0, 0, 0, 0, 0] [50, 43, 42, 44, 46, 48, 48, 46]
+eval win rate is 0.12121212121212122.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 275/3125 episodes, total num timesteps 883200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2513, 2542, 2527, 2529, 2545, 2518, 2507, 2564] [0, 0, 0, 0, 0, 0, 0, 0] [49, 48, 47, 42, 40, 48, 44, 46]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 280/3125 episodes, total num timesteps 899200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2559, 2587, 2573, 2570, 2593, 2565, 2553, 2617] [0, 0, 0, 0, 0, 0, 0, 0] [46, 45, 46, 41, 48, 47, 46, 53]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 285/3125 episodes, total num timesteps 915200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2601, 2637, 2621, 2616, 2640, 2606, 2604, 2667] [0, 0, 0, 0, 0, 0, 0, 0] [42, 50, 48, 46, 47, 41, 51, 50]
+eval win rate is 0.17647058823529413.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 290/3125 episodes, total num timesteps 931200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2651, 2686, 2663, 2664, 2685, 2649, 2652, 2713] [0, 0, 0, 0, 0, 0, 0, 0] [50, 49, 42, 48, 45, 43, 48, 46]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 295/3125 episodes, total num timesteps 947200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2697, 2732, 2707, 2705, 2731, 2697, 2700, 2758] [0, 0, 0, 0, 0, 0, 0, 0] [46, 46, 44, 41, 46, 48, 48, 45]
+eval win rate is 0.12121212121212122.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 300/3125 episodes, total num timesteps 963200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2744, 2769, 2748, 2749, 2775, 2737, 2745, 2799] [0, 0, 0, 0, 0, 0, 0, 0] [47, 37, 41, 44, 44, 40, 45, 41]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 305/3125 episodes, total num timesteps 979200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2785, 2815, 2793, 2799, 2819, 2774, 2788, 2841] [0, 0, 0, 0, 0, 0, 0, 0] [41, 46, 45, 50, 44, 37, 43, 42]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 310/3125 episodes, total num timesteps 995200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2833, 2861, 2839, 2843, 2866, 2820, 2839, 2884] [0, 0, 0, 0, 0, 0, 0, 0] [48, 46, 46, 44, 47, 46, 51, 43]
+eval win rate is 0.24242424242424243.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 315/3125 episodes, total num timesteps 1011200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2877, 2903, 2880, 2890, 2909, 2867, 2884, 2926] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 41, 47, 43, 47, 45, 42]
+eval win rate is 0.18181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 320/3125 episodes, total num timesteps 1027200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2924, 2948, 2928, 2933, 2953, 2909, 2935, 2967] [0, 0, 0, 0, 0, 0, 0, 0] [47, 45, 48, 43, 44, 42, 51, 41]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 325/3125 episodes, total num timesteps 1043200/1e7, FPS 395.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [2969, 2990, 2969, 2979, 2999, 2952, 2968, 3009] [0, 0, 0, 0, 0, 0, 0, 0] [45, 42, 41, 46, 46, 43, 33, 42]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 330/3125 episodes, total num timesteps 1059200/1e7, FPS 396.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3015, 3032, 3013, 3023, 3042, 2994, 3009, 3054] [0, 0, 0, 0, 0, 0, 0, 0] [46, 42, 44, 44, 43, 42, 41, 45]
+eval win rate is 0.14705882352941177.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 335/3125 episodes, total num timesteps 1075200/1e7, FPS 396.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3052, 3076, 3057, 3067, 3086, 3039, 3055, 3099] [0, 0, 0, 0, 0, 0, 0, 0] [37, 44, 44, 44, 44, 45, 46, 45]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 340/3125 episodes, total num timesteps 1091200/1e7, FPS 396.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3099, 3115, 3104, 3114, 3134, 3083, 3101, 3137] [0, 0, 0, 0, 0, 0, 0, 0] [47, 39, 47, 47, 48, 44, 46, 38]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 345/3125 episodes, total num timesteps 1107200/1e7, FPS 396.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3147, 3157, 3142, 3160, 3178, 3127, 3141, 3178] [0, 0, 0, 0, 0, 0, 0, 0] [48, 42, 38, 46, 44, 44, 40, 41]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 350/3125 episodes, total num timesteps 1123200/1e7, FPS 397.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3188, 3201, 3189, 3207, 3218, 3171, 3187, 3220] [0, 0, 0, 0, 0, 0, 0, 0] [41, 44, 47, 47, 40, 44, 46, 42]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 355/3125 episodes, total num timesteps 1139200/1e7, FPS 397.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3239, 3242, 3230, 3251, 3262, 3214, 3231, 3266] [0, 0, 0, 0, 0, 0, 0, 0] [51, 41, 41, 44, 44, 43, 44, 46]
+eval win rate is 0.24242424242424243.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 360/3125 episodes, total num timesteps 1155200/1e7, FPS 397.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3287, 3286, 3276, 3298, 3306, 3256, 3273, 3305] [0, 0, 0, 0, 0, 0, 0, 0] [48, 44, 46, 47, 44, 42, 42, 39]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 365/3125 episodes, total num timesteps 1171200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3330, 3329, 3320, 3338, 3349, 3299, 3314, 3351] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 44, 40, 43, 43, 41, 46]
+eval win rate is 0.15151515151515152.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 370/3125 episodes, total num timesteps 1187200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3368, 3377, 3365, 3382, 3391, 3342, 3360, 3395] [0, 0, 0, 0, 0, 0, 0, 0] [38, 48, 45, 44, 42, 43, 46, 44]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 375/3125 episodes, total num timesteps 1203200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3413, 3423, 3412, 3423, 3435, 3388, 3403, 3443] [0, 0, 0, 0, 0, 0, 0, 0] [45, 46, 47, 41, 44, 46, 43, 48]
+eval win rate is 0.24242424242424243.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 380/3125 episodes, total num timesteps 1219200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3460, 3462, 3455, 3467, 3482, 3430, 3447, 3492] [0, 0, 0, 0, 0, 0, 0, 0] [47, 39, 43, 44, 47, 42, 44, 49]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 385/3125 episodes, total num timesteps 1235200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3503, 3504, 3490, 3511, 3524, 3477, 3493, 3539] [0, 0, 0, 0, 0, 0, 0, 0] [43, 42, 35, 44, 42, 47, 46, 47]
+eval win rate is 0.23529411764705882.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 390/3125 episodes, total num timesteps 1251200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3542, 3549, 3537, 3551, 3562, 3523, 3536, 3584] [0, 0, 0, 0, 0, 0, 0, 0] [39, 45, 47, 40, 38, 46, 43, 45]
+eval win rate is 0.35294117647058826.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 395/3125 episodes, total num timesteps 1267200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3590, 3589, 3580, 3595, 3607, 3564, 3578, 3628] [0, 0, 0, 0, 0, 0, 0, 0] [48, 40, 43, 44, 45, 41, 42, 44]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 400/3125 episodes, total num timesteps 1283200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3633, 3631, 3625, 3640, 3653, 3605, 3617, 3673] [0, 0, 0, 0, 0, 0, 0, 0] [43, 42, 45, 45, 46, 41, 39, 45]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 405/3125 episodes, total num timesteps 1299200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3672, 3676, 3670, 3684, 3696, 3649, 3661, 3718] [0, 0, 0, 0, 0, 0, 0, 0] [39, 45, 45, 44, 43, 44, 44, 45]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 410/3125 episodes, total num timesteps 1315200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3713, 3720, 3715, 3731, 3738, 3686, 3703, 3764] [0, 0, 0, 0, 0, 0, 0, 0] [41, 44, 45, 47, 42, 37, 42, 46]
+eval win rate is 0.3235294117647059.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 415/3125 episodes, total num timesteps 1331200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3752, 3761, 3755, 3777, 3781, 3733, 3741, 3805] [0, 0, 0, 0, 0, 0, 0, 0] [39, 41, 40, 46, 43, 47, 38, 41]
+eval win rate is 0.34285714285714286.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 420/3125 episodes, total num timesteps 1347200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3796, 3808, 3800, 3816, 3822, 3776, 3783, 3849] [0, 0, 0, 0, 0, 0, 0, 0] [44, 47, 45, 39, 41, 43, 42, 44]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 425/3125 episodes, total num timesteps 1363200/1e7, FPS 400.
+
+incre win rate is 0.0028011204481792717.
+[0, 0, 0, 0, 1, 0, 0, 0] [3842, 3852, 3849, 3858, 3867, 3824, 3825, 3890] [0, 0, 0, 0, 1, 0, 0, 0] [46, 44, 49, 42, 45, 48, 42, 41]
+eval win rate is 0.34285714285714286.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 430/3125 episodes, total num timesteps 1379200/1e7, FPS 401.
+
+incre win rate is -0.002890173410404624.
+[0, 0, 0, 0, 0, 0, 0, 0] [3881, 3898, 3890, 3898, 3908, 3873, 3868, 3937] [0, 0, 0, 0, -1, 0, 0, 0] [39, 46, 41, 40, 41, 49, 43, 47]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 435/3125 episodes, total num timesteps 1395200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3922, 3938, 3934, 3941, 3953, 3916, 3913, 3975] [0, 0, 0, 0, 0, 0, 0, 0] [41, 40, 44, 43, 45, 43, 45, 38]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 440/3125 episodes, total num timesteps 1411200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [3961, 3977, 3976, 3988, 3994, 3956, 3953, 4020] [0, 0, 0, 0, 0, 0, 0, 0] [39, 39, 42, 47, 41, 40, 40, 45]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 445/3125 episodes, total num timesteps 1427200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4003, 4020, 4021, 4032, 4029, 3996, 3995, 4061] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 45, 44, 35, 40, 42, 41]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 450/3125 episodes, total num timesteps 1443200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4047, 4064, 4066, 4074, 4071, 4039, 4039, 4111] [0, 0, 0, 0, 0, 0, 0, 0] [44, 44, 45, 42, 42, 43, 44, 50]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 455/3125 episodes, total num timesteps 1459200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4093, 4111, 4111, 4116, 4118, 4082, 4083, 4154] [0, 0, 0, 0, 0, 0, 0, 0] [46, 47, 45, 42, 47, 43, 44, 43]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 460/3125 episodes, total num timesteps 1475200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4135, 4154, 4153, 4160, 4162, 4123, 4128, 4194] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 42, 44, 44, 41, 45, 40]
+eval win rate is 0.4.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 465/3125 episodes, total num timesteps 1491200/1e7, FPS 402.
+
+incre win rate is 0.0029239766081871343.
+[0, 0, 0, 0, 1, 0, 0, 0] [4182, 4199, 4194, 4197, 4207, 4164, 4172, 4236] [0, 0, 0, 0, 1, 0, 0, 0] [47, 45, 41, 37, 45, 41, 44, 42]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 470/3125 episodes, total num timesteps 1507200/1e7, FPS 402.
+
+incre win rate is -0.0028089887640449437.
+[0, 0, 0, 0, 0, 0, 0, 0] [4230, 4245, 4236, 4236, 4252, 4204, 4220, 4284] [0, 0, 0, 0, -1, 0, 0, 0] [48, 46, 42, 39, 45, 40, 48, 48]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 475/3125 episodes, total num timesteps 1523200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4272, 4288, 4277, 4280, 4300, 4250, 4261, 4330] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 41, 44, 48, 46, 41, 46]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 480/3125 episodes, total num timesteps 1539200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4316, 4336, 4324, 4321, 4342, 4290, 4301, 4371] [0, 0, 0, 0, 0, 0, 0, 0] [44, 48, 47, 41, 42, 40, 40, 41]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 485/3125 episodes, total num timesteps 1555200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4361, 4379, 4365, 4365, 4381, 4337, 4344, 4412] [0, 0, 0, 0, 0, 0, 0, 0] [45, 43, 41, 44, 39, 47, 43, 41]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 490/3125 episodes, total num timesteps 1571200/1e7, FPS 397.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4405, 4421, 4403, 4404, 4427, 4382, 4388, 4456] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 38, 39, 46, 45, 44, 44]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 495/3125 episodes, total num timesteps 1587200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4445, 4465, 4436, 4445, 4471, 4429, 4430, 4500] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 33, 41, 44, 47, 42, 44]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 500/3125 episodes, total num timesteps 1603200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4486, 4503, 4480, 4482, 4511, 4469, 4474, 4541] [0, 0, 0, 0, 0, 0, 0, 0] [41, 38, 44, 37, 40, 40, 44, 41]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 505/3125 episodes, total num timesteps 1619200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4527, 4540, 4521, 4524, 4547, 4516, 4516, 4578] [0, 0, 0, 0, 0, 0, 0, 0] [41, 37, 41, 42, 36, 47, 42, 37]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 510/3125 episodes, total num timesteps 1635200/1e7, FPS 398.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4570, 4580, 4560, 4567, 4589, 4560, 4562, 4618] [0, 0, 0, 0, 0, 0, 0, 0] [43, 40, 39, 43, 42, 44, 46, 40]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 515/3125 episodes, total num timesteps 1651200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4609, 4624, 4594, 4608, 4630, 4603, 4604, 4660] [0, 0, 0, 0, 0, 0, 0, 0] [39, 44, 34, 41, 41, 43, 42, 42]
+eval win rate is 0.3235294117647059.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 520/3125 episodes, total num timesteps 1667200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4653, 4661, 4637, 4653, 4671, 4645, 4648, 4701] [0, 0, 0, 0, 0, 0, 0, 0] [44, 37, 43, 45, 41, 42, 44, 41]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 525/3125 episodes, total num timesteps 1683200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4696, 4702, 4680, 4695, 4713, 4687, 4692, 4741] [0, 0, 0, 0, 0, 0, 0, 0] [43, 41, 43, 42, 42, 42, 44, 40]
+eval win rate is 0.2727272727272727.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 530/3125 episodes, total num timesteps 1699200/1e7, FPS 399.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4739, 4745, 4726, 4738, 4762, 4728, 4736, 4787] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 46, 43, 49, 41, 44, 46]
+eval win rate is 0.18181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 535/3125 episodes, total num timesteps 1715200/1e7, FPS 400.
+
+incre win rate is 0.0030581039755351682.
+[0, 0, 0, 0, 0, 1, 0, 0] [4782, 4788, 4767, 4779, 4802, 4770, 4777, 4823] [0, 0, 0, 0, 0, 1, 0, 0] [43, 43, 41, 41, 40, 42, 41, 36]
+eval win rate is 0.21212121212121213.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 540/3125 episodes, total num timesteps 1731200/1e7, FPS 400.
+
+incre win rate is -0.003115264797507788.
+[0, 0, 0, 0, 0, 0, 0, 0] [4820, 4830, 4808, 4815, 4847, 4810, 4815, 4864] [0, 0, 0, 0, 0, -1, 0, 0] [38, 42, 41, 36, 45, 40, 38, 41]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 545/3125 episodes, total num timesteps 1747200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4866, 4871, 4854, 4856, 4891, 4852, 4853, 4906] [0, 0, 0, 0, 0, 0, 0, 0] [46, 41, 46, 41, 44, 42, 38, 42]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 550/3125 episodes, total num timesteps 1763200/1e7, FPS 400.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4905, 4914, 4893, 4894, 4935, 4892, 4897, 4944] [0, 0, 0, 0, 0, 0, 0, 0] [39, 43, 39, 38, 44, 40, 44, 38]
+eval win rate is 0.35294117647058826.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 555/3125 episodes, total num timesteps 1779200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4949, 4955, 4934, 4939, 4976, 4933, 4936, 4984] [0, 0, 0, 0, 0, 0, 0, 0] [44, 41, 41, 45, 41, 41, 39, 40]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 560/3125 episodes, total num timesteps 1795200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [4983, 4999, 4973, 4979, 5018, 4971, 4981, 5026] [0, 0, 0, 0, 0, 0, 0, 0] [34, 44, 39, 40, 42, 38, 45, 42]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 565/3125 episodes, total num timesteps 1811200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5026, 5039, 5018, 5020, 5061, 5012, 5022, 5067] [0, 0, 0, 0, 0, 0, 0, 0] [43, 40, 45, 41, 43, 41, 41, 41]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 570/3125 episodes, total num timesteps 1827200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5069, 5085, 5060, 5060, 5101, 5050, 5062, 5110] [0, 0, 0, 0, 0, 0, 0, 0] [43, 46, 42, 40, 40, 38, 40, 43]
+eval win rate is 0.5.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 575/3125 episodes, total num timesteps 1843200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5113, 5126, 5102, 5108, 5146, 5089, 5105, 5148] [0, 0, 0, 0, 0, 0, 0, 0] [44, 41, 42, 48, 45, 39, 43, 38]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 580/3125 episodes, total num timesteps 1859200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5148, 5167, 5144, 5146, 5186, 5132, 5148, 5189] [0, 0, 0, 0, 0, 0, 0, 0] [35, 41, 42, 38, 40, 43, 43, 41]
+eval win rate is 0.4411764705882353.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 585/3125 episodes, total num timesteps 1875200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5191, 5209, 5188, 5183, 5230, 5175, 5185, 5228] [0, 0, 0, 0, 0, 0, 0, 0] [43, 42, 44, 37, 44, 43, 37, 39]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 590/3125 episodes, total num timesteps 1891200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5232, 5250, 5233, 5226, 5279, 5220, 5228, 5266] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 45, 43, 49, 45, 43, 38]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 595/3125 episodes, total num timesteps 1907200/1e7, FPS 402.
+
+incre win rate is 0.0029498525073746312.
+[1, 0, 0, 0, 0, 0, 0, 0] [5279, 5292, 5276, 5269, 5318, 5258, 5275, 5306] [1, 0, 0, 0, 0, 0, 0, 0] [47, 42, 43, 43, 39, 38, 47, 40]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 600/3125 episodes, total num timesteps 1923200/1e7, FPS 402.
+
+incre win rate is -0.003076923076923077.
+[0, 0, 0, 0, 0, 0, 0, 0] [5321, 5330, 5316, 5313, 5361, 5293, 5313, 5351] [-1, 0, 0, 0, 0, 0, 0, 0] [42, 38, 40, 44, 43, 35, 38, 45]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 605/3125 episodes, total num timesteps 1939200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5362, 5367, 5361, 5353, 5402, 5336, 5354, 5399] [0, 0, 0, 0, 0, 0, 0, 0] [41, 37, 45, 40, 41, 43, 41, 48]
+eval win rate is 0.4.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 610/3125 episodes, total num timesteps 1955200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5404, 5408, 5403, 5397, 5443, 5377, 5399, 5442] [0, 0, 0, 0, 0, 0, 0, 0] [42, 41, 42, 44, 41, 41, 45, 43]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 615/3125 episodes, total num timesteps 1971200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5445, 5455, 5445, 5439, 5489, 5418, 5444, 5481] [0, 0, 0, 0, 0, 0, 0, 0] [41, 47, 42, 42, 46, 41, 45, 39]
+eval win rate is 0.3235294117647059.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 620/3125 episodes, total num timesteps 1987200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5487, 5500, 5487, 5486, 5527, 5461, 5484, 5519] [0, 0, 0, 0, 0, 0, 0, 0] [42, 45, 42, 47, 38, 43, 40, 38]
+eval win rate is 0.4117647058823529.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 625/3125 episodes, total num timesteps 2003200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5530, 5541, 5529, 5527, 5569, 5506, 5526, 5563] [0, 0, 0, 0, 0, 0, 0, 0] [43, 41, 42, 41, 42, 45, 42, 44]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 630/3125 episodes, total num timesteps 2019200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5573, 5580, 5575, 5567, 5612, 5552, 5568, 5605] [0, 0, 0, 0, 0, 0, 0, 0] [43, 39, 46, 40, 43, 46, 42, 42]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 635/3125 episodes, total num timesteps 2035200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5612, 5620, 5613, 5611, 5656, 5596, 5610, 5645] [0, 0, 0, 0, 0, 0, 0, 0] [39, 40, 38, 44, 44, 44, 42, 40]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 640/3125 episodes, total num timesteps 2051200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5655, 5659, 5651, 5653, 5695, 5631, 5655, 5691] [0, 0, 0, 0, 0, 0, 0, 0] [43, 39, 38, 42, 39, 35, 45, 46]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 645/3125 episodes, total num timesteps 2067200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5693, 5701, 5697, 5693, 5738, 5677, 5699, 5734] [0, 0, 0, 0, 0, 0, 0, 0] [38, 42, 46, 40, 43, 46, 44, 43]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 650/3125 episodes, total num timesteps 2083200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5734, 5740, 5738, 5735, 5775, 5717, 5736, 5781] [0, 0, 0, 0, 0, 0, 0, 0] [41, 39, 41, 42, 37, 40, 37, 47]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 655/3125 episodes, total num timesteps 2099200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5781, 5778, 5782, 5771, 5816, 5761, 5779, 5821] [0, 0, 0, 0, 0, 0, 0, 0] [47, 38, 44, 36, 41, 44, 43, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 660/3125 episodes, total num timesteps 2115200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5816, 5822, 5825, 5815, 5860, 5805, 5824, 5859] [0, 0, 0, 0, 0, 0, 0, 0] [35, 44, 43, 44, 44, 44, 45, 38]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 665/3125 episodes, total num timesteps 2131200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5861, 5866, 5865, 5858, 5901, 5848, 5863, 5899] [0, 0, 0, 0, 0, 0, 0, 0] [45, 44, 40, 43, 41, 43, 39, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 670/3125 episodes, total num timesteps 2147200/1e7, FPS 401.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5903, 5903, 5903, 5904, 5945, 5888, 5904, 5939] [0, 0, 0, 0, 0, 0, 0, 0] [42, 37, 38, 46, 44, 40, 41, 40]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 675/3125 episodes, total num timesteps 2163200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5936, 5948, 5945, 5947, 5988, 5929, 5948, 5982] [0, 0, 0, 0, 0, 0, 0, 0] [33, 45, 42, 43, 43, 41, 44, 43]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 680/3125 episodes, total num timesteps 2179200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [5978, 5985, 5987, 5992, 6033, 5970, 5990, 6024] [0, 0, 0, 0, 0, 0, 0, 0] [42, 37, 42, 45, 45, 41, 42, 42]
+eval win rate is 0.5.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 685/3125 episodes, total num timesteps 2195200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6022, 6027, 6027, 6034, 6074, 6007, 6028, 6064] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 40, 42, 41, 37, 38, 40]
+eval win rate is 0.30303030303030304.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 690/3125 episodes, total num timesteps 2211200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6067, 6067, 6071, 6075, 6116, 6043, 6070, 6107] [0, 0, 0, 0, 0, 0, 0, 0] [45, 40, 44, 41, 42, 36, 42, 43]
+eval win rate is 0.4117647058823529.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 695/3125 episodes, total num timesteps 2227200/1e7, FPS 402.
+
+incre win rate is 0.0029411764705882353.
+[0, 0, 1, 0, 0, 0, 0, 0] [6111, 6106, 6109, 6118, 6160, 6088, 6110, 6154] [0, 0, 1, 0, 0, 0, 0, 0] [44, 39, 38, 43, 44, 45, 40, 47]
+eval win rate is 0.4117647058823529.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 700/3125 episodes, total num timesteps 2243200/1e7, FPS 402.
+
+incre win rate is -0.0028011204481792717.
+[0, 0, 0, 0, 0, 0, 0, 0] [6154, 6148, 6152, 6164, 6201, 6134, 6155, 6205] [0, 0, -1, 0, 0, 0, 0, 0] [43, 42, 43, 46, 41, 46, 45, 51]
+eval win rate is 0.4411764705882353.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 705/3125 episodes, total num timesteps 2259200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6197, 6192, 6192, 6205, 6245, 6176, 6196, 6249] [0, 0, 0, 0, 0, 0, 0, 0] [43, 44, 40, 41, 44, 42, 41, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 710/3125 episodes, total num timesteps 2275200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6240, 6239, 6233, 6250, 6285, 6216, 6233, 6295] [0, 0, 0, 0, 0, 0, 0, 0] [43, 47, 41, 45, 40, 40, 37, 46]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 715/3125 episodes, total num timesteps 2291200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6279, 6278, 6272, 6294, 6333, 6258, 6272, 6338] [0, 0, 0, 0, 0, 0, 0, 0] [39, 39, 39, 44, 48, 42, 39, 43]
+eval win rate is 0.5428571428571428.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 720/3125 episodes, total num timesteps 2307200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6323, 6318, 6312, 6335, 6381, 6299, 6312, 6379] [0, 0, 0, 0, 0, 0, 0, 0] [44, 40, 40, 41, 48, 41, 40, 41]
+eval win rate is 0.5294117647058824.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 725/3125 episodes, total num timesteps 2323200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6368, 6361, 6351, 6377, 6423, 6344, 6359, 6419] [0, 0, 0, 0, 0, 0, 0, 0] [45, 43, 39, 42, 42, 45, 47, 40]
+eval win rate is 0.4117647058823529.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 730/3125 episodes, total num timesteps 2339200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6410, 6404, 6395, 6414, 6465, 6385, 6400, 6463] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 44, 37, 42, 41, 41, 44]
+eval win rate is 0.38235294117647056.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 735/3125 episodes, total num timesteps 2355200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6450, 6445, 6436, 6453, 6507, 6435, 6444, 6505] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 41, 39, 42, 50, 44, 42]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 740/3125 episodes, total num timesteps 2371200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6493, 6489, 6480, 6490, 6550, 6473, 6482, 6547] [0, 0, 0, 0, 0, 0, 0, 0] [43, 44, 44, 37, 43, 38, 38, 42]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 745/3125 episodes, total num timesteps 2387200/1e7, FPS 403.
+
+incre win rate is 0.0029850746268656717.
+[0, 0, 0, 0, 0, 0, 1, 0] [6533, 6535, 6521, 6532, 6591, 6510, 6526, 6591] [0, 0, 0, 0, 0, 0, 1, 0] [40, 46, 41, 42, 41, 37, 44, 44]
+eval win rate is 0.38235294117647056.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 750/3125 episodes, total num timesteps 2403200/1e7, FPS 404.
+
+incre win rate is -0.003194888178913738.
+[0, 0, 0, 0, 0, 0, 0, 0] [6573, 6573, 6563, 6575, 6625, 6551, 6564, 6628] [0, 0, 0, 0, 0, 0, -1, 0] [40, 38, 42, 43, 34, 41, 38, 37]
+eval win rate is 0.3235294117647059.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 755/3125 episodes, total num timesteps 2419200/1e7, FPS 404.
+
+incre win rate is 0.0030120481927710845.
+[0, 0, 0, 1, 0, 0, 0, 0] [6616, 6607, 6605, 6617, 6664, 6597, 6604, 6674] [0, 0, 0, 1, 0, 0, 0, 0] [43, 34, 42, 42, 39, 46, 40, 46]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 760/3125 episodes, total num timesteps 2435200/1e7, FPS 404.
+
+incre win rate is -0.002976190476190476.
+[0, 0, 0, 0, 0, 0, 0, 0] [6656, 6648, 6646, 6666, 6701, 6642, 6643, 6718] [0, 0, 0, -1, 0, 0, 0, 0] [40, 41, 41, 49, 37, 45, 39, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 765/3125 episodes, total num timesteps 2451200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6696, 6692, 6684, 6709, 6745, 6683, 6683, 6762] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 38, 43, 44, 41, 40, 44]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 770/3125 episodes, total num timesteps 2467200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6740, 6734, 6724, 6751, 6789, 6728, 6721, 6809] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 40, 42, 44, 45, 38, 47]
+eval win rate is 0.4411764705882353.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 775/3125 episodes, total num timesteps 2483200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6781, 6777, 6767, 6797, 6830, 6770, 6761, 6854] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 43, 46, 41, 42, 40, 45]
+eval win rate is 0.4411764705882353.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 780/3125 episodes, total num timesteps 2499200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6821, 6817, 6811, 6842, 6874, 6815, 6805, 6897] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 44, 45, 44, 45, 44, 43]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 785/3125 episodes, total num timesteps 2515200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6863, 6858, 6854, 6880, 6915, 6856, 6846, 6935] [0, 0, 0, 0, 0, 0, 0, 0] [42, 41, 43, 38, 41, 41, 41, 38]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 790/3125 episodes, total num timesteps 2531200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6899, 6900, 6899, 6919, 6958, 6902, 6887, 6974] [0, 0, 0, 0, 0, 0, 0, 0] [36, 42, 45, 39, 43, 46, 41, 39]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 795/3125 episodes, total num timesteps 2547200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6943, 6939, 6944, 6961, 6997, 6936, 6930, 7017] [0, 0, 0, 0, 0, 0, 0, 0] [44, 39, 45, 42, 39, 34, 43, 43]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 800/3125 episodes, total num timesteps 2563200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [6987, 6981, 6988, 7002, 7037, 6975, 6971, 7056] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 44, 41, 40, 39, 41, 39]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 805/3125 episodes, total num timesteps 2579200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7030, 7022, 7030, 7043, 7079, 7019, 7015, 7096] [0, 0, 0, 0, 0, 0, 0, 0] [43, 41, 42, 41, 42, 44, 44, 40]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 810/3125 episodes, total num timesteps 2595200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7072, 7065, 7073, 7087, 7123, 7062, 7056, 7136] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 43, 44, 44, 43, 41, 40]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 815/3125 episodes, total num timesteps 2611200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7119, 7112, 7116, 7127, 7162, 7102, 7094, 7180] [0, 0, 0, 0, 0, 0, 0, 0] [47, 47, 43, 40, 39, 40, 38, 44]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 820/3125 episodes, total num timesteps 2627200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7163, 7151, 7159, 7168, 7208, 7140, 7135, 7221] [0, 0, 0, 0, 0, 0, 0, 0] [44, 39, 43, 41, 46, 38, 41, 41]
+eval win rate is 0.3142857142857143.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 825/3125 episodes, total num timesteps 2643200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7209, 7192, 7197, 7213, 7254, 7180, 7176, 7265] [0, 0, 0, 0, 0, 0, 0, 0] [46, 41, 38, 45, 46, 40, 41, 44]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 830/3125 episodes, total num timesteps 2659200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7253, 7230, 7237, 7259, 7297, 7223, 7219, 7304] [0, 0, 0, 0, 0, 0, 0, 0] [44, 38, 40, 46, 43, 43, 43, 39]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 835/3125 episodes, total num timesteps 2675200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7292, 7270, 7277, 7301, 7339, 7263, 7258, 7345] [0, 0, 0, 0, 0, 0, 0, 0] [39, 40, 40, 42, 42, 40, 39, 41]
+eval win rate is 0.5294117647058824.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 840/3125 episodes, total num timesteps 2691200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7332, 7312, 7320, 7339, 7383, 7301, 7303, 7384] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 43, 38, 44, 38, 45, 39]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 845/3125 episodes, total num timesteps 2707200/1e7, FPS 402.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7377, 7355, 7362, 7378, 7423, 7341, 7347, 7428] [0, 0, 0, 0, 0, 0, 0, 0] [45, 43, 42, 39, 40, 40, 44, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 850/3125 episodes, total num timesteps 2723200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7419, 7394, 7405, 7420, 7462, 7380, 7390, 7469] [0, 0, 0, 0, 0, 0, 0, 0] [42, 39, 43, 42, 39, 39, 43, 41]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 855/3125 episodes, total num timesteps 2739200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7460, 7433, 7443, 7463, 7504, 7422, 7431, 7510] [0, 0, 0, 0, 0, 0, 0, 0] [41, 39, 38, 43, 42, 42, 41, 41]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 860/3125 episodes, total num timesteps 2755200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7503, 7470, 7487, 7499, 7547, 7462, 7475, 7556] [0, 0, 0, 0, 0, 0, 0, 0] [43, 37, 44, 36, 43, 40, 44, 46]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 865/3125 episodes, total num timesteps 2771200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7545, 7518, 7523, 7542, 7593, 7505, 7517, 7599] [0, 0, 0, 0, 0, 0, 0, 0] [42, 48, 36, 43, 46, 43, 42, 43]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 870/3125 episodes, total num timesteps 2787200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7587, 7560, 7563, 7583, 7635, 7547, 7561, 7640] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 40, 41, 42, 42, 44, 41]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 875/3125 episodes, total num timesteps 2803200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7629, 7601, 7605, 7620, 7676, 7587, 7601, 7683] [0, 0, 0, 0, 0, 0, 0, 0] [42, 41, 42, 37, 41, 40, 40, 43]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 880/3125 episodes, total num timesteps 2819200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7667, 7642, 7648, 7663, 7719, 7624, 7643, 7726] [0, 0, 0, 0, 0, 0, 0, 0] [38, 41, 43, 43, 43, 37, 42, 43]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 885/3125 episodes, total num timesteps 2835200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7710, 7682, 7689, 7711, 7761, 7666, 7685, 7768] [0, 0, 0, 0, 0, 0, 0, 0] [43, 40, 41, 48, 42, 42, 42, 42]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 890/3125 episodes, total num timesteps 2851200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7749, 7726, 7734, 7753, 7803, 7707, 7727, 7809] [0, 0, 0, 0, 0, 0, 0, 0] [39, 44, 45, 42, 42, 41, 42, 41]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 895/3125 episodes, total num timesteps 2867200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7791, 7765, 7778, 7792, 7843, 7750, 7772, 7850] [0, 0, 0, 0, 0, 0, 0, 0] [42, 39, 44, 39, 40, 43, 45, 41]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 900/3125 episodes, total num timesteps 2883200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7832, 7802, 7821, 7835, 7892, 7791, 7811, 7889] [0, 0, 0, 0, 0, 0, 0, 0] [41, 37, 43, 43, 49, 41, 39, 39]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 905/3125 episodes, total num timesteps 2899200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7873, 7843, 7859, 7875, 7934, 7836, 7847, 7931] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 38, 40, 42, 45, 36, 42]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 910/3125 episodes, total num timesteps 2915200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7911, 7888, 7896, 7915, 7975, 7877, 7891, 7971] [0, 0, 0, 0, 0, 0, 0, 0] [38, 45, 37, 40, 41, 41, 44, 40]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 915/3125 episodes, total num timesteps 2931200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7957, 7927, 7935, 7957, 8017, 7920, 7932, 8011] [0, 0, 0, 0, 0, 0, 0, 0] [46, 39, 39, 42, 42, 43, 41, 40]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 920/3125 episodes, total num timesteps 2947200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [7998, 7970, 7973, 7999, 8059, 7961, 7974, 8054] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 38, 42, 42, 41, 42, 43]
+eval win rate is 0.35294117647058826.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 925/3125 episodes, total num timesteps 2963200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8040, 8014, 8017, 8038, 8105, 8003, 8018, 8096] [0, 0, 0, 0, 0, 0, 0, 0] [42, 44, 44, 39, 46, 42, 44, 42]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 930/3125 episodes, total num timesteps 2979200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8083, 8052, 8056, 8083, 8147, 8042, 8053, 8142] [0, 0, 0, 0, 0, 0, 0, 0] [43, 38, 39, 45, 42, 39, 35, 46]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 935/3125 episodes, total num timesteps 2995200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8128, 8096, 8096, 8119, 8188, 8081, 8092, 8185] [0, 0, 0, 0, 0, 0, 0, 0] [45, 44, 40, 36, 41, 39, 39, 43]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 940/3125 episodes, total num timesteps 3011200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8168, 8133, 8138, 8159, 8226, 8124, 8135, 8225] [0, 0, 0, 0, 0, 0, 0, 0] [40, 37, 42, 40, 38, 43, 43, 40]
+eval win rate is 0.6470588235294118.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 945/3125 episodes, total num timesteps 3027200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8208, 8170, 8180, 8199, 8273, 8170, 8174, 8265] [0, 0, 0, 0, 0, 0, 0, 0] [40, 37, 42, 40, 47, 46, 39, 40]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 950/3125 episodes, total num timesteps 3043200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8250, 8212, 8219, 8236, 8309, 8212, 8211, 8309] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 39, 37, 36, 42, 37, 44]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 955/3125 episodes, total num timesteps 3059200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8294, 8248, 8257, 8273, 8343, 8253, 8256, 8355] [0, 0, 0, 0, 0, 0, 0, 0] [44, 36, 38, 37, 34, 41, 45, 46]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 960/3125 episodes, total num timesteps 3075200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8335, 8285, 8296, 8311, 8385, 8293, 8297, 8400] [0, 0, 0, 0, 0, 0, 0, 0] [41, 37, 39, 38, 42, 40, 41, 45]
+eval win rate is 0.6.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 965/3125 episodes, total num timesteps 3091200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8377, 8322, 8339, 8351, 8428, 8333, 8341, 8440] [0, 0, 0, 0, 0, 0, 0, 0] [42, 37, 43, 40, 43, 40, 44, 40]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 970/3125 episodes, total num timesteps 3107200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8420, 8367, 8380, 8396, 8470, 8375, 8380, 8485] [0, 0, 0, 0, 0, 0, 0, 0] [43, 45, 41, 45, 42, 42, 39, 45]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 975/3125 episodes, total num timesteps 3123200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8462, 8407, 8424, 8437, 8511, 8411, 8421, 8527] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 44, 41, 41, 36, 41, 42]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 980/3125 episodes, total num timesteps 3139200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8499, 8449, 8458, 8477, 8555, 8450, 8463, 8571] [0, 0, 0, 0, 0, 0, 0, 0] [37, 42, 34, 40, 44, 39, 42, 44]
+eval win rate is 0.3333333333333333.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 985/3125 episodes, total num timesteps 3155200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8540, 8493, 8498, 8518, 8598, 8486, 8505, 8612] [0, 0, 0, 0, 0, 0, 0, 0] [41, 44, 40, 41, 43, 36, 42, 41]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 990/3125 episodes, total num timesteps 3171200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8578, 8538, 8538, 8555, 8636, 8523, 8546, 8656] [0, 0, 0, 0, 0, 0, 0, 0] [38, 45, 40, 37, 38, 37, 41, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 995/3125 episodes, total num timesteps 3187200/1e7, FPS 403.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8622, 8577, 8581, 8603, 8677, 8566, 8586, 8697] [0, 0, 0, 0, 0, 0, 0, 0] [44, 39, 43, 48, 41, 43, 40, 41]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1000/3125 episodes, total num timesteps 3203200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8662, 8616, 8623, 8646, 8723, 8613, 8631, 8736] [0, 0, 0, 0, 0, 0, 0, 0] [40, 39, 42, 43, 46, 47, 45, 39]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1005/3125 episodes, total num timesteps 3219200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8701, 8659, 8661, 8687, 8767, 8652, 8670, 8776] [0, 0, 0, 0, 0, 0, 0, 0] [39, 43, 38, 41, 44, 39, 39, 40]
+eval win rate is 0.5428571428571428.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1010/3125 episodes, total num timesteps 3235200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8741, 8701, 8701, 8732, 8813, 8693, 8715, 8818] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 40, 45, 46, 41, 45, 42]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1015/3125 episodes, total num timesteps 3251200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8782, 8739, 8746, 8772, 8858, 8735, 8757, 8860] [0, 0, 0, 0, 0, 0, 0, 0] [41, 38, 45, 40, 45, 42, 42, 42]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1020/3125 episodes, total num timesteps 3267200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8818, 8777, 8790, 8819, 8894, 8778, 8797, 8901] [0, 0, 0, 0, 0, 0, 0, 0] [36, 38, 44, 47, 36, 43, 40, 41]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1025/3125 episodes, total num timesteps 3283200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8856, 8819, 8828, 8860, 8937, 8820, 8836, 8944] [0, 0, 0, 0, 0, 0, 0, 0] [38, 42, 38, 41, 43, 42, 39, 43]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1030/3125 episodes, total num timesteps 3299200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8901, 8859, 8871, 8898, 8974, 8861, 8878, 8987] [0, 0, 0, 0, 0, 0, 0, 0] [45, 40, 43, 38, 37, 41, 42, 43]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1035/3125 episodes, total num timesteps 3315200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8937, 8899, 8915, 8945, 9013, 8900, 8916, 9028] [0, 0, 0, 0, 0, 0, 0, 0] [36, 40, 44, 47, 39, 39, 38, 41]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1040/3125 episodes, total num timesteps 3331200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [8981, 8941, 8955, 8986, 9059, 8945, 8957, 9074] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 40, 41, 46, 45, 41, 46]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1045/3125 episodes, total num timesteps 3347200/1e7, FPS 404.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9022, 8985, 8999, 9028, 9097, 8984, 8996, 9117] [0, 0, 0, 0, 0, 0, 0, 0] [41, 44, 44, 42, 38, 39, 39, 43]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1050/3125 episodes, total num timesteps 3363200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9063, 9024, 9040, 9068, 9142, 9030, 9041, 9160] [0, 0, 0, 0, 0, 0, 0, 0] [41, 39, 41, 40, 45, 46, 45, 43]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1055/3125 episodes, total num timesteps 3379200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9108, 9070, 9082, 9106, 9187, 9070, 9085, 9199] [0, 0, 0, 0, 0, 0, 0, 0] [45, 46, 42, 38, 45, 40, 44, 39]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1060/3125 episodes, total num timesteps 3395200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9152, 9114, 9128, 9145, 9229, 9112, 9125, 9239] [0, 0, 0, 0, 0, 0, 0, 0] [44, 44, 46, 39, 42, 42, 40, 40]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1065/3125 episodes, total num timesteps 3411200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9197, 9152, 9169, 9184, 9271, 9150, 9168, 9283] [0, 0, 0, 0, 0, 0, 0, 0] [45, 38, 41, 39, 42, 38, 43, 44]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1070/3125 episodes, total num timesteps 3427200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9238, 9193, 9219, 9227, 9312, 9188, 9212, 9329] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 50, 43, 41, 38, 44, 46]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1075/3125 episodes, total num timesteps 3443200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9283, 9236, 9263, 9266, 9352, 9228, 9256, 9369] [0, 0, 0, 0, 0, 0, 0, 0] [45, 43, 44, 39, 40, 40, 44, 40]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1080/3125 episodes, total num timesteps 3459200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9327, 9282, 9307, 9308, 9393, 9269, 9300, 9411] [0, 0, 0, 0, 0, 0, 0, 0] [44, 46, 44, 42, 41, 41, 44, 42]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1085/3125 episodes, total num timesteps 3475200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9370, 9332, 9347, 9357, 9433, 9313, 9346, 9447] [0, 0, 0, 0, 0, 0, 0, 0] [43, 50, 40, 49, 40, 44, 46, 36]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1090/3125 episodes, total num timesteps 3491200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9414, 9373, 9392, 9402, 9475, 9358, 9389, 9488] [0, 0, 0, 0, 0, 0, 0, 0] [44, 41, 45, 45, 42, 45, 43, 41]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1095/3125 episodes, total num timesteps 3507200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9456, 9414, 9437, 9441, 9513, 9401, 9433, 9525] [0, 0, 0, 0, 0, 0, 0, 0] [42, 41, 45, 39, 38, 43, 44, 37]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1100/3125 episodes, total num timesteps 3523200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9502, 9458, 9484, 9480, 9551, 9444, 9478, 9568] [0, 0, 0, 0, 0, 0, 0, 0] [46, 44, 47, 39, 38, 43, 45, 43]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1105/3125 episodes, total num timesteps 3539200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9545, 9496, 9524, 9524, 9593, 9487, 9520, 9611] [0, 0, 0, 0, 0, 0, 0, 0] [43, 38, 40, 44, 42, 43, 42, 43]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1110/3125 episodes, total num timesteps 3555200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9590, 9538, 9569, 9565, 9634, 9533, 9559, 9655] [0, 0, 0, 0, 0, 0, 0, 0] [45, 42, 45, 41, 41, 46, 39, 44]
+eval win rate is 0.4411764705882353.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1115/3125 episodes, total num timesteps 3571200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9630, 9578, 9610, 9607, 9673, 9575, 9600, 9690] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 41, 42, 39, 42, 41, 35]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1120/3125 episodes, total num timesteps 3587200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9668, 9618, 9651, 9646, 9716, 9617, 9641, 9729] [0, 0, 0, 0, 0, 0, 0, 0] [38, 40, 41, 39, 43, 42, 41, 39]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1125/3125 episodes, total num timesteps 3603200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9704, 9657, 9691, 9688, 9761, 9659, 9685, 9772] [0, 0, 0, 0, 0, 0, 0, 0] [36, 39, 40, 42, 45, 42, 44, 43]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1130/3125 episodes, total num timesteps 3619200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9750, 9700, 9733, 9730, 9806, 9697, 9726, 9812] [0, 0, 0, 0, 0, 0, 0, 0] [46, 43, 42, 42, 45, 38, 41, 40]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1135/3125 episodes, total num timesteps 3635200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9788, 9743, 9776, 9771, 9847, 9739, 9769, 9853] [0, 0, 0, 0, 0, 0, 0, 0] [38, 43, 43, 41, 41, 42, 43, 41]
+eval win rate is 0.5.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1140/3125 episodes, total num timesteps 3651200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9829, 9786, 9819, 9811, 9884, 9779, 9809, 9893] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 43, 40, 37, 40, 40, 40]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1145/3125 episodes, total num timesteps 3667200/1e7, FPS 405.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9878, 9823, 9856, 9854, 9923, 9817, 9850, 9933] [0, 0, 0, 0, 0, 0, 0, 0] [49, 37, 37, 43, 39, 38, 41, 40]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1150/3125 episodes, total num timesteps 3683200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9917, 9864, 9903, 9899, 9960, 9860, 9893, 9973] [0, 0, 0, 0, 0, 0, 0, 0] [39, 41, 47, 45, 37, 43, 43, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1155/3125 episodes, total num timesteps 3699200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9954, 9904, 9947, 9943, 10002, 9903, 9935, 10013] [0, 0, 0, 0, 0, 0, 0, 0] [37, 40, 44, 44, 42, 43, 42, 40]
+eval win rate is 0.4411764705882353.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1160/3125 episodes, total num timesteps 3715200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [9999, 9938, 9989, 9986, 10044, 9949, 9975, 10054] [0, 0, 0, 0, 0, 0, 0, 0] [45, 34, 42, 43, 42, 46, 40, 41]
+eval win rate is 0.5.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1165/3125 episodes, total num timesteps 3731200/1e7, FPS 406.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10038, 9980, 10030, 10027, 10087, 9991, 10013, 10099] [0, 0, 0, 0, 0, 0, 0, 0] [39, 42, 41, 41, 43, 42, 38, 45]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1170/3125 episodes, total num timesteps 3747200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10078, 10024, 10077, 10068, 10133, 10030, 10059, 10141] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 47, 41, 46, 39, 46, 42]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1175/3125 episodes, total num timesteps 3763200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10119, 10063, 10118, 10112, 10177, 10078, 10102, 10179] [0, 0, 0, 0, 0, 0, 0, 0] [41, 39, 41, 44, 44, 48, 43, 38]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1180/3125 episodes, total num timesteps 3779200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10155, 10106, 10156, 10151, 10219, 10123, 10142, 10218] [0, 0, 0, 0, 0, 0, 0, 0] [36, 43, 38, 39, 42, 45, 40, 39]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1185/3125 episodes, total num timesteps 3795200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10202, 10142, 10198, 10200, 10256, 10166, 10179, 10257] [0, 0, 0, 0, 0, 0, 0, 0] [47, 36, 42, 49, 37, 43, 37, 39]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1190/3125 episodes, total num timesteps 3811200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10250, 10182, 10239, 10240, 10295, 10207, 10218, 10300] [0, 0, 0, 0, 0, 0, 0, 0] [48, 40, 41, 40, 39, 41, 39, 43]
+eval win rate is 0.5294117647058824.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1195/3125 episodes, total num timesteps 3827200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10289, 10224, 10280, 10286, 10336, 10249, 10263, 10342] [0, 0, 0, 0, 0, 0, 0, 0] [39, 42, 41, 46, 41, 42, 45, 42]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1200/3125 episodes, total num timesteps 3843200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10333, 10262, 10319, 10324, 10377, 10290, 10305, 10381] [0, 0, 0, 0, 0, 0, 0, 0] [44, 38, 39, 38, 41, 41, 42, 39]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1205/3125 episodes, total num timesteps 3859200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10373, 10306, 10360, 10373, 10421, 10331, 10348, 10424] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 41, 49, 44, 41, 43, 43]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1210/3125 episodes, total num timesteps 3875200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10419, 10346, 10394, 10414, 10463, 10376, 10386, 10466] [0, 0, 0, 0, 0, 0, 0, 0] [46, 40, 34, 41, 42, 45, 38, 42]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1215/3125 episodes, total num timesteps 3891200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10461, 10390, 10437, 10459, 10501, 10413, 10429, 10506] [0, 0, 0, 0, 0, 0, 0, 0] [42, 44, 43, 45, 38, 37, 43, 40]
+eval win rate is 0.4.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1220/3125 episodes, total num timesteps 3907200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10505, 10427, 10479, 10498, 10540, 10459, 10473, 10547] [0, 0, 0, 0, 0, 0, 0, 0] [44, 37, 42, 39, 39, 46, 44, 41]
+eval win rate is 0.5555555555555556.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1225/3125 episodes, total num timesteps 3923200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10547, 10469, 10524, 10538, 10582, 10502, 10512, 10588] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 45, 40, 42, 43, 39, 41]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1230/3125 episodes, total num timesteps 3939200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10584, 10513, 10564, 10582, 10618, 10542, 10555, 10624] [0, 0, 0, 0, 0, 0, 0, 0] [37, 44, 40, 44, 36, 40, 43, 36]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1235/3125 episodes, total num timesteps 3955200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10627, 10556, 10607, 10621, 10661, 10585, 10595, 10662] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 43, 39, 43, 43, 40, 38]
+eval win rate is 0.5142857142857142.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1240/3125 episodes, total num timesteps 3971200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10669, 10599, 10648, 10659, 10701, 10632, 10631, 10705] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 41, 38, 40, 47, 36, 43]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1245/3125 episodes, total num timesteps 3987200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10709, 10640, 10682, 10702, 10742, 10676, 10672, 10747] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 34, 43, 41, 44, 41, 42]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1250/3125 episodes, total num timesteps 4003200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10755, 10676, 10724, 10743, 10781, 10719, 10712, 10792] [0, 0, 0, 0, 0, 0, 0, 0] [46, 36, 42, 41, 39, 43, 40, 45]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1255/3125 episodes, total num timesteps 4019200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10791, 10718, 10769, 10785, 10823, 10763, 10751, 10829] [0, 0, 0, 0, 0, 0, 0, 0] [36, 42, 45, 42, 42, 44, 39, 37]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1260/3125 episodes, total num timesteps 4035200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10832, 10762, 10811, 10824, 10865, 10802, 10792, 10867] [0, 0, 0, 0, 0, 0, 0, 0] [41, 44, 42, 39, 42, 39, 41, 38]
+eval win rate is 0.6285714285714286.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1265/3125 episodes, total num timesteps 4051200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10873, 10802, 10849, 10866, 10909, 10839, 10832, 10906] [0, 0, 0, 0, 0, 0, 0, 0] [41, 40, 38, 42, 44, 37, 40, 39]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1270/3125 episodes, total num timesteps 4067200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10913, 10847, 10892, 10909, 10941, 10883, 10874, 10946] [0, 0, 0, 0, 0, 0, 0, 0] [40, 45, 43, 43, 32, 44, 42, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1275/3125 episodes, total num timesteps 4083200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10954, 10887, 10934, 10957, 10984, 10924, 10914, 10987] [0, 0, 0, 0, 0, 0, 0, 0] [41, 40, 42, 48, 43, 41, 40, 41]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1280/3125 episodes, total num timesteps 4099200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [10990, 10927, 10970, 10998, 11022, 10964, 10959, 11027] [0, 0, 0, 0, 0, 0, 0, 0] [36, 40, 36, 41, 38, 40, 45, 40]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1285/3125 episodes, total num timesteps 4115200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11031, 10966, 11010, 11040, 11062, 11003, 10997, 11070] [0, 0, 0, 0, 0, 0, 0, 0] [41, 39, 40, 42, 40, 39, 38, 43]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1290/3125 episodes, total num timesteps 4131200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11074, 11002, 11054, 11080, 11106, 11043, 11030, 11107] [0, 0, 0, 0, 0, 0, 0, 0] [43, 36, 44, 40, 44, 40, 33, 37]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1295/3125 episodes, total num timesteps 4147200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11114, 11043, 11097, 11122, 11153, 11085, 11065, 11148] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 43, 42, 47, 42, 35, 41]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1300/3125 episodes, total num timesteps 4163200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11149, 11085, 11144, 11167, 11197, 11131, 11105, 11190] [0, 0, 0, 0, 0, 0, 0, 0] [35, 42, 47, 45, 44, 46, 40, 42]
+eval win rate is 0.6470588235294118.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1305/3125 episodes, total num timesteps 4179200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11191, 11123, 11186, 11209, 11240, 11176, 11150, 11226] [0, 0, 0, 0, 0, 0, 0, 0] [42, 38, 42, 42, 43, 45, 45, 36]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1310/3125 episodes, total num timesteps 4195200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11237, 11163, 11227, 11249, 11281, 11215, 11192, 11271] [0, 0, 0, 0, 0, 0, 0, 0] [46, 40, 41, 40, 41, 39, 42, 45]
+eval win rate is 0.4411764705882353.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1315/3125 episodes, total num timesteps 4211200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11278, 11206, 11268, 11293, 11321, 11253, 11236, 11311] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 41, 44, 40, 38, 44, 40]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1320/3125 episodes, total num timesteps 4227200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11316, 11250, 11315, 11337, 11359, 11293, 11278, 11354] [0, 0, 0, 0, 0, 0, 0, 0] [38, 44, 47, 44, 38, 40, 42, 43]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1325/3125 episodes, total num timesteps 4243200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11361, 11295, 11352, 11381, 11394, 11335, 11324, 11397] [0, 0, 0, 0, 0, 0, 0, 0] [45, 45, 37, 44, 35, 42, 46, 43]
+eval win rate is 0.6.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1330/3125 episodes, total num timesteps 4259200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11406, 11339, 11399, 11425, 11433, 11374, 11365, 11438] [0, 0, 0, 0, 0, 0, 0, 0] [45, 44, 47, 44, 39, 39, 41, 41]
+eval win rate is 0.4864864864864865.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1335/3125 episodes, total num timesteps 4275200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11449, 11382, 11437, 11470, 11473, 11411, 11398, 11479] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 38, 45, 40, 37, 33, 41]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1340/3125 episodes, total num timesteps 4291200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11488, 11425, 11478, 11507, 11515, 11448, 11441, 11520] [0, 0, 0, 0, 0, 0, 0, 0] [39, 43, 41, 37, 42, 37, 43, 41]
+eval win rate is 0.5294117647058824.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1345/3125 episodes, total num timesteps 4307200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11531, 11469, 11522, 11553, 11556, 11492, 11486, 11565] [0, 0, 0, 0, 0, 0, 0, 0] [43, 44, 44, 46, 41, 44, 45, 45]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1350/3125 episodes, total num timesteps 4323200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11571, 11511, 11563, 11592, 11600, 11532, 11526, 11606] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 41, 39, 44, 40, 40, 41]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1355/3125 episodes, total num timesteps 4339200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11615, 11548, 11602, 11635, 11642, 11575, 11565, 11644] [0, 0, 0, 0, 0, 0, 0, 0] [44, 37, 39, 43, 42, 43, 39, 38]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1360/3125 episodes, total num timesteps 4355200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11654, 11594, 11640, 11682, 11686, 11613, 11606, 11685] [0, 0, 0, 0, 0, 0, 0, 0] [39, 46, 38, 47, 44, 38, 41, 41]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1365/3125 episodes, total num timesteps 4371200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11701, 11630, 11679, 11720, 11731, 11655, 11648, 11727] [0, 0, 0, 0, 0, 0, 0, 0] [47, 36, 39, 38, 45, 42, 42, 42]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1370/3125 episodes, total num timesteps 4387200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11747, 11672, 11720, 11755, 11774, 11695, 11691, 11766] [0, 0, 0, 0, 0, 0, 0, 0] [46, 42, 41, 35, 43, 40, 43, 39]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1375/3125 episodes, total num timesteps 4403200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11787, 11718, 11761, 11794, 11815, 11740, 11734, 11806] [0, 0, 0, 0, 0, 0, 0, 0] [40, 46, 41, 39, 41, 45, 43, 40]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1380/3125 episodes, total num timesteps 4419200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11830, 11754, 11797, 11833, 11856, 11783, 11778, 11845] [0, 0, 0, 0, 0, 0, 0, 0] [43, 36, 36, 39, 41, 43, 44, 39]
+eval win rate is 0.5428571428571428.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1385/3125 episodes, total num timesteps 4435200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11871, 11791, 11839, 11880, 11894, 11824, 11814, 11885] [0, 0, 0, 0, 0, 0, 0, 0] [41, 37, 42, 47, 38, 41, 36, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1390/3125 episodes, total num timesteps 4451200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11911, 11832, 11882, 11919, 11937, 11862, 11859, 11929] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 43, 39, 43, 38, 45, 44]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1395/3125 episodes, total num timesteps 4467200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11955, 11874, 11918, 11960, 11973, 11907, 11901, 11963] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 36, 41, 36, 45, 42, 34]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1400/3125 episodes, total num timesteps 4483200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [11992, 11914, 11958, 12001, 12014, 11950, 11944, 12004] [0, 0, 0, 0, 0, 0, 0, 0] [37, 40, 40, 41, 41, 43, 43, 41]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1405/3125 episodes, total num timesteps 4499200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12033, 11957, 11996, 12043, 12056, 11993, 11982, 12041] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 38, 42, 42, 43, 38, 37]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1410/3125 episodes, total num timesteps 4515200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12071, 11994, 12038, 12080, 12093, 12036, 12024, 12077] [0, 0, 0, 0, 0, 0, 0, 0] [38, 37, 42, 37, 37, 43, 42, 36]
+eval win rate is 0.7058823529411765.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1415/3125 episodes, total num timesteps 4531200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12115, 12028, 12081, 12120, 12134, 12078, 12066, 12124] [0, 0, 0, 0, 0, 0, 0, 0] [44, 34, 43, 40, 41, 42, 42, 47]
+eval win rate is 0.5.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1420/3125 episodes, total num timesteps 4547200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12154, 12073, 12126, 12159, 12176, 12122, 12104, 12166] [0, 0, 0, 0, 0, 0, 0, 0] [39, 45, 45, 39, 42, 44, 38, 42]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1425/3125 episodes, total num timesteps 4563200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12197, 12111, 12167, 12199, 12215, 12163, 12144, 12202] [0, 0, 0, 0, 0, 0, 0, 0] [43, 38, 41, 40, 39, 41, 40, 36]
+eval win rate is 0.6.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1430/3125 episodes, total num timesteps 4579200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12239, 12155, 12204, 12238, 12252, 12206, 12182, 12245] [0, 0, 0, 0, 0, 0, 0, 0] [42, 44, 37, 39, 37, 43, 38, 43]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1435/3125 episodes, total num timesteps 4595200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12278, 12196, 12242, 12276, 12292, 12249, 12225, 12287] [0, 0, 0, 0, 0, 0, 0, 0] [39, 41, 38, 38, 40, 43, 43, 42]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1440/3125 episodes, total num timesteps 4611200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12321, 12240, 12280, 12315, 12330, 12289, 12266, 12327] [0, 0, 0, 0, 0, 0, 0, 0] [43, 44, 38, 39, 38, 40, 41, 40]
+eval win rate is 0.7428571428571429.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1445/3125 episodes, total num timesteps 4627200/1e7, FPS 408.
+
+incre win rate is 0.0029498525073746312.
+[0, 0, 0, 0, 0, 0, 0, 1] [12359, 12284, 12320, 12357, 12374, 12333, 12309, 12371] [0, 0, 0, 0, 0, 0, 0, 1] [38, 44, 40, 42, 44, 44, 43, 44]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1450/3125 episodes, total num timesteps 4643200/1e7, FPS 408.
+
+incre win rate is -0.0030211480362537764.
+[0, 0, 0, 0, 0, 0, 0, 0] [12399, 12324, 12362, 12402, 12412, 12372, 12353, 12414] [0, 0, 0, 0, 0, 0, 0, -1] [40, 40, 42, 45, 38, 39, 44, 43]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1455/3125 episodes, total num timesteps 4659200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12444, 12363, 12403, 12440, 12452, 12413, 12396, 12461] [0, 0, 0, 0, 0, 0, 0, 0] [45, 39, 41, 38, 40, 41, 43, 47]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1460/3125 episodes, total num timesteps 4675200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12487, 12405, 12447, 12476, 12493, 12457, 12432, 12499] [0, 0, 0, 0, 0, 0, 0, 0] [43, 42, 44, 36, 41, 44, 36, 38]
+eval win rate is 0.6285714285714286.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1465/3125 episodes, total num timesteps 4691200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12527, 12449, 12488, 12517, 12535, 12498, 12473, 12541] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 41, 41, 42, 41, 41, 42]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1470/3125 episodes, total num timesteps 4707200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12567, 12491, 12530, 12559, 12581, 12544, 12514, 12583] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 42, 42, 46, 46, 41, 42]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1475/3125 episodes, total num timesteps 4723200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12607, 12533, 12576, 12601, 12619, 12587, 12556, 12624] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 46, 42, 38, 43, 42, 41]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1480/3125 episodes, total num timesteps 4739200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12652, 12577, 12619, 12643, 12660, 12631, 12598, 12664] [0, 0, 0, 0, 0, 0, 0, 0] [45, 44, 43, 42, 41, 44, 42, 40]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1485/3125 episodes, total num timesteps 4755200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12692, 12618, 12662, 12684, 12699, 12670, 12641, 12707] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 43, 41, 39, 39, 43, 43]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1490/3125 episodes, total num timesteps 4771200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12734, 12661, 12701, 12729, 12740, 12716, 12678, 12749] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 39, 45, 41, 46, 37, 42]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1495/3125 episodes, total num timesteps 4787200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12781, 12702, 12748, 12770, 12780, 12760, 12718, 12787] [0, 0, 0, 0, 0, 0, 0, 0] [47, 41, 47, 41, 40, 44, 40, 38]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1500/3125 episodes, total num timesteps 4803200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12822, 12743, 12786, 12809, 12818, 12803, 12762, 12829] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 38, 39, 38, 43, 44, 42]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1505/3125 episodes, total num timesteps 4819200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12863, 12783, 12832, 12855, 12863, 12847, 12806, 12869] [0, 0, 0, 0, 0, 0, 0, 0] [41, 40, 46, 46, 45, 44, 44, 40]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1510/3125 episodes, total num timesteps 4835200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12904, 12828, 12874, 12893, 12907, 12894, 12846, 12911] [0, 0, 0, 0, 0, 0, 0, 0] [41, 45, 42, 38, 44, 47, 40, 42]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1515/3125 episodes, total num timesteps 4851200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12949, 12872, 12913, 12935, 12947, 12935, 12890, 12953] [0, 0, 0, 0, 0, 0, 0, 0] [45, 44, 39, 42, 40, 41, 44, 42]
+eval win rate is 0.4117647058823529.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1520/3125 episodes, total num timesteps 4867200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [12988, 12915, 12951, 12975, 12985, 12971, 12933, 12993] [0, 0, 0, 0, 0, 0, 0, 0] [39, 43, 38, 40, 38, 36, 43, 40]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1525/3125 episodes, total num timesteps 4883200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13028, 12951, 12999, 13018, 13024, 13014, 12979, 13031] [0, 0, 0, 0, 0, 0, 0, 0] [40, 36, 48, 43, 39, 43, 46, 38]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1530/3125 episodes, total num timesteps 4899200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13072, 12992, 13042, 13057, 13067, 13054, 13024, 13076] [0, 0, 0, 0, 0, 0, 0, 0] [44, 41, 43, 39, 43, 40, 45, 45]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1535/3125 episodes, total num timesteps 4915200/1e7, FPS 408.
+
+incre win rate is 0.003003003003003003.
+[0, 0, 0, 1, 0, 0, 0, 0] [13113, 13033, 13082, 13100, 13112, 13092, 13068, 13117] [0, 0, 0, 1, 0, 0, 0, 0] [41, 41, 40, 43, 45, 38, 44, 41]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1540/3125 episodes, total num timesteps 4931200/1e7, FPS 408.
+
+incre win rate is -0.002967359050445104.
+[0, 0, 0, 0, 0, 0, 0, 0] [13155, 13077, 13127, 13138, 13155, 13134, 13109, 13159] [0, 0, 0, -1, 0, 0, 0, 0] [42, 44, 45, 38, 43, 42, 41, 42]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1545/3125 episodes, total num timesteps 4947200/1e7, FPS 408.
+
+incre win rate is 0.0029850746268656717.
+[0, 0, 0, 1, 0, 0, 0, 0] [13198, 13123, 13169, 13173, 13197, 13173, 13154, 13202] [0, 0, 0, 1, 0, 0, 0, 0] [43, 46, 42, 35, 42, 39, 45, 43]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1550/3125 episodes, total num timesteps 4963200/1e7, FPS 408.
+
+incre win rate is -0.00303951367781155.
+[0, 0, 0, 0, 0, 0, 0, 0] [13245, 13167, 13204, 13215, 13236, 13217, 13196, 13238] [0, 0, 0, -1, 0, 0, 0, 0] [47, 44, 35, 42, 39, 44, 42, 36]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1555/3125 episodes, total num timesteps 4979200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13285, 13208, 13240, 13260, 13281, 13253, 13237, 13275] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 36, 45, 45, 36, 41, 37]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1560/3125 episodes, total num timesteps 4995200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13327, 13252, 13281, 13300, 13322, 13293, 13277, 13311] [0, 0, 0, 0, 0, 0, 0, 0] [42, 44, 41, 40, 41, 40, 40, 36]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1565/3125 episodes, total num timesteps 5011200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13375, 13289, 13322, 13348, 13362, 13331, 13318, 13351] [0, 0, 0, 0, 0, 0, 0, 0] [48, 37, 41, 48, 40, 38, 41, 40]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1570/3125 episodes, total num timesteps 5027200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13419, 13335, 13362, 13393, 13403, 13370, 13364, 13389] [0, 0, 0, 0, 0, 0, 0, 0] [44, 46, 40, 45, 41, 39, 46, 38]
+eval win rate is 0.7058823529411765.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1575/3125 episodes, total num timesteps 5043200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13464, 13382, 13401, 13437, 13444, 13411, 13403, 13433] [0, 0, 0, 0, 0, 0, 0, 0] [45, 47, 39, 44, 41, 41, 39, 44]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1580/3125 episodes, total num timesteps 5059200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13507, 13427, 13444, 13480, 13486, 13457, 13446, 13474] [0, 0, 0, 0, 0, 0, 0, 0] [43, 45, 43, 43, 42, 46, 43, 41]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1585/3125 episodes, total num timesteps 5075200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13551, 13466, 13482, 13524, 13532, 13498, 13488, 13516] [0, 0, 0, 0, 0, 0, 0, 0] [44, 39, 38, 44, 46, 41, 42, 42]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1590/3125 episodes, total num timesteps 5091200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13590, 13506, 13521, 13558, 13575, 13541, 13533, 13559] [0, 0, 0, 0, 0, 0, 0, 0] [39, 40, 39, 34, 43, 43, 45, 43]
+eval win rate is 0.6.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1595/3125 episodes, total num timesteps 5107200/1e7, FPS 409.
+
+incre win rate is 0.003105590062111801.
+[0, 0, 0, 0, 1, 0, 0, 0] [13632, 13545, 13568, 13595, 13620, 13583, 13567, 13595] [0, 0, 0, 0, 1, 0, 0, 0] [42, 39, 47, 37, 45, 42, 34, 36]
+eval win rate is 0.4722222222222222.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1600/3125 episodes, total num timesteps 5123200/1e7, FPS 409.
+
+incre win rate is -0.0030120481927710845.
+[0, 0, 0, 0, 0, 0, 0, 0] [13674, 13588, 13612, 13637, 13663, 13624, 13607, 13632] [0, 0, 0, 0, -1, 0, 0, 0] [42, 43, 44, 42, 43, 41, 40, 37]
+eval win rate is 0.38235294117647056.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1605/3125 episodes, total num timesteps 5139200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13717, 13631, 13654, 13683, 13701, 13670, 13647, 13673] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 42, 46, 38, 46, 40, 41]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1610/3125 episodes, total num timesteps 5155200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13755, 13669, 13697, 13728, 13744, 13714, 13691, 13715] [0, 0, 0, 0, 0, 0, 0, 0] [38, 38, 43, 45, 43, 44, 44, 42]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1615/3125 episodes, total num timesteps 5171200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13794, 13711, 13743, 13772, 13790, 13750, 13730, 13757] [0, 0, 0, 0, 0, 0, 0, 0] [39, 42, 46, 44, 46, 36, 39, 42]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1620/3125 episodes, total num timesteps 5187200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13834, 13750, 13787, 13816, 13833, 13787, 13771, 13800] [0, 0, 0, 0, 0, 0, 0, 0] [40, 39, 44, 44, 43, 37, 41, 43]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1625/3125 episodes, total num timesteps 5203200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13880, 13795, 13834, 13859, 13878, 13828, 13814, 13842] [0, 0, 0, 0, 0, 0, 0, 0] [46, 45, 47, 43, 45, 41, 43, 42]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1630/3125 episodes, total num timesteps 5219200/1e7, FPS 407.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13923, 13838, 13871, 13906, 13917, 13874, 13851, 13882] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 37, 47, 39, 46, 37, 40]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1635/3125 episodes, total num timesteps 5235200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [13960, 13881, 13913, 13945, 13960, 13920, 13889, 13928] [0, 0, 0, 0, 0, 0, 0, 0] [37, 43, 42, 39, 43, 46, 38, 46]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1640/3125 episodes, total num timesteps 5251200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14002, 13924, 13956, 13990, 13997, 13965, 13933, 13972] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 43, 45, 37, 45, 44, 44]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1645/3125 episodes, total num timesteps 5267200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14039, 13965, 13998, 14028, 14038, 14007, 13976, 14010] [0, 0, 0, 0, 0, 0, 0, 0] [37, 41, 42, 38, 41, 42, 43, 38]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1650/3125 episodes, total num timesteps 5283200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14085, 14006, 14045, 14068, 14081, 14039, 14024, 14053] [0, 0, 0, 0, 0, 0, 0, 0] [46, 41, 47, 40, 43, 32, 48, 43]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1655/3125 episodes, total num timesteps 5299200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14127, 14048, 14088, 14112, 14121, 14082, 14063, 14096] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 43, 44, 40, 43, 39, 43]
+eval win rate is 0.4117647058823529.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1660/3125 episodes, total num timesteps 5315200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14172, 14088, 14127, 14160, 14160, 14124, 14106, 14133] [0, 0, 0, 0, 0, 0, 0, 0] [45, 40, 39, 48, 39, 42, 43, 37]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1665/3125 episodes, total num timesteps 5331200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14210, 14127, 14168, 14201, 14201, 14163, 14152, 14176] [0, 0, 0, 0, 0, 0, 0, 0] [38, 39, 41, 41, 41, 39, 46, 43]
+eval win rate is 0.6470588235294118.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1670/3125 episodes, total num timesteps 5347200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14251, 14168, 14209, 14245, 14242, 14203, 14192, 14217] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 41, 44, 41, 40, 40, 41]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1675/3125 episodes, total num timesteps 5363200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14288, 14211, 14250, 14285, 14277, 14244, 14230, 14265] [0, 0, 0, 0, 0, 0, 0, 0] [37, 43, 41, 40, 35, 41, 38, 48]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1680/3125 episodes, total num timesteps 5379200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14330, 14251, 14294, 14321, 14321, 14284, 14271, 14310] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 44, 36, 44, 40, 41, 45]
+eval win rate is 0.5428571428571428.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1685/3125 episodes, total num timesteps 5395200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14374, 14288, 14338, 14369, 14357, 14329, 14307, 14349] [0, 0, 0, 0, 0, 0, 0, 0] [44, 37, 44, 48, 36, 45, 36, 39]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1690/3125 episodes, total num timesteps 5411200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14417, 14330, 14376, 14411, 14394, 14367, 14348, 14392] [0, 0, 0, 0, 0, 0, 0, 0] [43, 42, 38, 42, 37, 38, 41, 43]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1695/3125 episodes, total num timesteps 5427200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14463, 14376, 14413, 14451, 14429, 14406, 14388, 14430] [0, 0, 0, 0, 0, 0, 0, 0] [46, 46, 37, 40, 35, 39, 40, 38]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1700/3125 episodes, total num timesteps 5443200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14504, 14421, 14452, 14495, 14471, 14447, 14427, 14470] [0, 0, 0, 0, 0, 0, 0, 0] [41, 45, 39, 44, 42, 41, 39, 40]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1705/3125 episodes, total num timesteps 5459200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14547, 14467, 14493, 14536, 14511, 14492, 14469, 14516] [0, 0, 0, 0, 0, 0, 0, 0] [43, 46, 41, 41, 40, 45, 42, 46]
+eval win rate is 0.5142857142857142.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1710/3125 episodes, total num timesteps 5475200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14588, 14509, 14536, 14575, 14555, 14531, 14510, 14558] [0, 0, 0, 0, 0, 0, 0, 0] [41, 42, 43, 39, 44, 39, 41, 42]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1715/3125 episodes, total num timesteps 5491200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14627, 14546, 14575, 14611, 14596, 14576, 14547, 14603] [0, 0, 0, 0, 0, 0, 0, 0] [39, 37, 39, 36, 41, 45, 37, 45]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1720/3125 episodes, total num timesteps 5507200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14664, 14582, 14615, 14652, 14637, 14616, 14586, 14641] [0, 0, 0, 0, 0, 0, 0, 0] [37, 36, 40, 41, 41, 40, 39, 38]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1725/3125 episodes, total num timesteps 5523200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14706, 14628, 14653, 14693, 14679, 14660, 14625, 14683] [0, 0, 0, 0, 0, 0, 0, 0] [42, 46, 38, 41, 42, 44, 39, 42]
+eval win rate is 0.5142857142857142.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1730/3125 episodes, total num timesteps 5539200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14748, 14669, 14696, 14734, 14715, 14699, 14668, 14719] [0, 0, 0, 0, 0, 0, 0, 0] [42, 41, 43, 41, 36, 39, 43, 36]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1735/3125 episodes, total num timesteps 5555200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14786, 14708, 14737, 14775, 14756, 14740, 14712, 14761] [0, 0, 0, 0, 0, 0, 0, 0] [38, 39, 41, 41, 41, 41, 44, 42]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1740/3125 episodes, total num timesteps 5571200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14822, 14750, 14781, 14818, 14801, 14781, 14748, 14803] [0, 0, 0, 0, 0, 0, 0, 0] [36, 42, 44, 43, 45, 41, 36, 42]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1745/3125 episodes, total num timesteps 5587200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14861, 14790, 14824, 14863, 14844, 14826, 14790, 14843] [0, 0, 0, 0, 0, 0, 0, 0] [39, 40, 43, 45, 43, 45, 42, 40]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1750/3125 episodes, total num timesteps 5603200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14903, 14826, 14867, 14899, 14892, 14868, 14831, 14886] [0, 0, 0, 0, 0, 0, 0, 0] [42, 36, 43, 36, 48, 42, 41, 43]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1755/3125 episodes, total num timesteps 5619200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14946, 14869, 14908, 14945, 14933, 14912, 14863, 14925] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 41, 46, 41, 44, 32, 39]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1760/3125 episodes, total num timesteps 5635200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [14986, 14912, 14955, 14985, 14977, 14955, 14906, 14966] [0, 0, 0, 0, 0, 0, 0, 0] [40, 43, 47, 40, 44, 43, 43, 41]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1765/3125 episodes, total num timesteps 5651200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15033, 14954, 14999, 15027, 15018, 15001, 14944, 15014] [0, 0, 0, 0, 0, 0, 0, 0] [47, 42, 44, 42, 41, 46, 38, 48]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1770/3125 episodes, total num timesteps 5667200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15076, 14998, 15040, 15069, 15055, 15038, 14984, 15054] [0, 0, 0, 0, 0, 0, 0, 0] [43, 44, 41, 42, 37, 37, 40, 40]
+eval win rate is 0.6285714285714286.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1775/3125 episodes, total num timesteps 5683200/1e7, FPS 410.
+
+incre win rate is 0.003076923076923077.
+[0, 0, 0, 0, 0, 1, 0, 0] [15116, 15040, 15078, 15107, 15095, 15075, 15031, 15097] [0, 0, 0, 0, 0, 1, 0, 0] [40, 42, 38, 38, 40, 37, 47, 43]
+eval win rate is 0.5.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1780/3125 episodes, total num timesteps 5699200/1e7, FPS 410.
+
+incre win rate is -0.0030120481927710845.
+[0, 0, 0, 0, 0, 0, 0, 0] [15160, 15084, 15123, 15149, 15134, 15112, 15070, 15139] [0, 0, 0, 0, 0, -1, 0, 0] [44, 44, 45, 42, 39, 37, 39, 42]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1785/3125 episodes, total num timesteps 5715200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15200, 15126, 15164, 15189, 15178, 15155, 15109, 15179] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 41, 40, 44, 43, 39, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1790/3125 episodes, total num timesteps 5731200/1e7, FPS 408.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15243, 15160, 15203, 15229, 15218, 15196, 15147, 15220] [0, 0, 0, 0, 0, 0, 0, 0] [43, 34, 39, 40, 40, 41, 38, 41]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1795/3125 episodes, total num timesteps 5747200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15285, 15201, 15245, 15273, 15256, 15241, 15188, 15264] [0, 0, 0, 0, 0, 0, 0, 0] [42, 41, 42, 44, 38, 45, 41, 44]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1800/3125 episodes, total num timesteps 5763200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15324, 15242, 15280, 15314, 15301, 15277, 15226, 15309] [0, 0, 0, 0, 0, 0, 0, 0] [39, 41, 35, 41, 45, 36, 38, 45]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1805/3125 episodes, total num timesteps 5779200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15367, 15288, 15321, 15357, 15337, 15319, 15265, 15352] [0, 0, 0, 0, 0, 0, 0, 0] [43, 46, 41, 43, 36, 42, 39, 43]
+eval win rate is 0.3939393939393939.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1810/3125 episodes, total num timesteps 5795200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15409, 15330, 15367, 15401, 15375, 15361, 15306, 15394] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 46, 44, 38, 42, 41, 42]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1815/3125 episodes, total num timesteps 5811200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15453, 15368, 15409, 15441, 15417, 15400, 15342, 15441] [0, 0, 0, 0, 0, 0, 0, 0] [44, 38, 42, 40, 42, 39, 36, 47]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1820/3125 episodes, total num timesteps 5827200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15495, 15416, 15453, 15484, 15460, 15445, 15381, 15479] [0, 0, 0, 0, 0, 0, 0, 0] [42, 48, 44, 43, 43, 45, 39, 38]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1825/3125 episodes, total num timesteps 5843200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15543, 15459, 15492, 15525, 15503, 15485, 15424, 15526] [0, 0, 0, 0, 0, 0, 0, 0] [48, 43, 39, 41, 43, 40, 43, 47]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1830/3125 episodes, total num timesteps 5859200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15582, 15503, 15535, 15569, 15544, 15527, 15462, 15568] [0, 0, 0, 0, 0, 0, 0, 0] [39, 44, 43, 44, 41, 42, 38, 42]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1835/3125 episodes, total num timesteps 5875200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15621, 15546, 15577, 15610, 15587, 15562, 15498, 15609] [0, 0, 0, 0, 0, 0, 0, 0] [39, 43, 42, 41, 43, 35, 36, 41]
+eval win rate is 0.6.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1840/3125 episodes, total num timesteps 5891200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15663, 15586, 15617, 15651, 15632, 15602, 15536, 15651] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 40, 41, 45, 40, 38, 42]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1845/3125 episodes, total num timesteps 5907200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15705, 15622, 15659, 15690, 15671, 15642, 15578, 15689] [0, 0, 0, 0, 0, 0, 0, 0] [42, 36, 42, 39, 39, 40, 42, 38]
+eval win rate is 0.5294117647058824.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1850/3125 episodes, total num timesteps 5923200/1e7, FPS 409.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15746, 15661, 15703, 15729, 15709, 15683, 15620, 15736] [0, 0, 0, 0, 0, 0, 0, 0] [41, 39, 44, 39, 38, 41, 42, 47]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1855/3125 episodes, total num timesteps 5939200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15784, 15701, 15743, 15768, 15751, 15724, 15660, 15775] [0, 0, 0, 0, 0, 0, 0, 0] [38, 40, 40, 39, 42, 41, 40, 39]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1860/3125 episodes, total num timesteps 5955200/1e7, FPS 410.
+
+incre win rate is 0.0029498525073746312.
+[0, 0, 0, 0, 1, 0, 0, 0] [15828, 15742, 15784, 15813, 15793, 15767, 15704, 15814] [0, 0, 0, 0, 1, 0, 0, 0] [44, 41, 41, 45, 42, 43, 44, 39]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1865/3125 episodes, total num timesteps 5971200/1e7, FPS 410.
+
+incre win rate is -0.00303951367781155.
+[0, 0, 0, 0, 0, 0, 0, 0] [15863, 15781, 15827, 15857, 15835, 15813, 15743, 15855] [0, 0, 0, 0, -1, 0, 0, 0] [35, 39, 43, 44, 42, 46, 39, 41]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1870/3125 episodes, total num timesteps 5987200/1e7, FPS 410.
+
+incre win rate is 0.0030120481927710845.
+[0, 1, 0, 0, 0, 0, 0, 0] [15904, 15821, 15870, 15898, 15877, 15859, 15787, 15890] [0, 1, 0, 0, 0, 0, 0, 0] [41, 40, 43, 41, 42, 46, 44, 35]
+eval win rate is 0.4117647058823529.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1875/3125 episodes, total num timesteps 6003200/1e7, FPS 410.
+
+incre win rate is -0.002932551319648094.
+[0, 0, 0, 0, 0, 0, 0, 0] [15951, 15866, 15914, 15935, 15919, 15901, 15829, 15932] [0, -1, 0, 0, 0, 0, 0, 0] [47, 45, 44, 37, 42, 42, 42, 42]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1880/3125 episodes, total num timesteps 6019200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [15989, 15907, 15956, 15965, 15956, 15944, 15867, 15970] [0, 0, 0, 0, 0, 0, 0, 0] [38, 41, 42, 30, 37, 43, 38, 38]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1885/3125 episodes, total num timesteps 6035200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16029, 15947, 15995, 16009, 15993, 15986, 15914, 16010] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 39, 44, 37, 42, 47, 40]
+eval win rate is 0.7352941176470589.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1890/3125 episodes, total num timesteps 6051200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16073, 15988, 16036, 16049, 16031, 16027, 15960, 16046] [0, 0, 0, 0, 0, 0, 0, 0] [44, 41, 41, 40, 38, 41, 46, 36]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1895/3125 episodes, total num timesteps 6067200/1e7, FPS 410.
+
+incre win rate is 0.0029850746268656717.
+[1, 0, 0, 0, 0, 0, 0, 0] [16114, 16033, 16079, 16091, 16075, 16069, 15998, 16086] [1, 0, 0, 0, 0, 0, 0, 0] [41, 45, 43, 42, 44, 42, 38, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1900/3125 episodes, total num timesteps 6083200/1e7, FPS 410.
+
+incre win rate is -0.002932551319648094.
+[0, 0, 0, 0, 0, 0, 0, 0] [16151, 16072, 16121, 16133, 16120, 16115, 16039, 16135] [-1, 0, 0, 0, 0, 0, 0, 0] [37, 39, 42, 42, 45, 46, 41, 49]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1905/3125 episodes, total num timesteps 6099200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16194, 16115, 16169, 16173, 16160, 16159, 16079, 16181] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 48, 40, 40, 44, 40, 46]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1910/3125 episodes, total num timesteps 6115200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16239, 16164, 16213, 16218, 16205, 16202, 16122, 16222] [0, 0, 0, 0, 0, 0, 0, 0] [45, 49, 44, 45, 45, 43, 43, 41]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1915/3125 episodes, total num timesteps 6131200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16280, 16206, 16257, 16251, 16252, 16242, 16168, 16259] [0, 0, 0, 0, 0, 0, 0, 0] [41, 42, 44, 33, 47, 40, 46, 37]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1920/3125 episodes, total num timesteps 6147200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16320, 16249, 16299, 16293, 16287, 16282, 16210, 16297] [0, 0, 0, 0, 0, 0, 0, 0] [40, 43, 42, 42, 35, 40, 42, 38]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1925/3125 episodes, total num timesteps 6163200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16359, 16285, 16341, 16330, 16325, 16319, 16257, 16339] [0, 0, 0, 0, 0, 0, 0, 0] [39, 36, 42, 37, 38, 37, 47, 42]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1930/3125 episodes, total num timesteps 6179200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16404, 16333, 16385, 16378, 16372, 16355, 16292, 16381] [0, 0, 0, 0, 0, 0, 0, 0] [45, 48, 44, 48, 47, 36, 35, 42]
+eval win rate is 0.7058823529411765.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1935/3125 episodes, total num timesteps 6195200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16445, 16370, 16425, 16420, 16415, 16397, 16330, 16426] [0, 0, 0, 0, 0, 0, 0, 0] [41, 37, 40, 42, 43, 42, 38, 45]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1940/3125 episodes, total num timesteps 6211200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16488, 16413, 16464, 16464, 16459, 16442, 16371, 16466] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 39, 44, 44, 45, 41, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1945/3125 episodes, total num timesteps 6227200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16526, 16456, 16506, 16502, 16497, 16482, 16414, 16506] [0, 0, 0, 0, 0, 0, 0, 0] [38, 43, 42, 38, 38, 40, 43, 40]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1950/3125 episodes, total num timesteps 6243200/1e7, FPS 410.
+
+incre win rate is 0.0030959752321981426.
+[0, 0, 1, 0, 0, 0, 0, 0] [16565, 16493, 16550, 16544, 16534, 16519, 16458, 16549] [0, 0, 1, 0, 0, 0, 0, 0] [39, 37, 44, 42, 37, 37, 44, 43]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1955/3125 episodes, total num timesteps 6259200/1e7, FPS 410.
+
+incre win rate is -0.002932551319648094.
+[0, 0, 0, 0, 0, 0, 0, 0] [16608, 16539, 16594, 16582, 16575, 16563, 16499, 16593] [0, 0, -1, 0, 0, 0, 0, 0] [43, 46, 44, 38, 41, 44, 41, 44]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1960/3125 episodes, total num timesteps 6275200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16648, 16581, 16637, 16628, 16617, 16606, 16541, 16632] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 43, 46, 42, 43, 42, 39]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1965/3125 episodes, total num timesteps 6291200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16692, 16622, 16680, 16670, 16658, 16650, 16583, 16675] [0, 0, 0, 0, 0, 0, 0, 0] [44, 41, 43, 42, 41, 44, 42, 43]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1970/3125 episodes, total num timesteps 6307200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16735, 16662, 16725, 16713, 16697, 16690, 16619, 16723] [0, 0, 0, 0, 0, 0, 0, 0] [43, 40, 45, 43, 39, 40, 36, 48]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1975/3125 episodes, total num timesteps 6323200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16775, 16703, 16771, 16758, 16737, 16734, 16658, 16764] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 46, 45, 40, 44, 39, 41]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1980/3125 episodes, total num timesteps 6339200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16815, 16750, 16814, 16797, 16778, 16777, 16693, 16803] [0, 0, 0, 0, 0, 0, 0, 0] [40, 47, 43, 39, 41, 43, 35, 39]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1985/3125 episodes, total num timesteps 6355200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16859, 16793, 16852, 16841, 16826, 16812, 16735, 16841] [0, 0, 0, 0, 0, 0, 0, 0] [44, 43, 38, 44, 48, 35, 42, 38]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1990/3125 episodes, total num timesteps 6371200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16898, 16839, 16896, 16882, 16869, 16855, 16780, 16886] [0, 0, 0, 0, 0, 0, 0, 0] [39, 46, 44, 41, 43, 43, 45, 45]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 1995/3125 episodes, total num timesteps 6387200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16939, 16881, 16939, 16925, 16904, 16894, 16822, 16925] [0, 0, 0, 0, 0, 0, 0, 0] [41, 42, 43, 43, 35, 39, 42, 39]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2000/3125 episodes, total num timesteps 6403200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [16978, 16921, 16982, 16963, 16943, 16940, 16864, 16969] [0, 0, 0, 0, 0, 0, 0, 0] [39, 40, 43, 38, 39, 46, 42, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2005/3125 episodes, total num timesteps 6419200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17020, 16961, 17022, 17000, 16987, 16982, 16907, 17012] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 40, 37, 44, 42, 43, 43]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2010/3125 episodes, total num timesteps 6435200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17056, 16996, 17066, 17046, 17028, 17024, 16953, 17053] [0, 0, 0, 0, 0, 0, 0, 0] [36, 35, 44, 46, 41, 42, 46, 41]
+eval win rate is 0.7878787878787878.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2015/3125 episodes, total num timesteps 6451200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17098, 17038, 17111, 17091, 17071, 17066, 16992, 17095] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 45, 45, 43, 42, 39, 42]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2020/3125 episodes, total num timesteps 6467200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17138, 17078, 17155, 17134, 17114, 17106, 17039, 17139] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 44, 43, 43, 40, 47, 44]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2025/3125 episodes, total num timesteps 6483200/1e7, FPS 411.
+
+incre win rate is 0.0030211480362537764.
+[0, 0, 0, 0, 0, 0, 0, 1] [17175, 17118, 17195, 17181, 17162, 17143, 17079, 17181] [0, 0, 0, 0, 0, 0, 0, 1] [37, 40, 40, 47, 48, 37, 40, 42]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2030/3125 episodes, total num timesteps 6499200/1e7, FPS 411.
+
+incre win rate is -0.003115264797507788.
+[0, 0, 0, 0, 0, 0, 0, 0] [17215, 17157, 17239, 17215, 17204, 17181, 17121, 17223] [0, 0, 0, 0, 0, 0, 0, -1] [40, 39, 44, 34, 42, 38, 42, 42]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2035/3125 episodes, total num timesteps 6515200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17255, 17201, 17278, 17255, 17250, 17218, 17161, 17264] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 39, 40, 46, 37, 40, 41]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2040/3125 episodes, total num timesteps 6531200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17294, 17241, 17316, 17293, 17294, 17264, 17204, 17303] [0, 0, 0, 0, 0, 0, 0, 0] [39, 40, 38, 38, 44, 46, 43, 39]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2045/3125 episodes, total num timesteps 6547200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17340, 17286, 17359, 17335, 17333, 17308, 17247, 17343] [0, 0, 0, 0, 0, 0, 0, 0] [46, 45, 43, 42, 39, 44, 43, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2050/3125 episodes, total num timesteps 6563200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17377, 17328, 17405, 17374, 17379, 17348, 17293, 17381] [0, 0, 0, 0, 0, 0, 0, 0] [37, 42, 46, 39, 46, 40, 46, 38]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2055/3125 episodes, total num timesteps 6579200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17417, 17372, 17449, 17415, 17423, 17384, 17332, 17421] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 44, 41, 44, 36, 39, 40]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2060/3125 episodes, total num timesteps 6595200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17456, 17407, 17491, 17458, 17459, 17428, 17370, 17465] [0, 0, 0, 0, 0, 0, 0, 0] [39, 35, 42, 43, 36, 44, 38, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2065/3125 episodes, total num timesteps 6611200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17492, 17447, 17533, 17495, 17504, 17470, 17414, 17512] [0, 0, 0, 0, 0, 0, 0, 0] [36, 40, 42, 37, 45, 42, 44, 47]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2070/3125 episodes, total num timesteps 6627200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17534, 17493, 17573, 17535, 17549, 17512, 17451, 17556] [0, 0, 0, 0, 0, 0, 0, 0] [42, 46, 40, 40, 45, 42, 37, 44]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2075/3125 episodes, total num timesteps 6643200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17577, 17529, 17611, 17569, 17587, 17555, 17491, 17600] [0, 0, 0, 0, 0, 0, 0, 0] [43, 36, 38, 34, 38, 43, 40, 44]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2080/3125 episodes, total num timesteps 6659200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17614, 17570, 17651, 17610, 17622, 17593, 17530, 17633] [0, 0, 0, 0, 0, 0, 0, 0] [37, 41, 40, 41, 35, 38, 39, 33]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2085/3125 episodes, total num timesteps 6675200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17653, 17611, 17686, 17645, 17662, 17635, 17570, 17679] [0, 0, 0, 0, 0, 0, 0, 0] [39, 41, 35, 35, 40, 42, 40, 46]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2090/3125 episodes, total num timesteps 6691200/1e7, FPS 411.
+
+incre win rate is 0.0030581039755351682.
+[0, 0, 0, 0, 0, 0, 1, 0] [17697, 17651, 17728, 17686, 17703, 17670, 17611, 17722] [0, 0, 0, 0, 0, 0, 1, 0] [44, 40, 42, 41, 41, 35, 41, 43]
+eval win rate is 0.5.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2095/3125 episodes, total num timesteps 6707200/1e7, FPS 411.
+
+incre win rate is -0.0029411764705882353.
+[0, 0, 0, 0, 0, 0, 0, 0] [17738, 17693, 17770, 17730, 17746, 17712, 17655, 17764] [0, 0, 0, 0, 0, 0, -1, 0] [41, 42, 42, 44, 43, 42, 44, 42]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2100/3125 episodes, total num timesteps 6723200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17767, 17729, 17808, 17760, 17791, 17751, 17697, 17809] [0, 0, 0, 0, 0, 0, 0, 0] [29, 36, 38, 30, 45, 39, 42, 45]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2105/3125 episodes, total num timesteps 6739200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17814, 17769, 17851, 17806, 17834, 17787, 17737, 17850] [0, 0, 0, 0, 0, 0, 0, 0] [47, 40, 43, 46, 43, 36, 40, 41]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2110/3125 episodes, total num timesteps 6755200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17858, 17813, 17892, 17845, 17873, 17830, 17777, 17892] [0, 0, 0, 0, 0, 0, 0, 0] [44, 44, 41, 39, 39, 43, 40, 42]
+eval win rate is 0.36363636363636365.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2115/3125 episodes, total num timesteps 6771200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17902, 17856, 17928, 17890, 17913, 17873, 17816, 17934] [0, 0, 0, 0, 0, 0, 0, 0] [44, 43, 36, 45, 40, 43, 39, 42]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2120/3125 episodes, total num timesteps 6787200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [17944, 17898, 17965, 17929, 17954, 17917, 17856, 17976] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 37, 39, 41, 44, 40, 42]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2125/3125 episodes, total num timesteps 6803200/1e7, FPS 410.
+
+incre win rate is 0.0031847133757961785.
+[0, 0, 0, 0, 0, 1, 0, 0] [17984, 17938, 18009, 17966, 17990, 17958, 17895, 18013] [0, 0, 0, 0, 0, 1, 0, 0] [40, 40, 44, 37, 36, 41, 39, 37]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2130/3125 episodes, total num timesteps 6819200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[1, 0, 0, 0, 0, 0, 0, 0] [18027, 17978, 18052, 18009, 18034, 18000, 17936, 18055] [1, 0, 0, 0, 0, -1, 0, 0] [43, 40, 43, 43, 44, 42, 41, 42]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2135/3125 episodes, total num timesteps 6835200/1e7, FPS 410.
+
+incre win rate is -0.003215434083601286.
+[0, 0, 0, 0, 0, 0, 0, 0] [18065, 18018, 18093, 18045, 18071, 18038, 17975, 18097] [-1, 0, 0, 0, 0, 0, 0, 0] [38, 40, 41, 36, 37, 38, 39, 42]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2140/3125 episodes, total num timesteps 6851200/1e7, FPS 410.
+
+incre win rate is 0.003067484662576687.
+[0, 0, 1, 0, 0, 0, 0, 0] [18103, 18060, 18137, 18088, 18117, 18076, 18011, 18136] [0, 0, 1, 0, 0, 0, 0, 0] [38, 42, 44, 43, 46, 38, 36, 39]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2145/3125 episodes, total num timesteps 6867200/1e7, FPS 410.
+
+incre win rate is -0.0029585798816568047.
+[0, 0, 0, 0, 0, 0, 0, 0] [18142, 18101, 18177, 18132, 18161, 18120, 18056, 18177] [0, 0, -1, 0, 0, 0, 0, 0] [39, 41, 40, 44, 44, 44, 45, 41]
+eval win rate is 0.5263157894736842.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2150/3125 episodes, total num timesteps 6883200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18183, 18142, 18221, 18177, 18202, 18160, 18100, 18221] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 44, 45, 41, 40, 44, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2155/3125 episodes, total num timesteps 6899200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18228, 18190, 18264, 18219, 18246, 18201, 18143, 18264] [0, 0, 0, 0, 0, 0, 0, 0] [45, 48, 43, 42, 44, 41, 43, 43]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2160/3125 episodes, total num timesteps 6915200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18268, 18231, 18306, 18259, 18290, 18231, 18188, 18311] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 42, 40, 44, 30, 45, 47]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2165/3125 episodes, total num timesteps 6931200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18307, 18275, 18346, 18296, 18332, 18275, 18235, 18354] [0, 0, 0, 0, 0, 0, 0, 0] [39, 44, 40, 37, 42, 44, 47, 43]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2170/3125 episodes, total num timesteps 6947200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18349, 18318, 18388, 18339, 18369, 18318, 18278, 18398] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 42, 43, 37, 43, 43, 44]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2175/3125 episodes, total num timesteps 6963200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18393, 18363, 18423, 18381, 18406, 18359, 18323, 18437] [0, 0, 0, 0, 0, 0, 0, 0] [44, 45, 35, 42, 37, 41, 45, 39]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2180/3125 episodes, total num timesteps 6979200/1e7, FPS 411.
+
+incre win rate is 0.0030120481927710845.
+[0, 1, 0, 0, 0, 0, 0, 0] [18434, 18400, 18462, 18424, 18452, 18400, 18368, 18477] [0, 1, 0, 0, 0, 0, 0, 0] [41, 37, 39, 43, 46, 41, 45, 40]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2185/3125 episodes, total num timesteps 6995200/1e7, FPS 411.
+
+incre win rate is -0.0031746031746031746.
+[0, 0, 0, 0, 0, 0, 0, 0] [18475, 18439, 18498, 18468, 18490, 18439, 18407, 18516] [0, -1, 0, 0, 0, 0, 0, 0] [41, 39, 36, 44, 38, 39, 39, 39]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2190/3125 episodes, total num timesteps 7011200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18520, 18482, 18537, 18504, 18532, 18484, 18449, 18560] [0, 0, 0, 0, 0, 0, 0, 0] [45, 43, 39, 36, 42, 45, 42, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2195/3125 episodes, total num timesteps 7027200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18565, 18523, 18571, 18545, 18573, 18529, 18491, 18594] [0, 0, 0, 0, 0, 0, 0, 0] [45, 41, 34, 41, 41, 45, 42, 34]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2200/3125 episodes, total num timesteps 7043200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18609, 18569, 18616, 18590, 18611, 18574, 18528, 18635] [0, 0, 0, 0, 0, 0, 0, 0] [44, 46, 45, 45, 38, 45, 37, 41]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2205/3125 episodes, total num timesteps 7059200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18652, 18618, 18656, 18634, 18656, 18614, 18566, 18679] [0, 0, 0, 0, 0, 0, 0, 0] [43, 49, 40, 44, 45, 40, 38, 44]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2210/3125 episodes, total num timesteps 7075200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18696, 18657, 18701, 18677, 18698, 18658, 18612, 18720] [0, 0, 0, 0, 0, 0, 0, 0] [44, 39, 45, 43, 42, 44, 46, 41]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2215/3125 episodes, total num timesteps 7091200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18738, 18699, 18743, 18719, 18737, 18702, 18650, 18760] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 42, 42, 39, 44, 38, 40]
+eval win rate is 0.42424242424242425.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2220/3125 episodes, total num timesteps 7107200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18784, 18740, 18785, 18763, 18781, 18742, 18694, 18802] [0, 0, 0, 0, 0, 0, 0, 0] [46, 41, 42, 44, 44, 40, 44, 42]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2225/3125 episodes, total num timesteps 7123200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18831, 18785, 18828, 18810, 18825, 18785, 18734, 18842] [0, 0, 0, 0, 0, 0, 0, 0] [47, 45, 43, 47, 44, 43, 40, 40]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2230/3125 episodes, total num timesteps 7139200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18876, 18823, 18876, 18852, 18871, 18826, 18775, 18888] [0, 0, 0, 0, 0, 0, 0, 0] [45, 38, 48, 42, 46, 41, 41, 46]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2235/3125 episodes, total num timesteps 7155200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18914, 18866, 18916, 18892, 18914, 18868, 18812, 18929] [0, 0, 0, 0, 0, 0, 0, 0] [38, 43, 40, 40, 43, 42, 37, 41]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2240/3125 episodes, total num timesteps 7171200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18950, 18909, 18965, 18929, 18955, 18909, 18855, 18972] [0, 0, 0, 0, 0, 0, 0, 0] [36, 43, 49, 37, 41, 41, 43, 43]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2245/3125 episodes, total num timesteps 7187200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [18995, 18953, 19007, 18969, 18999, 18952, 18893, 19012] [0, 0, 0, 0, 0, 0, 0, 0] [45, 44, 42, 40, 44, 43, 38, 40]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2250/3125 episodes, total num timesteps 7203200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19028, 18995, 19050, 19010, 19038, 18994, 18933, 19055] [0, 0, 0, 0, 0, 0, 0, 0] [33, 42, 43, 41, 39, 42, 40, 43]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2255/3125 episodes, total num timesteps 7219200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19068, 19036, 19094, 19051, 19075, 19031, 18970, 19095] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 44, 41, 37, 37, 37, 40]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2260/3125 episodes, total num timesteps 7235200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19106, 19080, 19134, 19090, 19118, 19067, 19009, 19132] [0, 0, 0, 0, 0, 0, 0, 0] [38, 44, 40, 39, 43, 36, 39, 37]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2265/3125 episodes, total num timesteps 7251200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19145, 19123, 19179, 19127, 19161, 19104, 19052, 19171] [0, 0, 0, 0, 0, 0, 0, 0] [39, 43, 45, 37, 43, 37, 43, 39]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2270/3125 episodes, total num timesteps 7267200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19186, 19166, 19220, 19165, 19203, 19149, 19094, 19207] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 41, 38, 42, 45, 42, 36]
+eval win rate is 0.5405405405405406.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2275/3125 episodes, total num timesteps 7283200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19223, 19209, 19260, 19202, 19245, 19189, 19132, 19245] [0, 0, 0, 0, 0, 0, 0, 0] [37, 43, 40, 37, 42, 40, 38, 38]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2280/3125 episodes, total num timesteps 7299200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19265, 19252, 19302, 19246, 19287, 19228, 19173, 19289] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 42, 44, 42, 39, 41, 44]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2285/3125 episodes, total num timesteps 7315200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19305, 19297, 19344, 19286, 19329, 19270, 19214, 19330] [0, 0, 0, 0, 0, 0, 0, 0] [40, 45, 42, 40, 42, 42, 41, 41]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2290/3125 episodes, total num timesteps 7331200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19345, 19337, 19386, 19332, 19370, 19309, 19253, 19373] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 42, 46, 41, 39, 39, 43]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2295/3125 episodes, total num timesteps 7347200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19384, 19379, 19429, 19371, 19409, 19347, 19299, 19415] [0, 0, 0, 0, 0, 0, 0, 0] [39, 42, 43, 39, 39, 38, 46, 42]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2300/3125 episodes, total num timesteps 7363200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19426, 19419, 19472, 19411, 19452, 19391, 19342, 19456] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 43, 40, 43, 44, 43, 41]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2305/3125 episodes, total num timesteps 7379200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19468, 19460, 19513, 19452, 19491, 19433, 19387, 19499] [0, 0, 0, 0, 0, 0, 0, 0] [42, 41, 41, 41, 39, 42, 45, 43]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2310/3125 episodes, total num timesteps 7395200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19509, 19504, 19554, 19495, 19536, 19475, 19432, 19545] [0, 0, 0, 0, 0, 0, 0, 0] [41, 44, 41, 43, 45, 42, 45, 46]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2315/3125 episodes, total num timesteps 7411200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19548, 19543, 19594, 19539, 19578, 19521, 19476, 19587] [0, 0, 0, 0, 0, 0, 0, 0] [39, 39, 40, 44, 42, 46, 44, 42]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2320/3125 episodes, total num timesteps 7427200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19589, 19584, 19639, 19577, 19613, 19564, 19520, 19630] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 45, 38, 35, 43, 44, 43]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2325/3125 episodes, total num timesteps 7443200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19636, 19626, 19682, 19623, 19654, 19605, 19565, 19668] [0, 0, 0, 0, 0, 0, 0, 0] [47, 42, 43, 46, 41, 41, 45, 38]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2330/3125 episodes, total num timesteps 7459200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19675, 19668, 19718, 19667, 19689, 19647, 19610, 19709] [0, 0, 0, 0, 0, 0, 0, 0] [39, 42, 36, 44, 35, 42, 45, 41]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2335/3125 episodes, total num timesteps 7475200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19721, 19708, 19758, 19708, 19731, 19687, 19645, 19754] [0, 0, 0, 0, 0, 0, 0, 0] [46, 40, 40, 41, 42, 40, 35, 45]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2340/3125 episodes, total num timesteps 7491200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19761, 19748, 19798, 19742, 19762, 19725, 19688, 19797] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 40, 34, 31, 38, 43, 43]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2345/3125 episodes, total num timesteps 7507200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19805, 19792, 19839, 19781, 19802, 19763, 19730, 19837] [0, 0, 0, 0, 0, 0, 0, 0] [44, 44, 41, 39, 40, 38, 42, 40]
+eval win rate is 0.7352941176470589.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2350/3125 episodes, total num timesteps 7523200/1e7, FPS 411.
+
+incre win rate is 0.0029850746268656717.
+[0, 0, 0, 0, 1, 0, 0, 0] [19849, 19835, 19877, 19827, 19841, 19805, 19769, 19881] [0, 0, 0, 0, 1, 0, 0, 0] [44, 43, 38, 46, 39, 42, 39, 44]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2355/3125 episodes, total num timesteps 7539200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 1] [19886, 19880, 19919, 19866, 19882, 19848, 19812, 19919] [0, 0, 0, 0, -1, 0, 0, 1] [37, 45, 42, 39, 41, 43, 43, 38]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2360/3125 episodes, total num timesteps 7555200/1e7, FPS 411.
+
+incre win rate is -0.003125.
+[0, 0, 0, 0, 0, 0, 0, 0] [19927, 19918, 19961, 19909, 19917, 19891, 19850, 19959] [0, 0, 0, 0, 0, 0, 0, -1] [41, 38, 42, 43, 35, 43, 38, 40]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2365/3125 episodes, total num timesteps 7571200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [19962, 19954, 20006, 19949, 19957, 19935, 19893, 19999] [0, 0, 0, 0, 0, 0, 0, 0] [35, 36, 45, 40, 40, 44, 43, 40]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2370/3125 episodes, total num timesteps 7587200/1e7, FPS 411.
+
+incre win rate is 0.0029940119760479044.
+[1, 0, 0, 0, 0, 0, 0, 0] [20009, 19994, 20049, 19992, 19997, 19979, 19930, 20039] [1, 0, 0, 0, 0, 0, 0, 0] [47, 40, 43, 43, 40, 44, 37, 40]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2375/3125 episodes, total num timesteps 7603200/1e7, FPS 411.
+
+incre win rate is -0.0029411764705882353.
+[0, 0, 0, 0, 0, 0, 0, 0] [20051, 20037, 20089, 20031, 20042, 20025, 19972, 20082] [-1, 0, 0, 0, 0, 0, 0, 0] [42, 43, 40, 39, 45, 46, 42, 43]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2380/3125 episodes, total num timesteps 7619200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20091, 20076, 20136, 20071, 20079, 20067, 20015, 20122] [0, 0, 0, 0, 0, 0, 0, 0] [40, 39, 47, 40, 37, 42, 43, 40]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2385/3125 episodes, total num timesteps 7635200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20131, 20120, 20171, 20117, 20122, 20113, 20061, 20159] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 35, 46, 43, 46, 46, 37]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2390/3125 episodes, total num timesteps 7651200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20170, 20164, 20217, 20158, 20160, 20151, 20095, 20195] [0, 0, 0, 0, 0, 0, 0, 0] [39, 44, 46, 41, 38, 38, 34, 36]
+eval win rate is 0.4117647058823529.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2395/3125 episodes, total num timesteps 7667200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20210, 20206, 20256, 20201, 20206, 20198, 20133, 20234] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 39, 43, 46, 47, 38, 39]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2400/3125 episodes, total num timesteps 7683200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20254, 20245, 20301, 20238, 20245, 20237, 20176, 20278] [0, 0, 0, 0, 0, 0, 0, 0] [44, 39, 45, 37, 39, 39, 43, 44]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2405/3125 episodes, total num timesteps 7699200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20297, 20287, 20342, 20284, 20286, 20280, 20215, 20322] [0, 0, 0, 0, 0, 0, 0, 0] [43, 42, 41, 46, 41, 43, 39, 44]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2410/3125 episodes, total num timesteps 7715200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20338, 20330, 20381, 20330, 20327, 20325, 20258, 20365] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 39, 46, 41, 45, 43, 43]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2415/3125 episodes, total num timesteps 7731200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20386, 20370, 20421, 20370, 20368, 20367, 20301, 20402] [0, 0, 0, 0, 0, 0, 0, 0] [48, 40, 40, 40, 41, 42, 43, 37]
+eval win rate is 0.7647058823529411.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2420/3125 episodes, total num timesteps 7747200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20424, 20419, 20465, 20414, 20409, 20407, 20344, 20440] [0, 0, 0, 0, 0, 0, 0, 0] [38, 49, 44, 44, 41, 40, 43, 38]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2425/3125 episodes, total num timesteps 7763200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20466, 20461, 20509, 20448, 20445, 20451, 20385, 20485] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 44, 34, 36, 44, 41, 45]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2430/3125 episodes, total num timesteps 7779200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20510, 20501, 20548, 20491, 20477, 20489, 20422, 20527] [0, 0, 0, 0, 0, 0, 0, 0] [44, 40, 39, 43, 32, 38, 37, 42]
+eval win rate is 0.6.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2435/3125 episodes, total num timesteps 7795200/1e7, FPS 410.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20553, 20543, 20586, 20530, 20515, 20528, 20461, 20570] [0, 0, 0, 0, 0, 0, 0, 0] [43, 42, 38, 39, 38, 39, 39, 43]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2440/3125 episodes, total num timesteps 7811200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20593, 20583, 20623, 20573, 20558, 20574, 20505, 20610] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 37, 43, 43, 46, 44, 40]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2445/3125 episodes, total num timesteps 7827200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20637, 20627, 20669, 20618, 20604, 20614, 20545, 20650] [0, 0, 0, 0, 0, 0, 0, 0] [44, 44, 46, 45, 46, 40, 40, 40]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2450/3125 episodes, total num timesteps 7843200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20672, 20669, 20711, 20663, 20644, 20648, 20592, 20695] [0, 0, 0, 0, 0, 0, 0, 0] [35, 42, 42, 45, 40, 34, 47, 45]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2455/3125 episodes, total num timesteps 7859200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20716, 20706, 20756, 20705, 20685, 20689, 20635, 20733] [0, 0, 0, 0, 0, 0, 0, 0] [44, 37, 45, 42, 41, 41, 43, 38]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2460/3125 episodes, total num timesteps 7875200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20759, 20747, 20803, 20748, 20722, 20735, 20679, 20774] [0, 0, 0, 0, 0, 0, 0, 0] [43, 41, 47, 43, 37, 46, 44, 41]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2465/3125 episodes, total num timesteps 7891200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20800, 20790, 20843, 20789, 20759, 20776, 20721, 20818] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 40, 41, 37, 41, 42, 44]
+eval win rate is 0.6.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2470/3125 episodes, total num timesteps 7907200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20841, 20838, 20886, 20824, 20806, 20817, 20761, 20863] [0, 0, 0, 0, 0, 0, 0, 0] [41, 48, 43, 35, 47, 41, 40, 45]
+eval win rate is 0.5294117647058824.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2475/3125 episodes, total num timesteps 7923200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20887, 20874, 20925, 20862, 20849, 20856, 20803, 20908] [0, 0, 0, 0, 0, 0, 0, 0] [46, 36, 39, 38, 43, 39, 42, 45]
+eval win rate is 0.7647058823529411.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2480/3125 episodes, total num timesteps 7939200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [20932, 20917, 20966, 20903, 20892, 20897, 20839, 20953] [0, 0, 0, 0, 0, 0, 0, 0] [45, 43, 41, 41, 43, 41, 36, 45]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2485/3125 episodes, total num timesteps 7955200/1e7, FPS 411.
+
+incre win rate is 0.0030864197530864196.
+[0, 0, 0, 0, 0, 0, 0, 1] [20968, 20961, 21008, 20946, 20933, 20937, 20878, 20992] [0, 0, 0, 0, 0, 0, 0, 1] [36, 44, 42, 43, 41, 40, 39, 39]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2490/3125 episodes, total num timesteps 7971200/1e7, FPS 411.
+
+incre win rate is -0.0029940119760479044.
+[0, 0, 0, 0, 0, 0, 0, 0] [21010, 21006, 21051, 20986, 20973, 20977, 20920, 21034] [0, 0, 0, 0, 0, 0, 0, -1] [42, 45, 43, 40, 40, 40, 42, 42]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2495/3125 episodes, total num timesteps 7987200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21048, 21050, 21098, 21028, 21016, 21018, 20964, 21079] [0, 0, 0, 0, 0, 0, 0, 0] [38, 44, 47, 42, 43, 41, 44, 45]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2500/3125 episodes, total num timesteps 8003200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21083, 21088, 21139, 21070, 21055, 21061, 21005, 21120] [0, 0, 0, 0, 0, 0, 0, 0] [35, 38, 41, 42, 39, 43, 41, 41]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2505/3125 episodes, total num timesteps 8019200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21123, 21129, 21180, 21112, 21100, 21102, 21044, 21165] [0, 0, 0, 0, 0, 0, 0, 0] [40, 41, 41, 42, 45, 41, 39, 45]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2510/3125 episodes, total num timesteps 8035200/1e7, FPS 411.
+
+incre win rate is 0.00303951367781155.
+[0, 0, 0, 1, 0, 0, 0, 0] [21164, 21171, 21221, 21148, 21143, 21144, 21089, 21204] [0, 0, 0, 1, 0, 0, 0, 0] [41, 42, 41, 36, 43, 42, 45, 39]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2515/3125 episodes, total num timesteps 8051200/1e7, FPS 411.
+
+incre win rate is -0.0030864197530864196.
+[0, 0, 0, 0, 0, 0, 0, 0] [21211, 21213, 21259, 21193, 21185, 21178, 21127, 21242] [0, 0, 0, -1, 0, 0, 0, 0] [47, 42, 38, 45, 42, 34, 38, 38]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2520/3125 episodes, total num timesteps 8067200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21253, 21251, 21294, 21230, 21230, 21223, 21168, 21283] [0, 0, 0, 0, 0, 0, 0, 0] [42, 38, 35, 37, 45, 45, 41, 41]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2525/3125 episodes, total num timesteps 8083200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21294, 21289, 21331, 21270, 21270, 21266, 21213, 21328] [0, 0, 0, 0, 0, 0, 0, 0] [41, 38, 37, 40, 40, 43, 45, 45]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2530/3125 episodes, total num timesteps 8099200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21336, 21331, 21373, 21314, 21306, 21303, 21252, 21375] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 42, 44, 36, 37, 39, 47]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2535/3125 episodes, total num timesteps 8115200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21374, 21376, 21415, 21354, 21345, 21339, 21294, 21415] [0, 0, 0, 0, 0, 0, 0, 0] [38, 45, 42, 40, 39, 36, 42, 40]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2540/3125 episodes, total num timesteps 8131200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21418, 21419, 21455, 21401, 21389, 21385, 21333, 21456] [0, 0, 0, 0, 0, 0, 0, 0] [44, 43, 40, 47, 44, 46, 39, 41]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2545/3125 episodes, total num timesteps 8147200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21459, 21464, 21499, 21444, 21435, 21427, 21373, 21501] [0, 0, 0, 0, 0, 0, 0, 0] [41, 45, 44, 43, 46, 42, 40, 45]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2550/3125 episodes, total num timesteps 8163200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21500, 21507, 21545, 21483, 21476, 21469, 21418, 21547] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 46, 39, 41, 42, 45, 46]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2555/3125 episodes, total num timesteps 8179200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21541, 21544, 21584, 21527, 21515, 21513, 21462, 21592] [0, 0, 0, 0, 0, 0, 0, 0] [41, 37, 39, 44, 39, 44, 44, 45]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2560/3125 episodes, total num timesteps 8195200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21584, 21584, 21623, 21572, 21554, 21550, 21506, 21630] [0, 0, 0, 0, 0, 0, 0, 0] [43, 40, 39, 45, 39, 37, 44, 38]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2565/3125 episodes, total num timesteps 8211200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21630, 21626, 21665, 21616, 21593, 21591, 21547, 21673] [0, 0, 0, 0, 0, 0, 0, 0] [46, 42, 42, 44, 39, 41, 41, 43]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2570/3125 episodes, total num timesteps 8227200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21674, 21668, 21712, 21655, 21634, 21636, 21593, 21711] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 47, 39, 41, 45, 46, 38]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2575/3125 episodes, total num timesteps 8243200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21714, 21713, 21758, 21697, 21676, 21679, 21634, 21749] [0, 0, 0, 0, 0, 0, 0, 0] [40, 45, 46, 42, 42, 43, 41, 38]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2580/3125 episodes, total num timesteps 8259200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21757, 21756, 21796, 21736, 21721, 21721, 21679, 21788] [0, 0, 0, 0, 0, 0, 0, 0] [43, 43, 38, 39, 45, 42, 45, 39]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2585/3125 episodes, total num timesteps 8275200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21797, 21798, 21838, 21776, 21759, 21765, 21715, 21830] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 42, 40, 38, 44, 36, 42]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2590/3125 episodes, total num timesteps 8291200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21842, 21839, 21878, 21817, 21801, 21808, 21755, 21876] [0, 0, 0, 0, 0, 0, 0, 0] [45, 41, 40, 41, 42, 43, 40, 46]
+eval win rate is 0.45454545454545453.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2595/3125 episodes, total num timesteps 8307200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21882, 21882, 21913, 21855, 21845, 21850, 21793, 21919] [0, 0, 0, 0, 0, 0, 0, 0] [40, 43, 35, 38, 44, 42, 38, 43]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2600/3125 episodes, total num timesteps 8323200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [21924, 21924, 21951, 21893, 21887, 21894, 21829, 21964] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 38, 38, 42, 44, 36, 45]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2605/3125 episodes, total num timesteps 8339200/1e7, FPS 411.
+
+incre win rate is 0.003076923076923077.
+[0, 0, 0, 0, 1, 0, 0, 0] [21962, 21967, 21988, 21932, 21932, 21941, 21865, 22004] [0, 0, 0, 0, 1, 0, 0, 0] [38, 43, 37, 39, 45, 47, 36, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2610/3125 episodes, total num timesteps 8355200/1e7, FPS 411.
+
+incre win rate is -0.003115264797507788.
+[0, 0, 0, 0, 0, 0, 0, 0] [21999, 22008, 22033, 21976, 21974, 21982, 21901, 22039] [0, 0, 0, 0, -1, 0, 0, 0] [37, 41, 45, 44, 42, 41, 36, 35]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2615/3125 episodes, total num timesteps 8371200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22034, 22056, 22073, 22020, 22009, 22019, 21944, 22079] [0, 0, 0, 0, 0, 0, 0, 0] [35, 48, 40, 44, 35, 37, 43, 40]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2620/3125 episodes, total num timesteps 8387200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22072, 22098, 22113, 22067, 22052, 22061, 21990, 22113] [0, 0, 0, 0, 0, 0, 0, 0] [38, 42, 40, 47, 43, 42, 46, 34]
+eval win rate is 0.8181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2625/3125 episodes, total num timesteps 8403200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22116, 22141, 22156, 22104, 22095, 22105, 22028, 22155] [0, 0, 0, 0, 0, 0, 0, 0] [44, 43, 43, 37, 43, 44, 38, 42]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2630/3125 episodes, total num timesteps 8419200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22158, 22181, 22198, 22145, 22138, 22147, 22071, 22197] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 42, 41, 43, 42, 43, 42]
+eval win rate is 0.6470588235294118.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2635/3125 episodes, total num timesteps 8435200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22199, 22219, 22241, 22186, 22176, 22186, 22112, 22239] [0, 0, 0, 0, 0, 0, 0, 0] [41, 38, 43, 41, 38, 39, 41, 42]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2640/3125 episodes, total num timesteps 8451200/1e7, FPS 411.
+
+incre win rate is 0.003115264797507788.
+[0, 1, 0, 0, 0, 0, 0, 0] [22237, 22262, 22282, 22224, 22220, 22222, 22151, 22281] [0, 1, 0, 0, 0, 0, 0, 0] [38, 43, 41, 38, 44, 36, 39, 42]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2645/3125 episodes, total num timesteps 8467200/1e7, FPS 411.
+
+incre win rate is -0.003105590062111801.
+[0, 0, 0, 0, 0, 0, 0, 0] [22278, 22308, 22324, 22265, 22256, 22263, 22187, 22320] [0, -1, 0, 0, 0, 0, 0, 0] [41, 46, 42, 41, 36, 41, 36, 39]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2650/3125 episodes, total num timesteps 8483200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22319, 22346, 22362, 22303, 22302, 22300, 22229, 22357] [0, 0, 0, 0, 0, 0, 0, 0] [41, 38, 38, 38, 46, 37, 42, 37]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2655/3125 episodes, total num timesteps 8499200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22360, 22388, 22410, 22342, 22345, 22342, 22269, 22399] [0, 0, 0, 0, 0, 0, 0, 0] [41, 42, 48, 39, 43, 42, 40, 42]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2660/3125 episodes, total num timesteps 8515200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22402, 22431, 22454, 22382, 22384, 22385, 22308, 22442] [0, 0, 0, 0, 0, 0, 0, 0] [42, 43, 44, 40, 39, 43, 39, 43]
+eval win rate is 0.7878787878787878.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2665/3125 episodes, total num timesteps 8531200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22447, 22473, 22494, 22419, 22424, 22422, 22352, 22485] [0, 0, 0, 0, 0, 0, 0, 0] [45, 42, 40, 37, 40, 37, 44, 43]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2670/3125 episodes, total num timesteps 8547200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22483, 22517, 22538, 22457, 22465, 22459, 22393, 22524] [0, 0, 0, 0, 0, 0, 0, 0] [36, 44, 44, 38, 41, 37, 41, 39]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2675/3125 episodes, total num timesteps 8563200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22526, 22555, 22580, 22497, 22505, 22500, 22433, 22562] [0, 0, 0, 0, 0, 0, 0, 0] [43, 38, 42, 40, 40, 41, 40, 38]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2680/3125 episodes, total num timesteps 8579200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22566, 22594, 22621, 22542, 22542, 22545, 22478, 22604] [0, 0, 0, 0, 0, 0, 0, 0] [40, 39, 41, 45, 37, 45, 45, 42]
+eval win rate is 0.5294117647058824.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2685/3125 episodes, total num timesteps 8595200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22607, 22640, 22664, 22586, 22581, 22590, 22518, 22642] [0, 0, 0, 0, 0, 0, 0, 0] [41, 46, 43, 44, 39, 45, 40, 38]
+eval win rate is 0.7352941176470589.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2690/3125 episodes, total num timesteps 8611200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22649, 22679, 22706, 22631, 22624, 22634, 22562, 22687] [0, 0, 0, 0, 0, 0, 0, 0] [42, 39, 42, 45, 43, 44, 44, 45]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2695/3125 episodes, total num timesteps 8627200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22689, 22721, 22748, 22673, 22664, 22673, 22604, 22725] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 42, 42, 40, 39, 42, 38]
+eval win rate is 0.8181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2700/3125 episodes, total num timesteps 8643200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22723, 22761, 22791, 22716, 22708, 22716, 22646, 22768] [0, 0, 0, 0, 0, 0, 0, 0] [34, 40, 43, 43, 44, 43, 42, 43]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2705/3125 episodes, total num timesteps 8659200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22765, 22803, 22832, 22757, 22746, 22754, 22689, 22807] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 41, 41, 38, 38, 43, 39]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2710/3125 episodes, total num timesteps 8675200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22810, 22846, 22873, 22800, 22788, 22792, 22734, 22851] [0, 0, 0, 0, 0, 0, 0, 0] [45, 43, 41, 43, 42, 38, 45, 44]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2715/3125 episodes, total num timesteps 8691200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22850, 22886, 22916, 22837, 22832, 22829, 22779, 22898] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 43, 37, 44, 37, 45, 47]
+eval win rate is 0.5833333333333334.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2720/3125 episodes, total num timesteps 8707200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22896, 22925, 22960, 22878, 22874, 22870, 22820, 22942] [0, 0, 0, 0, 0, 0, 0, 0] [46, 39, 44, 41, 42, 41, 41, 44]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2725/3125 episodes, total num timesteps 8723200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22936, 22967, 22995, 22922, 22912, 22910, 22856, 22980] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 35, 44, 38, 40, 36, 38]
+eval win rate is 0.5.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2730/3125 episodes, total num timesteps 8739200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [22975, 23007, 23040, 22962, 22952, 22950, 22899, 23024] [0, 0, 0, 0, 0, 0, 0, 0] [39, 40, 45, 40, 40, 40, 43, 44]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2735/3125 episodes, total num timesteps 8755200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23011, 23045, 23081, 23000, 22995, 22990, 22939, 23065] [0, 0, 0, 0, 0, 0, 0, 0] [36, 38, 41, 38, 43, 40, 40, 41]
+eval win rate is 0.6857142857142857.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2740/3125 episodes, total num timesteps 8771200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23056, 23091, 23122, 23043, 23031, 23033, 22984, 23106] [0, 0, 0, 0, 0, 0, 0, 0] [45, 46, 41, 43, 36, 43, 45, 41]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2745/3125 episodes, total num timesteps 8787200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23094, 23137, 23164, 23080, 23071, 23079, 23021, 23151] [0, 0, 0, 0, 0, 0, 0, 0] [38, 46, 42, 37, 40, 46, 37, 45]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2750/3125 episodes, total num timesteps 8803200/1e7, FPS 412.
+
+incre win rate is 0.00303951367781155.
+[0, 0, 1, 0, 0, 0, 0, 0] [23136, 23179, 23206, 23121, 23116, 23116, 23064, 23188] [0, 0, 1, 0, 0, 0, 0, 0] [42, 42, 42, 41, 45, 37, 43, 37]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2755/3125 episodes, total num timesteps 8819200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 1, 0, 0, 0] [23177, 23220, 23248, 23156, 23160, 23154, 23107, 23232] [0, 0, -1, 0, 1, 0, 0, 0] [41, 41, 42, 35, 44, 38, 43, 44]
+eval win rate is 0.5428571428571428.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2760/3125 episodes, total num timesteps 8835200/1e7, FPS 411.
+
+incre win rate is -0.0030303030303030303.
+[0, 0, 0, 0, 0, 0, 0, 0] [23219, 23266, 23287, 23195, 23202, 23198, 23149, 23268] [0, 0, 0, 0, -1, 0, 0, 0] [42, 46, 39, 39, 42, 44, 42, 36]
+eval win rate is 0.6285714285714286.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2765/3125 episodes, total num timesteps 8851200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23258, 23308, 23330, 23234, 23244, 23238, 23192, 23314] [0, 0, 0, 0, 0, 0, 0, 0] [39, 42, 43, 39, 42, 40, 43, 46]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2770/3125 episodes, total num timesteps 8867200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23300, 23347, 23371, 23272, 23284, 23277, 23234, 23358] [0, 0, 0, 0, 0, 0, 0, 0] [42, 39, 41, 38, 40, 39, 42, 44]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2775/3125 episodes, total num timesteps 8883200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23339, 23391, 23415, 23312, 23324, 23322, 23273, 23399] [0, 0, 0, 0, 0, 0, 0, 0] [39, 44, 44, 40, 40, 45, 39, 41]
+eval win rate is 0.6857142857142857.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2780/3125 episodes, total num timesteps 8899200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23381, 23430, 23459, 23354, 23367, 23366, 23311, 23437] [0, 0, 0, 0, 0, 0, 0, 0] [42, 39, 44, 42, 43, 44, 38, 38]
+eval win rate is 0.6.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2785/3125 episodes, total num timesteps 8915200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23428, 23473, 23500, 23393, 23410, 23404, 23352, 23482] [0, 0, 0, 0, 0, 0, 0, 0] [47, 43, 41, 39, 43, 38, 41, 45]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2790/3125 episodes, total num timesteps 8931200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23470, 23511, 23541, 23437, 23453, 23441, 23390, 23523] [0, 0, 0, 0, 0, 0, 0, 0] [42, 38, 41, 44, 43, 37, 38, 41]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2795/3125 episodes, total num timesteps 8947200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23512, 23555, 23583, 23482, 23495, 23484, 23429, 23564] [0, 0, 0, 0, 0, 0, 0, 0] [42, 44, 42, 45, 42, 43, 39, 41]
+eval win rate is 0.47058823529411764.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2800/3125 episodes, total num timesteps 8963200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23549, 23593, 23625, 23526, 23529, 23529, 23467, 23609] [0, 0, 0, 0, 0, 0, 0, 0] [37, 38, 42, 44, 34, 45, 38, 45]
+eval win rate is 0.8529411764705882.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2805/3125 episodes, total num timesteps 8979200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23590, 23636, 23665, 23566, 23574, 23571, 23506, 23646] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 40, 40, 45, 42, 39, 37]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2810/3125 episodes, total num timesteps 8995200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23629, 23681, 23705, 23608, 23614, 23612, 23548, 23683] [0, 0, 0, 0, 0, 0, 0, 0] [39, 45, 40, 42, 40, 41, 42, 37]
+eval win rate is 0.7878787878787878.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2815/3125 episodes, total num timesteps 9011200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23668, 23720, 23745, 23645, 23650, 23652, 23588, 23722] [0, 0, 0, 0, 0, 0, 0, 0] [39, 39, 40, 37, 36, 40, 40, 39]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2820/3125 episodes, total num timesteps 9027200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23707, 23763, 23786, 23683, 23690, 23694, 23627, 23764] [0, 0, 0, 0, 0, 0, 0, 0] [39, 43, 41, 38, 40, 42, 39, 42]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2825/3125 episodes, total num timesteps 9043200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23752, 23808, 23827, 23726, 23730, 23735, 23669, 23804] [0, 0, 0, 0, 0, 0, 0, 0] [45, 45, 41, 43, 40, 41, 42, 40]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2830/3125 episodes, total num timesteps 9059200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23786, 23852, 23867, 23764, 23769, 23775, 23709, 23847] [0, 0, 0, 0, 0, 0, 0, 0] [34, 44, 40, 38, 39, 40, 40, 43]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2835/3125 episodes, total num timesteps 9075200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23827, 23893, 23908, 23807, 23806, 23815, 23751, 23893] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 41, 43, 37, 40, 42, 46]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2840/3125 episodes, total num timesteps 9091200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23872, 23938, 23951, 23845, 23848, 23857, 23792, 23933] [0, 0, 0, 0, 0, 0, 0, 0] [45, 45, 43, 38, 42, 42, 41, 40]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2845/3125 episodes, total num timesteps 9107200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23910, 23979, 23991, 23885, 23886, 23894, 23834, 23973] [0, 0, 0, 0, 0, 0, 0, 0] [38, 41, 40, 40, 38, 37, 42, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2850/3125 episodes, total num timesteps 9123200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23954, 24021, 24035, 23926, 23929, 23936, 23867, 24014] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 44, 41, 43, 42, 33, 41]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2855/3125 episodes, total num timesteps 9139200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [23995, 24064, 24074, 23969, 23971, 23977, 23904, 24057] [0, 0, 0, 0, 0, 0, 0, 0] [41, 43, 39, 43, 42, 41, 37, 43]
+eval win rate is 0.48484848484848486.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2860/3125 episodes, total num timesteps 9155200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24033, 24106, 24118, 24007, 24014, 24021, 23945, 24102] [0, 0, 0, 0, 0, 0, 0, 0] [38, 42, 44, 38, 43, 44, 41, 45]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2865/3125 episodes, total num timesteps 9171200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24078, 24147, 24164, 24048, 24055, 24064, 23987, 24143] [0, 0, 0, 0, 0, 0, 0, 0] [45, 41, 46, 41, 41, 43, 42, 41]
+eval win rate is 0.7058823529411765.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2870/3125 episodes, total num timesteps 9187200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24122, 24193, 24200, 24089, 24099, 24103, 24033, 24183] [0, 0, 0, 0, 0, 0, 0, 0] [44, 46, 36, 41, 44, 39, 46, 40]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2875/3125 episodes, total num timesteps 9203200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24166, 24232, 24233, 24132, 24141, 24146, 24070, 24224] [0, 0, 0, 0, 0, 0, 0, 0] [44, 39, 33, 43, 42, 43, 37, 41]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2880/3125 episodes, total num timesteps 9219200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24207, 24273, 24272, 24175, 24184, 24186, 24110, 24263] [0, 0, 0, 0, 0, 0, 0, 0] [41, 41, 39, 43, 43, 40, 40, 39]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2885/3125 episodes, total num timesteps 9235200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24248, 24313, 24314, 24223, 24226, 24229, 24152, 24304] [0, 0, 0, 0, 0, 0, 0, 0] [41, 40, 42, 48, 42, 43, 42, 41]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2890/3125 episodes, total num timesteps 9251200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24287, 24352, 24358, 24265, 24267, 24262, 24193, 24346] [0, 0, 0, 0, 0, 0, 0, 0] [39, 39, 44, 42, 41, 33, 41, 42]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2895/3125 episodes, total num timesteps 9267200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24327, 24392, 24396, 24307, 24307, 24306, 24230, 24384] [0, 0, 0, 0, 0, 0, 0, 0] [40, 40, 38, 42, 40, 44, 37, 38]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2900/3125 episodes, total num timesteps 9283200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24365, 24431, 24439, 24351, 24343, 24349, 24265, 24420] [0, 0, 0, 0, 0, 0, 0, 0] [38, 39, 43, 44, 36, 43, 35, 36]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2905/3125 episodes, total num timesteps 9299200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24405, 24467, 24477, 24393, 24383, 24385, 24304, 24460] [0, 0, 0, 0, 0, 0, 0, 0] [40, 36, 38, 42, 40, 36, 39, 40]
+eval win rate is 0.6571428571428571.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2910/3125 episodes, total num timesteps 9315200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24443, 24513, 24516, 24436, 24422, 24426, 24344, 24500] [0, 0, 0, 0, 0, 0, 0, 0] [38, 46, 39, 43, 39, 41, 40, 40]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2915/3125 episodes, total num timesteps 9331200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24484, 24555, 24557, 24479, 24462, 24461, 24384, 24544] [0, 0, 0, 0, 0, 0, 0, 0] [41, 42, 41, 43, 40, 35, 40, 44]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2920/3125 episodes, total num timesteps 9347200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24521, 24592, 24596, 24520, 24504, 24504, 24425, 24586] [0, 0, 0, 0, 0, 0, 0, 0] [37, 37, 39, 41, 42, 43, 41, 42]
+eval win rate is 0.5151515151515151.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2925/3125 episodes, total num timesteps 9363200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24569, 24635, 24635, 24568, 24548, 24550, 24464, 24623] [0, 0, 0, 0, 0, 0, 0, 0] [48, 43, 39, 48, 44, 46, 39, 37]
+eval win rate is 0.6285714285714286.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2930/3125 episodes, total num timesteps 9379200/1e7, FPS 411.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24608, 24674, 24679, 24612, 24591, 24593, 24504, 24661] [0, 0, 0, 0, 0, 0, 0, 0] [39, 39, 44, 44, 43, 43, 40, 38]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2935/3125 episodes, total num timesteps 9395200/1e7, FPS 411.
+
+incre win rate is 0.0029498525073746312.
+[0, 0, 1, 0, 0, 0, 0, 0] [24655, 24716, 24721, 24655, 24633, 24638, 24542, 24701] [0, 0, 1, 0, 0, 0, 0, 0] [47, 42, 42, 43, 42, 45, 38, 40]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2940/3125 episodes, total num timesteps 9411200/1e7, FPS 411.
+
+incre win rate is -0.00303951367781155.
+[0, 0, 0, 0, 0, 0, 0, 0] [24694, 24760, 24764, 24694, 24674, 24679, 24584, 24741] [0, 0, -1, 0, 0, 0, 0, 0] [39, 44, 43, 39, 41, 41, 42, 40]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2945/3125 episodes, total num timesteps 9427200/1e7, FPS 411.
+
+incre win rate is 0.0030303030303030303.
+[0, 0, 0, 0, 0, 1, 0, 0] [24731, 24800, 24801, 24738, 24716, 24723, 24627, 24784] [0, 0, 0, 0, 0, 1, 0, 0] [37, 40, 37, 44, 42, 44, 43, 43]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2950/3125 episodes, total num timesteps 9443200/1e7, FPS 412.
+
+incre win rate is -0.002976190476190476.
+[0, 0, 0, 0, 0, 0, 0, 0] [24772, 24840, 24846, 24781, 24758, 24765, 24668, 24826] [0, 0, 0, 0, 0, -1, 0, 0] [41, 40, 45, 43, 42, 42, 41, 42]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2955/3125 episodes, total num timesteps 9459200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24812, 24879, 24887, 24818, 24797, 24807, 24708, 24870] [0, 0, 0, 0, 0, 0, 0, 0] [40, 39, 41, 37, 39, 42, 40, 44]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2960/3125 episodes, total num timesteps 9475200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24852, 24918, 24930, 24861, 24839, 24847, 24753, 24910] [0, 0, 0, 0, 0, 0, 0, 0] [40, 39, 43, 43, 42, 40, 45, 40]
+eval win rate is 0.7878787878787878.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2965/3125 episodes, total num timesteps 9491200/1e7, FPS 412.
+
+incre win rate is 0.0029850746268656717.
+[0, 1, 0, 0, 0, 0, 0, 0] [24895, 24962, 24968, 24900, 24879, 24893, 24795, 24953] [0, 1, 0, 0, 0, 0, 0, 0] [43, 44, 38, 39, 40, 46, 42, 43]
+eval win rate is 0.45714285714285713.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2970/3125 episodes, total num timesteps 9507200/1e7, FPS 412.
+
+incre win rate is -0.003105590062111801.
+[0, 0, 0, 0, 0, 0, 0, 0] [24930, 25004, 25006, 24940, 24921, 24933, 24838, 24995] [0, -1, 0, 0, 0, 0, 0, 0] [35, 42, 38, 40, 42, 40, 43, 42]
+eval win rate is 0.8484848484848485.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2975/3125 episodes, total num timesteps 9523200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [24972, 25046, 25048, 24979, 24967, 24977, 24880, 25036] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 42, 39, 46, 44, 42, 41]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2980/3125 episodes, total num timesteps 9539200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25012, 25088, 25082, 25020, 25010, 25016, 24918, 25076] [0, 0, 0, 0, 0, 0, 0, 0] [40, 42, 34, 41, 43, 39, 38, 40]
+eval win rate is 0.7647058823529411.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2985/3125 episodes, total num timesteps 9555200/1e7, FPS 412.
+
+incre win rate is 0.0030120481927710845.
+[0, 0, 0, 0, 0, 0, 1, 0] [25054, 25130, 25121, 25064, 25052, 25055, 24963, 25115] [0, 0, 0, 0, 0, 0, 1, 0] [42, 42, 39, 44, 42, 39, 45, 39]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2990/3125 episodes, total num timesteps 9571200/1e7, FPS 412.
+
+incre win rate is -0.0030303030303030303.
+[0, 0, 0, 0, 0, 0, 0, 0] [25094, 25167, 25159, 25101, 25096, 25105, 25003, 25159] [0, 0, 0, 0, 0, 0, -1, 0] [40, 37, 38, 37, 44, 50, 40, 44]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 2995/3125 episodes, total num timesteps 9587200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25137, 25205, 25204, 25142, 25136, 25146, 25043, 25200] [0, 0, 0, 0, 0, 0, 0, 0] [43, 38, 45, 41, 40, 41, 40, 41]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3000/3125 episodes, total num timesteps 9603200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25173, 25245, 25245, 25176, 25178, 25191, 25079, 25238] [0, 0, 0, 0, 0, 0, 0, 0] [36, 40, 41, 34, 42, 45, 36, 38]
+eval win rate is 0.5454545454545454.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3005/3125 episodes, total num timesteps 9619200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25217, 25282, 25295, 25213, 25219, 25235, 25118, 25274] [0, 0, 0, 0, 0, 0, 0, 0] [44, 37, 50, 37, 41, 44, 39, 36]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3010/3125 episodes, total num timesteps 9635200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25258, 25324, 25337, 25255, 25264, 25274, 25158, 25319] [0, 0, 0, 0, 0, 0, 0, 0] [41, 42, 42, 42, 45, 39, 40, 45]
+eval win rate is 0.8181818181818182.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3015/3125 episodes, total num timesteps 9651200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25304, 25364, 25380, 25303, 25307, 25312, 25205, 25359] [0, 0, 0, 0, 0, 0, 0, 0] [46, 40, 43, 48, 43, 38, 47, 40]
+eval win rate is 0.5588235294117647.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3020/3125 episodes, total num timesteps 9667200/1e7, FPS 412.
+
+incre win rate is 0.0030211480362537764.
+[0, 0, 0, 0, 0, 1, 0, 0] [25345, 25401, 25422, 25344, 25345, 25358, 25248, 25402] [0, 0, 0, 0, 0, 1, 0, 0] [41, 37, 42, 41, 38, 46, 43, 43]
+eval win rate is 0.6176470588235294.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3025/3125 episodes, total num timesteps 9683200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 1, 0] [25388, 25442, 25463, 25382, 25387, 25396, 25289, 25441] [0, 0, 0, 0, 0, -1, 1, 0] [43, 41, 41, 38, 42, 38, 41, 39]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3030/3125 episodes, total num timesteps 9699200/1e7, FPS 413.
+
+incre win rate is -0.0030120481927710845.
+[0, 0, 0, 0, 0, 0, 0, 0] [25430, 25480, 25506, 25425, 25433, 25436, 25329, 25481] [0, 0, 0, 0, 0, 0, -1, 0] [42, 38, 43, 43, 46, 40, 40, 40]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3035/3125 episodes, total num timesteps 9715200/1e7, FPS 413.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25477, 25517, 25542, 25464, 25471, 25478, 25366, 25521] [0, 0, 0, 0, 0, 0, 0, 0] [47, 37, 36, 39, 38, 42, 37, 40]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3040/3125 episodes, total num timesteps 9731200/1e7, FPS 413.
+
+incre win rate is 0.00303951367781155.
+[0, 0, 0, 1, 0, 0, 0, 0] [25518, 25557, 25581, 25505, 25511, 25522, 25409, 25562] [0, 0, 0, 1, 0, 0, 0, 0] [41, 40, 39, 41, 40, 44, 43, 41]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3045/3125 episodes, total num timesteps 9747200/1e7, FPS 413.
+
+incre win rate is -0.002976190476190476.
+[0, 0, 0, 0, 0, 0, 0, 0] [25554, 25598, 25622, 25548, 25555, 25566, 25453, 25605] [0, 0, 0, -1, 0, 0, 0, 0] [36, 41, 41, 43, 44, 44, 44, 43]
+eval win rate is 0.7575757575757576.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3050/3125 episodes, total num timesteps 9763200/1e7, FPS 413.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25598, 25640, 25664, 25588, 25595, 25603, 25497, 25642] [0, 0, 0, 0, 0, 0, 0, 0] [44, 42, 42, 40, 40, 37, 44, 37]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3055/3125 episodes, total num timesteps 9779200/1e7, FPS 413.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25640, 25680, 25706, 25629, 25640, 25647, 25540, 25679] [0, 0, 0, 0, 0, 0, 0, 0] [42, 40, 42, 41, 45, 44, 43, 37]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3060/3125 episodes, total num timesteps 9795200/1e7, FPS 413.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25681, 25726, 25752, 25671, 25680, 25690, 25582, 25719] [0, 0, 0, 0, 0, 0, 0, 0] [41, 46, 46, 42, 40, 43, 42, 40]
+eval win rate is 0.6944444444444444.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3065/3125 episodes, total num timesteps 9811200/1e7, FPS 413.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25720, 25765, 25795, 25714, 25728, 25734, 25617, 25759] [0, 0, 0, 0, 0, 0, 0, 0] [39, 39, 43, 43, 48, 44, 35, 40]
+eval win rate is 0.7272727272727273.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3070/3125 episodes, total num timesteps 9827200/1e7, FPS 413.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25763, 25805, 25834, 25748, 25770, 25777, 25661, 25801] [0, 0, 0, 0, 0, 0, 0, 0] [43, 40, 39, 34, 42, 43, 44, 42]
+eval win rate is 0.5757575757575758.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3075/3125 episodes, total num timesteps 9843200/1e7, FPS 413.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25805, 25849, 25871, 25787, 25811, 25816, 25703, 25849] [0, 0, 0, 0, 0, 0, 0, 0] [42, 44, 37, 39, 41, 39, 42, 48]
+eval win rate is 0.6764705882352942.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3080/3125 episodes, total num timesteps 9859200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25848, 25893, 25917, 25828, 25856, 25860, 25739, 25892] [0, 0, 0, 0, 0, 0, 0, 0] [43, 44, 46, 41, 45, 44, 36, 43]
+eval win rate is 0.7058823529411765.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3085/3125 episodes, total num timesteps 9875200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25888, 25930, 25960, 25863, 25899, 25898, 25783, 25930] [0, 0, 0, 0, 0, 0, 0, 0] [40, 37, 43, 35, 43, 38, 44, 38]
+eval win rate is 0.696969696969697.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3090/3125 episodes, total num timesteps 9891200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25932, 25973, 25999, 25904, 25938, 25942, 25828, 25969] [0, 0, 0, 0, 0, 0, 0, 0] [44, 43, 39, 41, 39, 44, 45, 39]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3095/3125 episodes, total num timesteps 9907200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [25972, 26012, 26044, 25942, 25981, 25983, 25863, 26007] [0, 0, 0, 0, 0, 0, 0, 0] [40, 39, 45, 38, 43, 41, 35, 38]
+eval win rate is 0.6060606060606061.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3100/3125 episodes, total num timesteps 9923200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [26004, 26055, 26084, 25988, 26026, 26025, 25907, 26043] [0, 0, 0, 0, 0, 0, 0, 0] [32, 43, 40, 46, 45, 42, 44, 36]
+eval win rate is 0.5882352941176471.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3105/3125 episodes, total num timesteps 9939200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [26046, 26097, 26129, 26032, 26065, 26066, 25944, 26079] [0, 0, 0, 0, 0, 0, 0, 0] [42, 42, 45, 44, 39, 41, 37, 36]
+eval win rate is 0.6666666666666666.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3110/3125 episodes, total num timesteps 9955200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [26087, 26139, 26169, 26075, 26107, 26107, 25988, 26121] [0, 0, 0, 0, 0, 0, 0, 0] [41, 42, 40, 43, 42, 41, 44, 42]
+eval win rate is 0.7878787878787878.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3115/3125 episodes, total num timesteps 9971200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [26126, 26179, 26212, 26118, 26145, 26148, 26029, 26161] [0, 0, 0, 0, 0, 0, 0, 0] [39, 40, 43, 43, 38, 41, 41, 40]
+eval win rate is 0.6363636363636364.
+
+ Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 3120/3125 episodes, total num timesteps 9987200/1e7, FPS 412.
+
+incre win rate is 0.0.
+[0, 0, 0, 0, 0, 0, 0, 0] [26166, 26223, 26252, 26158, 26187, 26193, 26072, 26205] [0, 0, 0, 0, 0, 0, 0, 0] [40, 44, 40, 40, 42, 45, 43, 44]
+eval win rate is 0.6176470588235294.

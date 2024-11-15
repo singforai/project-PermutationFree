@@ -1,0 +1,8 @@
+{"time":"2024-11-12T22:07:59.829906219+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T22:07:59.829951533+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-12-22-07-58/wandb/run-20241112_220759-l8bo1o14/logs/debug-core.log"}
+{"time":"2024-11-12T22:07:59.941387322+09:00","level":"INFO","msg":"created new stream","id":"l8bo1o14"}
+{"time":"2024-11-12T22:07:59.941454391+09:00","level":"INFO","msg":"stream: started","id":"l8bo1o14"}
+{"time":"2024-11-12T22:07:59.941553553+09:00","level":"INFO","msg":"sender: started","stream_id":"l8bo1o14"}
+{"time":"2024-11-12T22:07:59.941528494+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"l8bo1o14"}}
+{"time":"2024-11-12T22:07:59.941517463+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"l8bo1o14"}}
+{"time":"2024-11-12T22:08:00.437806855+09:00","level":"INFO","msg":"Starting system monitor"}

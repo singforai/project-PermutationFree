@@ -1,0 +1,32 @@
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_setup.py:_flush():79] Current SDK version is 0.18.6
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_setup.py:_flush():79] Configure stats pid to 2210629
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_setup.py:_flush():79] Loading settings from /home1/sizz1997/.config/wandb/settings
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_setup.py:_flush():79] Loading settings from /gpfs/home1/sizz1997/MARL/marl/scripts/smacv2/mast/wandb/settings
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'marl/train.py', 'program_abspath': '/gpfs/home1/sizz1997/MARL/marl/train.py', 'program': '../../../train.py'}
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_init.py:_log_setup():533] Logging user logs to ../../../examples/results/smacv2/protoss_5_vs_5/mast/MAST/seed-00004-2024-11-14-04-59-21/wandb/run-20241114_045923-wjc20hxo/logs/debug.log
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_init.py:_log_setup():534] Logging internal logs to ../../../examples/results/smacv2/protoss_5_vs_5/mast/MAST/seed-00004-2024-11-14-04-59-21/wandb/run-20241114_045923-wjc20hxo/logs/debug-internal.log
+2024-11-14 04:59:23,883 INFO    MainThread:2210629 [wandb_init.py:init():619] calling init triggers
+2024-11-14 04:59:23,884 INFO    MainThread:2210629 [wandb_init.py:init():626] wandb.init called with sweep_config: {}
+config: {'env_name': 'smacv2', 'algorithm_name': 'mast', 'use_gpu': True, 'num_gpu': 0, 'seed': 4, 'experiment_name': 'MAST', 'group_name': 'MAST', 'user_name': 'singfor7012', 'use_wandb': True, 'cuda': True, 'torch_threads': 4, 'use_render': False, 'render_episodes': 10, 'log_dir': '../../../examples/results', 'model_dir': None, 'log_interval': 5, 'eval_interval': 5, 'save_model': False, 'save_interval': 1000, 'check_permutation_free': False, 'map_name': 'protoss_5_vs_5', 'train': {'n_rollout_threads': 32, 'episode_length': 100, 'use_linear_lr_decay': False, 'use_proper_time_limits': False, 'use_popart': False}, 'eval': {'use_eval': True, 'n_eval_rollout_threads': 32, 'eval_episodes': 32}, 'model': {'stacked_frames': 1, 'layer_N': 1, 'n_head': 4, 'use_pma_block': True, 'n_seed_vector': 1, 'hidden_size': 64, 'use_ReLU': True, 'use_feature_normalization': True, 'use_orthogonal': True, 'gain': 0.01, 'use_naive_recurrent_policy': False, 'use_recurrent_policy': True, 'recurrent_N': 1, 'lr': 0.0005, 'critic_lr': 5e-05, 'opti_eps': 1e-05, 'weight_decay': 0}, 'algo': {'ppo_epoch': 5, 'use_clipped_value_loss': True, 'clip_param': 0.2, 'num_mini_batch': 1, 'entropy_coef': 0.01, 'data_chunk_length': 10, 'value_loss_coef': 1, 'use_max_grad_norm': True, 'max_grad_norm': 10.0, 'use_gae': True, 'gamma': 0.99, 'gae_lambda': 0.95, 'use_huber_loss': True, 'use_policy_active_masks': True, 'use_value_active_masks': False, 'huber_delta': 10.0, 'use_valuenorm': True}, 'num_env_steps': '1e7'}
+2024-11-14 04:59:23,884 INFO    MainThread:2210629 [wandb_init.py:init():669] starting backend
+2024-11-14 04:59:23,884 INFO    MainThread:2210629 [wandb_init.py:init():673] sending inform_init request
+2024-11-14 04:59:23,888 INFO    MainThread:2210629 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-11-14 04:59:23,889 INFO    MainThread:2210629 [wandb_init.py:init():686] backend started and connected
+2024-11-14 04:59:23,900 INFO    MainThread:2210629 [wandb_init.py:init():781] updated telemetry
+2024-11-14 04:59:23,962 INFO    MainThread:2210629 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2024-11-14 04:59:24,398 INFO    MainThread:2210629 [wandb_init.py:init():867] starting run threads in backend
+2024-11-14 04:59:24,744 INFO    MainThread:2210629 [wandb_run.py:_console_start():2451] atexit reg
+2024-11-14 04:59:24,744 INFO    MainThread:2210629 [wandb_run.py:_redirect():2299] redirect: wrap_raw
+2024-11-14 04:59:24,744 INFO    MainThread:2210629 [wandb_run.py:_redirect():2364] Wrapping output streams.
+2024-11-14 04:59:24,744 INFO    MainThread:2210629 [wandb_run.py:_redirect():2389] Redirects installed.
+2024-11-14 04:59:24,757 INFO    MainThread:2210629 [wandb_init.py:init():911] run started, returning control to user process
+2024-11-14 09:01:35,455 INFO    MainThread:2210629 [wandb_run.py:_finish():2146] finishing run singfor7012/smacv2_protoss_5_vs_5/wjc20hxo
+2024-11-14 09:01:35,457 INFO    MainThread:2210629 [wandb_run.py:_atexit_cleanup():2414] got exitcode: 0
+2024-11-14 09:01:35,457 INFO    MainThread:2210629 [wandb_run.py:_restore():2396] restore
+2024-11-14 09:01:35,457 INFO    MainThread:2210629 [wandb_run.py:_restore():2402] restore done
+2024-11-14 09:01:38,078 INFO    MainThread:2210629 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2024-11-14 09:01:38,079 INFO    MainThread:2210629 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2024-11-14 09:01:38,092 INFO    MainThread:2210629 [wandb_run.py:_footer_sync_info():3922] logging synced files

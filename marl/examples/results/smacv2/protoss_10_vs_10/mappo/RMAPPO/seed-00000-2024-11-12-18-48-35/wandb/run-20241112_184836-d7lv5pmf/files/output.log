@@ -1,0 +1,405 @@
+share_observation_space:  [Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,)]
+observation_space:  [Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,)]
+action_space:  [Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16)]
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 0/3125 episodes, total num timesteps 3200/1e7, FPS 216.
+
+incre win rate is 0.0.
+0.38544264339152123
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 5/3125 episodes, total num timesteps 19200/1e7, FPS 279.
+
+incre win rate is 0.0.
+0.3842581047381546
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 10/3125 episodes, total num timesteps 35200/1e7, FPS 299.
+
+incre win rate is 0.0.
+0.4017768079800499
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 15/3125 episodes, total num timesteps 51200/1e7, FPS 321.
+
+incre win rate is 0.0.
+0.4191084788029925
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 20/3125 episodes, total num timesteps 67200/1e7, FPS 333.
+
+incre win rate is 0.0.
+0.3889027431421447
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 25/3125 episodes, total num timesteps 83200/1e7, FPS 341.
+
+incre win rate is 0.0.
+0.4108478802992519
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 30/3125 episodes, total num timesteps 99200/1e7, FPS 347.
+
+incre win rate is 0.0.
+0.4052680798004987
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 35/3125 episodes, total num timesteps 115200/1e7, FPS 352.
+
+incre win rate is 0.0.
+0.41418329177057356
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 40/3125 episodes, total num timesteps 131200/1e7, FPS 356.
+
+incre win rate is 0.003968253968253968.
+0.4274625935162095
+eval win rate is 0.029411764705882353.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 45/3125 episodes, total num timesteps 147200/1e7, FPS 360.
+
+incre win rate is 0.0038910505836575876.
+0.42035536159600995
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 50/3125 episodes, total num timesteps 163200/1e7, FPS 362.
+
+incre win rate is 0.0.
+0.4132169576059851
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 55/3125 episodes, total num timesteps 179200/1e7, FPS 365.
+
+incre win rate is 0.0.
+0.4260598503740648
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 60/3125 episodes, total num timesteps 195200/1e7, FPS 366.
+
+incre win rate is 0.0.
+0.4343827930174564
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 65/3125 episodes, total num timesteps 211200/1e7, FPS 367.
+
+incre win rate is 0.0.
+0.41817331670822944
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 70/3125 episodes, total num timesteps 227200/1e7, FPS 369.
+
+incre win rate is 0.007722007722007722.
+0.4170822942643392
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 75/3125 episodes, total num timesteps 243200/1e7, FPS 369.
+
+incre win rate is 0.003816793893129771.
+0.4274937655860349
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 80/3125 episodes, total num timesteps 259200/1e7, FPS 371.
+
+incre win rate is 0.0038910505836575876.
+0.41586658354114714
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 85/3125 episodes, total num timesteps 275200/1e7, FPS 372.
+
+incre win rate is 0.00390625.
+0.41334164588528677
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 90/3125 episodes, total num timesteps 291200/1e7, FPS 372.
+
+incre win rate is 0.00796812749003984.
+0.4267768079800499
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 95/3125 episodes, total num timesteps 307200/1e7, FPS 373.
+
+incre win rate is 0.007782101167315175.
+0.4007793017456359
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 100/3125 episodes, total num timesteps 323200/1e7, FPS 374.
+
+incre win rate is 0.0038314176245210726.
+0.41957605985037405
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 105/3125 episodes, total num timesteps 339200/1e7, FPS 375.
+
+incre win rate is 0.023255813953488372.
+0.4055174563591022
+eval win rate is 0.029411764705882353.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 110/3125 episodes, total num timesteps 355200/1e7, FPS 375.
+
+incre win rate is 0.0038461538461538464.
+0.43628428927680796
+eval win rate is 0.12121212121212122.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 115/3125 episodes, total num timesteps 371200/1e7, FPS 376.
+
+incre win rate is 0.00796812749003984.
+0.4297693266832918
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 120/3125 episodes, total num timesteps 387200/1e7, FPS 377.
+
+incre win rate is 0.031496062992125984.
+0.4114713216957606
+eval win rate is 0.058823529411764705.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 125/3125 episodes, total num timesteps 403200/1e7, FPS 377.
+
+incre win rate is 0.019762845849802372.
+0.4099438902743142
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 130/3125 episodes, total num timesteps 419200/1e7, FPS 378.
+
+incre win rate is 0.00390625.
+0.4102556109725686
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 135/3125 episodes, total num timesteps 435200/1e7, FPS 378.
+
+incre win rate is 0.007547169811320755.
+0.40448877805486283
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 140/3125 episodes, total num timesteps 451200/1e7, FPS 378.
+
+incre win rate is 0.00784313725490196.
+0.4062655860349127
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 145/3125 episodes, total num timesteps 467200/1e7, FPS 379.
+
+incre win rate is 0.012048192771084338.
+0.41047381546134665
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 150/3125 episodes, total num timesteps 483200/1e7, FPS 379.
+
+incre win rate is 0.0038910505836575876.
+0.415430174563591
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 155/3125 episodes, total num timesteps 499200/1e7, FPS 379.
+
+incre win rate is 0.007722007722007722.
+0.39987531172069823
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 160/3125 episodes, total num timesteps 515200/1e7, FPS 379.
+
+incre win rate is 0.0.
+0.41976309226932673
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 165/3125 episodes, total num timesteps 531200/1e7, FPS 369.
+
+incre win rate is 0.003816793893129771.
+0.414713216957606
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 170/3125 episodes, total num timesteps 547200/1e7, FPS 369.
+
+incre win rate is 0.011235955056179775.
+0.41505610972568574
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 175/3125 episodes, total num timesteps 563200/1e7, FPS 370.
+
+incre win rate is 0.011111111111111112.
+0.38824812967581046
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 180/3125 episodes, total num timesteps 579200/1e7, FPS 370.
+
+incre win rate is 0.018518518518518517.
+0.4062655860349127
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 185/3125 episodes, total num timesteps 595200/1e7, FPS 371.
+
+incre win rate is 0.003745318352059925.
+0.4163029925187033
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 190/3125 episodes, total num timesteps 611200/1e7, FPS 371.
+
+incre win rate is 0.03065134099616858.
+0.42182044887780545
+eval win rate is 0.17647058823529413.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 195/3125 episodes, total num timesteps 627200/1e7, FPS 372.
+
+incre win rate is 0.01858736059479554.
+0.40601620947630923
+eval win rate is 0.12121212121212122.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 200/3125 episodes, total num timesteps 643200/1e7, FPS 372.
+
+incre win rate is 0.007692307692307693.
+0.42250623441396506
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 205/3125 episodes, total num timesteps 659200/1e7, FPS 373.
+
+incre win rate is 0.011673151750972763.
+0.4139339152119701
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 210/3125 episodes, total num timesteps 675200/1e7, FPS 374.
+
+incre win rate is 0.003816793893129771.
+0.3977244389027431
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 215/3125 episodes, total num timesteps 691200/1e7, FPS 374.
+
+incre win rate is 0.019157088122605363.
+0.4130610972568578
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 220/3125 episodes, total num timesteps 707200/1e7, FPS 375.
+
+incre win rate is 0.023346303501945526.
+0.42104114713216956
+eval win rate is 0.15151515151515152.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 225/3125 episodes, total num timesteps 723200/1e7, FPS 375.
+
+incre win rate is 0.031496062992125984.
+0.40748129675810474
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 230/3125 episodes, total num timesteps 739200/1e7, FPS 376.
+
+incre win rate is 0.03543307086614173.
+0.4026184538653367
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 235/3125 episodes, total num timesteps 755200/1e7, FPS 376.
+
+incre win rate is 0.026923076923076925.
+0.40801122194513717
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 240/3125 episodes, total num timesteps 771200/1e7, FPS 376.
+
+incre win rate is 0.011450381679389313.
+0.4087281795511222
+eval win rate is 0.12121212121212122.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 245/3125 episodes, total num timesteps 787200/1e7, FPS 376.
+
+incre win rate is 0.04743083003952569.
+0.40579800498753116
+eval win rate is 0.029411764705882353.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 250/3125 episodes, total num timesteps 803200/1e7, FPS 377.
+
+incre win rate is 0.020491803278688523.
+0.4131546134663342
+eval win rate is 0.12121212121212122.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 255/3125 episodes, total num timesteps 819200/1e7, FPS 377.
+
+incre win rate is 0.047244094488188976.
+0.43036159600997503
+eval win rate is 0.12121212121212122.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 260/3125 episodes, total num timesteps 835200/1e7, FPS 378.
+
+incre win rate is 0.04878048780487805.
+0.4198877805486284
+eval win rate is 0.12121212121212122.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 265/3125 episodes, total num timesteps 851200/1e7, FPS 378.
+
+incre win rate is 0.03571428571428571.
+0.407574812967581
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 270/3125 episodes, total num timesteps 867200/1e7, FPS 378.
+
+incre win rate is 0.04065040650406504.
+0.4130922693266833
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 275/3125 episodes, total num timesteps 883200/1e7, FPS 379.
+
+incre win rate is 0.06048387096774194.
+0.3918952618453866
+eval win rate is 0.18181818181818182.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 280/3125 episodes, total num timesteps 899200/1e7, FPS 379.
+
+incre win rate is 0.02766798418972332.
+0.4032730673316708
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 285/3125 episodes, total num timesteps 915200/1e7, FPS 379.
+
+incre win rate is 0.05138339920948617.
+0.3910224438902743
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 290/3125 episodes, total num timesteps 931200/1e7, FPS 380.
+
+incre win rate is 0.0163265306122449.
+0.4153366583541147
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 295/3125 episodes, total num timesteps 947200/1e7, FPS 380.
+
+incre win rate is 0.03937007874015748.
+0.40451995012468833
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 300/3125 episodes, total num timesteps 963200/1e7, FPS 380.
+
+incre win rate is 0.060240963855421686.
+0.4230673316708229
+eval win rate is 0.12121212121212122.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 305/3125 episodes, total num timesteps 979200/1e7, FPS 381.
+
+incre win rate is 0.06493506493506493.
+0.41885910224438905
+eval win rate is 0.09090909090909091.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 310/3125 episodes, total num timesteps 995200/1e7, FPS 381.
+
+incre win rate is 0.045454545454545456.
+0.3946384039900249
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 315/3125 episodes, total num timesteps 1011200/1e7, FPS 382.
+
+incre win rate is 0.05761316872427984.
+0.4243765586034913
+eval win rate is 0.11764705882352941.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 320/3125 episodes, total num timesteps 1027200/1e7, FPS 382.
+
+incre win rate is 0.05531914893617021.
+0.4403678304239401
+eval win rate is 0.06060606060606061.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 325/3125 episodes, total num timesteps 1043200/1e7, FPS 375.
+
+incre win rate is 0.07983193277310924.
+0.40523690773067333
+eval win rate is 0.12121212121212122.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 330/3125 episodes, total num timesteps 1059200/1e7, FPS 375.
+
+incre win rate is 0.06276150627615062.
+0.4427680798004987
+eval win rate is 0.09090909090909091.

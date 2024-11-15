@@ -1,0 +1,443 @@
+share_observation_space:  [Box(130,), Box(130,), Box(130,), Box(130,), Box(130,)]
+observation_space:  [Box(92,), Box(92,), Box(92,), Box(92,), Box(92,)]
+action_space:  [Discrete(11), Discrete(11), Discrete(11), Discrete(11), Discrete(11)]
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 0/3125 episodes, total num timesteps 3200/1e7, FPS 216.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 5/3125 episodes, total num timesteps 19200/1e7, FPS 346.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 10/3125 episodes, total num timesteps 35200/1e7, FPS 398.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 15/3125 episodes, total num timesteps 51200/1e7, FPS 447.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 20/3125 episodes, total num timesteps 67200/1e7, FPS 477.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 25/3125 episodes, total num timesteps 83200/1e7, FPS 499.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 30/3125 episodes, total num timesteps 99200/1e7, FPS 515.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 35/3125 episodes, total num timesteps 115200/1e7, FPS 528.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 40/3125 episodes, total num timesteps 131200/1e7, FPS 537.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 45/3125 episodes, total num timesteps 147200/1e7, FPS 545.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 50/3125 episodes, total num timesteps 163200/1e7, FPS 551.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 55/3125 episodes, total num timesteps 179200/1e7, FPS 557.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 60/3125 episodes, total num timesteps 195200/1e7, FPS 562.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 65/3125 episodes, total num timesteps 211200/1e7, FPS 566.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 70/3125 episodes, total num timesteps 227200/1e7, FPS 570.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 75/3125 episodes, total num timesteps 243200/1e7, FPS 572.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 80/3125 episodes, total num timesteps 259200/1e7, FPS 576.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 85/3125 episodes, total num timesteps 275200/1e7, FPS 579.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 90/3125 episodes, total num timesteps 291200/1e7, FPS 581.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 95/3125 episodes, total num timesteps 307200/1e7, FPS 583.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 100/3125 episodes, total num timesteps 323200/1e7, FPS 585.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 105/3125 episodes, total num timesteps 339200/1e7, FPS 587.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 110/3125 episodes, total num timesteps 355200/1e7, FPS 589.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 115/3125 episodes, total num timesteps 371200/1e7, FPS 591.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 120/3125 episodes, total num timesteps 387200/1e7, FPS 592.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 125/3125 episodes, total num timesteps 403200/1e7, FPS 594.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 130/3125 episodes, total num timesteps 419200/1e7, FPS 595.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 135/3125 episodes, total num timesteps 435200/1e7, FPS 597.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 140/3125 episodes, total num timesteps 451200/1e7, FPS 598.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 145/3125 episodes, total num timesteps 467200/1e7, FPS 600.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 150/3125 episodes, total num timesteps 483200/1e7, FPS 601.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 155/3125 episodes, total num timesteps 499200/1e7, FPS 602.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 160/3125 episodes, total num timesteps 515200/1e7, FPS 603.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 165/3125 episodes, total num timesteps 531200/1e7, FPS 604.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 170/3125 episodes, total num timesteps 547200/1e7, FPS 605.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 175/3125 episodes, total num timesteps 563200/1e7, FPS 606.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 180/3125 episodes, total num timesteps 579200/1e7, FPS 607.
+
+incre win rate is 0.0.
+eval win rate is 0.18181818181818182.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 185/3125 episodes, total num timesteps 595200/1e7, FPS 608.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 190/3125 episodes, total num timesteps 611200/1e7, FPS 609.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 195/3125 episodes, total num timesteps 627200/1e7, FPS 610.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 200/3125 episodes, total num timesteps 643200/1e7, FPS 611.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 205/3125 episodes, total num timesteps 659200/1e7, FPS 612.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 210/3125 episodes, total num timesteps 675200/1e7, FPS 612.
+
+incre win rate is 0.0.
+eval win rate is 0.11764705882352941.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 215/3125 episodes, total num timesteps 691200/1e7, FPS 613.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 220/3125 episodes, total num timesteps 707200/1e7, FPS 614.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 225/3125 episodes, total num timesteps 723200/1e7, FPS 614.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 230/3125 episodes, total num timesteps 739200/1e7, FPS 615.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 235/3125 episodes, total num timesteps 755200/1e7, FPS 616.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 240/3125 episodes, total num timesteps 771200/1e7, FPS 617.
+
+incre win rate is 0.0.
+eval win rate is 0.17142857142857143.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 245/3125 episodes, total num timesteps 787200/1e7, FPS 617.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 250/3125 episodes, total num timesteps 803200/1e7, FPS 618.
+
+incre win rate is 0.0.
+eval win rate is 0.029411764705882353.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 255/3125 episodes, total num timesteps 819200/1e7, FPS 618.
+
+incre win rate is 0.0.
+eval win rate is 0.17647058823529413.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 260/3125 episodes, total num timesteps 835200/1e7, FPS 619.
+
+incre win rate is 0.0.
+eval win rate is 0.18181818181818182.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 265/3125 episodes, total num timesteps 851200/1e7, FPS 619.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 270/3125 episodes, total num timesteps 867200/1e7, FPS 620.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 275/3125 episodes, total num timesteps 883200/1e7, FPS 620.
+
+incre win rate is 0.0.
+eval win rate is 0.08571428571428572.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 280/3125 episodes, total num timesteps 899200/1e7, FPS 620.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 285/3125 episodes, total num timesteps 915200/1e7, FPS 621.
+
+incre win rate is 0.0.
+eval win rate is 0.17647058823529413.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 290/3125 episodes, total num timesteps 931200/1e7, FPS 621.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 295/3125 episodes, total num timesteps 947200/1e7, FPS 621.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 300/3125 episodes, total num timesteps 963200/1e7, FPS 622.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 305/3125 episodes, total num timesteps 979200/1e7, FPS 622.
+
+incre win rate is 0.0.
+eval win rate is 0.18181818181818182.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 310/3125 episodes, total num timesteps 995200/1e7, FPS 623.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 315/3125 episodes, total num timesteps 1011200/1e7, FPS 623.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 320/3125 episodes, total num timesteps 1027200/1e7, FPS 623.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 325/3125 episodes, total num timesteps 1043200/1e7, FPS 605.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 330/3125 episodes, total num timesteps 1059200/1e7, FPS 605.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 335/3125 episodes, total num timesteps 1075200/1e7, FPS 605.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 340/3125 episodes, total num timesteps 1091200/1e7, FPS 606.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 345/3125 episodes, total num timesteps 1107200/1e7, FPS 606.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 350/3125 episodes, total num timesteps 1123200/1e7, FPS 607.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 355/3125 episodes, total num timesteps 1139200/1e7, FPS 607.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 360/3125 episodes, total num timesteps 1155200/1e7, FPS 607.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 365/3125 episodes, total num timesteps 1171200/1e7, FPS 608.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 370/3125 episodes, total num timesteps 1187200/1e7, FPS 608.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 375/3125 episodes, total num timesteps 1203200/1e7, FPS 608.
+
+incre win rate is 0.0.
+eval win rate is 0.24242424242424243.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 380/3125 episodes, total num timesteps 1219200/1e7, FPS 609.
+
+incre win rate is 0.0.
+eval win rate is 0.21212121212121213.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 385/3125 episodes, total num timesteps 1235200/1e7, FPS 609.
+
+incre win rate is 0.0.
+eval win rate is 0.3939393939393939.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 390/3125 episodes, total num timesteps 1251200/1e7, FPS 610.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 395/3125 episodes, total num timesteps 1267200/1e7, FPS 610.
+
+incre win rate is 0.0.
+eval win rate is 0.20588235294117646.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 400/3125 episodes, total num timesteps 1283200/1e7, FPS 611.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 405/3125 episodes, total num timesteps 1299200/1e7, FPS 611.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 410/3125 episodes, total num timesteps 1315200/1e7, FPS 612.
+
+incre win rate is 0.0.
+eval win rate is 0.20588235294117646.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 415/3125 episodes, total num timesteps 1331200/1e7, FPS 612.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 420/3125 episodes, total num timesteps 1347200/1e7, FPS 612.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 425/3125 episodes, total num timesteps 1363200/1e7, FPS 613.
+
+incre win rate is 0.0.
+eval win rate is 0.18181818181818182.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 430/3125 episodes, total num timesteps 1379200/1e7, FPS 613.
+
+incre win rate is 0.0.
+eval win rate is 0.14705882352941177.
+
+ Map protoss_5_vs_5 Algo mast Exp MAST updates 435/3125 episodes, total num timesteps 1395200/1e7, FPS 613.
+
+incre win rate is 0.0.
+eval win rate is 0.18181818181818182.

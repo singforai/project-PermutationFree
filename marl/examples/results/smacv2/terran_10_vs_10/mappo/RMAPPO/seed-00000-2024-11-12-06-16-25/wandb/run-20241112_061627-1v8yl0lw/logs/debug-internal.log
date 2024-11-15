@@ -1,0 +1,17 @@
+{"time":"2024-11-12T06:16:27.339538916+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T06:16:27.339589396+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/terran_10_vs_10/mappo/RMAPPO/seed-00000-2024-11-12-06-16-25/wandb/run-20241112_061627-1v8yl0lw/logs/debug-core.log"}
+{"time":"2024-11-12T06:16:27.450431378+09:00","level":"INFO","msg":"created new stream","id":"1v8yl0lw"}
+{"time":"2024-11-12T06:16:27.450485196+09:00","level":"INFO","msg":"stream: started","id":"1v8yl0lw"}
+{"time":"2024-11-12T06:16:27.450583207+09:00","level":"INFO","msg":"sender: started","stream_id":"1v8yl0lw"}
+{"time":"2024-11-12T06:16:27.450570763+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"1v8yl0lw"}}
+{"time":"2024-11-12T06:16:27.450583412+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"1v8yl0lw"}}
+{"time":"2024-11-12T06:16:27.900123244+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-12T13:43:09.515029217+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-12T13:43:09.515719348+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-12T13:43:10.469237959+09:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-11-12T13:43:12.321083141+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-12T13:43:13.658129635+09:00","level":"INFO","msg":"stream: closing","id":"1v8yl0lw"}
+{"time":"2024-11-12T13:43:13.658154532+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"1v8yl0lw"}}
+{"time":"2024-11-12T13:43:13.658175788+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"1v8yl0lw"}}
+{"time":"2024-11-12T13:43:13.658223867+09:00","level":"INFO","msg":"sender: closed","stream_id":"1v8yl0lw"}
+{"time":"2024-11-12T13:43:13.664107355+09:00","level":"INFO","msg":"stream: closed","id":"1v8yl0lw"}

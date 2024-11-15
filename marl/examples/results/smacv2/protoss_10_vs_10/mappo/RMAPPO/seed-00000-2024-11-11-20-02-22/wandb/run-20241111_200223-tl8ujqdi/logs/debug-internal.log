@@ -1,0 +1,11 @@
+{"time":"2024-11-11T20:02:23.972265627+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-11T20:02:23.972325767+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_10_vs_10/mappo/RMAPPO/seed-00000-2024-11-11-20-02-22/wandb/run-20241111_200223-tl8ujqdi/logs/debug-core.log"}
+{"time":"2024-11-11T20:02:24.091225889+09:00","level":"INFO","msg":"created new stream","id":"tl8ujqdi"}
+{"time":"2024-11-11T20:02:24.091288441+09:00","level":"INFO","msg":"stream: started","id":"tl8ujqdi"}
+{"time":"2024-11-11T20:02:24.091345876+09:00","level":"INFO","msg":"sender: started","stream_id":"tl8ujqdi"}
+{"time":"2024-11-11T20:02:24.091334452+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tl8ujqdi"}}
+{"time":"2024-11-11T20:02:24.091334405+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"tl8ujqdi"}}
+{"time":"2024-11-11T20:02:24.502302469+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-12T00:04:15.419279912+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/singfor7012/smacv2_protoss_10_vs_10/tl8ujqdi/file_stream"}
+{"time":"2024-11-12T00:04:23.045387595+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/singfor7012/smacv2_protoss_10_vs_10/tl8ujqdi/file_stream"}
+{"time":"2024-11-12T00:04:25.193310604+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql"}

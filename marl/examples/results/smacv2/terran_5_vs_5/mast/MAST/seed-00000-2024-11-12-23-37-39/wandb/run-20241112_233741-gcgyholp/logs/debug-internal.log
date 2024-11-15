@@ -1,0 +1,8 @@
+{"time":"2024-11-12T23:37:41.58053509+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T23:37:41.580578483+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/terran_5_vs_5/mast/MAST/seed-00000-2024-11-12-23-37-39/wandb/run-20241112_233741-gcgyholp/logs/debug-core.log"}
+{"time":"2024-11-12T23:37:41.690130483+09:00","level":"INFO","msg":"created new stream","id":"gcgyholp"}
+{"time":"2024-11-12T23:37:41.690178106+09:00","level":"INFO","msg":"stream: started","id":"gcgyholp"}
+{"time":"2024-11-12T23:37:41.690249354+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"gcgyholp"}}
+{"time":"2024-11-12T23:37:41.690236392+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"gcgyholp"}}
+{"time":"2024-11-12T23:37:41.690261757+09:00","level":"INFO","msg":"sender: started","stream_id":"gcgyholp"}
+{"time":"2024-11-12T23:37:42.191886771+09:00","level":"INFO","msg":"Starting system monitor"}

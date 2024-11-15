@@ -1,0 +1,19 @@
+{"time":"2024-11-11T20:24:23.831135016+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-11T20:24:23.831186695+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/terran_10_vs_10/mappo/RMAPPO/seed-00000-2024-11-11-20-24-22/wandb/run-20241111_202423-qwgvbhri/logs/debug-core.log"}
+{"time":"2024-11-11T20:24:23.943274835+09:00","level":"INFO","msg":"created new stream","id":"qwgvbhri"}
+{"time":"2024-11-11T20:24:23.943327053+09:00","level":"INFO","msg":"stream: started","id":"qwgvbhri"}
+{"time":"2024-11-11T20:24:23.943394082+09:00","level":"INFO","msg":"sender: started","stream_id":"qwgvbhri"}
+{"time":"2024-11-11T20:24:23.943371178+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"qwgvbhri"}}
+{"time":"2024-11-11T20:24:23.943403028+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"qwgvbhri"}}
+{"time":"2024-11-11T20:24:25.575143215+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-12T00:04:16.452429324+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/singfor7012/smacv2_terran_10_vs_10/qwgvbhri/file_stream"}
+{"time":"2024-11-12T00:04:24.144431674+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/singfor7012/smacv2_terran_10_vs_10/qwgvbhri/file_stream"}
+{"time":"2024-11-12T03:47:55.524074335+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-12T03:47:55.524775627+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-12T03:47:56.525031735+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.530001692},{"desc":"uploading config.yaml","runtime_seconds":0.285763268,"progress":"2.2KB/2.2KB"},{"desc":"uploading output.log","runtime_seconds":0.285751237,"progress":"127.5KB/127.5KB"}],"total_operations":3}}
+{"time":"2024-11-12T03:47:59.613532185+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-12T03:48:00.951662943+09:00","level":"INFO","msg":"stream: closing","id":"qwgvbhri"}
+{"time":"2024-11-12T03:48:00.951678941+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"qwgvbhri"}}
+{"time":"2024-11-12T03:48:00.95169781+09:00","level":"INFO","msg":"sender: closed","stream_id":"qwgvbhri"}
+{"time":"2024-11-12T03:48:00.951690341+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"qwgvbhri"}}
+{"time":"2024-11-12T03:48:00.951850187+09:00","level":"INFO","msg":"stream: closed","id":"qwgvbhri"}

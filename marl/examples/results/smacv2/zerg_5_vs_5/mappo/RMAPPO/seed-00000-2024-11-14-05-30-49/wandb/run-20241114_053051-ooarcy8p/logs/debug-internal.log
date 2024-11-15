@@ -1,0 +1,8 @@
+{"time":"2024-11-14T05:30:51.180925364+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-14T05:30:51.180978431+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/zerg_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-14-05-30-49/wandb/run-20241114_053051-ooarcy8p/logs/debug-core.log"}
+{"time":"2024-11-14T05:30:51.295957676+09:00","level":"INFO","msg":"created new stream","id":"ooarcy8p"}
+{"time":"2024-11-14T05:30:51.296003474+09:00","level":"INFO","msg":"stream: started","id":"ooarcy8p"}
+{"time":"2024-11-14T05:30:51.296081014+09:00","level":"INFO","msg":"sender: started","stream_id":"ooarcy8p"}
+{"time":"2024-11-14T05:30:51.296033331+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ooarcy8p"}}
+{"time":"2024-11-14T05:30:51.296067409+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ooarcy8p"}}
+{"time":"2024-11-14T05:30:51.689324602+09:00","level":"INFO","msg":"Starting system monitor"}

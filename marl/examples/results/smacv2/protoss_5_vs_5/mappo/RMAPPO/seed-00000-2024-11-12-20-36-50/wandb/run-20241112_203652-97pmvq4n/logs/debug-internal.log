@@ -1,0 +1,10 @@
+{"time":"2024-11-12T20:36:52.077877876+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T20:36:52.077922827+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-12-20-36-50/wandb/run-20241112_203652-97pmvq4n/logs/debug-core.log"}
+{"time":"2024-11-12T20:36:52.19048594+09:00","level":"INFO","msg":"created new stream","id":"97pmvq4n"}
+{"time":"2024-11-12T20:36:52.19054575+09:00","level":"INFO","msg":"stream: started","id":"97pmvq4n"}
+{"time":"2024-11-12T20:36:52.190641469+09:00","level":"INFO","msg":"sender: started","stream_id":"97pmvq4n"}
+{"time":"2024-11-12T20:36:52.190610067+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"97pmvq4n"}}
+{"time":"2024-11-12T20:36:52.190640264+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"97pmvq4n"}}
+{"time":"2024-11-12T20:36:52.611857869+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-12T20:58:38.552304315+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/singfor7012/smacv2_protoss_5_vs_5/97pmvq4n/file_stream"}
+{"time":"2024-11-12T20:58:38.552901422+09:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/singfor7012/smacv2_protoss_5_vs_5/97pmvq4n/file_stream: {\"error\":\"run smacv2_protoss_5_vs_5/97pmvq4n not found while streaming file\"}"}

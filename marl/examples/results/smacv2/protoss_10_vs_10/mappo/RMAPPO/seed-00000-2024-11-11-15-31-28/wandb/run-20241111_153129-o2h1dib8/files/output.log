@@ -1,0 +1,3 @@
+share_observation_space:  [Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,)]
+observation_space:  [Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,)]
+action_space:  [Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16)]

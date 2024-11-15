@@ -1,0 +1,28 @@
+share_observation_space:  [Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,), Box(310,)]
+observation_space:  [Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,), Box(182,)]
+action_space:  [Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16)]
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 0/3125 episodes, total num timesteps 3200/1e7, FPS 138.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 5/3125 episodes, total num timesteps 19200/1e7, FPS 216.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 10/3125 episodes, total num timesteps 35200/1e7, FPS 242.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 15/3125 episodes, total num timesteps 51200/1e7, FPS 264.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map protoss_10_vs_10 Algo mappo Exp RMAPPO updates 20/3125 episodes, total num timesteps 67200/1e7, FPS 278.
+
+incre win rate is 0.0.
+eval win rate is 0.0.

@@ -1,0 +1,8 @@
+{"time":"2024-11-13T00:30:03.802579122+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-13T00:30:03.802633315+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/zerg_5_vs_5/mast/MAST/seed-00000-2024-11-13-00-30-02/wandb/run-20241113_003003-yia4rcue/logs/debug-core.log"}
+{"time":"2024-11-13T00:30:03.910463705+09:00","level":"INFO","msg":"created new stream","id":"yia4rcue"}
+{"time":"2024-11-13T00:30:03.910512748+09:00","level":"INFO","msg":"stream: started","id":"yia4rcue"}
+{"time":"2024-11-13T00:30:03.910553692+09:00","level":"INFO","msg":"sender: started","stream_id":"yia4rcue"}
+{"time":"2024-11-13T00:30:03.910527232+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"yia4rcue"}}
+{"time":"2024-11-13T00:30:03.910533747+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"yia4rcue"}}
+{"time":"2024-11-13T00:30:04.299175345+09:00","level":"INFO","msg":"Starting system monitor"}

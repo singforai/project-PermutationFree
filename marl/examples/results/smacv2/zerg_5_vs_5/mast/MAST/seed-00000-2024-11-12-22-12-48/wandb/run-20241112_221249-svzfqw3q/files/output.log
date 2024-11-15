@@ -1,0 +1,348 @@
+share_observation_space:  [Box(120,), Box(120,), Box(120,), Box(120,), Box(120,)]
+observation_space:  [Box(82,), Box(82,), Box(82,), Box(82,), Box(82,)]
+action_space:  [Discrete(11), Discrete(11), Discrete(11), Discrete(11), Discrete(11)]
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 0/3125 episodes, total num timesteps 3200/1e7, FPS 196.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 5/3125 episodes, total num timesteps 19200/1e7, FPS 310.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 10/3125 episodes, total num timesteps 35200/1e7, FPS 346.
+
+incre win rate is 0.0.
+eval win rate is 0.058823529411764705.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 15/3125 episodes, total num timesteps 51200/1e7, FPS 381.
+
+incre win rate is 0.0.
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 20/3125 episodes, total num timesteps 67200/1e7, FPS 404.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 25/3125 episodes, total num timesteps 83200/1e7, FPS 420.
+
+incre win rate is 0.0.
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 30/3125 episodes, total num timesteps 99200/1e7, FPS 430.
+
+incre win rate is 0.0.
+eval win rate is 0.058823529411764705.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 35/3125 episodes, total num timesteps 115200/1e7, FPS 439.
+
+incre win rate is 0.0.
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 40/3125 episodes, total num timesteps 131200/1e7, FPS 445.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 45/3125 episodes, total num timesteps 147200/1e7, FPS 450.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 50/3125 episodes, total num timesteps 163200/1e7, FPS 454.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 55/3125 episodes, total num timesteps 179200/1e7, FPS 458.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 60/3125 episodes, total num timesteps 195200/1e7, FPS 460.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 65/3125 episodes, total num timesteps 211200/1e7, FPS 463.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 70/3125 episodes, total num timesteps 227200/1e7, FPS 466.
+
+incre win rate is 0.0.
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 75/3125 episodes, total num timesteps 243200/1e7, FPS 468.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 80/3125 episodes, total num timesteps 259200/1e7, FPS 470.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 85/3125 episodes, total num timesteps 275200/1e7, FPS 472.
+
+incre win rate is 0.0.
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 90/3125 episodes, total num timesteps 291200/1e7, FPS 474.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 95/3125 episodes, total num timesteps 307200/1e7, FPS 475.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 100/3125 episodes, total num timesteps 323200/1e7, FPS 476.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 105/3125 episodes, total num timesteps 339200/1e7, FPS 477.
+
+incre win rate is 0.0.
+eval win rate is 0.029411764705882353.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 110/3125 episodes, total num timesteps 355200/1e7, FPS 479.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 115/3125 episodes, total num timesteps 371200/1e7, FPS 480.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 120/3125 episodes, total num timesteps 387200/1e7, FPS 481.
+
+incre win rate is 0.0.
+eval win rate is 0.17647058823529413.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 125/3125 episodes, total num timesteps 403200/1e7, FPS 481.
+
+incre win rate is 0.0.
+eval win rate is 0.18181818181818182.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 130/3125 episodes, total num timesteps 419200/1e7, FPS 482.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 135/3125 episodes, total num timesteps 435200/1e7, FPS 483.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 140/3125 episodes, total num timesteps 451200/1e7, FPS 484.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 145/3125 episodes, total num timesteps 467200/1e7, FPS 485.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 150/3125 episodes, total num timesteps 483200/1e7, FPS 485.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 155/3125 episodes, total num timesteps 499200/1e7, FPS 486.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 160/3125 episodes, total num timesteps 515200/1e7, FPS 487.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 165/3125 episodes, total num timesteps 531200/1e7, FPS 488.
+
+incre win rate is 0.0.
+eval win rate is 0.21212121212121213.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 170/3125 episodes, total num timesteps 547200/1e7, FPS 489.
+
+incre win rate is 0.0.
+eval win rate is 0.14705882352941177.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 175/3125 episodes, total num timesteps 563200/1e7, FPS 489.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 180/3125 episodes, total num timesteps 579200/1e7, FPS 490.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 185/3125 episodes, total num timesteps 595200/1e7, FPS 490.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 190/3125 episodes, total num timesteps 611200/1e7, FPS 490.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 195/3125 episodes, total num timesteps 627200/1e7, FPS 491.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 200/3125 episodes, total num timesteps 643200/1e7, FPS 491.
+
+incre win rate is 0.0.
+eval win rate is 0.21212121212121213.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 205/3125 episodes, total num timesteps 659200/1e7, FPS 492.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 210/3125 episodes, total num timesteps 675200/1e7, FPS 492.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 215/3125 episodes, total num timesteps 691200/1e7, FPS 492.
+
+incre win rate is 0.0.
+eval win rate is 0.11764705882352941.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 220/3125 episodes, total num timesteps 707200/1e7, FPS 493.
+
+incre win rate is 0.0.
+eval win rate is 0.11428571428571428.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 225/3125 episodes, total num timesteps 723200/1e7, FPS 494.
+
+incre win rate is 0.0.
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 230/3125 episodes, total num timesteps 739200/1e7, FPS 494.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 235/3125 episodes, total num timesteps 755200/1e7, FPS 494.
+
+incre win rate is 0.0.
+eval win rate is 0.058823529411764705.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 240/3125 episodes, total num timesteps 771200/1e7, FPS 494.
+
+incre win rate is 0.0.
+eval win rate is 0.14285714285714285.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 245/3125 episodes, total num timesteps 787200/1e7, FPS 495.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 250/3125 episodes, total num timesteps 803200/1e7, FPS 495.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 255/3125 episodes, total num timesteps 819200/1e7, FPS 495.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 260/3125 episodes, total num timesteps 835200/1e7, FPS 495.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 265/3125 episodes, total num timesteps 851200/1e7, FPS 496.
+
+incre win rate is 0.0.
+eval win rate is 0.21212121212121213.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 270/3125 episodes, total num timesteps 867200/1e7, FPS 496.
+
+incre win rate is 0.0.
+eval win rate is 0.11764705882352941.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 275/3125 episodes, total num timesteps 883200/1e7, FPS 496.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 280/3125 episodes, total num timesteps 899200/1e7, FPS 496.
+
+incre win rate is 0.0.
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 285/3125 episodes, total num timesteps 915200/1e7, FPS 497.
+
+incre win rate is 0.0.
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 290/3125 episodes, total num timesteps 931200/1e7, FPS 497.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 295/3125 episodes, total num timesteps 947200/1e7, FPS 497.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 300/3125 episodes, total num timesteps 963200/1e7, FPS 497.
+
+incre win rate is 0.0.
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 305/3125 episodes, total num timesteps 979200/1e7, FPS 498.
+
+incre win rate is 0.0.
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 310/3125 episodes, total num timesteps 995200/1e7, FPS 498.
+
+incre win rate is 0.0.
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 315/3125 episodes, total num timesteps 1011200/1e7, FPS 498.
+
+incre win rate is 0.0.
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 320/3125 episodes, total num timesteps 1027200/1e7, FPS 498.
+
+incre win rate is 0.0.
+eval win rate is 0.18181818181818182.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 325/3125 episodes, total num timesteps 1043200/1e7, FPS 480.
+
+incre win rate is 0.0.
+eval win rate is 0.20588235294117646.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 330/3125 episodes, total num timesteps 1059200/1e7, FPS 481.
+
+incre win rate is 0.0.
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 335/3125 episodes, total num timesteps 1075200/1e7, FPS 481.
+
+incre win rate is 0.0.
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mast Exp MAST updates 340/3125 episodes, total num timesteps 1091200/1e7, FPS 481.
+
+incre win rate is 0.0.
+eval win rate is 0.11764705882352941.

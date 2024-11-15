@@ -1,0 +1,18 @@
+{"time":"2024-11-11T20:02:17.523126418+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-11T20:02:17.523185673+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/zerg_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-11-20-02-16/wandb/run-20241111_200217-s7vdeguh/logs/debug-core.log"}
+{"time":"2024-11-11T20:02:17.633631391+09:00","level":"INFO","msg":"created new stream","id":"s7vdeguh"}
+{"time":"2024-11-11T20:02:17.633692606+09:00","level":"INFO","msg":"stream: started","id":"s7vdeguh"}
+{"time":"2024-11-11T20:02:17.633732879+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"s7vdeguh"}}
+{"time":"2024-11-11T20:02:17.633872074+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"s7vdeguh"}}
+{"time":"2024-11-11T20:02:17.633778071+09:00","level":"INFO","msg":"sender: started","stream_id":"s7vdeguh"}
+{"time":"2024-11-11T20:02:18.078889896+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-12T00:04:23.942605652+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/singfor7012/smacv2_zerg_5_vs_5/s7vdeguh/file_stream"}
+{"time":"2024-11-12T02:57:52.504694596+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-12T02:57:52.511665308+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-12T02:57:53.461846095+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.577098249},{"desc":"uploading output.log","runtime_seconds":0.336379902,"progress":"125.5KB/125.5KB"},{"desc":"uploading history, summary","runtime_seconds":0.077233278}],"total_operations":3}}
+{"time":"2024-11-12T02:57:56.664668748+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-12T02:57:57.966066883+09:00","level":"INFO","msg":"stream: closing","id":"s7vdeguh"}
+{"time":"2024-11-12T02:57:57.966087049+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"s7vdeguh"}}
+{"time":"2024-11-12T02:57:57.966111793+09:00","level":"INFO","msg":"sender: closed","stream_id":"s7vdeguh"}
+{"time":"2024-11-12T02:57:57.966108703+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"s7vdeguh"}}
+{"time":"2024-11-12T02:57:57.970403783+09:00","level":"INFO","msg":"stream: closed","id":"s7vdeguh"}

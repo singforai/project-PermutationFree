@@ -1,0 +1,107 @@
+{"time":"2024-11-13T01:24:39.328357887+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-13T01:24:39.328412064+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/terran_5_vs_5/mast/MAST/seed-00004-2024-11-13-01-24-37/wandb/run-20241113_012439-j2egk9p6/logs/debug-core.log"}
+{"time":"2024-11-13T01:24:39.443184053+09:00","level":"INFO","msg":"created new stream","id":"j2egk9p6"}
+{"time":"2024-11-13T01:24:39.443246712+09:00","level":"INFO","msg":"stream: started","id":"j2egk9p6"}
+{"time":"2024-11-13T01:24:39.443398254+09:00","level":"INFO","msg":"sender: started","stream_id":"j2egk9p6"}
+{"time":"2024-11-13T01:24:39.443356172+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"j2egk9p6"}}
+{"time":"2024-11-13T01:24:39.443379028+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"j2egk9p6"}}
+{"time":"2024-11-13T01:24:39.879847737+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-13T01:28:25.848001545+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/singfor7012/smacv2_terran_5_vs_5/j2egk9p6/file_stream"}
+{"time":"2024-11-13T01:28:25.848093109+09:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/singfor7012/smacv2_terran_5_vs_5/j2egk9p6/file_stream: {\"error\":\"run smacv2_terran_5_vs_5/j2egk9p6 not found while streaming file\"}"}
+{"time":"2024-11-13T05:53:08.387560295+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-13T05:53:08.396655657+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-13T05:53:08.585628514+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:53:09.384328235+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":1.003340864,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T05:53:11.261694789+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:53:15.892725751+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:53:26.035768275+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:53:42.316906484+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:54:09.42920223+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":61.048216724,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T05:54:15.75518822+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:55:09.466313279+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":121.085324948,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T05:55:15.946589412+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:56:09.50388271+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":181.122894792,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T05:56:16.13719941+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:57:09.541575071+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":241.16058731,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T05:57:16.335425983+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:58:09.582246695+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":301.201255501,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T05:58:16.535326516+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T05:59:09.61710452+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":361.236115934,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T05:59:16.728220713+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:00:09.651357545+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":421.270366896,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:00:16.929649189+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:01:09.687389194+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":481.306402912,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:01:17.121079333+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:02:09.729518833+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":541.348532816,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:02:17.309473895+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:03:08.389511001+09:00","level":"WARN","msg":"sender: taking a long time","seconds":600.000658479,"work":"WorkRecord(*service_go_proto.Record_Telemetry); Control(connection_id:\"127.0.0.1:45136\")"}
+{"time":"2024-11-13T06:03:09.766359012+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":601.385371864,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:03:17.497012672+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:04:09.801641256+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":661.420655625,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:04:17.692362709+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:05:09.838872102+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":721.457883659,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:05:17.88470434+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:06:09.873325669+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":781.492339297,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:06:18.073206888+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:07:09.909080779+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":841.528094928,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:07:18.269661587+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:08:09.943977963+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":901.562990083,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:08:18.494009103+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:09:09.980001371+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":961.59901322,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:09:18.686559743+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:09:18.686669884+09:00","level":"ERROR","msg":"sender: sendConfig:","error":"api: failed sending: POST https://api.wandb.ai/graphql giving up after 21 attempt(s)"}
+{"time":"2024-11-13T06:09:18.686861219+09:00","level":"INFO","msg":"sender: succeeded after taking longer than expected","seconds":970.305891052,"work":"WorkRecord(*service_go_proto.Record_Telemetry); Control(connection_id:\"127.0.0.1:45136\")"}
+{"time":"2024-11-13T06:09:18.884425562+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:09:18.929437175+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:09:18.929474718+09:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404 Not Found: {\"errors\":[{\"message\":\"run smacv2_terran_5_vs_5/j2egk9p6 not found during createRunFiles\",\"path\":[\"createRunFiles\"]}],\"data\":{\"createRunFiles\":null}}"}
+{"time":"2024-11-13T06:09:21.516474878+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:09:25.997531666+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:09:35.702525929+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:09:52.206701269+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:10:10.014043794+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":51.322162855,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:10:30.406031707+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:11:10.046829076+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":111.354948961,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:11:30.600436893+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:12:10.090302815+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":171.398423311,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:12:30.798777511+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:13:10.124744644+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":231.432862311,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:13:30.994181892+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:14:10.156448257+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":291.464569276,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:14:31.184633132+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:15:10.188069503+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":351.496191328,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:15:31.392950952+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:16:10.22293892+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":411.531060779,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:16:31.594397665+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:17:10.254968802+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":471.56309026,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:17:31.802796279+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:18:10.287033422+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":531.595152944,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:18:32.00627792+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:19:10.320747662+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":591.628867884,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:19:18.692305631+09:00","level":"WARN","msg":"sender: taking a long time","seconds":600.0003887,"work":"WorkRecord(*service_go_proto.Request_Defer); Control(local:true always_send:true)"}
+{"time":"2024-11-13T06:19:32.201735223+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:20:10.354017683+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":651.662136871,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:20:32.393347013+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:21:10.38738916+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":711.695509393,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:21:32.596771379+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:22:10.418639358+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":771.72675954,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:22:32.795109424+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:23:10.448976534+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":831.75709541,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:23:32.987671875+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:24:10.481878944+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":891.790000772,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:24:33.188999233+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:25:10.513380465+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":951.821500087,"error_status":"retrying HTTP 409 Conflict"}],"total_operations":1}}
+{"time":"2024-11-13T06:25:33.381485601+09:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:25:33.381584458+09:00","level":"ERROR","msg":"sender: sendConfig:","error":"api: failed sending: POST https://api.wandb.ai/graphql giving up after 21 attempt(s)"}
+{"time":"2024-11-13T06:25:33.390511423+09:00","level":"INFO","msg":"sender: succeeded after taking longer than expected","seconds":974.698636508,"work":"WorkRecord(*service_go_proto.Request_Defer); Control(local:true always_send:true)"}
+{"time":"2024-11-13T06:25:33.631392021+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:25:33.631458726+09:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404 Not Found: {\"errors\":[{\"message\":\"run smacv2_terran_5_vs_5/j2egk9p6 not found during createRunFiles\",\"path\":[\"createRunFiles\"]}],\"data\":{\"createRunFiles\":null}}"}
+{"time":"2024-11-13T06:25:34.003504238+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:25:34.004122384+09:00","level":"ERROR","msg":"sender: failed to save job artifact: gql.UseArtifact: returned error 404 Not Found: {\"errors\":[{\"message\":\"failed to find run smacv2_terran_5_vs_5/j2egk9p6\",\"path\":[\"useArtifact\"]}],\"data\":{\"useArtifact\":null}}"}
+{"time":"2024-11-13T06:25:34.055786401+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-13T06:25:34.250482858+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2024-11-13T06:25:34.250551834+09:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404 Not Found: {\"errors\":[{\"message\":\"run smacv2_terran_5_vs_5/j2egk9p6 not found during createRunFiles\",\"path\":[\"createRunFiles\"]}],\"data\":{\"createRunFiles\":null}}"}
+{"time":"2024-11-13T06:25:35.079164639+09:00","level":"INFO","msg":"stream: closing","id":"j2egk9p6"}
+{"time":"2024-11-13T06:25:35.079191847+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"j2egk9p6"}}
+{"time":"2024-11-13T06:25:35.079215647+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"j2egk9p6"}}
+{"time":"2024-11-13T06:25:35.079268854+09:00","level":"INFO","msg":"sender: closed","stream_id":"j2egk9p6"}
+{"time":"2024-11-13T06:25:35.082787106+09:00","level":"INFO","msg":"stream: closed","id":"j2egk9p6"}

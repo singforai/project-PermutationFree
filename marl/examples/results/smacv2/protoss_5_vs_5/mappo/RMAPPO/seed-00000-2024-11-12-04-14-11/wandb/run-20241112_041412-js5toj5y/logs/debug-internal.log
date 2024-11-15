@@ -1,0 +1,17 @@
+{"time":"2024-11-12T04:14:12.720190564+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-11-12T04:14:12.720247015+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-12-04-14-11/wandb/run-20241112_041412-js5toj5y/logs/debug-core.log"}
+{"time":"2024-11-12T04:14:12.831366273+09:00","level":"INFO","msg":"created new stream","id":"js5toj5y"}
+{"time":"2024-11-12T04:14:12.831422734+09:00","level":"INFO","msg":"stream: started","id":"js5toj5y"}
+{"time":"2024-11-12T04:14:12.83148435+09:00","level":"INFO","msg":"sender: started","stream_id":"js5toj5y"}
+{"time":"2024-11-12T04:14:12.831470646+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"js5toj5y"}}
+{"time":"2024-11-12T04:14:12.831481365+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"js5toj5y"}}
+{"time":"2024-11-12T04:14:13.219728742+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-12T09:36:44.221672781+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-12T09:36:44.228319566+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-12T09:36:45.181141668+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.586966472},{"desc":"uploading output.log","runtime_seconds":0.343292358,"progress":"126.5KB/126.5KB"}],"total_operations":2}}
+{"time":"2024-11-12T09:36:45.497573131+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-12T09:36:46.910854013+09:00","level":"INFO","msg":"stream: closing","id":"js5toj5y"}
+{"time":"2024-11-12T09:36:46.91087748+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"js5toj5y"}}
+{"time":"2024-11-12T09:36:46.91090259+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"js5toj5y"}}
+{"time":"2024-11-12T09:36:46.910948987+09:00","level":"INFO","msg":"sender: closed","stream_id":"js5toj5y"}
+{"time":"2024-11-12T09:36:46.914879776+09:00","level":"INFO","msg":"stream: closed","id":"js5toj5y"}

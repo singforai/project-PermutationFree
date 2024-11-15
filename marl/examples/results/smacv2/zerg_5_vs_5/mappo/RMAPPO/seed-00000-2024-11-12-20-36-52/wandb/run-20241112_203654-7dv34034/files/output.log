@@ -1,0 +1,656 @@
+share_observation_space:  [Box(120,), Box(120,), Box(120,), Box(120,), Box(120,)]
+observation_space:  [Box(82,), Box(82,), Box(82,), Box(82,), Box(82,)]
+action_space:  [Discrete(11), Discrete(11), Discrete(11), Discrete(11), Discrete(11)]
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 0/3125 episodes, total num timesteps 3200/1e7, FPS 219.
+
+incre win rate is 0.0.
+0.3466957605985037
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 5/3125 episodes, total num timesteps 19200/1e7, FPS 298.
+
+incre win rate is 0.0.
+0.36377805486284287
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 10/3125 episodes, total num timesteps 35200/1e7, FPS 319.
+
+incre win rate is 0.0.
+0.35710723192019955
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 15/3125 episodes, total num timesteps 51200/1e7, FPS 328.
+
+incre win rate is 0.0.
+0.3651496259351621
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 20/3125 episodes, total num timesteps 67200/1e7, FPS 346.
+
+incre win rate is 0.0.
+0.36845386533665836
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 25/3125 episodes, total num timesteps 83200/1e7, FPS 357.
+
+incre win rate is 0.0.
+0.379426433915212
+eval win rate is 0.058823529411764705.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 30/3125 episodes, total num timesteps 99200/1e7, FPS 365.
+
+incre win rate is 0.0.
+0.3772443890274314
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 35/3125 episodes, total num timesteps 115200/1e7, FPS 371.
+
+incre win rate is 0.0.
+0.37980049875311717
+eval win rate is 0.029411764705882353.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 40/3125 episodes, total num timesteps 131200/1e7, FPS 375.
+
+incre win rate is 0.0.
+0.3826059850374065
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 45/3125 episodes, total num timesteps 147200/1e7, FPS 378.
+
+incre win rate is 0.0.
+0.37518703241895257
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 50/3125 episodes, total num timesteps 163200/1e7, FPS 381.
+
+incre win rate is 0.0.
+0.37836658354114716
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 55/3125 episodes, total num timesteps 179200/1e7, FPS 385.
+
+incre win rate is 0.0.
+0.37481296758104743
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 60/3125 episodes, total num timesteps 195200/1e7, FPS 388.
+
+incre win rate is 0.0.
+0.37400249376558603
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 65/3125 episodes, total num timesteps 211200/1e7, FPS 390.
+
+incre win rate is 0.0.
+0.3788029925187032
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 70/3125 episodes, total num timesteps 227200/1e7, FPS 392.
+
+incre win rate is 0.0.
+0.35785536159600995
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 75/3125 episodes, total num timesteps 243200/1e7, FPS 394.
+
+incre win rate is 0.0.
+0.3668329177057357
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 80/3125 episodes, total num timesteps 259200/1e7, FPS 395.
+
+incre win rate is 0.0.
+0.38740648379052367
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 85/3125 episodes, total num timesteps 275200/1e7, FPS 396.
+
+incre win rate is 0.0.
+0.3863466334164588
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 90/3125 episodes, total num timesteps 291200/1e7, FPS 398.
+
+incre win rate is 0.0.
+0.37755610972568576
+eval win rate is 0.0.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 95/3125 episodes, total num timesteps 307200/1e7, FPS 399.
+
+incre win rate is 0.0.
+0.3635286783042394
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 100/3125 episodes, total num timesteps 323200/1e7, FPS 400.
+
+incre win rate is 0.0.
+0.39756857855361594
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 105/3125 episodes, total num timesteps 339200/1e7, FPS 401.
+
+incre win rate is 0.0.
+0.38142144638403985
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 110/3125 episodes, total num timesteps 355200/1e7, FPS 402.
+
+incre win rate is 0.0.
+0.3767456359102245
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 115/3125 episodes, total num timesteps 371200/1e7, FPS 403.
+
+incre win rate is 0.0.
+0.3605361596009975
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 120/3125 episodes, total num timesteps 387200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.3612219451371571
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 125/3125 episodes, total num timesteps 403200/1e7, FPS 406.
+
+incre win rate is 0.0.
+0.38834164588528675
+eval win rate is 0.14705882352941177.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 130/3125 episodes, total num timesteps 419200/1e7, FPS 406.
+
+incre win rate is 0.0.
+0.3903990024937656
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 135/3125 episodes, total num timesteps 435200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.3743142144638404
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 140/3125 episodes, total num timesteps 451200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.3726309226932668
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 145/3125 episodes, total num timesteps 467200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.3672069825436409
+eval win rate is 0.029411764705882353.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 150/3125 episodes, total num timesteps 483200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.35935162094763096
+eval win rate is 0.11428571428571428.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 155/3125 episodes, total num timesteps 499200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.3634663341645885
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 160/3125 episodes, total num timesteps 515200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.3835411471321696
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 165/3125 episodes, total num timesteps 531200/1e7, FPS 395.
+
+incre win rate is 0.0.
+0.37755610972568576
+eval win rate is 0.029411764705882353.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 170/3125 episodes, total num timesteps 547200/1e7, FPS 395.
+
+incre win rate is 0.0.
+0.3726309226932668
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 175/3125 episodes, total num timesteps 563200/1e7, FPS 396.
+
+incre win rate is 0.0.
+0.3604114713216957
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 180/3125 episodes, total num timesteps 579200/1e7, FPS 396.
+
+incre win rate is 0.0.
+0.3695137157107232
+eval win rate is 0.029411764705882353.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 185/3125 episodes, total num timesteps 595200/1e7, FPS 396.
+
+incre win rate is 0.0.
+0.36103491271820454
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 190/3125 episodes, total num timesteps 611200/1e7, FPS 397.
+
+incre win rate is 0.0.
+0.34264339152119705
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 195/3125 episodes, total num timesteps 627200/1e7, FPS 397.
+
+incre win rate is 0.0.
+0.3413965087281795
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 200/3125 episodes, total num timesteps 643200/1e7, FPS 397.
+
+incre win rate is 0.0.
+0.36483790523690773
+eval win rate is 0.08108108108108109.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 205/3125 episodes, total num timesteps 659200/1e7, FPS 398.
+
+incre win rate is 0.0.
+0.34869077306733165
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 210/3125 episodes, total num timesteps 675200/1e7, FPS 398.
+
+incre win rate is 0.0.
+0.3513715710723192
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 215/3125 episodes, total num timesteps 691200/1e7, FPS 399.
+
+incre win rate is 0.0.
+0.33958852867830425
+eval win rate is 0.029411764705882353.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 220/3125 episodes, total num timesteps 707200/1e7, FPS 400.
+
+incre win rate is 0.0.
+0.346072319201995
+eval win rate is 0.06060606060606061.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 225/3125 episodes, total num timesteps 723200/1e7, FPS 400.
+
+incre win rate is 0.0.
+0.36103491271820454
+eval win rate is 0.23529411764705882.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 230/3125 episodes, total num timesteps 739200/1e7, FPS 400.
+
+incre win rate is 0.0.
+0.34214463840399
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 235/3125 episodes, total num timesteps 755200/1e7, FPS 401.
+
+incre win rate is 0.0.
+0.3742518703241895
+eval win rate is 0.14285714285714285.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 240/3125 episodes, total num timesteps 771200/1e7, FPS 402.
+
+incre win rate is 0.0.
+0.36408977556109723
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 245/3125 episodes, total num timesteps 787200/1e7, FPS 402.
+
+incre win rate is 0.0.
+0.3796758104738155
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 250/3125 episodes, total num timesteps 803200/1e7, FPS 403.
+
+incre win rate is 0.0.
+0.3560473815461347
+eval win rate is 0.030303030303030304.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 255/3125 episodes, total num timesteps 819200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.3467581047381546
+eval win rate is 0.18181818181818182.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 260/3125 episodes, total num timesteps 835200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.3576683291770574
+eval win rate is 0.24242424242424243.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 265/3125 episodes, total num timesteps 851200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.35847880299251866
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 270/3125 episodes, total num timesteps 867200/1e7, FPS 406.
+
+incre win rate is 0.0.
+0.36246882793017454
+eval win rate is 0.14705882352941177.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 275/3125 episodes, total num timesteps 883200/1e7, FPS 406.
+
+incre win rate is 0.0.
+0.3606608478802993
+eval win rate is 0.24242424242424243.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 280/3125 episodes, total num timesteps 899200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.35561097256857854
+eval win rate is 0.20588235294117646.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 285/3125 episodes, total num timesteps 915200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.37094763092269323
+eval win rate is 0.24242424242424243.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 290/3125 episodes, total num timesteps 931200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.3572942643391521
+eval win rate is 0.14705882352941177.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 295/3125 episodes, total num timesteps 947200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.3704488778054863
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 300/3125 episodes, total num timesteps 963200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.34638403990024935
+eval win rate is 0.2647058823529412.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 305/3125 episodes, total num timesteps 979200/1e7, FPS 409.
+
+incre win rate is 0.0.
+0.3293017456359102
+eval win rate is 0.058823529411764705.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 310/3125 episodes, total num timesteps 995200/1e7, FPS 409.
+
+incre win rate is 0.0.
+0.35243142144638406
+eval win rate is 0.08823529411764706.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 315/3125 episodes, total num timesteps 1011200/1e7, FPS 409.
+
+incre win rate is 0.0.
+0.3316708229426434
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 320/3125 episodes, total num timesteps 1027200/1e7, FPS 409.
+
+incre win rate is 0.0.
+0.32724438902743147
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 325/3125 episodes, total num timesteps 1043200/1e7, FPS 401.
+
+incre win rate is 0.0.
+0.3475062344139651
+eval win rate is 0.14705882352941177.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 330/3125 episodes, total num timesteps 1059200/1e7, FPS 402.
+
+incre win rate is 0.0.
+0.3454488778054863
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 335/3125 episodes, total num timesteps 1075200/1e7, FPS 402.
+
+incre win rate is 0.0.
+0.3552992518703242
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 340/3125 episodes, total num timesteps 1091200/1e7, FPS 402.
+
+incre win rate is 0.0.
+0.33958852867830425
+eval win rate is 0.12121212121212122.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 345/3125 episodes, total num timesteps 1107200/1e7, FPS 403.
+
+incre win rate is 0.0.
+0.3467581047381546
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 350/3125 episodes, total num timesteps 1123200/1e7, FPS 403.
+
+incre win rate is 0.0.
+0.3506234413965087
+eval win rate is 0.23529411764705882.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 355/3125 episodes, total num timesteps 1139200/1e7, FPS 403.
+
+incre win rate is 0.0.
+0.3400249376558604
+eval win rate is 0.11428571428571428.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 360/3125 episodes, total num timesteps 1155200/1e7, FPS 403.
+
+incre win rate is 0.0.
+0.31839152119700753
+eval win rate is 0.2727272727272727.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 365/3125 episodes, total num timesteps 1171200/1e7, FPS 403.
+
+incre win rate is 0.0.
+0.34869077306733165
+eval win rate is 0.18181818181818182.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 370/3125 episodes, total num timesteps 1187200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.344638403990025
+eval win rate is 0.21212121212121213.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 375/3125 episodes, total num timesteps 1203200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.34788029925187036
+eval win rate is 0.21212121212121213.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 380/3125 episodes, total num timesteps 1219200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.3374688279301745
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 385/3125 episodes, total num timesteps 1235200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.3246882793017456
+eval win rate is 0.1388888888888889.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 390/3125 episodes, total num timesteps 1251200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.34632169576059846
+eval win rate is 0.11764705882352941.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 395/3125 episodes, total num timesteps 1267200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.3096009975062344
+eval win rate is 0.14705882352941177.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 400/3125 episodes, total num timesteps 1283200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.34014962593516207
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 405/3125 episodes, total num timesteps 1299200/1e7, FPS 406.
+
+incre win rate is 0.0.
+0.3514339152119701
+eval win rate is 0.17647058823529413.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 410/3125 episodes, total num timesteps 1315200/1e7, FPS 406.
+
+incre win rate is 0.0.
+0.358354114713217
+eval win rate is 0.18181818181818182.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 415/3125 episodes, total num timesteps 1331200/1e7, FPS 406.
+
+incre win rate is 0.0.
+0.3397755610972568
+eval win rate is 0.3333333333333333.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 420/3125 episodes, total num timesteps 1347200/1e7, FPS 406.
+
+incre win rate is 0.0.
+0.3390274314214464
+eval win rate is 0.2727272727272727.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 425/3125 episodes, total num timesteps 1363200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.33123441396508724
+eval win rate is 0.36363636363636365.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 430/3125 episodes, total num timesteps 1379200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.34806733167082293
+eval win rate is 0.21212121212121213.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 435/3125 episodes, total num timesteps 1395200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.3489401496259351
+eval win rate is 0.21212121212121213.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 440/3125 episodes, total num timesteps 1411200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.3451371571072319
+eval win rate is 0.20588235294117646.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 445/3125 episodes, total num timesteps 1427200/1e7, FPS 407.
+
+incre win rate is 0.0.
+0.3354738154613466
+eval win rate is 0.36363636363636365.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 450/3125 episodes, total num timesteps 1443200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.34046134663341643
+eval win rate is 0.18181818181818182.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 455/3125 episodes, total num timesteps 1459200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.3429551122194514
+eval win rate is 0.09090909090909091.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 460/3125 episodes, total num timesteps 1475200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.32824189526184544
+eval win rate is 0.18181818181818182.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 465/3125 episodes, total num timesteps 1491200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.3767456359102245
+eval win rate is 0.17142857142857143.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 470/3125 episodes, total num timesteps 1507200/1e7, FPS 408.
+
+incre win rate is 0.0.
+0.3286159600997506
+eval win rate is 0.21212121212121213.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 475/3125 episodes, total num timesteps 1523200/1e7, FPS 409.
+
+incre win rate is 0.0.
+0.3346009975062344
+eval win rate is 0.24242424242424243.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 480/3125 episodes, total num timesteps 1539200/1e7, FPS 409.
+
+incre win rate is 0.0.
+0.33653366583541144
+eval win rate is 0.23529411764705882.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 485/3125 episodes, total num timesteps 1555200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.3307356608478803
+eval win rate is 0.17142857142857143.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 490/3125 episodes, total num timesteps 1571200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.3308603491271821
+eval win rate is 0.24242424242424243.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 495/3125 episodes, total num timesteps 1587200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.30592269326683297
+eval win rate is 0.36363636363636365.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 500/3125 episodes, total num timesteps 1603200/1e7, FPS 404.
+
+incre win rate is 0.0.
+0.3011845386533666
+eval win rate is 0.15151515151515152.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 505/3125 episodes, total num timesteps 1619200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.3294887780548629
+eval win rate is 0.3235294117647059.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 510/3125 episodes, total num timesteps 1635200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.3231296758104738
+eval win rate is 0.2.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 515/3125 episodes, total num timesteps 1651200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.32499999999999996
+eval win rate is 0.14705882352941177.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 520/3125 episodes, total num timesteps 1667200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.3057356608478803
+eval win rate is 0.24242424242424243.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 525/3125 episodes, total num timesteps 1683200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.3405860349127182
+eval win rate is 0.24242424242424243.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 530/3125 episodes, total num timesteps 1699200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.2950124688279302
+eval win rate is 0.08333333333333333.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 535/3125 episodes, total num timesteps 1715200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.3354738154613466
+eval win rate is 0.11764705882352941.
+
+ Map zerg_5_vs_5 Algo mappo Exp RMAPPO updates 540/3125 episodes, total num timesteps 1731200/1e7, FPS 405.
+
+incre win rate is 0.0.
+0.306359102244389
