@@ -1,8 +1,0 @@
-{"time":"2024-11-12T09:47:36.940709988+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-12T09:47:36.940766966+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_10_vs_10/mappo/RMAPPO/seed-00000-2024-11-12-09-47-35/wandb/run-20241112_094736-afrpxgdt/logs/debug-core.log"}
-{"time":"2024-11-12T09:47:37.053825544+09:00","level":"INFO","msg":"created new stream","id":"afrpxgdt"}
-{"time":"2024-11-12T09:47:37.05387356+09:00","level":"INFO","msg":"stream: started","id":"afrpxgdt"}
-{"time":"2024-11-12T09:47:37.053935111+09:00","level":"INFO","msg":"sender: started","stream_id":"afrpxgdt"}
-{"time":"2024-11-12T09:47:37.053916471+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"afrpxgdt"}}
-{"time":"2024-11-12T09:47:37.053933955+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"afrpxgdt"}}
-{"time":"2024-11-12T09:47:37.430473675+09:00","level":"INFO","msg":"Starting system monitor"}

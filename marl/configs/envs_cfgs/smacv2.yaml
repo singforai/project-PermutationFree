@@ -1,4 +1,0 @@
-#p, masking is usable
-
-# number of total training steps
-num_env_steps: 1e7

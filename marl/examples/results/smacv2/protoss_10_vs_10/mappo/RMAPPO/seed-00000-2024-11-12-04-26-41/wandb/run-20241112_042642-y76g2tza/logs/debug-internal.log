@@ -1,8 +1,0 @@
-{"time":"2024-11-12T04:26:42.435119916+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-12T04:26:42.43517287+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_10_vs_10/mappo/RMAPPO/seed-00000-2024-11-12-04-26-41/wandb/run-20241112_042642-y76g2tza/logs/debug-core.log"}
-{"time":"2024-11-12T04:26:42.546788395+09:00","level":"INFO","msg":"created new stream","id":"y76g2tza"}
-{"time":"2024-11-12T04:26:42.546845175+09:00","level":"INFO","msg":"stream: started","id":"y76g2tza"}
-{"time":"2024-11-12T04:26:42.546878161+09:00","level":"INFO","msg":"sender: started","stream_id":"y76g2tza"}
-{"time":"2024-11-12T04:26:42.546870761+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"y76g2tza"}}
-{"time":"2024-11-12T04:26:42.546866743+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"y76g2tza"}}
-{"time":"2024-11-12T04:26:42.94192972+09:00","level":"INFO","msg":"Starting system monitor"}

@@ -1,5 +1,0 @@
-share_observation_space:  [Box(120,), Box(120,), Box(120,), Box(120,), Box(120,)]
-observation_space:  [Box(82,), Box(82,), Box(82,), Box(82,), Box(82,)]
-action_space:  [Discrete(11), Discrete(11), Discrete(11), Discrete(11), Discrete(11)]
-
- Map terran_5_vs_5 Algo mappo Exp RMAPPO updates 0/3125 episodes, total num timesteps 3200/1e7, FPS 213.

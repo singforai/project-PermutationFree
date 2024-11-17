@@ -1,8 +1,0 @@
-{"time":"2024-11-13T05:18:57.961782863+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-13T05:18:57.961837176+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/terran_5_vs_5/mast/MAST/seed-00001-2024-11-13-05-18-56/wandb/run-20241113_051857-doza7xaw/logs/debug-core.log"}
-{"time":"2024-11-13T05:18:58.075890402+09:00","level":"INFO","msg":"created new stream","id":"doza7xaw"}
-{"time":"2024-11-13T05:18:58.075951639+09:00","level":"INFO","msg":"stream: started","id":"doza7xaw"}
-{"time":"2024-11-13T05:18:58.075978244+09:00","level":"INFO","msg":"sender: started","stream_id":"doza7xaw"}
-{"time":"2024-11-13T05:18:58.075969541+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"doza7xaw"}}
-{"time":"2024-11-13T05:18:58.075991531+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"doza7xaw"}}
-{"time":"2024-11-13T05:18:58.490823575+09:00","level":"INFO","msg":"Starting system monitor"}

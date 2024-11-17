@@ -1,8 +1,0 @@
-{"time":"2024-11-13T00:30:08.558979136+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-13T00:30:08.559030661+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/terran_5_vs_5/mast/MAST/seed-00000-2024-11-13-00-30-06/wandb/run-20241113_003008-vga4r70p/logs/debug-core.log"}
-{"time":"2024-11-13T00:30:08.672953589+09:00","level":"INFO","msg":"created new stream","id":"vga4r70p"}
-{"time":"2024-11-13T00:30:08.672998876+09:00","level":"INFO","msg":"stream: started","id":"vga4r70p"}
-{"time":"2024-11-13T00:30:08.673018734+09:00","level":"INFO","msg":"sender: started","stream_id":"vga4r70p"}
-{"time":"2024-11-13T00:30:08.673014231+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"vga4r70p"}}
-{"time":"2024-11-13T00:30:08.673081473+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"vga4r70p"}}
-{"time":"2024-11-13T00:30:09.067057426+09:00","level":"INFO","msg":"Starting system monitor"}

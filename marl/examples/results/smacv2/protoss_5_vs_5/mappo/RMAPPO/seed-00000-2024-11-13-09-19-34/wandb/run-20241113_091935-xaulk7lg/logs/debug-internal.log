@@ -1,9 +1,0 @@
-{"time":"2024-11-13T09:19:35.563899309+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-13T09:19:35.56394948+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mappo/RMAPPO/seed-00000-2024-11-13-09-19-34/wandb/run-20241113_091935-xaulk7lg/logs/debug-core.log"}
-{"time":"2024-11-13T09:19:35.678376891+09:00","level":"INFO","msg":"created new stream","id":"xaulk7lg"}
-{"time":"2024-11-13T09:19:35.678424019+09:00","level":"INFO","msg":"stream: started","id":"xaulk7lg"}
-{"time":"2024-11-13T09:19:35.678465605+09:00","level":"INFO","msg":"sender: started","stream_id":"xaulk7lg"}
-{"time":"2024-11-13T09:19:35.678469818+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"xaulk7lg"}}
-{"time":"2024-11-13T09:19:35.678460347+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"xaulk7lg"}}
-{"time":"2024-11-13T09:19:36.077870885+09:00","level":"INFO","msg":"Starting system monitor"}
-{"time":"2024-11-13T10:34:52.399449879+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/singfor7012/smacv2_protoss_5_vs_5/xaulk7lg/file_stream"}

@@ -1,8 +1,0 @@
-{"time":"2024-11-12T23:02:38.442402233+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-12T23:02:38.442448898+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_5_vs_5/mast/MAST/seed-00000-2024-11-12-23-02-36/wandb/run-20241112_230238-deiky8un/logs/debug-core.log"}
-{"time":"2024-11-12T23:02:38.560755545+09:00","level":"INFO","msg":"created new stream","id":"deiky8un"}
-{"time":"2024-11-12T23:02:38.56080989+09:00","level":"INFO","msg":"stream: started","id":"deiky8un"}
-{"time":"2024-11-12T23:02:38.560862664+09:00","level":"INFO","msg":"sender: started","stream_id":"deiky8un"}
-{"time":"2024-11-12T23:02:38.560852827+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"deiky8un"}}
-{"time":"2024-11-12T23:02:38.560881512+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"deiky8un"}}
-{"time":"2024-11-12T23:02:39.084952999+09:00","level":"INFO","msg":"Starting system monitor"}

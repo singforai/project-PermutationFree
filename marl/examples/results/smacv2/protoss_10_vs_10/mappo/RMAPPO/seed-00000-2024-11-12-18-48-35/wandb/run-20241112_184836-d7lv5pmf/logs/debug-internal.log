@@ -1,8 +1,0 @@
-{"time":"2024-11-12T18:48:36.675791931+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-12T18:48:36.675848375+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/protoss_10_vs_10/mappo/RMAPPO/seed-00000-2024-11-12-18-48-35/wandb/run-20241112_184836-d7lv5pmf/logs/debug-core.log"}
-{"time":"2024-11-12T18:48:36.791902238+09:00","level":"INFO","msg":"created new stream","id":"d7lv5pmf"}
-{"time":"2024-11-12T18:48:36.791940439+09:00","level":"INFO","msg":"stream: started","id":"d7lv5pmf"}
-{"time":"2024-11-12T18:48:36.791982361+09:00","level":"INFO","msg":"sender: started","stream_id":"d7lv5pmf"}
-{"time":"2024-11-12T18:48:36.791955373+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"d7lv5pmf"}}
-{"time":"2024-11-12T18:48:36.791968041+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"d7lv5pmf"}}
-{"time":"2024-11-12T18:48:37.182351559+09:00","level":"INFO","msg":"Starting system monitor"}

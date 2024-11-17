@@ -1,9 +1,14 @@
 
-# Exclude __pycache__ directories
-__pycache__/
 *.pyc
+__pycache__/
+
+.vscode/
+.idea/
+
+# 기타
+*.log
+*.tmp
 
 
-
-
+./marl/scripts/smacv2/_log/*
 ./marl/examples/*

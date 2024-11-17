@@ -1,8 +1,0 @@
-{"time":"2024-11-13T21:42:33.91169203+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-13T21:42:33.911736057+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/terran_5_vs_5/mast/MAST/seed-00002-2024-11-13-21-42-32/wandb/run-20241113_214233-zyk6wb2f/logs/debug-core.log"}
-{"time":"2024-11-13T21:42:34.025550147+09:00","level":"INFO","msg":"created new stream","id":"zyk6wb2f"}
-{"time":"2024-11-13T21:42:34.025601138+09:00","level":"INFO","msg":"stream: started","id":"zyk6wb2f"}
-{"time":"2024-11-13T21:42:34.025638443+09:00","level":"INFO","msg":"sender: started","stream_id":"zyk6wb2f"}
-{"time":"2024-11-13T21:42:34.025636514+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"zyk6wb2f"}}
-{"time":"2024-11-13T21:42:34.025615694+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"zyk6wb2f"}}
-{"time":"2024-11-13T21:42:34.629285836+09:00","level":"INFO","msg":"Starting system monitor"}

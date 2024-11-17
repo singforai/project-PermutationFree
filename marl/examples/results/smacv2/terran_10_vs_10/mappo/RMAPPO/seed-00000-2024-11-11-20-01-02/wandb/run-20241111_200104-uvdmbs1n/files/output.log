@@ -1,4 +1,0 @@
-share_observation_space:  [Box(290,), Box(290,), Box(290,), Box(290,), Box(290,), Box(290,), Box(290,), Box(290,), Box(290,), Box(290,)]
-observation_space:  [Box(162,), Box(162,), Box(162,), Box(162,), Box(162,), Box(162,), Box(162,), Box(162,), Box(162,), Box(162,)]
-action_space:  [Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16), Discrete(16)]
-Traceback (most recent call last):

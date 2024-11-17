@@ -1,8 +1,0 @@
-{"time":"2024-11-11T19:59:29.294789169+09:00","level":"INFO","msg":"using version","core version":"0.18.6"}
-{"time":"2024-11-11T19:59:29.294844869+09:00","level":"INFO","msg":"created symlink","path":"../../../examples/results/smacv2/zerg_10_vs_10/mappo/RMAPPO/seed-00000-2024-11-11-19-59-27/wandb/run-20241111_195929-j6mybggl/logs/debug-core.log"}
-{"time":"2024-11-11T19:59:29.412166695+09:00","level":"INFO","msg":"created new stream","id":"j6mybggl"}
-{"time":"2024-11-11T19:59:29.412209164+09:00","level":"INFO","msg":"stream: started","id":"j6mybggl"}
-{"time":"2024-11-11T19:59:29.412264403+09:00","level":"INFO","msg":"sender: started","stream_id":"j6mybggl"}
-{"time":"2024-11-11T19:59:29.412259814+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"j6mybggl"}}
-{"time":"2024-11-11T19:59:29.412263117+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"j6mybggl"}}
-{"time":"2024-11-11T19:59:29.868589395+09:00","level":"INFO","msg":"Starting system monitor"}
