@@ -1760,7 +1760,6 @@ class StarCraft2Env(MultiAgentEnv):
             
         for enemy_id in enemies:
             obs[enemy_id + self.n_agents] = self.own_obs_enemy(enemy_id = enemy_id)
-        print(self.visible_masking)
         return obs
 
     def get_obs_agent(self, agent_id, fully_observable=False):
