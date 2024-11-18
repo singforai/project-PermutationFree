@@ -1638,19 +1638,11 @@ class StarCraft2Env(MultiAgentEnv):
                     own_feats[ind] = unit.shield / max_shield
                     ind += 1
 
-            # if self.stochastic_attack:
-            #     own_feats[ind] = self.agent_attack_probabilities[agent_id]
-            #     ind += 1
-            # if self.stochastic_health:
-            #     own_feats[ind] = self.agent_health_levels[agent_id]
-            #     ind += 1
             if self.obs_own_pos:
                 own_feats[ind] = x / self.map_x
                 own_feats[ind + 1] = y / self.map_y
                 ind += 2
-            # if self.conic_fov:
-            #     own_feats[ind : ind + 2] = self.fov_directions[agent_id]
-            #     ind += 2
+            
             if self.unit_type_bits > 0:
                 type_id = self.get_unit_type_id(unit, True)
                 own_feats[ind + type_id] = 1
@@ -1711,7 +1703,9 @@ class StarCraft2Env(MultiAgentEnv):
                 move_feats[m] = avail_actions[m + 2]
                 
             ind = 0
+
             if self.obs_own_health:
+                
                 if not self.stochastic_health:
                     own_feats[ind] = e_unit.health / e_unit.health_max
                 else:
@@ -1721,7 +1715,6 @@ class StarCraft2Env(MultiAgentEnv):
                     max_shield = self.unit_max_shield(e_unit)
                     own_feats[ind] = e_unit.shield / max_shield
                     ind += 1
-
             if self.obs_own_pos:
                 own_feats[ind] = x / self.map_x
                 own_feats[ind + 1] = y / self.map_y
@@ -2241,8 +2234,8 @@ class StarCraft2Env(MultiAgentEnv):
         if self.obs_own_pos and self.obs_starcraft:
             own_feats += 2
         
-        if self.algorithm_name == "mast":
-            own_feats += 1
+        # if self.algorithm_name == "mast":
+        own_feats += 1
         
         return own_feats
 
@@ -2287,36 +2280,36 @@ class StarCraft2Env(MultiAgentEnv):
     def get_obs_size(self):
         """Returns the size of the observation."""
         
-        if self.algorithm_name == "mast":
-            move_feats = self.get_obs_move_feats_size()
-            own_feats = self.get_obs_own_feats_size()
+        # if self.algorithm_name == "mast":
+        move_feats = self.get_obs_move_feats_size()
+        own_feats = self.get_obs_own_feats_size()
 
-            return (
-                self.obs_timestep_number
-                + own_feats
-                + move_feats
-                + 3
-            )
-        else:
-            own_feats = self.get_obs_own_feats_size()
-            move_feats = self.get_obs_move_feats_size()
+        return (
+            self.obs_timestep_number
+            + own_feats
+            + move_feats
+            + 3
+        )
+        # else:
+        #     own_feats = self.get_obs_own_feats_size()
+        #     move_feats = self.get_obs_move_feats_size()
 
-            n_enemies, n_enemy_feats = self.get_obs_enemy_feats_size()
-            n_allies, n_ally_feats = self.get_obs_ally_feats_size()
+        #     n_enemies, n_enemy_feats = self.get_obs_enemy_feats_size()
+        #     n_allies, n_ally_feats = self.get_obs_ally_feats_size()
 
-            enemy_feats = n_enemies * n_enemy_feats
-            ally_feats = n_allies * n_ally_feats
+        #     enemy_feats = n_enemies * n_enemy_feats
+        #     ally_feats = n_allies * n_ally_feats
             
-            if self.obs_starcraft:
-                return (
-                    self.obs_timestep_number
-                    + move_feats
-                    + enemy_feats
-                    + ally_feats
-                    + own_feats
-                )
-            else:
-                return 1 if self.obs_timestep_number else 0
+        #     if self.obs_starcraft:
+        #         return (
+        #             self.obs_timestep_number
+        #             + move_feats
+        #             + enemy_feats
+        #             + ally_feats
+        #             + own_feats
+        #         )
+        #     else:
+        #         return 1 if self.obs_timestep_number else 0
 
     def get_state_size(self):
         """Returns the size of the global state."""

@@ -27,17 +27,17 @@ class SMACv2Env:
         processed_actions = np.squeeze(actions, axis=1).tolist()
         reward, terminated, info = self.env.step(actions)
         
-        if self.algorithm_name == "mast":
-            obs = self.env.get_own_obs()
-            state = None
-            
-            """
-            obs_enemies: (self.n_enemies, self.n_agents)
-            obs_ally: (self.n_agents, self.n_agents)
-            """
-        else:
-            obs = self.env.get_obs()
-            state = self.repeat(self.env.get_state())
+        # if self.algorithm_name == "mast":
+        obs = self.env.get_own_obs()[:5]
+        state = self.env.get_own_obs()[:5]
+        
+        #     """
+        #     obs_enemies: (self.n_enemies, self.n_agents)
+        #     obs_ally: (self.n_agents, self.n_agents)
+        #     """
+        # else:
+        #     obs = self.env.get_obs()
+        #     state = self.repeat(self.env.get_state())
 
         self.visiable_objects = self.env.get_visiable_object()
         rewards = [[reward]] * self.n_agents
@@ -75,12 +75,12 @@ class SMACv2Env:
 
     def reset(self):
         self.env.reset()
-        if self.algorithm_name == "mast":
-            obs = self.env.get_own_obs()
-            state = None
-        else:
-            obs = self.env.get_obs()
-            state = self.repeat(self.env.get_state())
+        # if self.algorithm_name == "mast":
+        obs = self.env.get_own_obs()[:5]
+        state = self.env.get_own_obs()[:5]
+        # else:
+        #     obs = self.env.get_obs()
+        #     state = self.repeat(self.env.get_state())
             
         self.visiable_objects = self.env.get_visiable_object()
         avail_actions = self.env.get_avail_actions()

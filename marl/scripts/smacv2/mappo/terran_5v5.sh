@@ -23,7 +23,7 @@ prob=1.0
 
 algo="mappo" 
 exp_name="RMAPPO"
-group_name="RMAPPO"
+group_name="RMAPPO-obs"
 map_name="terran_5_vs_5"
 
 for seed in 0 1 2 3 4; do

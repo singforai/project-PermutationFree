@@ -24,7 +24,7 @@ class Encoder(nn.Module):
         
         self.base = nn.Sequential(
             nn.Linear(
-               self.obs_space , self.hidden_size
+                self.obs_space ,self.hidden_size
             ),
         )
         
