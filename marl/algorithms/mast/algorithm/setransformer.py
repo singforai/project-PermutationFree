@@ -76,9 +76,9 @@ class Encoder(nn.Module):
 
         agents = x[:, : self.num_agents, :]
         enemys = x[:, self.num_agents :, :]
-        z = self.CAB_block(x = agents, y = enemys, visible_masking = visible_masking[:, :self.num_agents, self.num_agents:])
+        x = self.CAB_block(x = agents, y = enemys, visible_masking = visible_masking[:, :self.num_agents, self.num_agents:])
         
-        x = self.SAB_block_ally(z, visible_masking = visible_masking[:, :self.num_agents, :self.num_agents])
+        z = self.SAB_block_ally(x, visible_masking = visible_masking[:, :self.num_agents, :self.num_agents])
         
         x = x.reshape(-1, self.hidden_size)
         actions, action_log_probs = self.act_layer(
@@ -172,9 +172,9 @@ class MultiAgentSetTransformer(nn.Module):
         agents = x[:, :self.num_agents, :]
         enemys = x[:, self.num_agents:, :]
         
-        z = self.encoder.CAB_block(x = agents, y = enemys, visible_masking = visible_masking[:, :self.num_agents, self.num_agents:])
+        x = self.encoder.CAB_block(x = agents, y = enemys, visible_masking = visible_masking[:, :self.num_agents, self.num_agents:])
         
-        x = self.encoder.SAB_block_ally(z, visible_masking = visible_masking[:, :self.num_agents, :self.num_agents])
+        z = self.encoder.SAB_block_ally(x, visible_masking = visible_masking[:, :self.num_agents, :self.num_agents])
         
         x = x.reshape(-1, self.hidden_size)
         action_log_probs, dist_entropy = self.encoder.act_layer.evaluate_actions(

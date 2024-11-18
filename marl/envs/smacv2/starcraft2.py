@@ -1561,11 +1561,13 @@ class StarCraft2Env(MultiAgentEnv):
         move_feats = np.zeros(move_feats_dim, dtype=np.float32) 
         own_feats = np.zeros(own_feats_dim, dtype=np.float32) 
         
-        self.visible_masking[agent_id, agent_id] = 1.0
+        
         
         if (
             unit.health > 0 and self.obs_starcraft
         ):  # otherwise dead, return all zeros
+            self.visible_masking[agent_id, agent_id] = 1.0
+            
             team_feats[0] = 1.0
             
             x = unit.pos.x
