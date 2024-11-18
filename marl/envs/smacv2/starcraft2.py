@@ -213,7 +213,7 @@ class StarCraft2Env(MultiAgentEnv):
             debugging purposes (default is False).
         """
         
-        self.visiable_objects = None
+        self.visible_masking = None
         self.algorithm_name = algorithm_name
 
         # Map arguments
@@ -1594,8 +1594,8 @@ class StarCraft2Env(MultiAgentEnv):
                     else dist < sight_range
                 )      
                 if enemy_visible:
-                    self.visiable_objects[agent_id, e_id + self.n_agents] = 1.0
-                    self.visiable_objects[e_id + self.n_agents, agent_id] = 1.0
+                    self.visible_masking[agent_id, e_id + self.n_agents] = 1.0
+                    self.visible_masking[e_id + self.n_agents, agent_id] = 1.0
                     if self.enemy_tags[e_id] is None:
                         self.obs_enemies[e_id, agent_id] = 1
                         self.enemy_tags[e_id] = agent_id
@@ -1623,8 +1623,8 @@ class StarCraft2Env(MultiAgentEnv):
                     else dist < sight_range
                 )
                 if ally_visible :
-                    self.visiable_objects[agent_id, al_id] = 1.0
-                    self.visiable_objects[al_id, agent_id] = 1.0
+                    self.visible_masking[agent_id, al_id] = 1.0
+                    self.visible_masking[al_id, agent_id] = 1.0
                     
             ind = 0
             if self.obs_own_health:
@@ -1752,8 +1752,8 @@ class StarCraft2Env(MultiAgentEnv):
         random.shuffle(agents)
         obs = [None for _ in range(self.num_objects)]
         
-        self.visiable_objects = np.zeros((self.num_objects, self.num_objects), dtype=np.float32)
-        self.visiable_objects[self.n_agents:, self.n_agents:] = 1.0
+        self.visible_masking = np.zeros((self.num_objects, self.num_objects), dtype=np.float32)
+        self.visible_masking[self.n_agents:, self.n_agents:] = 1.0
         
         for agent_id in agents:
             obs[agent_id] = self.own_obs_agent(agent_id = agent_id)
@@ -2234,8 +2234,8 @@ class StarCraft2Env(MultiAgentEnv):
         if self.obs_own_pos and self.obs_starcraft:
             own_feats += 2
         
-        # if self.algorithm_name == "mast":
-        own_feats += 1
+        if self.algorithm_name == "mast":
+            own_feats += 1
         
         return own_feats
 
@@ -2280,36 +2280,36 @@ class StarCraft2Env(MultiAgentEnv):
     def get_obs_size(self):
         """Returns the size of the observation."""
         
-        # if self.algorithm_name == "mast":
-        move_feats = self.get_obs_move_feats_size()
-        own_feats = self.get_obs_own_feats_size()
+        if self.algorithm_name == "mast":
+            move_feats = self.get_obs_move_feats_size()
+            own_feats = self.get_obs_own_feats_size()
 
-        return (
-            self.obs_timestep_number
-            + own_feats
-            + move_feats
-            + 3
-        )
-        # else:
-        #     own_feats = self.get_obs_own_feats_size()
-        #     move_feats = self.get_obs_move_feats_size()
+            return (
+                self.obs_timestep_number
+                + own_feats
+                + move_feats
+                + 3
+            )
+        else:
+            own_feats = self.get_obs_own_feats_size()
+            move_feats = self.get_obs_move_feats_size()
 
-        #     n_enemies, n_enemy_feats = self.get_obs_enemy_feats_size()
-        #     n_allies, n_ally_feats = self.get_obs_ally_feats_size()
+            n_enemies, n_enemy_feats = self.get_obs_enemy_feats_size()
+            n_allies, n_ally_feats = self.get_obs_ally_feats_size()
 
-        #     enemy_feats = n_enemies * n_enemy_feats
-        #     ally_feats = n_allies * n_ally_feats
+            enemy_feats = n_enemies * n_enemy_feats
+            ally_feats = n_allies * n_ally_feats
             
-        #     if self.obs_starcraft:
-        #         return (
-        #             self.obs_timestep_number
-        #             + move_feats
-        #             + enemy_feats
-        #             + ally_feats
-        #             + own_feats
-        #         )
-        #     else:
-        #         return 1 if self.obs_timestep_number else 0
+            if self.obs_starcraft:
+                return (
+                    self.obs_timestep_number
+                    + move_feats
+                    + enemy_feats
+                    + ally_feats
+                    + own_feats
+                )
+            else:
+                return 1 if self.obs_timestep_number else 0
 
     def get_state_size(self):
         """Returns the size of the global state."""

@@ -38,7 +38,7 @@ class MAPPORunner(Runner):
                 # Sample actions
                 values, actions, action_log_probs, rnn_states, rnn_states_critic = self.collect(step)
                 # Obser reward and next obs
-                obs, share_obs, rewards, dones, total_dones, infos, available_actions, visiable_objects = self.envs.step(actions)
+                obs, share_obs, rewards, dones, total_dones, infos, available_actions, visible_masking = self.envs.step(actions)
                 data = obs, share_obs, rewards, dones, total_dones, infos, available_actions, \
                        values, actions, action_log_probs, \
                        rnn_states, rnn_states_critic 
@@ -78,7 +78,7 @@ class MAPPORunner(Runner):
         
     def warmup(self):
         # reset env
-        obs, share_obs, available_actions, visiable_objects = self.envs.reset()
+        obs, share_obs, available_actions, visible_masking = self.envs.reset()
         if self.algorithm_name == "mast":
             self.buffer.obs[0] = obs.copy()
             self.buffer.available_actions[0] = available_actions.copy()
@@ -182,7 +182,7 @@ class MAPPORunner(Runner):
         
         eval_episode = 0
 
-        eval_obs, eval_share_obs, eval_available_actions, visiable_objects = self.eval_envs.reset()
+        eval_obs, eval_share_obs, eval_available_actions, visible_masking = self.eval_envs.reset()
 
         eval_rnn_states = np.zeros((self.n_eval_rollout_threads, self.num_agents, self.recurrent_N, self.hidden_size), dtype=np.float32)
         eval_masks = np.ones((self.n_eval_rollout_threads, self.num_agents, 1), dtype=np.float32)
@@ -203,7 +203,7 @@ class MAPPORunner(Runner):
             eval_rnn_states = np.array(np.split(_t2n(eval_rnn_states), self.n_eval_rollout_threads))
             
             # Obser reward and next obs
-            eval_obs, eval_share_obs, eval_rewards, eval_dones,  eval_total_dones, eval_infos, eval_available_actions, visiable_objects = self.eval_envs.step(eval_actions)
+            eval_obs, eval_share_obs, eval_rewards, eval_dones,  eval_total_dones, eval_infos, eval_available_actions, visible_masking = self.eval_envs.step(eval_actions)
             
             self.logger.eval_per_step(
                 eval_rewards,
