@@ -1561,7 +1561,7 @@ class StarCraft2Env(MultiAgentEnv):
         move_feats = np.zeros(move_feats_dim, dtype=np.float32) 
         own_feats = np.zeros(own_feats_dim, dtype=np.float32) 
         
-        
+        self.visible_masking[agent_id, agent_id] = 1.0
         
         if (
             unit.health > 0 and self.obs_starcraft
@@ -1754,12 +1754,13 @@ class StarCraft2Env(MultiAgentEnv):
         
         self.visible_masking = np.zeros((self.num_objects, self.num_objects), dtype=np.float32)
         self.visible_masking[self.n_agents:, self.n_agents:] = 1.0
-        
+       
         for agent_id in agents:
             obs[agent_id] = self.own_obs_agent(agent_id = agent_id)
             
         for enemy_id in enemies:
             obs[enemy_id + self.n_agents] = self.own_obs_enemy(enemy_id = enemy_id)
+        print(self.visible_masking)
         return obs
 
     def get_obs_agent(self, agent_id, fully_observable=False):
