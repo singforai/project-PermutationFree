@@ -1,0 +1,15 @@
+# Python 관련
+*.pyc
+__pycache__/
+
+# IDE 관련
+.vscode/
+.idea/
+
+# 로그와 임시 파일
+*.log
+*.tmp
+
+# 특정 경로 무시
+marl/scripts/smacv2/_log/*
+marl/examples/*
