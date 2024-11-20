@@ -5,7 +5,7 @@ from utils.util import get_shape_from_obs_space
 
 from algorithms.utils.util import check
 
-from algorithms.mast.algorithm.setransformer import  MultiAgentSetTransformer
+from algorithms.mast.algorithm.setransformer import  Actor, Critic
 
 class MastPolicy:
     def __init__(self, args, obs_space, cent_obs_space, act_space, num_agents, num_objects, device=torch.device("cpu")):
@@ -25,23 +25,35 @@ class MastPolicy:
         self.action_dim = act_space.n
         self.tpdv = dict(dtype=torch.float32, device=device)
         
+        self._use_recurrent_policy = args["use_recurrent_policy"]
+        self._use_policy_active_masks = args["use_policy_active_masks"]
+        
         self.threadshold = 1e-7
         
-        self.model = MultiAgentSetTransformer(
-            args, 
-            self.obs_shape, 
-            act_space, 
-            self.num_agents,
-            self.num_objects,
+        self.actor = Actor(
+            args = args, 
+            obs_space = self.obs_shape, 
+            action_space = act_space, 
+            num_agents = self.num_agents,
+            num_objects = self.num_objects,
             device = self.device
         )
-
-        self.optimizer = torch.optim.Adam(
-            self.model.parameters(),
-            lr=self.lr, 
-            eps=self.opti_eps,
-            weight_decay=self.weight_decay
+        
+        self.critic = Critic(
+            args = args,
+            obs_space = self.obs_shape, 
+            num_agents = self.num_agents,
+            num_objects = self.num_objects,
+            device = device
         )
+        
+        self.actor_optimizer = torch.optim.Adam(self.actor.parameters(),
+                                                lr=self.lr, eps=self.opti_eps,
+                                                weight_decay=self.weight_decay)
+        self.critic_optimizer = torch.optim.Adam(self.critic.parameters(),
+                                                 lr=self.critic_lr,
+                                                 eps=self.opti_eps,
+                                                 weight_decay=self.weight_decay)
         
     def lr_decay(self, episode, episodes):
         """
@@ -85,7 +97,7 @@ class MastPolicy:
         if self.check_permutation_free:
             self.is_permutation_free(obs, rnn_states, masks, available_actions)
 
-        actions, action_log_probs, rnn_states, z = self.model.encoder(
+        actions, action_log_probs, rnn_states = self.actor(
             obs,
             rnn_states,
             visible_masking, 
@@ -93,7 +105,7 @@ class MastPolicy:
             available_actions,
             deterministic,
         )
-        values = self.model.decoder(z)
+        values = self.critic(obs, None)
         
         return values, actions, action_log_probs, rnn_states
     
@@ -105,14 +117,8 @@ class MastPolicy:
             available_actions = check(available_actions).to(**self.tpdv)
         visible_masking = check(visible_masking).to(**self.tpdv)
             
-        _, _, _, z = self.model.encoder(
-            obs,
-            rnn_states,
-            visible_masking, 
-            masks,
-            available_actions,
-        )
-        values = self.model.decoder(z)
+        values = self.critic(obs, None)
+        
         return values
     
     def evaluate_actions(self, obs, rnn_states, visible_masking,
@@ -143,16 +149,28 @@ class MastPolicy:
         if available_actions is not None:
             available_actions = check(available_actions).to(**self.tpdv)
         visible_masking = check(visible_masking).to(**self.tpdv)
-            
-        values, action_log_probs, dist_entropy = self.model.evaluate_actions(
-            obs = obs, 
-            rnn_states = rnn_states,
-            visible_masking = visible_masking, 
-            action = action, 
-            masks = masks, 
-            available_actions=available_actions, 
-            active_masks=active_masks
+        
+        x = self.actor.base(obs)
+        x = x.reshape(-1, self.num_objects, self.hidden_size)
+        x = self.actor.SAB_block(x, visible_masking = visible_masking)
+
+        agents = x[:, : self.num_agents, :]
+        enemys = x[:, self.num_agents :, :]
+        x = self.actor.CAB_block(x = agents, y = enemys, visible_masking = visible_masking[:, :self.num_agents, self.num_agents:])
+
+        x = self.actor.SAB_block_ally(x, visible_masking = visible_masking[:, :self.num_agents, :self.num_agents])
+        
+        x = x.reshape(-1, self.hidden_size)
+        
+        action_log_probs, dist_entropy = self.actor.act_layer.evaluate_actions(
+            x,
+            action,
+            available_actions, 
+            active_masks = active_masks if self._use_policy_active_masks else None
         )
+        
+        values = self.critic(obs, None)
+        
         return values, action_log_probs, dist_entropy
     
     def act(self, obs, visible_masking, rnn_states, masks, available_actions=None, deterministic=False):
@@ -163,7 +181,7 @@ class MastPolicy:
             available_actions = check(available_actions).to(**self.tpdv)
         visible_masking = check(visible_masking).to(**self.tpdv)
 
-        actions, _, rnn_states, _ = self.model.encoder(
+        actions, _, rnn_states = self.actor(
             obs,
             rnn_states,
             visible_masking, 
@@ -175,8 +193,6 @@ class MastPolicy:
     
 
     def is_permutation_free(self, obs, rnn_states, masks, available_actions):
-        
-        # 입력 feature 순서에 대해서도 검증하는 코드를 작성해야만 한다. 
         
         input_dim = obs.shape[1]
         obs = obs.reshape(-1, self.num_agents, input_dim)

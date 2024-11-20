@@ -159,20 +159,29 @@ class Mast():
         
         policy_loss = policy_action_loss
         
-        value_loss = self.cal_value_loss(values, value_preds_batch, return_batch, active_masks_batch)
-
-        self.policy.optimizer.zero_grad()
-        ((value_loss * self.value_loss_coef) + (policy_loss - dist_entropy * self.entropy_coef)).backward()
-        
+        self.policy.actor_optimizer.zero_grad()
+        (policy_loss - dist_entropy * self.entropy_coef).backward()
         
         if self._use_max_grad_norm:
-            model_grad_norm = nn.utils.clip_grad_norm_(self.policy.model.parameters(), self.max_grad_norm)
+            actor_grad_norm = nn.utils.clip_grad_norm_(self.policy.actor.parameters(), self.max_grad_norm)
         else:
-            model_grad_norm = get_gard_norm(self.policy.model.parameters())
-            
-        self.policy.optimizer.step()
+            actor_grad_norm = get_gard_norm(self.policy.actor.parameters())
 
-        return value_loss, policy_loss, dist_entropy, imp_weights, model_grad_norm
+        self.policy.actor_optimizer.step()
+        
+        value_loss = self.cal_value_loss(values, value_preds_batch, return_batch, active_masks_batch)
+
+        self.policy.critic_optimizer.zero_grad()
+
+        (value_loss * self.value_loss_coef).backward()
+
+        if self._use_max_grad_norm:
+            critic_grad_norm = nn.utils.clip_grad_norm_(self.policy.critic.parameters(), self.max_grad_norm)
+        else:
+            critic_grad_norm = get_gard_norm(self.policy.critic.parameters())
+
+        self.policy.critic_optimizer.step()
+        return value_loss, policy_loss, dist_entropy, imp_weights, actor_grad_norm, critic_grad_norm
         
     def train(self, buffer):
         if self._use_popart or self._use_valuenorm:
@@ -190,7 +199,8 @@ class Mast():
         train_info['policy_loss'] = 0
         train_info['dist_entropy'] = 0
         train_info['ratio'] = 0
-        train_info["model_grad_norm"] = 0
+        train_info['actor_grad_norm'] = 0
+        train_info['critic_grad_norm'] = 0
         
         for _ in range(self.ppo_epoch):
             if self.use_recurrent_policy:
@@ -199,12 +209,13 @@ class Mast():
                 data_generator = buffer.forward_transformer_generator(advantages, self.num_mini_batch)
 
             for sample in data_generator:
-                value_loss, policy_loss, dist_entropy, imp_weights, model_grad_norm = self.network_update(sample)
+                value_loss, policy_loss, dist_entropy, imp_weights, actor_grad_norm, critic_grad_norm = self.network_update(sample)
                 train_info["value_loss"] += value_loss.item()
                 train_info["policy_loss"] += policy_loss.item()
                 train_info["dist_entropy"] += dist_entropy.item()
                 train_info["ratio"] += imp_weights.mean()
-                train_info["model_grad_norm"] += model_grad_norm
+                train_info['actor_grad_norm'] += actor_grad_norm
+                train_info['critic_grad_norm'] += critic_grad_norm
                 
         num_updates = self.ppo_epoch * self.num_mini_batch
         for k in train_info.keys():
@@ -213,8 +224,9 @@ class Mast():
         return train_info
         
     def prep_training(self):
-        self.policy.model.train()
+        self.policy.actor.train()
+        self.policy.critic.train()
 
     def prep_rollout(self):
-        self.policy.model.eval()
-    
+        self.policy.actor.eval()
+        self.policy.critic.eval()
