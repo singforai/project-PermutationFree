@@ -38,7 +38,7 @@ model:
   # whether to use rnn policy (data is not chunked for training)
   use_naive_recurrent_policy: False
   # whether to use rnn policy (data is chunked for training)
-  use_recurrent_policy: True
+  use_recurrent_policy: False
   # number of recurrent layers
   recurrent_N: 1
   # actor learning rate

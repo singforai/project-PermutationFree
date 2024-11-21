@@ -215,6 +215,7 @@ class StarCraft2Env(MultiAgentEnv):
         
         self.visible_masking = None
         self.algorithm_name = algorithm_name
+        self.agent_obs_dim = 12
 
         # Map arguments
         self.map_name = map_name
@@ -1722,7 +1723,7 @@ class StarCraft2Env(MultiAgentEnv):
                 own_feats[ind + 1] = y / self.map_y
                 ind += 2
             if self.unit_type_bits > 0:
-                type_id = self.get_unit_type_id(e_unit, True)
+                type_id = self.get_unit_type_id(e_unit, False)
                 own_feats[ind + type_id] = 1
                 ind += self.unit_type_bits
         
@@ -2283,14 +2284,8 @@ class StarCraft2Env(MultiAgentEnv):
         """Returns the size of the observation."""
         
         if self.algorithm_name == "mast":
-            move_feats = self.get_obs_move_feats_size()
-            own_feats = self.get_obs_own_feats_size()
-
             return (
-                self.obs_timestep_number
-                + own_feats
-                + move_feats
-                + 3
+                self.cal_agent_obs_dim() * self.num_objects
             )
         else:
             own_feats = self.get_obs_own_feats_size()
@@ -3087,3 +3082,173 @@ class StarCraft2Env(MultiAgentEnv):
         )
         env_info["enemy_features"] = self.enemy_state_attr_names
         return env_info
+    
+    def cal_agent_obs_dim(self):
+        ally_enemy = 1
+        unit_type = 3
+        attackable = 1
+        health = 1
+        relative_pos = 2
+        distance = 1
+        sight_range = 1
+        
+        obs_dim = ally_enemy + unit_type + attackable + health + relative_pos + distance + sight_range
+        
+        if self.shield_bits_enemy and self.shield_bits_ally:
+            shield = 1
+            obs_dim += shield
+        
+        
+        return obs_dim
+    
+    def create_agent_obs(self, agent_id, fully_observable=False):
+        
+        """
+        포함할 관측 정보(적/아군 가리지 않고 크기는 동일함.)
+            1. 적군 / 아군: 1
+            2. 유닛 유형: 3
+            3. 공격 가능 여부(아군은 무조건 False / 적은 공격 가능 범위 안일 때 True): 1
+            4. 체력: 1
+            5. 상대적 x, y  좌표 : 2
+            6. 거리: 1
+            7. 시야 범위 (정규화 필요): 1
+            8. 방어막: 1
+            
+            """
+            
+        obs_dim = self.cal_agent_obs_dim()
+        obs = np.zeros((self.num_objects, obs_dim), dtype=np.float32)
+        
+        center_x = self.map_x / 2
+        center_y = self.map_y / 2
+        
+        unit = self.get_unit_by_id(agent_id)
+        if (
+            unit.health > 0 and self.obs_starcraft
+        ):  # otherwise dead, return all zeros
+            
+            x = unit.pos.x
+            y = unit.pos.y
+            
+            type_id = self.get_unit_type_id(unit, True)
+            sight_range = self.unit_sight_range(agent_id)
+            if self.shield_bits_ally:
+                max_shield = self.unit_max_shield(unit)
+
+            ally = True
+            attackable = False
+
+            ind = 0
+            obs[0, ind] = ally 
+            ind += 1
+            obs[0, ind + type_id] = 1.0 
+            ind += 3
+            obs[0, ind] = attackable
+            ind += 1
+            obs[0, ind] = unit.health / unit.health_max
+            ind += 1
+            obs[0, ind: ind + 3] = 0.0
+            ind += 3
+            obs[0, ind] = sight_range / center_x
+            ind += 1
+            if self.shield_bits_ally:
+                obs[0, ind] = unit.shield / max_shield
+
+            al_ids = [
+                al_id for al_id in range(self.n_agents) if al_id != agent_id
+            ]
+            for idx, al_id in enumerate(al_ids):
+                idx += 1
+                ind = 0
+
+                al_unit = self.get_unit_by_id(al_id)
+                al_x = al_unit.pos.x
+                al_y = al_unit.pos.y
+                dist = self.distance(x, y, al_x, al_y)
+                
+                ally_visible = (
+                    self.is_position_in_cone(agent_id, al_unit.pos)
+                    if self.conic_fov
+                    else dist < sight_range
+                )
+                
+                if (ally_visible and al_unit.health > 0) or (
+                    al_unit.health > 0 and fully_observable
+                ):  # visible and alive
+                    obs[idx, ind] = ally
+                    ind += 1
+                    type_id = self.get_unit_type_id(al_unit, True)
+                    obs[idx, ind + type_id] = 1.0
+                    ind += 3
+                    obs[idx, ind] = attackable
+                    ind += 1
+                    obs[idx, ind] = al_unit.health / al_unit.health_max
+                    ind += 1
+                    obs[idx, ind: ind + 3] = [dist / sight_range, (al_x - x) / sight_range, (al_y - y) / sight_range]
+                    ind += 3
+                    al_sight_range = self.unit_sight_range(al_id)
+                    obs[idx, ind] = al_sight_range / center_x
+                    ind += 1
+                    if self.shield_bits_ally:
+                        max_shield = self.unit_max_shield(al_unit)
+                        obs[idx, ind] = al_unit.shield / max_shield
+            
+            ally = False
+            
+            for e_id, e_unit in self.enemies.items():
+                enemy_id = self.n_agents + e_id
+                ind = 0
+                
+                e_x = e_unit.pos.x
+                e_y = e_unit.pos.y
+                dist = self.distance(x, y, e_x, e_y)
+                enemy_visible = (
+                    self.is_position_in_cone(agent_id, e_unit.pos)
+                    if self.conic_fov
+                    else dist < sight_range
+                )
+                if enemy_visible:
+                    if self.enemy_tags[e_id] is None:
+                        self.obs_enemies[e_id, agent_id] = 1
+                        self.enemy_tags[e_id] = agent_id
+                        for a_id in range(self.n_agents):
+                            if a_id != agent_id:
+                                draw = np.random.rand()
+                                if draw < self.prob_obs_enemy:
+                                    self.obs_enemies[e_id, a_id] = 1
+                if self.obs_enemies[e_id, agent_id] == 0:
+                    enemy_visible = False
+                if (enemy_visible and e_unit.health > 0) or (
+                    e_unit.health > 0 and fully_observable
+                ):  # visible and alive
+                    attackable = True
+                    obs[enemy_id, ind] = ally
+                    ind += 1
+                    type_id = self.get_unit_type_id(e_unit, False)
+                    obs[enemy_id, ind + type_id] = 1.0
+                    ind += 3
+                    obs[enemy_id, ind] = attackable
+                    ind += 1
+                    obs[enemy_id, ind] = e_unit.health / e_unit.health_max
+                    ind += 1
+                    obs[enemy_id, ind: ind + 3] = [dist / sight_range, (e_x - x) / sight_range, (e_y - y) / sight_range]
+                    ind += 3
+                    e_sight_range = self.enemy_sight_range(e_id)
+                    obs[enemy_id, ind] = e_sight_range / center_x
+                    ind += 1
+                    if self.shield_bits_enemy:
+                        max_shield = self.unit_max_shield(e_unit)
+        obs = obs.reshape(-1)
+        return obs
+    
+    
+    def create_obs(self):
+        agents = list(range(self.n_agents))
+        random.shuffle(agents)
+        agents_obs = [None for i in range(len(agents))]
+        for agent_id in agents:
+            agents_obs[agent_id] = self.create_agent_obs(
+                agent_id = agent_id, 
+                fully_observable=self.fully_observable
+            )
+        return agents_obs

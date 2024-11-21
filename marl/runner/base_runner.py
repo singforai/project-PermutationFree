@@ -197,7 +197,6 @@ class Runner(object):
             self.policy = Policy(
                 args = self.policy_args, 
                 obs_space = observation_space, 
-                cent_obs_space = share_observation_space, 
                 act_space = action_space, 
                 num_agents = self.num_agents, 
                 num_objects = self.num_objects, 
@@ -249,6 +248,7 @@ class Runner(object):
                 share_observation_space,
                 self.envs.action_space[0]
             )
+
         else:
             self.buffer = SharedReplayBuffer(
                 self.args,

@@ -67,10 +67,10 @@ class ObjectSharedReplayBuffer(object):
         if type(share_obs_shape[-1]) == list:
             share_obs_shape = share_obs_shape[:1]
             
-        self.obs = np.zeros((self.episode_length + 1, self.n_rollout_threads, self.num_objects, *obs_shape), dtype=np.float32)
+        self.obs = np.zeros((self.episode_length + 1, self.n_rollout_threads, self.num_agents, *obs_shape), dtype=np.float32)
 
         self.rnn_states = np.zeros(
-            (self.episode_length + 1, self.n_rollout_threads, self.num_objects, self.recurrent_N, self.hidden_size),
+            (self.episode_length + 1, self.n_rollout_threads, self.num_agents, self.recurrent_N, self.hidden_size),
             dtype=np.float32)
 
         self.value_preds = np.zeros(
@@ -96,16 +96,14 @@ class ObjectSharedReplayBuffer(object):
         self.rewards = np.zeros(
             (self.episode_length, self.n_rollout_threads, self.num_agents, 1), dtype=np.float32)
 
-        self.masks = np.ones((self.episode_length + 1, self.n_rollout_threads, self.num_objects, 1), dtype=np.float32)
+        self.masks = np.ones((self.episode_length + 1, self.n_rollout_threads, self.num_agents, 1), dtype=np.float32)
         
         self.bad_masks = np.ones((self.episode_length + 1, self.n_rollout_threads, self.num_agents, 1), dtype=np.float32)
         self.active_masks = np.ones_like(self.bad_masks)
         
-        self.visible_masking =np.zeros((self.episode_length + 1, self.n_rollout_threads, self.num_objects, self.num_objects),dtype=np.float32)
-        
         self.step = 0
         
-    def insert(self, obs, visible_masking, rnn_states_actor, actions, action_log_probs,
+    def insert(self, obs, rnn_states_actor, actions, action_log_probs,
                value_preds, rewards, masks, bad_masks=None, active_masks=None, available_actions=None):
         """
         Insert data into the buffer.
@@ -123,7 +121,6 @@ class ObjectSharedReplayBuffer(object):
         :param available_actions: (np.ndarray) actions available to each agent. If None, all actions are available.
         """
         self.obs[self.step + 1] = obs.copy()
-        self.visible_masking[self.step + 1] = visible_masking.copy()
         self.rnn_states[self.step + 1] = rnn_states_actor.copy()
         self.actions[self.step] = actions.copy()
         self.action_log_probs[self.step] = action_log_probs.copy()
@@ -148,8 +145,6 @@ class ObjectSharedReplayBuffer(object):
         self.active_masks[0] = self.active_masks[-1].copy()
         if self.available_actions is not None:
             self.available_actions[0] = self.available_actions[-1].copy()
-            
-        self.visible_masking[0] = self.visible_masking[-1].copy()
 
     def compute_returns(self, next_value, value_normalizer=None):
         """
@@ -165,27 +160,27 @@ class ObjectSharedReplayBuffer(object):
                     if self._use_popart or self._use_valuenorm:
                         # step + 1
                         delta = self.rewards[step] + self.gamma * value_normalizer.denormalize(
-                            self.value_preds[step + 1]) * self.masks[step + 1, :, : self.num_agents] \
+                            self.value_preds[step + 1]) * self.masks[step + 1] \
                                 - value_normalizer.denormalize(self.value_preds[step])
-                        gae = delta + self.gamma * self.gae_lambda * gae * self.masks[step + 1, :, : self.num_agents]
+                        gae = delta + self.gamma * self.gae_lambda * gae * self.masks[step + 1]
                         gae = gae * self.bad_masks[step + 1]
                         self.returns[step] = gae + value_normalizer.denormalize(self.value_preds[step])
                     else:
-                        delta = self.rewards[step] + self.gamma * self.value_preds[step + 1] * self.masks[step + 1, :, : self.num_agents] - \
+                        delta = self.rewards[step] + self.gamma * self.value_preds[step + 1] * self.masks[step + 1] - \
                                 self.value_preds[step]
-                        gae = delta + self.gamma * self.gae_lambda * self.masks[step + 1, :, : self.num_agents] * gae
+                        gae = delta + self.gamma * self.gae_lambda * self.masks[step + 1] * gae
                         gae = gae * self.bad_masks[step + 1]
                         self.returns[step] = gae + self.value_preds[step]
             else:
                 self.returns[-1] = next_value
                 for step in reversed(range(self.rewards.shape[0])):
                     if self._use_popart or self._use_valuenorm:
-                        self.returns[step] = (self.returns[step + 1] * self.gamma * self.masks[step + 1, :, : self.num_agents] + self.rewards[
+                        self.returns[step] = (self.returns[step + 1] * self.gamma * self.masks[step + 1] + self.rewards[
                             step]) * self.bad_masks[step + 1] \
                                              + (1 - self.bad_masks[step + 1]) * value_normalizer.denormalize(
                             self.value_preds[step])
                     else:
-                        self.returns[step] = (self.returns[step + 1] * self.gamma * self.masks[step + 1, :, : self.num_agents] + self.rewards[
+                        self.returns[step] = (self.returns[step + 1] * self.gamma * self.masks[step + 1] + self.rewards[
                             step]) * self.bad_masks[step + 1] \
                                              + (1 - self.bad_masks[step + 1]) * self.value_preds[step]
         else:
@@ -194,20 +189,47 @@ class ObjectSharedReplayBuffer(object):
                 gae = 0
                 for step in reversed(range(self.rewards.shape[0])):
                     if self._use_popart or self._use_valuenorm:
-                        delta = self.rewards[step] + self.gamma * value_normalizer.denormalize(
-                            self.value_preds[step + 1]) * self.active_masks[step + 1] \
-                                - value_normalizer.denormalize(self.value_preds[step])
-                        gae = delta + self.gamma * self.gae_lambda * self.masks[step + 1, :, : self.num_agents] * gae
-                        self.returns[step] = gae + value_normalizer.denormalize(self.value_preds[step])
+                        if self.algo == "mat" or self.algo == "mat_dec":
+                            value_t = value_normalizer.denormalize(self.value_preds[step])
+                            value_t_next = value_normalizer.denormalize(self.value_preds[step + 1])
+                            rewards_t = self.rewards[step]
+
+                            # mean_v_t = np.mean(value_t, axis=-2, keepdims=True)
+                            # mean_v_t_next = np.mean(value_t_next, axis=-2, keepdims=True)
+                            # delta = rewards_t + self.gamma * self.masks[step + 1] * mean_v_t_next - mean_v_t
+
+                            delta = rewards_t + self.gamma * self.masks[step + 1] * value_t_next - value_t
+                            gae = delta + self.gamma * self.gae_lambda * self.masks[step + 1] * gae
+                            self.advantages[step] = gae
+                            self.returns[step] = gae + value_t
+                        else:
+                            delta = self.rewards[step] + self.gamma * value_normalizer.denormalize(
+                                self.value_preds[step + 1]) * self.masks[step + 1] \
+                                    - value_normalizer.denormalize(self.value_preds[step])
+                            gae = delta + self.gamma * self.gae_lambda * self.masks[step + 1] * gae
+                            self.returns[step] = gae + value_normalizer.denormalize(self.value_preds[step])
                     else:
-                        delta = self.rewards[step] + self.gamma * self.value_preds[step + 1] * \
-                                self.masks[step + 1, :, : self.num_agents] - self.value_preds[step]
-                        gae = delta + self.gamma * self.gae_lambda * self.masks[step + 1, :, : self.num_agents] * gae
-                        self.returns[step] = gae + self.value_preds[step]
+                        if self.algo == "mat" or self.algo == "mat_dec":
+                            rewards_t = self.rewards[step]
+                            mean_v_t = np.mean(self.value_preds[step], axis=-2, keepdims=True)
+                            mean_v_t_next = np.mean(self.value_preds[step + 1], axis=-2, keepdims=True)
+                            delta = rewards_t + self.gamma * self.masks[step + 1] * mean_v_t_next - mean_v_t
+
+                            # delta = rewards_t + self.gamma * self.value_preds[step + 1] * \
+                            #         self.masks[step + 1] - self.value_preds[step]
+                            gae = delta + self.gamma * self.gae_lambda * self.masks[step + 1] * gae
+                            self.advantages[step] = gae
+                            self.returns[step] = gae + self.value_preds[step]
+
+                        else:
+                            delta = self.rewards[step] + self.gamma * self.value_preds[step + 1] * \
+                                    self.masks[step + 1] - self.value_preds[step]
+                            gae = delta + self.gamma * self.gae_lambda * self.masks[step + 1] * gae
+                            self.returns[step] = gae + self.value_preds[step]
             else:
                 self.returns[-1] = next_value
                 for step in reversed(range(self.rewards.shape[0])):
-                    self.returns[step] = self.returns[step + 1] * self.gamma * self.self.masks[step + 1, :, : self.num_agents] + self.rewards[step]
+                    self.returns[step] = self.returns[step + 1] * self.gamma * self.masks[step + 1] + self.rewards[step]
 
     def recurrent_transformer_generator(self, advantages, num_mini_batch, data_chunk_length):
         
@@ -291,10 +313,10 @@ class ObjectSharedReplayBuffer(object):
             => (num_rollout * episode_length // data_chunk_length * agent_num, reccurent_N, hidden_size)
             """
             rnn_states_batch = np.stack(rnn_states_batch).reshape(
-                N * self.num_objects, *self.rnn_states.shape[3:]
+                N * self.num_agents, *self.rnn_states.shape[3:]
             )
             
-            obs_batch = _flatten_v3(L, N, self.num_objects, obs_batch)
+            obs_batch = _flatten_v3(L, N, self.num_agents, obs_batch)
             actions_batch = _flatten_v3(L, N, self.num_agents, actions_batch)
             if self.available_actions is not None:
                 available_actions_batch = _flatten_v3(L, N, self.num_agents, available_actions_batch)
@@ -302,7 +324,7 @@ class ObjectSharedReplayBuffer(object):
                 available_actions_batch = None
             value_preds_batch = _flatten_v3(L, N, self.num_agents, value_preds_batch)
             return_batch = _flatten_v3(L, N, self.num_agents, return_batch)
-            masks_batch = _flatten_v3(L, N, self.num_objects, masks_batch)
+            masks_batch = _flatten_v3(L, N, self.num_agents, masks_batch)
             active_masks_batch = _flatten_v3(L, N, self.num_agents, active_masks_batch)
             old_action_log_probs_batch = _flatten_v3(L, N, self.num_agents, old_action_log_probs_batch)
             adv_targ = _flatten_v3(L, N, self.num_agents, adv_targ)
@@ -328,22 +350,21 @@ class ObjectSharedReplayBuffer(object):
         
         rand = torch.randperm(batch_size).numpy() 
         sampler = [rand[i * mini_batch_size:(i + 1) * mini_batch_size] for i in range(num_mini_batch)] 
+        
         obs = self.obs[:-1].reshape(-1, *self.obs.shape[2:])
         rnn_states = self.rnn_states[:-1].reshape(-1, *self.rnn_states.shape[2:])
-        visible_masking = self.visible_masking[:-1].reshape(-1, *self.visible_masking.shape[-2:])
         actions = self.actions.reshape(-1, *self.actions.shape[-2:])
         if self.available_actions is not None:
             available_actions = self.available_actions[:-1].reshape(-1, *self.available_actions.shape[-2:])
         value_preds = self.value_preds[:-1].reshape(-1, self.num_agents, 1)
         returns = self.returns[:-1].reshape(-1, self.num_agents, 1)
-        masks = self.masks[:-1].reshape(-1, self.num_objects, 1)
+        masks = self.masks[:-1].reshape(-1, self.num_agents, 1)
         active_masks = self.active_masks[:-1].reshape(-1, self.num_agents, 1)
         action_log_probs = self.action_log_probs.reshape(-1, *self.action_log_probs.shape[-2:])
         advantages = advantages.reshape(-1, self.num_agents, 1)
         for indices in sampler:
             obs_batch = obs[indices]
             rnn_states_batch = rnn_states[indices]
-            visible_masking_batch = visible_masking[indices]
             actions_batch = actions[indices]
             if self.available_actions is not None:
                 available_actions_batch = available_actions[indices]
@@ -361,4 +382,4 @@ class ObjectSharedReplayBuffer(object):
 
             yield obs_batch, rnn_states_batch, actions_batch,\
                   value_preds_batch, return_batch, masks_batch, active_masks_batch, old_action_log_probs_batch,\
-                  adv_targ, available_actions_batch, visible_masking_batch
+                  adv_targ, available_actions_batch

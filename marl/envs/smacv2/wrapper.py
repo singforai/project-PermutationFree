@@ -42,6 +42,9 @@ class StarCraftCapabilityEnvWrapper(MultiAgentEnv):
             return getattr(self.env, name)
         else:
             raise AttributeError
+        
+    def create_obs(self):
+        return self.env.create_obs()
 
     def get_visible_object(self):
         return self.env.visible_masking

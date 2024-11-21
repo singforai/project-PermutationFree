@@ -20,7 +20,7 @@ echo "jobid: $SLURM_JOB_ID"
 env="smacv2"
 algo="mast" 
 exp_name="MAST"
-group_name="MAST-decouple"
+group_name="MAST64"
 map_name=zerg_5_vs_5
 
 for seed in 0 1 2 3 4; do

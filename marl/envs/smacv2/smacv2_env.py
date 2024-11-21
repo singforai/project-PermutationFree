@@ -24,11 +24,11 @@ class SMACv2Env:
         self.algorithm_name = args["algorithm_name"] 
 
     def step(self, actions):
-        processed_actions = np.squeeze(actions, axis=1).tolist()
         reward, terminated, info = self.env.step(actions)
         
         if self.algorithm_name == "mast":
-            obs = self.env.get_own_obs()
+            # obs = self.env.get_own_obs()
+            obs = self.env.create_obs()
             state = None
             
             """
@@ -77,7 +77,8 @@ class SMACv2Env:
     def reset(self):
         self.env.reset()
         if self.algorithm_name == "mast":
-            obs = self.env.get_own_obs()
+            obs = self.env.create_obs()
+            # obs = self.env.get_own_obs()
             state = None
         else:
             obs = self.env.get_obs()

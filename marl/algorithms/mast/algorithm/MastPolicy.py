@@ -8,7 +8,7 @@ from algorithms.utils.util import check
 from algorithms.mast.algorithm.setransformer import  Actor, Critic
 
 class MastPolicy:
-    def __init__(self, args, obs_space, cent_obs_space, act_space, num_agents, num_objects, device=torch.device("cpu")):
+    def __init__(self, args, obs_space, act_space, num_agents, num_objects, device=torch.device("cpu")):
         self.device = device
         self.lr = args["lr"]
         self.critic_lr = args["critic_lr"]
@@ -27,6 +27,7 @@ class MastPolicy:
         
         self._use_recurrent_policy = args["use_recurrent_policy"]
         self._use_policy_active_masks = args["use_policy_active_masks"]
+        self.input_dim = self.obs_shape // self.num_objects
         
         self.threadshold = 1e-7
         
@@ -67,7 +68,7 @@ class MastPolicy:
         update_linear_schedule(self.actor_optimizer, episode, episodes, self.lr)
         update_linear_schedule(self.critic_optimizer, episode, episodes, self.critic_lr)
         
-    def get_actions(self, obs, visible_masking, rnn_states, masks, available_actions=None, deterministic=False):
+    def get_actions(self, obs, rnn_states, masks, available_actions=None, deterministic=False):
         """
         A function to sample the next action during the sampling process
 
@@ -92,7 +93,6 @@ class MastPolicy:
         masks = check(masks).to(**self.tpdv)
         if available_actions is not None:
             available_actions = check(available_actions).to(**self.tpdv)
-        visible_masking = check(visible_masking).to(**self.tpdv)
         
         if self.check_permutation_free:
             self.is_permutation_free(obs, rnn_states, masks, available_actions)
@@ -100,28 +100,26 @@ class MastPolicy:
         actions, action_log_probs, rnn_states = self.actor(
             obs,
             rnn_states,
-            visible_masking, 
             masks,
             available_actions,
             deterministic,
         )
-        values = self.critic(obs, None)
+        values = self.critic(obs)
         
         return values, actions, action_log_probs, rnn_states
     
-    def get_values(self, obs, visible_masking, rnn_states, masks, available_actions=None):
+    def get_values(self, obs, rnn_states, masks, available_actions=None):
         obs = check(obs).to(**self.tpdv)
         rnn_states = check(rnn_states).to(**self.tpdv)
         masks = check(masks).to(**self.tpdv)
         if available_actions is not None:
             available_actions = check(available_actions).to(**self.tpdv)
-        visible_masking = check(visible_masking).to(**self.tpdv)
             
-        values = self.critic(obs, None)
+        values = self.critic(obs)
         
         return values
     
-    def evaluate_actions(self, obs, rnn_states, visible_masking,
+    def evaluate_actions(self, obs, rnn_states, 
                           action, masks, available_actions = None, active_masks = None):
         """
         A function to calculate the importance weight and value loss between the updated network 
@@ -148,20 +146,14 @@ class MastPolicy:
         masks = check(masks).to(**self.tpdv)
         if available_actions is not None:
             available_actions = check(available_actions).to(**self.tpdv)
-        visible_masking = check(visible_masking).to(**self.tpdv)
-        
-        x = self.actor.base(obs)
-        x = x.reshape(-1, self.num_objects, self.hidden_size)
-        x = self.actor.SAB_block(x, visible_masking = visible_masking)
-
-        agents = x[:, : self.num_agents, :]
-        enemys = x[:, self.num_agents :, :]
-        x = self.actor.CAB_block(x = agents, y = enemys, visible_masking = visible_masking[:, :self.num_agents, self.num_agents:])
-
-        x = self.actor.SAB_block_ally(x, visible_masking = visible_masking[:, :self.num_agents, :self.num_agents])
-        
+            
+        x = obs.reshape(obs.shape[0] * obs.shape[1], self.num_objects, self.input_dim)
+        x = self.actor.base(x)
+        x = self.actor.PMA(x)
+        x = x.mean(dim = 1)
+        x = x.reshape(-1, self.num_agents, self.hidden_size)
+        x = self.actor.SAB_block(x)
         x = x.reshape(-1, self.hidden_size)
-        
         action_log_probs, dist_entropy = self.actor.act_layer.evaluate_actions(
             x,
             action,
@@ -169,22 +161,20 @@ class MastPolicy:
             active_masks = active_masks if self._use_policy_active_masks else None
         )
         
-        values = self.critic(obs, None)
+        values = self.critic(obs)
         
         return values, action_log_probs, dist_entropy
     
-    def act(self, obs, visible_masking, rnn_states, masks, available_actions=None, deterministic=False):
+    def act(self, obs, rnn_states, masks, available_actions=None, deterministic=False):
         obs = check(obs).to(**self.tpdv)
         rnn_states = check(rnn_states).to(**self.tpdv)
         masks = check(masks).to(**self.tpdv)
         if available_actions is not None:
             available_actions = check(available_actions).to(**self.tpdv)
-        visible_masking = check(visible_masking).to(**self.tpdv)
 
         actions, _, rnn_states = self.actor(
             obs,
             rnn_states,
-            visible_masking, 
             masks,
             available_actions,
             deterministic,
@@ -192,61 +182,61 @@ class MastPolicy:
         return actions, rnn_states 
     
 
-    def is_permutation_free(self, obs, rnn_states, masks, available_actions):
+    # def is_permutation_free(self, obs, rnn_states, masks, available_actions):
         
-        input_dim = obs.shape[1]
-        obs = obs.reshape(-1, self.num_agents, input_dim)
-        rnn_states = rnn_states.reshape(-1, self.num_agents, 1, self.hidden_size)
-        masks = masks.reshape(-1, self.num_agents, 1)
-        available_actions = available_actions.reshape(-1, self.num_agents, 1, self.action_dim)
-        possible_permutations = list(itertools.permutations(range(self.num_agents)))
+    #     input_dim = obs.shape[1]
+    #     obs = obs.reshape(-1, self.num_agents, input_dim)
+    #     rnn_states = rnn_states.reshape(-1, self.num_agents, 1, self.hidden_size)
+    #     masks = masks.reshape(-1, self.num_agents, 1)
+    #     available_actions = available_actions.reshape(-1, self.num_agents, 1, self.action_dim)
+    #     possible_permutations = list(itertools.permutations(range(self.num_agents)))
         
-        actions_set = []
-        values_set = []
-        rnn_states_output_set = []
+    #     actions_set = []
+    #     values_set = []
+    #     rnn_states_output_set = []
         
-        for possible_permutation in possible_permutations:
-            permuted_obs = obs[:, possible_permutation, :].reshape(-1, input_dim)
-            permuted_rnn_states = rnn_states[:, possible_permutation, :, :].reshape(-1, 1, self.hidden_size)
-            permuted_masks = masks[:, possible_permutation, :].reshape(-1, 1)
-            permuted_available_actions = available_actions[:, possible_permutation, :, :].reshape(-1, self.action_dim)
+    #     for possible_permutation in possible_permutations:
+    #         permuted_obs = obs[:, possible_permutation, :].reshape(-1, input_dim)
+    #         permuted_rnn_states = rnn_states[:, possible_permutation, :, :].reshape(-1, 1, self.hidden_size)
+    #         permuted_masks = masks[:, possible_permutation, :].reshape(-1, 1)
+    #         permuted_available_actions = available_actions[:, possible_permutation, :, :].reshape(-1, self.action_dim)
             
-            actions, _, rnn_states_ouput, z = self.model.encoder(
-                obs = permuted_obs,
-                rnn_states = permuted_rnn_states,
-                masks = permuted_masks,
-                available_actions = permuted_available_actions,
-                deterministic = True,
-            )
-            values = self.model.decoder(z)
+    #         actions, _, rnn_states_ouput, z = self.model.encoder(
+    #             obs = permuted_obs,
+    #             rnn_states = permuted_rnn_states,
+    #             masks = permuted_masks,
+    #             available_actions = permuted_available_actions,
+    #             deterministic = True,
+    #         )
+    #         values = self.model.decoder(z)
             
-            reverse_permutation = [0] * len(possible_permutation)
-            for i, p in enumerate(possible_permutation):
-                reverse_permutation[p] = i
+    #         reverse_permutation = [0] * len(possible_permutation)
+    #         for i, p in enumerate(possible_permutation):
+    #             reverse_permutation[p] = i
                 
-            actions = actions.reshape(
-                -1, self.num_agents, 1
-            )[:, reverse_permutation, :].reshape(-1)
+    #         actions = actions.reshape(
+    #             -1, self.num_agents, 1
+    #         )[:, reverse_permutation, :].reshape(-1)
             
-            rnn_states_ouput = rnn_states_ouput.reshape(
-                -1, self.num_agents, 1, self.hidden_size
-            )[:, reverse_permutation, :, :].reshape(-1)
+    #         rnn_states_ouput = rnn_states_ouput.reshape(
+    #             -1, self.num_agents, 1, self.hidden_size
+    #         )[:, reverse_permutation, :, :].reshape(-1)
                     
-            actions_set.append(actions.reshape(-1))
-            rnn_states_output_set.append(rnn_states_ouput.reshape(-1))
+    #         actions_set.append(actions.reshape(-1))
+    #         rnn_states_output_set.append(rnn_states_ouput.reshape(-1))
             
-            values_set.append(values.reshape(-1))
+    #         values_set.append(values.reshape(-1))
         
-        actions_set = torch.stack(actions_set)
-        values_set = torch.stack(values_set)
-        rnn_states_output_set = torch.stack(rnn_states_output_set)
+    #     actions_set = torch.stack(actions_set)
+    #     values_set = torch.stack(values_set)
+    #     rnn_states_output_set = torch.stack(rnn_states_output_set)
         
-        if torch.allclose(actions_set[0], actions_set, atol=self.threadshold) and torch.allclose(rnn_states_output_set[0], rnn_states_output_set, atol=self.threadshold):
-            print("Model is Permutation equivariant!")
-        else:
-            print("Model is not Permutation equivariant!")
+    #     if torch.allclose(actions_set[0], actions_set, atol=self.threadshold) and torch.allclose(rnn_states_output_set[0], rnn_states_output_set, atol=self.threadshold):
+    #         print("Model is Permutation equivariant!")
+    #     else:
+    #         print("Model is not Permutation equivariant!")
 
-        if torch.allclose(values_set[0], values_set, atol=self.threadshold):
-            print("Model is Permutation invariant!")
-        else:
-            print("Model is not Permutation invariant!")
+    #     if torch.allclose(values_set[0], values_set, atol=self.threadshold):
+    #         print("Model is Permutation invariant!")
+    #     else:
+    #         print("Model is not Permutation invariant!")

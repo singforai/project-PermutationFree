@@ -111,8 +111,7 @@ class Mast():
             active_masks_batch,
             old_action_log_probs_batch,
             adv_targ,
-            available_actions_batch,
-            visible_masking_batch
+            available_actions_batch
         ) = sample
 
         adv_targ = check(adv_targ).to(**self.tpdv)
@@ -121,15 +120,15 @@ class Mast():
         active_masks_batch = check(active_masks_batch).to(**self.tpdv)
         old_action_log_probs_batch = check(old_action_log_probs_batch).to(**self.tpdv)
 
-        mini_batch_size, num_objects, feature_dim = obs_batch.shape
-        mini_batch_size, num_objects, recurrent_N, hidden_size = rnn_states_batch.shape
+        mini_batch_size, num_agents, feature_dim = obs_batch.shape
+        mini_batch_size, num_agents, recurrent_N, hidden_size = rnn_states_batch.shape
         
-        obs_batch = obs_batch.reshape(mini_batch_size * num_objects, feature_dim)
-        rnn_states_batch = rnn_states_batch.reshape(mini_batch_size * num_objects, recurrent_N, hidden_size)
+        # obs_batch = obs_batch.reshape(mini_batch_size * num_agents, feature_dim)
+        # rnn_states_batch = rnn_states_batch.reshape(mini_batch_size * num_agents, recurrent_N, hidden_size)
         actions_batch = actions_batch.reshape(mini_batch_size * self.num_agents, 1)
         value_preds_batch = value_preds_batch.reshape(mini_batch_size * self.num_agents, 1)
         return_batch = return_batch.reshape(mini_batch_size * self.num_agents, 1)
-        masks_batch = masks_batch.reshape(mini_batch_size * num_objects, 1)
+        # masks_batch = masks_batch.reshape(mini_batch_size * num_agents, 1)
         active_masks_batch  = active_masks_batch.reshape(mini_batch_size * self.num_agents, 1)
         old_action_log_probs_batch = old_action_log_probs_batch.reshape(mini_batch_size * self.num_agents, 1)
         adv_targ = adv_targ.reshape(mini_batch_size * self.num_agents, 1)
@@ -138,7 +137,6 @@ class Mast():
         values, action_log_probs, dist_entropy = self.policy.evaluate_actions(
             obs=obs_batch,
             rnn_states = rnn_states_batch,
-            visible_masking = visible_masking_batch,
             action=actions_batch,
             masks=masks_batch,
             available_actions=available_actions_batch,

@@ -29,9 +29,11 @@ model:
   # whether to use PMA
   use_pma_block: True
   #Number of seed vector
-  n_seed_vector: 1
+  n_seed_vector: 4
+  # number of sab blocks
+  n_sab_blocks: 5
   # hidden sizes for mlp module in the network
-  hidden_size: 32
+  hidden_size: 64
   # activation function
   use_ReLU: True
   # whether to use feature normalization
@@ -46,9 +48,9 @@ model:
   # number of recurrent layers
   recurrent_N: 1
   # actor learning rate
-  lr: 0.0005
+  lr: 0.00005
   # critic learning rate
-  critic_lr: 0.00005
+  critic_lr: 0.0005
   # eps in Adam
   opti_eps: 0.00001
   # weight_decay in Adam
@@ -57,7 +59,7 @@ model:
 algo:
   # ppo parameters
   # number of epochs for actor Fpdate
-  ppo_epoch: 5
+  ppo_epoch: 10
   # whether to use clipped value loss
   use_clipped_value_loss: True
   # clip parameter

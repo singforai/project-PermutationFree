@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --nodes=1
-#SBATCH --partition=gpu1
+#SBATCH --partition=gpu4
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=20
 #SBATCH -o ../_out/%j.sbatch.%N.out
@@ -10,7 +10,7 @@
 
 GRES="gpu:1"
 mkdir -p ../_log/$SLURM_JOB_ID
-SLURM_JOB_PARTITION="gpu1"
+SLURM_JOB_PARTITION="gpu4"
 cpus_per_task=20
 
 # print sbatch job 
@@ -23,7 +23,7 @@ prob=1.0
 
 algo="mappo" 
 exp_name="RMAPPO"
-group_name="RMAPPO-obs"
+group_name="RMAPPO"
 map_name="protoss_5_vs_5"
 
 for seed in 0 1 2 3 4; do

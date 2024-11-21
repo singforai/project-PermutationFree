@@ -2,6 +2,91 @@ import torch
 import torch.nn as nn
 
 
+# class Token_Mixing(nn.Module) : 
+#     def __init__(self, input) : 
+#         super(Token_Mixing, self).__init__()
+
+#         self.Layer_Norm = nn.LayerNorm(input[-2]) 
+#         self.MLP = nn.Sequential(
+#             nn.Linear(input[-2], input[-2]),
+#             nn.GELU(),
+#             nn.Linear(input[-2], input[-2])
+#         )
+
+#     def forward(self, x) : # (B * N_A) x N_O x H
+#         output = self.Layer_Norm(x.transpose(2,1))  # (B * N_A) x H x N_O
+#         output = self.MLP(output) # (B * N_A) x H x N_O
+
+#         output = output.transpose(2,1) # (B * N_A) x N_O x H
+
+#         return output + x # (B * N_A) x N_O x H
+
+# class Channel_Mixing(nn.Module) :
+#     def __init__(self, input) : # 
+#         super(Channel_Mixing, self).__init__()
+
+#         self.Layer_Norm = nn.LayerNorm(input[-1])
+#         self.MLP = nn.Sequential(
+#             nn.Linear(input[-1], input[-1]),
+#             nn.GELU(),
+#             nn.Linear(input[-1], input[-1])
+#         )
+    
+#     def forward(self, x) : # (B * N_A) x N_O x H
+#         output = self.Layer_Norm(x) # (B * N_A) x N_O x H
+#         output = self.MLP(output)  # (B * N_A) x N_O x H
+#         return output + x  # (B * N_A) x N_O x H
+
+# class Mixer_Layer(nn.Module) :
+#     def __init__(self, input) : # 
+#         super(Mixer_Layer, self).__init__()
+
+#         self.mixer_layer = nn.Sequential(
+#             Token_Mixing(input),
+#             Channel_Mixing(input)
+#         )
+#     def forward(self, x) :
+#         return self.mixer_layer(x)
+    
+
+# class MLP_Mixer(nn.Module):
+#     def __init__(self, num_agents, num_objects, mixer_hidden_size, input_dim, n_block = 3):
+#         super(MLP_Mixer, self).__init__()
+#         self.num_agents = num_agents
+#         self.num_objects = num_objects
+#         self.mixer_hidden_size = mixer_hidden_size
+#         self.input_dim = input_dim
+        
+#         self.base = nn.Sequential(
+#             nn.Linear(
+#                 self.input_dim, self.mixer_hidden_size
+#             ),
+#             nn.GELU(),
+#             nn.Linear(
+#                 self.mixer_hidden_size, self.mixer_hidden_size
+#             ), 
+#         )
+        
+#         self.mlp_mixer = nn.Sequential()
+        
+#         for i in range(n_block) : # Mixer Layer를 N번 쌓아준다
+#             self.mlp_mixer.add_module("Mixer_Layer_" + str(i), Mixer_Layer((self.num_objects, self.mixer_hidden_size)))
+            
+#         self.global_average_Pooling = nn.LayerNorm([self.num_objects, self.mixer_hidden_size])
+            
+#     def forward(self, obs):
+#         x = obs.reshape(obs.shape[0] * obs.shape[1], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
+#         x = self.base(x) # (B * N_A) x N_O x H
+#         x = self.mlp_mixer(x) # (B * N_A) x N_O x H
+#         x = self.global_average_Pooling(x) # (B * N_A) x N_O x H
+#         x = x.mean(1) # (B * N_A) x H
+#         x = x.reshape(obs.shape[0], self.num_agents, self.mixer_hidden_size) # B x N_A x H
+#         return x
+
+
+
+
+
 class Attention(nn.Module):
     """Scaled Dot-Product Attention."""
 
@@ -42,7 +127,6 @@ class Attention(nn.Module):
 
 
 class MultiheadAttention(nn.Module):
-
     def __init__(self, d, h):
         """
         Arguments:
@@ -210,6 +294,7 @@ class RFF(nn.Module):
         super().__init__()
         
         self.layers = nn.Sequential(
+            nn.Linear(d, d), nn.ReLU(),
             nn.Linear(d, d), nn.ReLU(),
             nn.Linear(d, d), nn.ReLU(),
         )
