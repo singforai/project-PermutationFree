@@ -37,7 +37,6 @@ class R_Actor(nn.Module):
         self.act = ACTLayer(action_space, self.hidden_size, self._use_orthogonal, self._gain, args)
 
         self.to(device)
-        self.algo = args["algorithm_name"]
 
     def forward(self, obs, rnn_states, masks, available_actions=None, deterministic=False):
         """

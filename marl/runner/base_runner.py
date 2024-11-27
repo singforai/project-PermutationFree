@@ -197,6 +197,7 @@ class Runner(object):
             self.policy = Policy(
                 args = self.policy_args, 
                 obs_space = observation_space, 
+                share_obs_space = share_observation_space, 
                 act_space = action_space, 
                 num_agents = self.num_agents, 
                 num_objects = self.num_objects, 

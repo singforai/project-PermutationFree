@@ -20,10 +20,10 @@ echo "jobid: $SLURM_JOB_ID"
 env="smacv2"
 algo="mast" 
 exp_name="MAST"
-group_name="MAST64"
+group_name="MAST"
 map_name=protoss_5_vs_5
 
-for seed in 0 1 2 3 4; do
+for seed in 0 1 2; do
     srun --partition=$SLURM_JOB_PARTITION \
         --gres=$GRES \
         --cpus-per-task=$cpus_per_task \

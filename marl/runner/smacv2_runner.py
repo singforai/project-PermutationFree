@@ -12,10 +12,10 @@ from utils.util import timer_start, timer_cancel
 def _t2n(x):
     return x.detach().cpu().numpy()
 
-class MAPPORunner(Runner):
+class SMACv2Runner(Runner):
     """Runner class to perform training, evaluation. and data collection for SMAC. See parent class for details."""
     def __init__(self, exp_args, algo_args, env_args):
-        super(MAPPORunner, self).__init__(exp_args, algo_args, env_args)
+        super().__init__(exp_args, algo_args, env_args)
 
     def run(self):
         
@@ -38,8 +38,8 @@ class MAPPORunner(Runner):
                 # Sample actions
                 values, actions, action_log_probs, rnn_states, rnn_states_critic = self.collect(step)
                 # Obser reward and next obs
-                obs, share_obs, rewards, dones, total_dones, infos, available_actions, visible_masking = self.envs.step(actions)
-                data = obs, share_obs, rewards, dones, total_dones, infos, available_actions, \
+                share_obs, obs, rewards, dones, infos, available_actions = self.envs.step(actions)
+                data = obs, share_obs, rewards, dones, infos, available_actions, \
                        values, actions, action_log_probs, \
                        rnn_states, rnn_states_critic 
 
@@ -78,14 +78,11 @@ class MAPPORunner(Runner):
         
     def warmup(self):
         # reset env
-        obs, share_obs, available_actions, visible_masking = self.envs.reset()
-        if self.algorithm_name == "mast":
-            self.buffer.obs[0] = obs.copy()
-            self.buffer.available_actions[0] = available_actions.copy()
-        else:
-            self.buffer.share_obs[0] = share_obs.copy()
-            self.buffer.obs[0] = obs.copy()
-            self.buffer.available_actions[0] = available_actions.copy()
+        obs, share_obs, available_actions = self.envs.reset()
+
+        self.buffer.share_obs[0] = share_obs.copy()
+        self.buffer.obs[0] = obs.copy()
+        self.buffer.available_actions[0] = available_actions.copy()
 
     @torch.no_grad()
     def collect(self, step):
@@ -103,11 +100,10 @@ class MAPPORunner(Runner):
         values = np.array(np.split(_t2n(value), self.n_rollout_threads))
         actions = np.array(np.split(_t2n(action), self.n_rollout_threads))
         action_log_probs = np.array(np.split(_t2n(action_log_prob), self.n_rollout_threads))
+        
         rnn_states = np.array(np.split(_t2n(rnn_state), self.n_rollout_threads))
-        if self.algorithm_name != "mast":
-            rnn_states_critic = np.array(np.split(_t2n(rnn_state_critic), self.n_rollout_threads))
-        else:
-            rnn_states_critic = None
+        rnn_states_critic = np.array(np.split(_t2n(rnn_state_critic), self.n_rollout_threads))
+
         return values, actions, action_log_probs, rnn_states, rnn_states_critic
 
     @torch.no_grad()
@@ -129,11 +125,10 @@ class MAPPORunner(Runner):
 
     def insert(self, data):
         (
-            obs,  # (n_threads, n_agents, obs_dim)
             share_obs,  # (n_threads, n_agents, share_obs_dim)
+            obs,  # (n_threads, n_agents, obs_dim)            
             rewards,  # (n_threads, n_agents, 1)
             dones,  # (n_threads, n_agents)
-            total_dones,
             infos,  # type: list, shape: (n_threads, n_agents)
             available_actions,  # (n_threads, ) of None or (n_threads, n_agents, action_number)
             values,  # EP: (n_threads, dim), FP: (n_threads, n_agents, dim)
@@ -145,8 +140,7 @@ class MAPPORunner(Runner):
         
         dones_env = np.all(dones, axis=1)
         rnn_states[dones_env == True] = np.zeros(((dones_env == True).sum(), self.num_agents, self.recurrent_N, self.hidden_size), dtype=np.float32)
-        if self.algorithm_name != "mast":
-            rnn_states_critic[dones_env == True] = np.zeros(((dones_env == True).sum(), self.num_agents, *self.buffer.rnn_states_critic.shape[3:]), dtype=np.float32)
+        rnn_states_critic[dones_env == True] = np.zeros(((dones_env == True).sum(), self.num_agents, *self.buffer.rnn_states_critic.shape[3:]), dtype=np.float32)
 
         masks = np.ones((self.n_rollout_threads, self.num_agents, 1), dtype=np.float32)
         masks[dones_env == True] = np.zeros(((dones_env == True).sum(), self.num_agents, 1), dtype=np.float32)
@@ -182,7 +176,7 @@ class MAPPORunner(Runner):
         
         eval_episode = 0
 
-        eval_obs, eval_share_obs, eval_available_actions, visible_masking = self.eval_envs.reset()
+        eval_obs, eval_share_obs, eval_available_actions = self.eval_envs.reset()
 
         eval_rnn_states = np.zeros((self.n_eval_rollout_threads, self.num_agents, self.recurrent_N, self.hidden_size), dtype=np.float32)
         eval_masks = np.ones((self.n_eval_rollout_threads, self.num_agents, 1), dtype=np.float32)
@@ -203,7 +197,7 @@ class MAPPORunner(Runner):
             eval_rnn_states = np.array(np.split(_t2n(eval_rnn_states), self.n_eval_rollout_threads))
             
             # Obser reward and next obs
-            eval_obs, eval_share_obs, eval_rewards, eval_dones,  eval_total_dones, eval_infos, eval_available_actions, visible_masking = self.eval_envs.step(eval_actions)
+            eval_obs, eval_share_obs, eval_rewards, eval_dones, eval_infos, eval_available_actions = self.eval_envs.step(eval_actions)
             
             self.logger.eval_per_step(
                 eval_rewards,

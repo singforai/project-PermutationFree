@@ -3,6 +3,7 @@ import torch.nn as nn
 from algorithms.utils.rnn import RNNLayer
 from algorithms.utils.act import ACTLayer
 
+from algorithms.utils.mast_utils import SetAttentionBlock, PoolingMultiheadAttention, RFF
 from algorithms.utils.set_utils import SAB, PMA
 
 class Actor(nn.Module):
@@ -22,7 +23,6 @@ class Actor(nn.Module):
         self._use_orthogonal: bool = args["use_orthogonal"]
         self.use_recurrent_policy: int = args["use_recurrent_policy"]
         
-        self.mixer_hidden_size = 16
         self.input_dim = obs_space // self.num_objects
 
         self.base = nn.Sequential(
@@ -34,24 +34,47 @@ class Actor(nn.Module):
                 self.hidden_size, self.hidden_size
             ), 
         )
-        
-        self.PMA = PMA(
-            hidden_size =  self.hidden_size,
-            num_seed_vector = self.num_seed_vector,
-            num_heads = self.num_head,
-            v_norm_samples = self.num_objects,
-        )
-        self.SAB_block = nn.Sequential()
-        
-        for i in range(self.n_sab_blocks):
-            self.SAB_block.add_module(
-                f"SAB_{i}",
-                SAB(
-                    hidden_size =  self.hidden_size,
-                    num_heads = self.num_head,
-                    sample_size = self.num_agents,
-                )
+        # self._feature_PF_Block = nn.Sequential(
+        #     SAB(
+        #         hidden_size =  self.hidden_size,
+        #         num_heads = self.num_head,
+        #         sample_size = self.num_objects,
+        #     ),
+        #     PMA(
+        #         hidden_size =  self.hidden_size,
+        #         num_seed_vector = self.num_seed_vector,
+        #         num_heads = self.num_head,
+        #         v_norm_samples = self.num_objects,
+        #     )
+        # )
+        self._feature_PF_Block = nn.Sequential(
+            SetAttentionBlock(
+                d =  self.hidden_size,
+                h = self.num_head,
+                rff = RFF(self.hidden_size),
+            ),
+            PoolingMultiheadAttention(
+                d =  self.hidden_size,
+                k = self.num_seed_vector,
+                h = self.num_head,
+                rff = RFF(self.hidden_size),
             )
+        )
+        
+        # self._agent_PE_Block = nn.Sequential(
+        #     SAB(
+        #         hidden_size =  self.hidden_size,
+        #         num_heads = self.num_head,
+        #         sample_size = self.num_agents,
+        #     ),
+        # )
+        self._agent_PE_Block = nn.Sequential(
+            SetAttentionBlock(
+                d =  self.hidden_size,
+                h = self.num_head,
+                rff = RFF(self.hidden_size),
+            ),
+        )
 
         self.act_layer = ACTLayer(
             action_space = action_space,
@@ -63,16 +86,16 @@ class Actor(nn.Module):
         self.to(device)
 
     def forward(self, obs, rnn_states, masks, available_actions=None, deterministic=False):
-        x = obs.reshape(obs.shape[0] * obs.shape[1], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
+        x = obs.reshape(obs.shape[0], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
         x = self.base(x)
-        x = self.PMA(x)
+        x = self._feature_PF_Block(x)
         x = x.mean(dim = 1)
         x = x.reshape(-1 ,self.num_agents, self.hidden_size)
-        x = self.SAB_block(x)
+        x = self._agent_PE_Block(x)
         x = x.reshape(-1, self.hidden_size)
         actions, action_log_probs = self.act_layer(
             x,
-            torch.concat([available_actions], dim = 0),
+            available_actions,
             deterministic
         )
 
@@ -103,26 +126,62 @@ class Critic(nn.Module):
             ), 
         )
         
-        self.object_PMA = PMA(
-            hidden_size =  self.hidden_size,
-            num_seed_vector = self.num_seed_vector,
-            num_heads = self.num_head,
-            v_norm_samples = self.num_objects,
+        # self._feature_PF_Block = nn.Sequential(
+        #     SAB(
+        #         hidden_size =  self.hidden_size,
+        #         num_heads = self.num_head,
+        #         sample_size = self.num_objects,
+        #     ),
+        #     PMA(
+        #         hidden_size =  self.hidden_size,
+        #         num_seed_vector = self.num_seed_vector,
+        #         num_heads = self.num_head,
+        #         v_norm_samples = self.num_objects,
+        #     )
+        # )
+
+        self._feature_PF_Block = nn.Sequential(
+            SetAttentionBlock(
+                d =  self.hidden_size,
+                h = self.num_head,
+                rff = RFF(self.hidden_size),
+            ),
+            PoolingMultiheadAttention(
+                d =  self.hidden_size,
+                k = self.num_seed_vector,
+                h = self.num_head,
+                rff = RFF(self.hidden_size),
+            )
         )
 
-        self.SAB = SAB(
-            hidden_size =  self.hidden_size,
-            num_heads = self.num_head,
-            sample_size = self.num_agents,
+        # self._agent_PF_Block = nn.Sequential(
+        #     SAB(
+        #         hidden_size =  self.hidden_size,
+        #         num_heads = self.num_head,
+        #         sample_size = self.num_agents,
+        #     ),
+        #     PMA(
+        #         hidden_size =  self.hidden_size,
+        #         num_seed_vector = self.num_seed_vector,
+        #         num_heads = self.num_head,
+        #         v_norm_samples = self.num_agents,
+        #     )
+        # )
+
+        self._agent_PF_Block = nn.Sequential(
+            SetAttentionBlock(
+                d =  self.hidden_size,
+                h = self.num_head,
+                rff = RFF(self.hidden_size),
+            ),
+            PoolingMultiheadAttention(
+                d =  self.hidden_size,
+                k = self.num_seed_vector,
+                h = self.num_head,
+                rff = RFF(self.hidden_size),
+            )
         )
 
-        self.agent_PMA = PMA(
-            hidden_size =  self.hidden_size,
-            num_seed_vector = self.num_seed_vector,
-            num_heads = self.num_head,
-            v_norm_samples = self.num_agents,
-        )
-    
         self.v_net = nn.Sequential(
             nn.Linear(
                 (self.hidden_size), self.hidden_size // 2
@@ -136,13 +195,12 @@ class Critic(nn.Module):
         self.to(device)
 
     def forward(self, obs):
-        x = obs.reshape(obs.shape[0] * obs.shape[1], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
+        x = obs.reshape(obs.shape[0], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
         x = self.base(x)
-        x = self.object_PMA(x)
+        x = self._feature_PF_Block(x)
         x = x.mean(dim = 1)
         x = x.reshape(-1 ,self.num_agents, self.hidden_size)
-        x = self.SAB(x)
-        x = self.agent_PMA(x)
+        x = self._agent_PF_Block(x)
         x = x.mean(dim = 1)
         x = self.v_net(x)
         values = x.unsqueeze(1).repeat(1, self.num_agents, 1).reshape(-1, 1)

@@ -169,7 +169,7 @@ def shareworker(remote, parent_remote, env_fn_wrapper):
     while True:
         cmd, data = remote.recv()
         if cmd == "step":
-            ob, s_ob, reward, done, total_dones, info, available_actions, visible_masking = env.step(data)
+            ob, s_ob, reward, done, info, available_actions = env.step(data)
             if "bool" in done.__class__.__name__:  # done is a bool
                 if (
                     done
@@ -177,7 +177,7 @@ def shareworker(remote, parent_remote, env_fn_wrapper):
                     info[0]["original_obs"] = copy.deepcopy(ob)
                     info[0]["original_state"] = copy.deepcopy(s_ob)
                     info[0]["original_avail_actions"] = copy.deepcopy(available_actions)
-                    ob, s_ob, available_actions, visible_masking = env.reset()
+                    ob, s_ob, available_actions = env.reset()
             else:
                 if np.all(
                     done
@@ -185,12 +185,12 @@ def shareworker(remote, parent_remote, env_fn_wrapper):
                     info[0]["original_obs"] = copy.deepcopy(ob)
                     info[0]["original_state"] = copy.deepcopy(s_ob)
                     info[0]["original_avail_actions"] = copy.deepcopy(available_actions)
-                    ob, s_ob, available_actions, visible_masking = env.reset()
+                    ob, s_ob, available_actions = env.reset()
 
-            remote.send((ob, s_ob, reward, done, total_dones, info, available_actions, visible_masking))
+            remote.send((ob, s_ob, reward, done, info, available_actions))
         elif cmd == "reset":
-            ob, s_ob, available_actions, visible_masking = env.reset()
-            remote.send((ob, s_ob, available_actions, visible_masking))
+            ob, s_ob, available_actions = env.reset()
+            remote.send((ob, s_ob, available_actions))
         elif cmd == "reset_task":
             ob = env.reset_task()
             remote.send(ob)
@@ -261,24 +261,22 @@ class ShareSubprocVecEnv(ShareVecEnv):
     def step_wait(self):
         results = [remote.recv() for remote in self.remotes]
         self.waiting = False
-        obs, share_obs, rews, dones, total_dones, infos, available_actions, visible_masking = zip(*results)
+        obs, share_obs, rews, dones, infos, available_actions = zip(*results)
         return (
             np.stack(obs),
             np.stack(share_obs),
             np.stack(rews),
             np.stack(dones),
-            np.stack(total_dones),
             infos,
-            np.stack(available_actions),
-            np.stack(visible_masking)
+            np.stack(available_actions)
         )
 
     def reset(self):
         for remote in self.remotes:
             remote.send(("reset", None))
         results = [remote.recv() for remote in self.remotes]
-        obs, share_obs, available_actions, visible_masking = zip(*results)
-        return np.stack(obs), np.stack(share_obs), np.stack(available_actions), np.stack(visible_masking)
+        obs, share_obs, available_actions = zip(*results)
+        return np.stack(obs), np.stack(share_obs), np.stack(available_actions)
 
     def reset_task(self):
         for remote in self.remotes:

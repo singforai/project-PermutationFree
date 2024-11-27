@@ -26,18 +26,9 @@ class SMACv2Env:
     def step(self, actions):
         reward, terminated, info = self.env.step(actions)
         
-        if self.algorithm_name == "mast":
-            # obs = self.env.get_own_obs()
-            obs = self.env.create_obs()
-            state = None
+        obs = self.env.create_obs()
+        state = self.env.create_state()
             
-            """
-            obs_enemies: (self.n_enemies, self.n_agents)
-            obs_ally: (self.n_agents, self.n_agents)
-            """
-        else:
-            obs = self.env.get_obs()
-            state = self.repeat(self.env.get_state())
             
         rewards = [[reward]] * self.n_agents
 
@@ -55,39 +46,22 @@ class SMACv2Env:
         avail_actions = self.env.get_avail_actions()
         
         dones = []
-        total_dones = []
         for i in range(self.env.n_agents):
             if terminated:
                 dones.append(True)
-                total_dones.append(True)
             else:
                 dones.append(self.env.death_tracker_ally[i])
-                total_dones.append(self.env.death_tracker_ally[i])
                 
-        for i in range(self.env.n_enemies):
-            if self.env.death_tracker_enemy[i]:
-                total_dones.append(True)
-            else:
-                total_dones.append(self.env.death_tracker_enemy[i])
-                
-        visible_masking = self.env.get_visible_object()
-                
-        return obs, state, rewards, dones, total_dones, infos, avail_actions, visible_masking
+        return obs, state, rewards, dones, infos, avail_actions
 
     def reset(self):
         self.env.reset()
-        if self.algorithm_name == "mast":
-            obs = self.env.create_obs()
-            # obs = self.env.get_own_obs()
-            state = None
-        else:
-            obs = self.env.get_obs()
-            state = self.repeat(self.env.get_state())
+        
+        obs = self.env.create_obs()
+        state = self.env.create_state()
         avail_actions = self.env.get_avail_actions()
         
-        visible_masking = self.env.get_visible_object()
-        
-        return obs, state, avail_actions, visible_masking
+        return obs, state, avail_actions
 
     def seed(self, seed):
         self.env = StarCraftCapabilityEnvWrapper(

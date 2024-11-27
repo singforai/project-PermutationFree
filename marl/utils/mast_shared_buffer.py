@@ -68,10 +68,12 @@ class ObjectSharedReplayBuffer(object):
             share_obs_shape = share_obs_shape[:1]
             
         self.obs = np.zeros((self.episode_length + 1, self.n_rollout_threads, self.num_agents, *obs_shape), dtype=np.float32)
+        self.share_obs = np.zeros((self.episode_length + 1, self.n_rollout_threads, self.num_agents, *share_obs_shape), dtype=np.float32)
 
         self.rnn_states = np.zeros(
             (self.episode_length + 1, self.n_rollout_threads, self.num_agents, self.recurrent_N, self.hidden_size),
             dtype=np.float32)
+        self.rnn_states_critic = np.zeros_like(self.rnn_states)
 
         self.value_preds = np.zeros(
             (self.episode_length + 1, self.n_rollout_threads, self.num_agents, 1), dtype=np.float32)
@@ -86,8 +88,6 @@ class ObjectSharedReplayBuffer(object):
             self.available_actions = None
 
         act_shape = get_shape_from_act_space(act_space)
-        self.obs_shape = (*obs_shape,)[0]
-        self.share_obs_shape = (*share_obs_shape,)[0]
 
         self.actions = np.zeros(
             (self.episode_length, self.n_rollout_threads, self.num_agents, act_shape), dtype=np.float32)
@@ -103,7 +103,7 @@ class ObjectSharedReplayBuffer(object):
         
         self.step = 0
         
-    def insert(self, obs, rnn_states_actor, actions, action_log_probs,
+    def insert(self, share_obs, obs, rnn_states_actor, rnn_states_critic, actions, action_log_probs,
                value_preds, rewards, masks, bad_masks=None, active_masks=None, available_actions=None):
         """
         Insert data into the buffer.
@@ -121,6 +121,7 @@ class ObjectSharedReplayBuffer(object):
         :param available_actions: (np.ndarray) actions available to each agent. If None, all actions are available.
         """
         self.obs[self.step + 1] = obs.copy()
+        self.share_obs[self.step + 1] = share_obs.copy()
         self.rnn_states[self.step + 1] = rnn_states_actor.copy()
         self.actions[self.step] = actions.copy()
         self.action_log_probs[self.step] = action_log_probs.copy()
@@ -139,6 +140,7 @@ class ObjectSharedReplayBuffer(object):
     def after_update(self):
         """Copy last timestep data to first index. Called after update to model."""
         self.obs[0] = self.obs[-1].copy()
+        self.share_obs[0] = self.share_obs[-1].copy()
         self.rnn_states[0] = self.rnn_states[-1].copy()
         self.masks[0] = self.masks[-1].copy()
         self.bad_masks[0] = self.bad_masks[-1].copy()
@@ -352,6 +354,7 @@ class ObjectSharedReplayBuffer(object):
         sampler = [rand[i * mini_batch_size:(i + 1) * mini_batch_size] for i in range(num_mini_batch)] 
         
         obs = self.obs[:-1].reshape(-1, *self.obs.shape[2:])
+        share_obs = self.share_obs[:-1].reshape(-1, *self.share_obs.shape[2:])
         rnn_states = self.rnn_states[:-1].reshape(-1, *self.rnn_states.shape[2:])
         actions = self.actions.reshape(-1, *self.actions.shape[-2:])
         if self.available_actions is not None:
@@ -364,6 +367,7 @@ class ObjectSharedReplayBuffer(object):
         advantages = advantages.reshape(-1, self.num_agents, 1)
         for indices in sampler:
             obs_batch = obs[indices]
+            share_obs_batch = share_obs[indices]
             rnn_states_batch = rnn_states[indices]
             actions_batch = actions[indices]
             if self.available_actions is not None:
@@ -380,6 +384,60 @@ class ObjectSharedReplayBuffer(object):
             else:
                 adv_targ = advantages[indices]
 
-            yield obs_batch, rnn_states_batch, actions_batch,\
+            yield obs_batch, share_obs_batch, rnn_states_batch, actions_batch,\
+                  value_preds_batch, return_batch, masks_batch, active_masks_batch, old_action_log_probs_batch,\
+                  adv_targ, available_actions_batch
+                  
+                  
+    def forward_transformer_generator(self, advantages, num_mini_batch=None, mini_batch_size=None):
+        
+        episode_length, n_rollout_threads, self.num_agents = self.rewards.shape[0:3]
+        batch_size = n_rollout_threads * episode_length
+
+        if mini_batch_size is None:
+            assert batch_size >= num_mini_batch, (
+                "PPO requires the number of processes ({}) "
+                "* number of steps ({}) * number of agents ({}) = {} "
+                "to be greater than or equal to the number of PPO mini batches ({})."
+                "".format(n_rollout_threads, episode_length, self.num_agents,
+                          n_rollout_threads * episode_length * self.num_agents,
+                          num_mini_batch))
+            mini_batch_size = batch_size // num_mini_batch
+        
+        rand = torch.randperm(batch_size).numpy() 
+        sampler = [rand[i * mini_batch_size:(i + 1) * mini_batch_size] for i in range(num_mini_batch)] 
+        
+        obs = self.obs[:-1].reshape(-1, *self.obs.shape[2:])
+        share_obs = self.share_obs[:-1].reshape(-1, *self.share_obs.shape[2:])
+        rnn_states = self.rnn_states[:-1].reshape(-1, *self.rnn_states.shape[2:])
+        actions = self.actions.reshape(-1, *self.actions.shape[-2:])
+        if self.available_actions is not None:
+            available_actions = self.available_actions[:-1].reshape(-1, *self.available_actions.shape[-2:])
+        value_preds = self.value_preds[:-1].reshape(-1, self.num_agents, 1)
+        returns = self.returns[:-1].reshape(-1, self.num_agents, 1)
+        masks = self.masks[:-1].reshape(-1, self.num_agents, 1)
+        active_masks = self.active_masks[:-1].reshape(-1, self.num_agents, 1)
+        action_log_probs = self.action_log_probs.reshape(-1, *self.action_log_probs.shape[-2:])
+        advantages = advantages.reshape(-1, self.num_agents, 1)
+        for indices in sampler:
+            obs_batch = obs[indices]
+            share_obs_batch = share_obs[indices]
+            rnn_states_batch = rnn_states[indices]
+            actions_batch = actions[indices]
+            if self.available_actions is not None:
+                available_actions_batch = available_actions[indices]
+            else:
+                available_actions_batch = None
+            value_preds_batch = value_preds[indices]
+            return_batch = returns[indices]
+            masks_batch = masks[indices]
+            active_masks_batch = active_masks[indices]
+            old_action_log_probs_batch = action_log_probs[indices]
+            if advantages is None:
+                adv_targ = None
+            else:
+                adv_targ = advantages[indices]
+
+            yield obs_batch, share_obs_batch, rnn_states_batch, actions_batch,\
                   value_preds_batch, return_batch, masks_batch, active_masks_batch, old_action_log_probs_batch,\
                   adv_targ, available_actions_batch

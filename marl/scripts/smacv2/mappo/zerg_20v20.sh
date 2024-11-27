@@ -21,9 +21,9 @@ env="smacv2"
 num_env_steps=10000000
 
 algo="mappo" 
-exp_name="RMAPPO"
-group_name="RMAPPO"
-map_name="zerg_10_vs_10"
+exp_name="MAPPO"
+group_name="MAPPO_state"
+map_name="zerg_20_vs_20"
 
 for seed in 0 1 2; do
     srun --partition=$SLURM_JOB_PARTITION \

@@ -1,8 +1,7 @@
 """Runner registry."""
-from .mappo_runner import MAPPORunner
-from .mast_runner import MASTRunner
+from .smacv2_runner import SMACv2Runner
 
 RUNNER_REGISTRY = {
-    "mast": MASTRunner,
-    "mappo": MAPPORunner,
+    "mast": SMACv2Runner,
+    "mappo": SMACv2Runner,
 }

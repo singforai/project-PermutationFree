@@ -107,7 +107,7 @@ class SMACv2Logger():
             self.one_episode_rewards.append([])
             
         self.eval_battles_won = 0
-
+        
     def eval_per_step(self, eval_rewards, eval_infos):
         """Log evaluation information per step."""
 

@@ -103,6 +103,7 @@ class Mast():
         """
         (
             obs_batch,
+            share_obs_batch,
             rnn_states_batch,
             actions_batch,
             value_preds_batch,
@@ -123,8 +124,9 @@ class Mast():
         mini_batch_size, num_agents, feature_dim = obs_batch.shape
         mini_batch_size, num_agents, recurrent_N, hidden_size = rnn_states_batch.shape
         
-        # obs_batch = obs_batch.reshape(mini_batch_size * num_agents, feature_dim)
-        # rnn_states_batch = rnn_states_batch.reshape(mini_batch_size * num_agents, recurrent_N, hidden_size)
+        obs_batch = obs_batch.reshape(mini_batch_size * num_agents, feature_dim)
+        share_obs_batch = share_obs_batch.reshape(mini_batch_size * num_agents, -1) 
+        rnn_states_batch = rnn_states_batch.reshape(mini_batch_size * num_agents, recurrent_N, hidden_size)
         actions_batch = actions_batch.reshape(mini_batch_size * self.num_agents, 1)
         value_preds_batch = value_preds_batch.reshape(mini_batch_size * self.num_agents, 1)
         return_batch = return_batch.reshape(mini_batch_size * self.num_agents, 1)
@@ -135,6 +137,7 @@ class Mast():
         available_actions_batch = available_actions_batch.reshape(mini_batch_size * self.num_agents, -1)
 
         values, action_log_probs, dist_entropy = self.policy.evaluate_actions(
+            share_obs = share_obs_batch,
             obs=obs_batch,
             rnn_states = rnn_states_batch,
             action=actions_batch,

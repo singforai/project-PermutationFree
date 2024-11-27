@@ -2,9 +2,9 @@
 
 train:
   # number of parallel environments for training data collection
-  n_rollout_threads: 32
+  n_rollout_threads: 16
   # number of steps per environment per training data collection
-  episode_length: 100
+  episode_length: 200
   # whether to use linear learning rate decay
   use_linear_lr_decay: False
   # whether to consider the case of truncation when an episode is done
@@ -25,13 +25,13 @@ model:
   #Number of layers for actor/critic networks
   layer_N: 1
   #Number of head
-  n_head: 4
+  n_head: 1
   # whether to use PMA
   use_pma_block: True
   #Number of seed vector
-  n_seed_vector: 4
+  n_seed_vector: 5
   # number of sab blocks
-  n_sab_blocks: 5
+  n_sab_blocks: 2
   # hidden sizes for mlp module in the network
   hidden_size: 64
   # activation function
@@ -59,7 +59,7 @@ model:
 algo:
   # ppo parameters
   # number of epochs for actor Fpdate
-  ppo_epoch: 10
+  ppo_epoch: 5
   # whether to use clipped value loss
   use_clipped_value_loss: True
   # clip parameter

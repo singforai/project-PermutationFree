@@ -9,6 +9,7 @@ class StarCraftCapabilityEnvWrapper(MultiAgentEnv):
         self.env_key_to_distribution_map = {}
         self._parse_distribution_config()
         kwargs["prob_obs_enemy"] = kwargs["capability_config"]["prob_obs_enemy"]
+        kwargs["action_mask"] = kwargs["capability_config"]["action_mask"]
         self.env = StarCraft2Env(**kwargs)
         assert (
             self.distribution_config.keys()
@@ -17,7 +18,7 @@ class StarCraftCapabilityEnvWrapper(MultiAgentEnv):
 
     def _parse_distribution_config(self):
         for env_key, config in self.distribution_config.items():
-            if env_key == "n_units" or env_key == "n_enemies" or env_key == "prob_obs_enemy":
+            if env_key == "n_units" or env_key == "n_enemies" or env_key == "prob_obs_enemy" or env_key == "action_mask":
                 continue
             config["env_key"] = env_key
             # add n_units key
@@ -43,15 +44,12 @@ class StarCraftCapabilityEnvWrapper(MultiAgentEnv):
         else:
             raise AttributeError
         
+    def create_state(self):
+        return self.env.create_state()
+
     def create_obs(self):
         return self.env.create_obs()
-
-    def get_visible_object(self):
-        return self.env.visible_masking
     
-    def get_own_obs(self):
-        return self.env.get_own_obs()
-
     def get_obs(self):
         return self.env.get_obs()
 

@@ -25,13 +25,13 @@ exp_name="RMAPPO"
 group_name="RMAPPO"
 map_name="zerg_10_vs_11"
 
-for seed in 0 1 2 3 4; do
+for seed in 0 1 2; do
     srun --partition=$SLURM_JOB_PARTITION \
         --gres=$GRES \
         --cpus-per-task=$cpus_per_task \
         -o ../_log/%j/%N.out \
         -e ../_log/%j/%N.err \
         python ../../../train.py --env_name ${env} --algorithm_name ${algo} --experiment_name ${exp_name} \
-        --map_name ${map_name} --use_wandb --group_name ${group_name} --log_dir "../../../examples/results";
+        --map_name ${map_name} --seed ${seed} --use_wandb --group_name ${group_name} --log_dir "../../../examples/results";
 done
 
