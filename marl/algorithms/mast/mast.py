@@ -41,10 +41,6 @@ class Mast():
             self.value_normalizer = ValueNorm(1, device=self.device)
         else:
             self.value_normalizer = None
-
-    def to_single_np(self, input):
-        reshape_input = input.reshape(-1, self.num_agents, *input.shape[1:])
-        return reshape_input[:, 0, ...]
             
     def cal_value_loss(self, values, value_preds_batch, return_batch, active_masks_batch):
         """
@@ -105,6 +101,7 @@ class Mast():
             obs_batch,
             share_obs_batch,
             rnn_states_batch,
+            rnn_states_critic_batch,
             actions_batch,
             value_preds_batch,
             return_batch,
@@ -120,26 +117,12 @@ class Mast():
         value_preds_batch = check(value_preds_batch).to(**self.tpdv)
         active_masks_batch = check(active_masks_batch).to(**self.tpdv)
         old_action_log_probs_batch = check(old_action_log_probs_batch).to(**self.tpdv)
-
-        mini_batch_size, num_agents, feature_dim = obs_batch.shape
-        mini_batch_size, num_agents, recurrent_N, hidden_size = rnn_states_batch.shape
         
-        obs_batch = obs_batch.reshape(mini_batch_size * num_agents, feature_dim)
-        share_obs_batch = share_obs_batch.reshape(mini_batch_size * num_agents, -1) 
-        rnn_states_batch = rnn_states_batch.reshape(mini_batch_size * num_agents, recurrent_N, hidden_size)
-        actions_batch = actions_batch.reshape(mini_batch_size * self.num_agents, 1)
-        value_preds_batch = value_preds_batch.reshape(mini_batch_size * self.num_agents, 1)
-        return_batch = return_batch.reshape(mini_batch_size * self.num_agents, 1)
-        # masks_batch = masks_batch.reshape(mini_batch_size * num_agents, 1)
-        active_masks_batch  = active_masks_batch.reshape(mini_batch_size * self.num_agents, 1)
-        old_action_log_probs_batch = old_action_log_probs_batch.reshape(mini_batch_size * self.num_agents, 1)
-        adv_targ = adv_targ.reshape(mini_batch_size * self.num_agents, 1)
-        available_actions_batch = available_actions_batch.reshape(mini_batch_size * self.num_agents, -1)
-
         values, action_log_probs, dist_entropy = self.policy.evaluate_actions(
             share_obs = share_obs_batch,
             obs=obs_batch,
             rnn_states = rnn_states_batch,
+            rnn_states_critic = rnn_states_critic_batch,
             action=actions_batch,
             masks=masks_batch,
             available_actions=available_actions_batch,

@@ -27,7 +27,7 @@ min_attack_range: 2
 num_fov_actions: 12
 capability_config:
   prob_obs_enemy: 0.5
-  action_mask: False
+  action_mask: True
   n_units: 10
   n_enemies: 11
   team_gen:

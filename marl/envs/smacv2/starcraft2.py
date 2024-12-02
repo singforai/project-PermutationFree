@@ -1086,6 +1086,25 @@ class StarCraft2Env(MultiAgentEnv):
         else:
             return 6
 
+    def enemy_shoot_range(self, agent_id):
+        """Returns the shooting range for an agent."""
+        if self.use_unit_ranges:
+            attack_range_map = {
+                Protoss.Stalker: 6,
+                Protoss.Zealot: 0.1,
+                Protoss.Colossus: 7,
+                Zerg.Zergling: 0.1,
+                Zerg.Baneling: 0.25,
+                Zerg.Hydralisk: 5,
+                Terran.Marine: 5,
+                Terran.Marauder: 6,
+                Terran.Medivac: 4,
+            }
+            unit = self.enemies[agent_id]
+            return max(attack_range_map[unit.unit_type], self.min_attack_range)
+        else:
+            return 6
+
     def unit_sight_range(self, agent_id):
         """Returns the sight range for an agent."""
         # get the unit
@@ -2667,9 +2686,9 @@ class StarCraft2Env(MultiAgentEnv):
         health = 1
         relative_pos = 2
         distance = 1
-        sight_range = 1
+        attack_range = 1
         
-        obs_dim = myself + ally_enemy + unit_type + health + relative_pos + distance + sight_range
+        obs_dim = myself + ally_enemy + unit_type + health + relative_pos + distance + attack_range
         
         if self.shield_bits_enemy and self.shield_bits_ally:
             shield = 1
@@ -2696,8 +2715,6 @@ class StarCraft2Env(MultiAgentEnv):
         obs_dim = self.cal_agent_obs_dim()
         obs = np.zeros((self.num_objects, obs_dim), dtype=np.float32)
         
-        center = self.map_x / 2
-        
         unit = self.get_unit_by_id(agent_id)
         if (
             unit.health > 0 and self.obs_starcraft
@@ -2708,6 +2725,7 @@ class StarCraft2Env(MultiAgentEnv):
             
             type_id = self.get_unit_type_id(unit, True)
             sight_range = self.unit_sight_range(agent_id)
+            attack_range = self.unit_shoot_range(agent_id)
             if self.shield_bits_ally:
                 max_shield = self.unit_max_shield(unit)
 
@@ -2725,7 +2743,7 @@ class StarCraft2Env(MultiAgentEnv):
             ind += 1
             obs[0, ind: ind + 3] = 0.0
             ind += 3
-            obs[0, ind] = sight_range / center
+            obs[0, ind] = attack_range / sight_range
             ind += 1
             if self.shield_bits_ally:
                 obs[0, ind] = unit.shield / max_shield
@@ -2767,7 +2785,8 @@ class StarCraft2Env(MultiAgentEnv):
                     obs[idx, ind: ind + 3] = [dist / sight_range, (al_x - x) / sight_range, (al_y - y) / sight_range]
                     ind += 3
                     al_sight_range = self.unit_sight_range(al_id)
-                    obs[idx, ind] = al_sight_range / center
+                    al_attack_range = self.unit_shoot_range(al_id)
+                    obs[idx, ind] = al_attack_range / al_sight_range
                     ind += 1
                     if self.shield_bits_ally:
                         max_shield = self.unit_max_shield(al_unit)
@@ -2814,10 +2833,12 @@ class StarCraft2Env(MultiAgentEnv):
                     obs[enemy_id, ind: ind + 3] = [dist / sight_range, (e_x - x) / sight_range, (e_y - y) / sight_range]
                     ind += 3
                     e_sight_range = self.enemy_sight_range(e_id)
-                    obs[enemy_id, ind] = e_sight_range / center
+                    e_attack_range = self.enemy_shoot_range(e_id)
+                    obs[enemy_id, ind] = e_attack_range / e_sight_range
                     ind += 1
                     if self.shield_bits_enemy:
                         max_shield = self.unit_max_shield(e_unit)
+                        obs[idx, ind] = e_unit.shield / max_shield
         obs = obs.reshape(-1)
         return obs
     

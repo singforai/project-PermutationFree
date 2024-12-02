@@ -11,7 +11,7 @@ def main(args):
         env = exp_args["env_name"]
     )
 
-    runner = RUNNER_REGISTRY[exp_args["algorithm_name"]](
+    runner = RUNNER_REGISTRY[exp_args["env_name"]](
         exp_args = exp_args, 
         algo_args = algo_args, 
         env_args = env_args,

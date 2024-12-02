@@ -14,7 +14,7 @@ env="smacv2"
 algo="mast" 
 exp_name="PFN"
 group_name="PFN"
-map_name=zerg_20_vs_20
+map_name=protoss_10_vs_10
 
 for seed in 42; do
     srun --partition=$SLURM_JOB_PARTITION \

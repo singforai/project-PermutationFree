@@ -23,7 +23,7 @@ model:
   #Number of input frames which should be stack together
   stacked_frames: 1
   #Number of layers for actor/critic networks
-  layer_N: 1
+  layer_N: 2
   # hidden sizes for mlp module in the network
   hidden_size: 64
   # activation function
@@ -38,7 +38,7 @@ model:
   # whether to use rnn policy (data is not chunked for training)
   use_naive_recurrent_policy: False
   # whether to use rnn policy (data is chunked for training)
-  use_recurrent_policy: True
+  use_recurrent_policy: False
   # number of recurrent layers
   recurrent_N: 1
   # actor learning rate
@@ -49,6 +49,7 @@ model:
   opti_eps: 0.00001
   # weight_decay in Adam
   weight_decay: 0
+
 algo:
   # ppo parameters
   # number of epochs for actor update
@@ -80,8 +81,15 @@ algo:
   # whether to use policy active masks
   use_policy_active_masks: True
   #by default True, whether to mask useless data in value loss.
-  use_value_active_masks: False
+  use_value_active_masks: True
   # huber delta
   huber_delta: 10.0
   # whether to use ValueNorm
   use_valuenorm: True
+
+  encode_state : True
+  n_block : 1
+  n_embd : 64
+  n_head : 1
+  dec_actor : False
+  share_actor : False

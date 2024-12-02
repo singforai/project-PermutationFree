@@ -1,13 +1,5 @@
 #!/bin/bash
 
-#SBATCH --nodes=1
-#SBATCH --partition=gpu1
-#SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=20
-#SBATCH -o ../_out/%j.sbatch.%N.out
-#SBATCH -e ../_err/%j.sbatch.%N.err
-#================================================
-
 GRES="gpu:1"
 mkdir -p ../_log/$SLURM_JOB_ID
 SLURM_JOB_PARTITION="gpu1"
@@ -18,15 +10,12 @@ echo "node: $HOSTNAME"
 echo "jobid: $SLURM_JOB_ID"
 
 env="smacv2"
-num_env_steps=20000000
-prob=1.0
-
 algo="mappo" 
 exp_name="MAPPO"
 group_name="MAPPO"
 map_name="zerg_5_vs_5"
 
-for seed in 0 1 2; do
+for seed in 42; do
     srun --partition=$SLURM_JOB_PARTITION \
         --gres=$GRES \
         --cpus-per-task=$cpus_per_task \

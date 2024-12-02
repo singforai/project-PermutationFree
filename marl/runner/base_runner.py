@@ -10,7 +10,6 @@ from gym import spaces
 
 from utils.util import timer_start, timer_cancel
 
-from utils.mast_shared_buffer import ObjectSharedReplayBuffer
 from utils.shared_buffer import SharedReplayBuffer
 
 from envs import LOGGER_REGISTRY
@@ -107,8 +106,6 @@ class Runner(object):
         setproctitle.setproctitle(
             str(self.algorithm_name) + "-" + str(self.env_name) + "-" + str(self.experiment_name)
         )
-
-        
         
         if self.use_render:  # make envs for rendering
             (
@@ -174,6 +171,9 @@ class Runner(object):
         if self.algorithm_name == "mast":
             from algorithms.mast.mast import Mast as TrainAlgo
             from algorithms.mast.algorithm.MastPolicy import MastPolicy as Policy
+        elif self.algorithm_name == "mat":
+            from algorithms.mat.mat_trainer import MATTrainer as TrainAlgo
+            from algorithms.mat.algorithm.transformer_policy import TransformerPolicy as Policy      
         else:
             from algorithms.r_mappo.r_mappo import R_MAPPO as TrainAlgo
             from algorithms.r_mappo.algorithm.rMAPPOPolicy import R_MAPPOPolicy as Policy
@@ -184,7 +184,7 @@ class Runner(object):
         self.num_objects = sum(map(int, re.findall('\d+', self.map_name)))
         
         # policy network
-        if self.algorithm_name == "mat" or self.algorithm_name == "mat_dec":
+        if self.algorithm_name == "mat":
             self.policy = Policy(
                 self.policy_args, 
                 observation_space, 
@@ -219,7 +219,7 @@ class Runner(object):
         # algorithm
 
         # algorithm
-        if self.algorithm_name == "mat" or self.algorithm_name == "mat_dec":
+        if self.algorithm_name == "mat":
             self.trainer = TrainAlgo(
                 self.args, 
                 self.policy, 
@@ -239,25 +239,15 @@ class Runner(object):
                 self.policy, 
                 device = self.device
             )
+            
         
-        if self.algorithm_name == "mast":
-            self.buffer = ObjectSharedReplayBuffer(
-                self.args,
-                self.num_agents,
-                self.num_objects,
-                observation_space,
-                share_observation_space,
-                self.envs.action_space[0]
-            )
-
-        else:
-            self.buffer = SharedReplayBuffer(
-                self.args,
-                self.num_agents,
-                observation_space,
-                share_observation_space,
-                self.envs.action_space[0]
-            )
+        self.buffer = SharedReplayBuffer(
+            self.args,
+            self.num_agents,
+            observation_space,
+            share_observation_space,
+            self.envs.action_space[0]
+        )
             
         self.logger = LOGGER_REGISTRY[self.exp_args["env_name"]](
             exp_args = self.exp_args,
@@ -287,6 +277,22 @@ class Runner(object):
         :param data: (Tuple) data to insert into training buffer.
         """
         raise NotImplementedError
+
+    @torch.no_grad()
+    def compute(self):
+        """Calculate returns for the collected data."""
+        self.trainer.prep_rollout()
+        next_values = self.trainer.policy.get_values(
+            np.concatenate(self.buffer.share_obs[-1]),
+            np.concatenate(self.buffer.obs[-1]),
+            np.concatenate(self.buffer.rnn_states[-1]),
+            np.concatenate(self.buffer.rnn_states_critic[-1]),
+            np.concatenate(self.buffer.masks[-1]),
+            np.concatenate(self.buffer.available_actions[-1])
+        )
+    
+        next_values = np.array(np.split(_t2n(next_values), self.n_rollout_threads))
+        self.buffer.compute_returns(next_values, self.trainer.value_normalizer)
     
 
     def train(self):
@@ -301,10 +307,10 @@ class Runner(object):
         save_directory = f"{self.save_dir}/{episode}"
         if not os.path.exists(save_directory):
             os.makedirs(save_directory)
-        
+            
         if self.algorithm_name == "mat" or self.algorithm_name == "mat_dec":
             self.policy.save(save_dir = save_directory)
-        elif self.algorithm_name == "rmappo" or self.algorithm_name == "mappo" or self.algorithm_name == "tizero"  or self.algorithm_name == "mast":
+        elif self.algorithm_name == "mappo"  or self.algorithm_name == "mast":
             policy_actor = self.trainer.policy.actor
             torch.save(policy_actor.state_dict(), str(save_directory) + "/actor.pt")
             policy_critic = self.trainer.policy.critic

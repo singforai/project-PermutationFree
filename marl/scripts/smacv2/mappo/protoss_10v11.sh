@@ -25,7 +25,7 @@ exp_name="RMAPPO"
 group_name="RMAPPO"
 map_name="protoss_10_vs_11"
 
-for seed in 0 1 2; do
+for seed in 42; do
     srun --partition=$SLURM_JOB_PARTITION \
         --gres=$GRES \
         --cpus-per-task=$cpus_per_task \

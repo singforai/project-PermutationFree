@@ -97,7 +97,7 @@ class DecodeBlock(nn.Module):
         self.attn2 = SelfAttention(n_embd, n_head, n_agent, masked=True)
         self.mlp = nn.Sequential(
             init_(nn.Linear(n_embd, 1 * n_embd), activate=True),
-            nn.ReLU()(),
+            nn.ReLU(),
             init_(nn.Linear(1 * n_embd, n_embd))
         )
 

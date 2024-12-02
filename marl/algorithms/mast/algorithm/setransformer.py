@@ -18,10 +18,10 @@ class Actor(nn.Module):
         
         self.hidden_size: int = args["hidden_size"]
         self._recurrent_N: int = args["recurrent_N"]
-        self.n_sab_blocks: int = args["n_sab_blocks"]
         self.num_seed_vector: int = args["n_seed_vector"]
         self._use_orthogonal: bool = args["use_orthogonal"]
-        self.use_recurrent_policy: int = args["use_recurrent_policy"]
+        self._use_recurrent_policy: int = args["use_recurrent_policy"]
+        self._use_attention_scaling: int = args["use_attention_scaling"]
         
         self.input_dim = obs_space // self.num_objects
 
@@ -34,45 +34,38 @@ class Actor(nn.Module):
                 self.hidden_size, self.hidden_size
             ), 
         )
-        # self._feature_PF_Block = nn.Sequential(
-        #     SAB(
-        #         hidden_size =  self.hidden_size,
-        #         num_heads = self.num_head,
-        #         sample_size = self.num_objects,
-        #     ),
-        #     PMA(
-        #         hidden_size =  self.hidden_size,
-        #         num_seed_vector = self.num_seed_vector,
-        #         num_heads = self.num_head,
-        #         v_norm_samples = self.num_objects,
-        #     )
-        # )
+        if self._use_recurrent_policy:
+            self.rnn = RNNLayer(self.hidden_size, self.hidden_size, self._recurrent_N, self._use_orthogonal)
+        
+
         self._feature_PF_Block = nn.Sequential(
             SetAttentionBlock(
                 d =  self.hidden_size,
                 h = self.num_head,
                 rff = RFF(self.hidden_size),
+                use_scale = self._use_attention_scaling
             ),
             PoolingMultiheadAttention(
                 d =  self.hidden_size,
                 k = self.num_seed_vector,
                 h = self.num_head,
                 rff = RFF(self.hidden_size),
+                use_scale = self._use_attention_scaling
             )
         )
         
-        # self._agent_PE_Block = nn.Sequential(
-        #     SAB(
-        #         hidden_size =  self.hidden_size,
-        #         num_heads = self.num_head,
-        #         sample_size = self.num_agents,
-        #     ),
-        # )
         self._agent_PE_Block = nn.Sequential(
             SetAttentionBlock(
                 d =  self.hidden_size,
                 h = self.num_head,
                 rff = RFF(self.hidden_size),
+                use_scale = self._use_attention_scaling
+            ),
+            SetAttentionBlock(
+                d =  self.hidden_size,
+                h = self.num_head,
+                rff = RFF(self.hidden_size),
+                use_scale = self._use_attention_scaling
             ),
         )
 
@@ -89,7 +82,10 @@ class Actor(nn.Module):
         x = obs.reshape(obs.shape[0], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
         x = self.base(x)
         x = self._feature_PF_Block(x)
-        x = x.mean(dim = 1)
+        x = x.mean(dim = 1).squeeze(dim=1)
+        if self._use_recurrent_policy:
+            x = x.squeeze(dim=1)
+            x, rnn_states = self.rnn(x, rnn_states, masks)
         x = x.reshape(-1 ,self.num_agents, self.hidden_size)
         x = self._agent_PE_Block(x)
         x = x.reshape(-1, self.hidden_size)
@@ -113,6 +109,8 @@ class Critic(nn.Module):
         self._recurrent_N: int = args["recurrent_N"]
         self.num_seed_vector: int = args["n_seed_vector"]
         self._use_orthogonal: bool = args["use_orthogonal"]
+        self._use_recurrent_policy: int = args["use_recurrent_policy"]
+        self._use_attention_scaling: int = args["use_attention_scaling"]
         
         self.input_dim = obs_space // self.num_objects
         
@@ -125,60 +123,39 @@ class Critic(nn.Module):
                 self.hidden_size, self.hidden_size
             ), 
         )
-        
-        # self._feature_PF_Block = nn.Sequential(
-        #     SAB(
-        #         hidden_size =  self.hidden_size,
-        #         num_heads = self.num_head,
-        #         sample_size = self.num_objects,
-        #     ),
-        #     PMA(
-        #         hidden_size =  self.hidden_size,
-        #         num_seed_vector = self.num_seed_vector,
-        #         num_heads = self.num_head,
-        #         v_norm_samples = self.num_objects,
-        #     )
-        # )
+
+        if self._use_recurrent_policy:
+            self.rnn = RNNLayer(self.hidden_size, self.hidden_size, self._recurrent_N, self._use_orthogonal)
 
         self._feature_PF_Block = nn.Sequential(
             SetAttentionBlock(
                 d =  self.hidden_size,
                 h = self.num_head,
                 rff = RFF(self.hidden_size),
+                use_scale = self._use_attention_scaling
             ),
             PoolingMultiheadAttention(
                 d =  self.hidden_size,
                 k = self.num_seed_vector,
                 h = self.num_head,
                 rff = RFF(self.hidden_size),
+                use_scale = self._use_attention_scaling
             )
         )
 
-        # self._agent_PF_Block = nn.Sequential(
-        #     SAB(
-        #         hidden_size =  self.hidden_size,
-        #         num_heads = self.num_head,
-        #         sample_size = self.num_agents,
-        #     ),
-        #     PMA(
-        #         hidden_size =  self.hidden_size,
-        #         num_seed_vector = self.num_seed_vector,
-        #         num_heads = self.num_head,
-        #         v_norm_samples = self.num_agents,
-        #     )
-        # )
-
-        self._agent_PF_Block = nn.Sequential(
+        self._agent_PI_Block = nn.Sequential(
             SetAttentionBlock(
                 d =  self.hidden_size,
                 h = self.num_head,
                 rff = RFF(self.hidden_size),
+                use_scale = self._use_attention_scaling
             ),
             PoolingMultiheadAttention(
                 d =  self.hidden_size,
                 k = self.num_seed_vector,
                 h = self.num_head,
                 rff = RFF(self.hidden_size),
+                use_scale = self._use_attention_scaling
             )
         )
 
@@ -194,14 +171,19 @@ class Critic(nn.Module):
             
         self.to(device)
 
-    def forward(self, obs):
-        x = obs.reshape(obs.shape[0], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
+    def forward(self, share_obs, rnn_states_critic, masks):
+        x = share_obs.reshape(share_obs.shape[0], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
         x = self.base(x)
         x = self._feature_PF_Block(x)
         x = x.mean(dim = 1)
+        if self._use_recurrent_policy:
+            x = x.squeeze(dim=1)
+            x, rnn_states_critic = self.rnn(x, rnn_states_critic, masks)
         x = x.reshape(-1 ,self.num_agents, self.hidden_size)
-        x = self._agent_PF_Block(x)
+        x = self._agent_PI_Block(x)
         x = x.mean(dim = 1)
         x = self.v_net(x)
         values = x.unsqueeze(1).repeat(1, self.num_agents, 1).reshape(-1, 1)
-        return values
+        return values, rnn_states_critic
+        
+        

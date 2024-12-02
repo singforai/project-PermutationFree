@@ -7,7 +7,7 @@ def get_config(args):
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("--env_name", type=str, default='smacv2', choices=['smacv2' , 'grf'], help="Name of environment")
-    parser.add_argument("--algorithm_name", type=str, default='mast', choices=['mast',"mappo"], help="Name of algorithm")
+    parser.add_argument("--algorithm_name", type=str, default='mast', choices=['mast',"mappo", "mat"], help="Name of algorithm")
     parser.add_argument("--use_gpu", action='store_false', default=True, help="Whether to use GPU or CPU for training model.")
     parser.add_argument("--num_gpu", type=int, default=0, help="GPU number to use for training")
     parser.add_argument("--seed", type=int, default=0, help="Random seed for numpy/torch")

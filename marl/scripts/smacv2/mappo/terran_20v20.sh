@@ -19,11 +19,11 @@ echo "jobid: $SLURM_JOB_ID"
 
 env="smacv2"
 algo="mappo" 
-exp_name="MAPPO"
-group_name="MAPPO_state"
+exp_name="RMAPPO"
+group_name="RMAPPO"
 map_name="terran_20_vs_20"
 
-for seed in 0 1 2; do
+for seed in 42; do
     srun --partition=$SLURM_JOB_PARTITION \
         --gres=$GRES \
         --cpus-per-task=$cpus_per_task \

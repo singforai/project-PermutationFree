@@ -69,12 +69,14 @@ class SMACv2Runner(Runner):
 
             if self.save_model and (episode % self.save_interval == 0):
                 self.save(episode = episode)
-                    
+
             # eval
             if self.use_eval and episode % self.eval_interval == 0:
                 self.eval(total_num_steps)
             
             timer_cancel(timer = timer)
+        
+        self.save(episode = episode)
         
     def warmup(self):
         # reset env
@@ -90,7 +92,7 @@ class SMACv2Runner(Runner):
         value, action, action_log_prob, rnn_state, rnn_state_critic \
             = self.trainer.policy.get_actions(
             np.concatenate(self.buffer.share_obs[step]), 
-            np.concatenate(self.buffer.obs[step]), # rollout x num_agent x feature
+            np.concatenate(self.buffer.obs[step]), 
             np.concatenate(self.buffer.rnn_states[step]),
             np.concatenate(self.buffer.rnn_states_critic[step]),
             np.concatenate(self.buffer.masks[step]),
@@ -105,23 +107,6 @@ class SMACv2Runner(Runner):
         rnn_states_critic = np.array(np.split(_t2n(rnn_state_critic), self.n_rollout_threads))
 
         return values, actions, action_log_probs, rnn_states, rnn_states_critic
-
-    @torch.no_grad()
-    def compute(self):
-        """Calculate returns for the collected data."""
-        self.trainer.prep_rollout()
-        next_values = self.trainer.policy.get_values(
-            np.concatenate(self.buffer.share_obs[-1]),
-            np.concatenate(self.buffer.obs[-1]),
-            np.concatenate(self.buffer.rnn_states[-1]),
-            np.concatenate(self.buffer.rnn_states_critic[-1]),
-            np.concatenate(self.buffer.masks[-1]),
-            np.concatenate(self.buffer.available_actions[-1])
-        )
-    
-        next_values = np.array(np.split(_t2n(next_values), self.n_rollout_threads))
-        self.buffer.compute_returns(next_values, self.trainer.value_normalizer)
-    
 
     def insert(self, data):
         (
@@ -183,7 +168,7 @@ class SMACv2Runner(Runner):
 
         while True:
             self.trainer.prep_rollout()
-
+            
             eval_actions, eval_rnn_states = self.trainer.policy.act(
                 np.concatenate(eval_share_obs),
                 np.concatenate(eval_obs),

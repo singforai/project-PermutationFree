@@ -1,13 +1,11 @@
 import torch
 import torch.nn as nn
 
-
-class Attention(nn.Module):
+class ScalingAttention(nn.Module):
     """Scaled Dot-Product Attention."""
 
     def __init__(self, temperature):
         super().__init__()
-
         self.temperature = temperature
         self.softmax = nn.Softmax(dim=2)
 
@@ -29,17 +27,27 @@ class Attention(nn.Module):
         Returns:
             a float tensor with shape [b, n, d'].
         """
+        scaling_factor =  0.2 * keys.size(1) 
+        attention = torch.bmm(queries, keys.transpose(1, 2)) / self.temperature
+        attention = self.softmax(attention) # it has shape [b, n, m]
+        return torch.bmm(attention, values) / scaling_factor # it has shape [b, n, d]
 
-        attention = torch.bmm(queries, keys.transpose(1, 2))
-        attention = attention / self.temperature
+class Attention(nn.Module):
+    """Scaled Dot-Product Attention."""
+    def __init__(self, temperature):
+        super().__init__()
+        self.temperature = temperature
+        self.softmax = nn.Softmax(dim=2)
+        
 
-        attention = self.softmax(attention)
-        # it has shape [b, n, m]
-        return torch.bmm(attention, values)
-
+    def forward(self, queries, keys, values):
+        attention = torch.bmm(queries, keys.transpose(1, 2)) / self.temperature
+        attention = self.softmax(attention) # it has shape [b, n, m]
+        return torch.bmm(attention, values) # it has shape [b, n, d]
+            
 
 class MultiheadAttention(nn.Module):
-    def __init__(self, d, h):
+    def __init__(self, d, h, use_scale):
         """
         Arguments:
             d: an integer, dimension of queries and values.
@@ -59,7 +67,10 @@ class MultiheadAttention(nn.Module):
         self.project_keys = nn.Linear(d, d)
         self.project_values = nn.Linear(d, d)
         self.concatenation = nn.Linear(d, d)
-        self.attention = Attention(temperature=p**0.5)
+        if use_scale:
+            self.attention = ScalingAttention(temperature=p**0.5)
+        else:
+            self.attention = Attention(temperature=p**0.5)
 
     def forward(self, queries, keys, values):
         """
@@ -97,7 +108,7 @@ class MultiheadAttention(nn.Module):
     
 class MultiheadAttentionBlock(nn.Module):
 
-    def __init__(self, d, h, rff):
+    def __init__(self, d, h, rff, use_scale):
         """
         Arguments:
             d: an integer, input dimension.
@@ -108,7 +119,7 @@ class MultiheadAttentionBlock(nn.Module):
         """
         super().__init__()
 
-        self.multihead = MultiheadAttention(d, h)
+        self.multihead = MultiheadAttention(d, h, use_scale)
         self.layer_norm1 = nn.LayerNorm(d)
         self.layer_norm2 = nn.LayerNorm(d)
         self.rff = rff
@@ -132,9 +143,9 @@ class MultiheadAttentionBlock(nn.Module):
 
 class SetAttentionBlock(nn.Module):
 
-    def __init__(self, d, h, rff):
+    def __init__(self, d, h, rff, use_scale):
         super().__init__()
-        self.mab = MultiheadAttentionBlock(d, h, rff)
+        self.mab = MultiheadAttentionBlock(d, h, rff, use_scale)
 
     def forward(self, x):
         """
@@ -144,27 +155,11 @@ class SetAttentionBlock(nn.Module):
             a float tensor with shape [b, n, d].
         """
         return self.mab(x, x)
-    
-class CrossAttentionBlock(nn.Module):
-
-    def __init__(self, d, h, rff):
-        super().__init__()
-        self.mab = MultiheadAttentionBlock(d, h, rff)
-
-    def forward(self, x, y):
-        """
-        Arguments:
-            x: a float tensor with shape [b, n, d].
-            y: a float tensor with shape [b, m, d].
-        Returns:
-            a float tensor with shape [b, n, d].
-        """
-        return self.mab(x, y)
 
 
 class PoolingMultiheadAttention(nn.Module):
 
-    def __init__(self, d, k, h, rff):
+    def __init__(self, d, k, h, rff, use_scale):
         """
         Arguments:
             d: an integer, input dimension.
@@ -175,7 +170,7 @@ class PoolingMultiheadAttention(nn.Module):
                 returns a float tensor with the same shape.
         """
         super().__init__()
-        self.mab = MultiheadAttentionBlock(d, h, rff)
+        self.mab = MultiheadAttentionBlock(d, h, rff, use_scale)
         self.seed_vectors = nn.Parameter(torch.randn(1, k, d))
 
     def forward(self, z):

@@ -2,9 +2,9 @@
 
 train:
   # number of parallel environments for training data collection
-  n_rollout_threads: 16
+  n_rollout_threads: 8
   # number of steps per environment per training data collection
-  episode_length: 200
+  episode_length: 400
   # whether to use linear learning rate decay
   use_linear_lr_decay: False
   # whether to consider the case of truncation when an episode is done
@@ -26,12 +26,8 @@ model:
   layer_N: 1
   #Number of head
   n_head: 1
-  # whether to use PMA
-  use_pma_block: True
   #Number of seed vector
   n_seed_vector: 5
-  # number of sab blocks
-  n_sab_blocks: 2
   # hidden sizes for mlp module in the network
   hidden_size: 64
   # activation function
@@ -44,11 +40,13 @@ model:
   gain: 0.01
   # recurrent parameters
   # whether to use rnn policy (data is chunked for training)
-  use_recurrent_policy: False
+  use_recurrent_policy: True
   # number of recurrent layers
   recurrent_N: 1
+  # agent independent attention value 
+  use_attention_scaling: True
   # actor learning rate
-  lr: 0.00005
+  lr: 0.0003
   # critic learning rate
   critic_lr: 0.0005
   # eps in Adam
@@ -59,7 +57,7 @@ model:
 algo:
   # ppo parameters
   # number of epochs for actor Fpdate
-  ppo_epoch: 5
+  ppo_epoch: 10
   # whether to use clipped value loss
   use_clipped_value_loss: True
   # clip parameter

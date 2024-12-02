@@ -32,7 +32,6 @@ class MastPolicy:
         
         self.threadshold = 1e-7
         
-    
         self.actor = Actor(
             args = args, 
             obs_space = self.obs_shape, 
@@ -49,13 +48,18 @@ class MastPolicy:
             device = device
         )
         
-        self.actor_optimizer = torch.optim.Adam(self.actor.parameters(),
-                                                lr=self.lr, eps=self.opti_eps,
-                                                weight_decay=self.weight_decay)
-        self.critic_optimizer = torch.optim.Adam(self.critic.parameters(),
-                                                 lr=self.critic_lr,
-                                                 eps=self.opti_eps,
-                                                 weight_decay=self.weight_decay)
+        self.actor_optimizer = torch.optim.Adam(
+            self.actor.parameters(),
+            lr=self.lr, 
+            eps=self.opti_eps,
+            weight_decay=self.weight_decay
+        )
+        self.critic_optimizer = torch.optim.Adam(
+            self.critic.parameters(),
+            lr=self.critic_lr,
+            eps=self.opti_eps,
+            weight_decay=self.weight_decay
+        )
         
     def lr_decay(self, episode, episodes):
         """
@@ -96,6 +100,7 @@ class MastPolicy:
         masks = check(masks).to(**self.tpdv)
         if available_actions is not None:
             available_actions = check(available_actions).to(**self.tpdv)
+            
         actions, action_log_probs, rnn_states = self.actor(
             obs,
             rnn_states,
@@ -104,11 +109,15 @@ class MastPolicy:
             deterministic,
         )
 
-        values = self.critic(share_obs)
+        values, rnn_states_critic = self.critic(
+            share_obs,
+            rnn_states_critic,
+            masks,
+        )
         
         return values, actions, action_log_probs, rnn_states, rnn_states_critic
     
-    def get_values(self, share_obs, obs, rnn_states, rnn_states_critic , masks, available_actions=None):
+    def get_values(self, share_obs, obs, rnn_states, rnn_states_critic, masks, available_actions=None):
         share_obs = check(share_obs).to(**self.tpdv)
         obs = check(obs).to(**self.tpdv)
         rnn_states = check(rnn_states).to(**self.tpdv)
@@ -117,11 +126,15 @@ class MastPolicy:
         if available_actions is not None:
             available_actions = check(available_actions).to(**self.tpdv)
             
-        values = self.critic(share_obs)
+        values, _ = self.critic(
+            share_obs,
+            rnn_states_critic,
+            masks,
+        )
         
         return values
     
-    def evaluate_actions(self, share_obs, obs, rnn_states, 
+    def evaluate_actions(self, share_obs, obs, rnn_states, rnn_states_critic,
                           action, masks, available_actions = None, active_masks = None):
         """
         A function to calculate the importance weight and value loss between the updated network 
@@ -145,6 +158,7 @@ class MastPolicy:
         share_obs = check(share_obs).to(**self.tpdv)
         obs = check(obs).to(**self.tpdv)
         rnn_states = check(rnn_states).to(**self.tpdv)
+        rnn_states_critic = check(rnn_states_critic).to(**self.tpdv)
         action = check(action).to(**self.tpdv)
         masks = check(masks).to(**self.tpdv)
         if available_actions is not None:
@@ -156,6 +170,9 @@ class MastPolicy:
         x = self.actor.base(obs)
         x = self.actor._feature_PF_Block(x)
         x = x.mean(dim = 1)
+        if self._use_recurrent_policy:
+            x = x.squeeze(dim=1)
+            x, rnn_states = self.actor.rnn(x, rnn_states, masks)
         x = x.reshape(-1, self.num_agents, self.hidden_size)
         x = self.actor._agent_PE_Block(x)
         x = x.reshape(-1, self.hidden_size)
@@ -166,12 +183,15 @@ class MastPolicy:
             active_masks = active_masks if self._use_policy_active_masks else None
         )
         
-        values = self.critic(share_obs)
+        values, _ = self.critic(
+            share_obs,
+            rnn_states_critic,
+            masks,
+        )
         
         return values, action_log_probs, dist_entropy
     
     def act(self, share_obs, obs, rnn_states, masks, available_actions=None, deterministic=False):
-        share_obs = check(share_obs).to(**self.tpdv)
         obs = check(obs).to(**self.tpdv)
         rnn_states = check(rnn_states).to(**self.tpdv)
         masks = check(masks).to(**self.tpdv)
