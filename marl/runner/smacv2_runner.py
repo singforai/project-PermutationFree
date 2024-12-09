@@ -61,10 +61,19 @@ class SMACv2Runner(Runner):
             
             # log information
             if episode % self.log_interval == 0:
+                modules = []
+                for module in self.module_names:
+                    network = getattr(self.policy, module, None)
+                    if network is None:
+                        raise NotImplementedError("U have to check the 'modules' hyperparameter of algo yaml file!")
+                    else:
+                        modules.append({module : network})
+                        
                 self.logger.episode_log(
                     total_num_steps,
                     train_infos,
-                    self.buffer
+                    self.buffer,
+                    modules
                 )
 
             if self.save_model and (episode % self.save_interval == 0):
@@ -133,7 +142,7 @@ class SMACv2Runner(Runner):
         active_masks = np.ones((self.n_rollout_threads, self.num_agents, 1), dtype=np.float32)
         active_masks[dones == True] = np.zeros(((dones == True).sum(), 1), dtype=np.float32)
         active_masks[dones_env == True] = np.ones(((dones_env == True).sum(), self.num_agents, 1), dtype=np.float32)
-        
+
         bad_masks = np.array(
             [
                 [
@@ -148,11 +157,6 @@ class SMACv2Runner(Runner):
         )
         self.buffer.insert(share_obs, obs, rnn_states, rnn_states_critic,
                            actions, action_log_probs, values, rewards, masks, bad_masks, active_masks, available_actions)
-
-    def log_train(self, train_infos, total_num_steps):
-        for k, v in train_infos.items():
-            if self.use_wandb:
-                wandb.log({k: v}, step=total_num_steps)
     
     @torch.no_grad()
     def eval(self, total_num_steps = 0):

@@ -49,6 +49,12 @@ model:
   opti_eps: 0.00001
   # weight_decay in Adam
   weight_decay: 0
+
+  # list form of modules
+  module:
+    - "actor"
+    - "critic"
+
 algo:
   # ppo parameters
   # number of epochs for actor update

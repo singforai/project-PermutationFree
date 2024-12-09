@@ -22,6 +22,6 @@ for seed in 42; do
         --cpus-per-task=$cpus_per_task \
         -o ../_log/%j/%N.out \
         -e ../_log/%j/%N.err \
-        python ../../../train.py --env_name ${env} --algorithm_name ${algo} --experiment_name ${exp_name} \
+        python ../../../train.py --env_name ${env} --algorithm_name ${algo} --experiment_name ${exp_name} --model_dir "../../../models/terran_5v5/models/3124"\
         --map_name ${map_name} --seed ${seed} --use_wandb --group_name ${group_name} --log_dir "../../../examples/results";
 done

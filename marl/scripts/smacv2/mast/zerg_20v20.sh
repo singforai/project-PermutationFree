@@ -13,9 +13,9 @@ echo "jobid: $SLURM_JOB_ID"
 env="smacv2"
 algo="mast" 
 exp_name="PFN"
-group_name="PFN"
+group_name="pfn_notscale_notfine"
 map_name=zerg_20_vs_20
-
+# --model_dir "../../../models/zerg_5v5/pfn_notscale/3124"
 for seed in 42; do
     srun --partition=$SLURM_JOB_PARTITION \
         --gres=$GRES \

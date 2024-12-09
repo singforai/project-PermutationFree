@@ -4,9 +4,11 @@ import torch.nn as nn
 class ScalingAttention(nn.Module):
     """Scaled Dot-Product Attention."""
 
-    def __init__(self, temperature):
+    def __init__(self, temperature, scaling_rate):
         super().__init__()
         self.temperature = temperature
+        self.scaling_rate = scaling_rate
+        
         self.softmax = nn.Softmax(dim=2)
 
     def forward(self, queries, keys, values):
@@ -27,7 +29,7 @@ class ScalingAttention(nn.Module):
         Returns:
             a float tensor with shape [b, n, d'].
         """
-        scaling_factor =  0.2 * keys.size(1) 
+        scaling_factor =  (self.scaling_rate * keys.size(1)) 
         attention = torch.bmm(queries, keys.transpose(1, 2)) / self.temperature
         attention = self.softmax(attention) # it has shape [b, n, m]
         return torch.bmm(attention, values) / scaling_factor # it has shape [b, n, d]
@@ -38,7 +40,7 @@ class Attention(nn.Module):
         super().__init__()
         self.temperature = temperature
         self.softmax = nn.Softmax(dim=2)
-        
+
 
     def forward(self, queries, keys, values):
         attention = torch.bmm(queries, keys.transpose(1, 2)) / self.temperature
@@ -47,7 +49,7 @@ class Attention(nn.Module):
             
 
 class MultiheadAttention(nn.Module):
-    def __init__(self, d, h, use_scale):
+    def __init__(self, d, h, use_scale, scaling_rate):
         """
         Arguments:
             d: an integer, dimension of queries and values.
@@ -63,12 +65,23 @@ class MultiheadAttention(nn.Module):
         # everything is projected to this dimension
         p = d // h
 
-        self.project_queries = nn.Linear(d, d)
-        self.project_keys = nn.Linear(d, d)
-        self.project_values = nn.Linear(d, d)
-        self.concatenation = nn.Linear(d, d)
+        self.project_queries = nn.Sequential(
+            nn.Linear(d, d),
+            nn.ReLU(inplace = True),
+            nn.Linear(d, d),
+        )
+        self.project_keys = nn.Sequential(
+            nn.Linear(d, d),
+            nn.ReLU(inplace = True),
+            nn.Linear(d, d),
+        )
+        self.project_values = nn.Sequential(
+            nn.Linear(d, d),
+            nn.ReLU(inplace = True),
+            nn.Linear(d, d),
+        )
         if use_scale:
-            self.attention = ScalingAttention(temperature=p**0.5)
+            self.attention = ScalingAttention(temperature=p**0.5, scaling_rate = scaling_rate)
         else:
             self.attention = Attention(temperature=p**0.5)
 
@@ -87,6 +100,8 @@ class MultiheadAttention(nn.Module):
         _, m, _ = keys.size()
         p = d // h
         
+        
+        
         queries = self.project_queries(queries)  # shape [b, n, d]
         keys = self.project_keys(keys)  # shape [b, m, d]
         values = self.project_values(values)  # shape [b, m, d]
@@ -101,14 +116,13 @@ class MultiheadAttention(nn.Module):
 
         output = self.attention(queries, keys, values)  # shape [h * b, n, p]
         output = output.view(h, b, n, p)
-        output = output.permute(1, 2, 0, 3).contiguous().view(b, n, d)
-        output = self.concatenation(output)  # shape [b, n, d]
+        output = output.permute(1, 2, 0, 3).contiguous().view(b, n, d) # shape [b, n, d]
 
         return output
     
 class MultiheadAttentionBlock(nn.Module):
 
-    def __init__(self, d, h, rff, use_scale):
+    def __init__(self, d, h, use_scale, scaling_rate):
         """
         Arguments:
             d: an integer, input dimension.
@@ -119,11 +133,10 @@ class MultiheadAttentionBlock(nn.Module):
         """
         super().__init__()
 
-        self.multihead = MultiheadAttention(d, h, use_scale)
+        self.multihead = MultiheadAttention(d, h, use_scale, scaling_rate)
         self.layer_norm1 = nn.LayerNorm(d)
-        self.layer_norm2 = nn.LayerNorm(d)
-        self.rff = rff
-
+        #self.layer_norm2 = nn.LayerNorm(d)
+    
     def forward(self, x, y):
         """
         It is equivariant to permutations of the
@@ -138,14 +151,13 @@ class MultiheadAttentionBlock(nn.Module):
         Returns:
             a float tensor with shape [b, n, d].
         """
-        h = self.layer_norm1(x + self.multihead(x, y, y))
-        return self.layer_norm2(h + self.rff(h))
+        return self.layer_norm1(x + self.multihead(x, y, y))
 
 class SetAttentionBlock(nn.Module):
 
-    def __init__(self, d, h, rff, use_scale):
+    def __init__(self, d, h, use_scale, scaling_rate):
         super().__init__()
-        self.mab = MultiheadAttentionBlock(d, h, rff, use_scale)
+        self.mab = MultiheadAttentionBlock(d, h, use_scale, scaling_rate)
 
     def forward(self, x):
         """
@@ -159,7 +171,7 @@ class SetAttentionBlock(nn.Module):
 
 class PoolingMultiheadAttention(nn.Module):
 
-    def __init__(self, d, k, h, rff, use_scale):
+    def __init__(self, d, k, h, use_scale, scaling_rate):
         """
         Arguments:
             d: an integer, input dimension.
@@ -170,7 +182,7 @@ class PoolingMultiheadAttention(nn.Module):
                 returns a float tensor with the same shape.
         """
         super().__init__()
-        self.mab = MultiheadAttentionBlock(d, h, rff, use_scale)
+        self.mab = MultiheadAttentionBlock(d, h, use_scale, scaling_rate)
         self.seed_vectors = nn.Parameter(torch.randn(1, k, d))
 
     def forward(self, z):
@@ -187,25 +199,3 @@ class PoolingMultiheadAttention(nn.Module):
         # note that in the original paper
         # they return mab(s, rff(z))
         return self.mab(s, z)
-
-class RFF(nn.Module):
-    """
-    Row-wise FeedForward layers.
-    """
-    def __init__(self, d):
-        super().__init__()
-        
-        self.layers = nn.Sequential(
-            nn.Linear(d, d), nn.ReLU(),
-            nn.Linear(d, d), nn.ReLU(),
-            nn.Linear(d, d), nn.ReLU(),
-        )
-
-    def forward(self, x):
-        """
-        Arguments:
-            x: a float tensor with shape [b, n, d].
-        Returns:
-            a float tensor with shape [b, n, d].
-        """
-        return self.layers(x)

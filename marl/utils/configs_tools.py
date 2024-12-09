@@ -75,6 +75,7 @@ def init_dir(env_name, map_name, algo, exp_name, seed, logger_path):
 
     save_dir = os.path.join(run_dir, "models")
     os.makedirs(save_dir, exist_ok=True)
+    
     return run_dir, save_dir
 
 def save_config(args, algo_args, env_args, run_dir):

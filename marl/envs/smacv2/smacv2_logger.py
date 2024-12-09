@@ -1,4 +1,4 @@
-import time
+import wandb
 from functools import reduce
 import numpy as np
 
@@ -41,7 +41,7 @@ class SMACv2Logger():
                 self.one_episode_len[i] = 0
 
     def episode_log(
-        self, total_num_steps, train_infos, buffer
+        self, total_num_steps, train_infos, buffer, modules
     ):
         self.total_num_steps = total_num_steps
         print(
@@ -56,6 +56,16 @@ class SMACv2Logger():
                 self.env_args["num_env_steps"],
             )
         )
+        
+        for module_dict in modules:
+            for name, module in module_dict.items():
+                module_weights = np.concatenate([
+                    param.detach().cpu().numpy().flatten() 
+                    for _, param in module.named_parameters() 
+                    if param.requires_grad
+                ])
+                train_infos[f'{name}_params_distribution'] = wandb.Histogram(module_weights)
+                
         battles_won = [0 for _ in range(self.algo_args["train"]["n_rollout_threads"])]    
         battles_game = [0 for _ in range(self.algo_args["train"]["n_rollout_threads"])]   
         incre_battles_won = [0 for _ in range(self.algo_args["train"]["n_rollout_threads"])]   

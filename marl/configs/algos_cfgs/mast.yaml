@@ -27,13 +27,13 @@ model:
   #Number of head
   n_head: 1
   #Number of seed vector
-  n_seed_vector: 5
+  n_seed_vector: 4
   # hidden sizes for mlp module in the network
   hidden_size: 64
   # activation function
   use_ReLU: True
   # whether to use feature normalization
-  use_feature_normalization: True
+  use_feature_normalization: False
   # initialization method for network parameters, choose from orthogonal_, ...
   use_orthogonal: True
   # gain of the output layer of the network.
@@ -44,9 +44,11 @@ model:
   # number of recurrent layers
   recurrent_N: 1
   # agent independent attention value 
-  use_attention_scaling: True
+  use_attention_scaling: False
+  # attention scaling rate
+  attention_scaling_rate: 0.05
   # actor learning rate
-  lr: 0.0003
+  lr: 0.0002
   # critic learning rate
   critic_lr: 0.0005
   # eps in Adam
@@ -54,16 +56,20 @@ model:
   # weight_decay in Adam
   weight_decay: 0
   # parameters of diagonal Gaussian distribution
+
+  module:
+  - "actor"
+  - "critic"
 algo:
   # ppo parameters
   # number of epochs for actor Fpdate
-  ppo_epoch: 10
+  ppo_epoch: 5
   # whether to use clipped value loss
   use_clipped_value_loss: True
   # clip parameter
   clip_param: 0.2
   # number of mini-batches per epoch for update
-  num_mini_batch: 1
+  num_mini_batch: 2
   # coefficient for entropy term in actor loss
   entropy_coef: 0.01
   # length of data chunk; only useful when use_recurrent_policy is True; episode_length has to be a multiple of data_chunk_length
@@ -85,7 +91,7 @@ algo:
   # whether to use policy active masks
   use_policy_active_masks: True
   #by default True, whether to mask useless data in value loss.
-  use_value_active_masks: False
+  use_value_active_masks: True
   # huber delta
   huber_delta: 10.0
   # whether to use ValueNorm

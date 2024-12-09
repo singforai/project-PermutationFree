@@ -18,7 +18,6 @@ echo "node: $HOSTNAME"
 echo "jobid: $SLURM_JOB_ID"
 
 env="smacv2"
-num_env_steps=10000000
 
 algo="mappo" 
 exp_name="RMAPPO"

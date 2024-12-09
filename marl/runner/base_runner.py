@@ -6,6 +6,7 @@ import socket
 import setproctitle
 
 import numpy as np
+import torch.nn as nn
 from gym import spaces
 
 from utils.util import timer_start, timer_cancel
@@ -77,7 +78,7 @@ class Runner(object):
         self.recurrent_N: int = self.algo_args["model"]["recurrent_N"]
         self.hidden_size: int = self.algo_args["model"]["hidden_size"]  
         self.eval_episodes: int = self.algo_args["eval"]["eval_episodes"]
-        
+        self.module_names: str = self.algo_args["model"]["module"]
         # env args
         self.num_env_steps: int = self.env_args["num_env_steps"]
         env_info: Dict[str, Any] = {"map_name":self.map_name, "algorithm_name":self.algorithm_name}
@@ -106,7 +107,6 @@ class Runner(object):
         setproctitle.setproctitle(
             str(self.algorithm_name) + "-" + str(self.env_name) + "-" + str(self.experiment_name)
         )
-        
         if self.use_render:  # make envs for rendering
             (
                 self.envs,
@@ -161,7 +161,7 @@ class Runner(object):
                 name="-".join([self.algorithm_name, self.experiment_name, "seed" + str(self.seed)]),
                 group=self.group_name,
                 dir=str(self.run_dir),
-                job_type="training",
+                job_type="training"
             )
         
         print("share_observation_space: ", self.envs.share_observation_space)
@@ -213,8 +213,8 @@ class Runner(object):
                 device = self.device
             )
 
-        if self.model_dir is not None:  # restore model
-            self.restore()
+        if self.model_dir is not None and self.algorithm_name == "mast":  # restore model
+            self.restore(model_dir = self.exp_args["model_dir"], action_space = action_space)
 
         # algorithm
 
@@ -248,7 +248,7 @@ class Runner(object):
             share_observation_space,
             self.envs.action_space[0]
         )
-            
+        
         self.logger = LOGGER_REGISTRY[self.exp_args["env_name"]](
             exp_args = self.exp_args,
             algo_args = self.algo_args,
@@ -290,6 +290,7 @@ class Runner(object):
             np.concatenate(self.buffer.masks[-1]),
             np.concatenate(self.buffer.available_actions[-1])
         )
+        
     
         next_values = np.array(np.split(_t2n(next_values), self.n_rollout_threads))
         self.buffer.compute_returns(next_values, self.trainer.value_normalizer)
@@ -318,16 +319,22 @@ class Runner(object):
         else:
             raise NotImplementedError
 
-    def restore(self, model_dir):
+    def restore(self, model_dir, action_space):
         """Restore policy's networks from a saved model."""
         if self.algorithm_name == "mat" or self.algorithm_name == "mat_dec":
             self.policy.restore(model_dir)
         else:
             policy_actor_state_dict = torch.load(str(self.model_dir) + '/actor.pt')
-            self.policy.actor.load_state_dict(policy_actor_state_dict)
-            if not self.args.use_render:
-                policy_critic_state_dict = torch.load(str(self.model_dir) + '/critic.pt')
-                self.policy.critic.load_state_dict(policy_critic_state_dict)
+            names = []
+            for name in policy_actor_state_dict.keys():
+                if "act_layer.action_out" in name:
+                    names.append(name)
+            for name in names:
+                del policy_actor_state_dict[name]
+            self.policy.actor.load_state_dict(policy_actor_state_dict, strict=False)
+
+            policy_critic_state_dict = torch.load(str(self.model_dir) + '/critic.pt')
+            self.policy.critic.load_state_dict(policy_critic_state_dict)
 
     def log_train(self, train_infos, total_num_steps):
         """

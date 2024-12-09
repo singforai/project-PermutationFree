@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn 
+from algorithms.utils.mlp import MLPBase   
 from algorithms.utils.rnn import RNNLayer
 from algorithms.utils.act import ACTLayer
 
-from algorithms.utils.mast_utils import SetAttentionBlock, PoolingMultiheadAttention, RFF
-from algorithms.utils.set_utils import SAB, PMA
+from algorithms.utils.mast_utils import SetAttentionBlock, PoolingMultiheadAttention
 
 class Actor(nn.Module):
     def __init__(self, args, obs_space, action_space, num_agents, num_objects, device):
@@ -22,18 +22,12 @@ class Actor(nn.Module):
         self._use_orthogonal: bool = args["use_orthogonal"]
         self._use_recurrent_policy: int = args["use_recurrent_policy"]
         self._use_attention_scaling: int = args["use_attention_scaling"]
+        self._attention_scaling_rate: int = args["attention_scaling_rate"]
         
         self.input_dim = obs_space // self.num_objects
 
-        self.base = nn.Sequential(
-            nn.Linear(
-                self.input_dim, self.hidden_size
-            ),
-            nn.ReLU(),
-            nn.Linear(
-                self.hidden_size, self.hidden_size
-            ), 
-        )
+        self.base = MLPBase(args, self.input_dim)
+        
         if self._use_recurrent_policy:
             self.rnn = RNNLayer(self.hidden_size, self.hidden_size, self._recurrent_N, self._use_orthogonal)
         
@@ -42,15 +36,15 @@ class Actor(nn.Module):
             SetAttentionBlock(
                 d =  self.hidden_size,
                 h = self.num_head,
-                rff = RFF(self.hidden_size),
-                use_scale = self._use_attention_scaling
+                use_scale = self._use_attention_scaling,
+                scaling_rate = self._attention_scaling_rate
             ),
             PoolingMultiheadAttention(
                 d =  self.hidden_size,
                 k = self.num_seed_vector,
                 h = self.num_head,
-                rff = RFF(self.hidden_size),
-                use_scale = self._use_attention_scaling
+                use_scale = self._use_attention_scaling,
+                scaling_rate = self._attention_scaling_rate
             )
         )
         
@@ -58,14 +52,8 @@ class Actor(nn.Module):
             SetAttentionBlock(
                 d =  self.hidden_size,
                 h = self.num_head,
-                rff = RFF(self.hidden_size),
-                use_scale = self._use_attention_scaling
-            ),
-            SetAttentionBlock(
-                d =  self.hidden_size,
-                h = self.num_head,
-                rff = RFF(self.hidden_size),
-                use_scale = self._use_attention_scaling
+                use_scale = self._use_attention_scaling,
+                scaling_rate = self._attention_scaling_rate
             ),
         )
 
@@ -111,18 +99,11 @@ class Critic(nn.Module):
         self._use_orthogonal: bool = args["use_orthogonal"]
         self._use_recurrent_policy: int = args["use_recurrent_policy"]
         self._use_attention_scaling: int = args["use_attention_scaling"]
+        self._attention_scaling_rate: int = args["attention_scaling_rate"]
         
         self.input_dim = obs_space // self.num_objects
         
-        self.base = nn.Sequential(
-            nn.Linear(
-                self.input_dim, self.hidden_size
-            ),
-            nn.ReLU(),
-            nn.Linear(
-                self.hidden_size, self.hidden_size
-            ), 
-        )
+        self.base = MLPBase(args, self.input_dim)
 
         if self._use_recurrent_policy:
             self.rnn = RNNLayer(self.hidden_size, self.hidden_size, self._recurrent_N, self._use_orthogonal)
@@ -131,43 +112,29 @@ class Critic(nn.Module):
             SetAttentionBlock(
                 d =  self.hidden_size,
                 h = self.num_head,
-                rff = RFF(self.hidden_size),
-                use_scale = self._use_attention_scaling
+                use_scale = self._use_attention_scaling,
+                scaling_rate = self._attention_scaling_rate
             ),
             PoolingMultiheadAttention(
                 d =  self.hidden_size,
                 k = self.num_seed_vector,
                 h = self.num_head,
-                rff = RFF(self.hidden_size),
-                use_scale = self._use_attention_scaling
+                use_scale = self._use_attention_scaling,
+                scaling_rate = self._attention_scaling_rate
             )
         )
 
         self._agent_PI_Block = nn.Sequential(
-            SetAttentionBlock(
-                d =  self.hidden_size,
-                h = self.num_head,
-                rff = RFF(self.hidden_size),
-                use_scale = self._use_attention_scaling
-            ),
             PoolingMultiheadAttention(
                 d =  self.hidden_size,
                 k = self.num_seed_vector,
                 h = self.num_head,
-                rff = RFF(self.hidden_size),
-                use_scale = self._use_attention_scaling
+                use_scale = self._use_attention_scaling,
+                scaling_rate = self._attention_scaling_rate
             )
         )
 
-        self.v_net = nn.Sequential(
-            nn.Linear(
-                (self.hidden_size), self.hidden_size // 2
-            ),
-            nn.ReLU(),
-            nn.Linear(
-                self.hidden_size // 2, 1
-            ),
-        )
+        self.v_net = nn.Linear(self.hidden_size, 1)
             
         self.to(device)
 
