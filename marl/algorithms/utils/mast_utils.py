@@ -1,39 +1,6 @@
 import torch
 import torch.nn as nn
 
-class ScalingAttention(nn.Module):
-    """Scaled Dot-Product Attention."""
-
-    def __init__(self, temperature, scaling_rate):
-        super().__init__()
-        self.temperature = temperature
-        self.scaling_rate = scaling_rate
-        
-        self.softmax = nn.Softmax(dim=2)
-
-    def forward(self, queries, keys, values):
-        """
-        It is equivariant to permutations
-        of the batch dimension (`b`).
-
-        It is equivariant to permutations of the
-        second dimension of the queries (`n`).
-
-        It is invariant to permutations of the
-        second dimension of keys and values (`m`).
-
-        Arguments:
-            queries: a float tensor with shape [b, n, d].
-            keys: a float tensor with shape [b, m, d].
-            values: a float tensor with shape [b, m, d'].
-        Returns:
-            a float tensor with shape [b, n, d'].
-        """
-        scaling_factor =  (self.scaling_rate * keys.size(1)) 
-        attention = torch.bmm(queries, keys.transpose(1, 2)) / self.temperature
-        attention = self.softmax(attention) # it has shape [b, n, m]
-        return torch.bmm(attention, values) / scaling_factor # it has shape [b, n, d]
-
 class Attention(nn.Module):
     """Scaled Dot-Product Attention."""
     def __init__(self, temperature):
@@ -49,7 +16,7 @@ class Attention(nn.Module):
             
 
 class MultiheadAttention(nn.Module):
-    def __init__(self, d, h, use_scale, scaling_rate):
+    def __init__(self, d, h):
         """
         Arguments:
             d: an integer, dimension of queries and values.
@@ -80,10 +47,7 @@ class MultiheadAttention(nn.Module):
             nn.ReLU(inplace = True),
             nn.Linear(d, d),
         )
-        if use_scale:
-            self.attention = ScalingAttention(temperature=p**0.5, scaling_rate = scaling_rate)
-        else:
-            self.attention = Attention(temperature=p**0.5)
+        self.attention = Attention(temperature=p**0.5)
 
     def forward(self, queries, keys, values):
         """
@@ -122,7 +86,7 @@ class MultiheadAttention(nn.Module):
     
 class MultiheadAttentionBlock(nn.Module):
 
-    def __init__(self, d, h, use_scale, scaling_rate):
+    def __init__(self, d, h):
         """
         Arguments:
             d: an integer, input dimension.
@@ -133,7 +97,7 @@ class MultiheadAttentionBlock(nn.Module):
         """
         super().__init__()
 
-        self.multihead = MultiheadAttention(d, h, use_scale, scaling_rate)
+        self.multihead = MultiheadAttention(d, h)
         self.layer_norm1 = nn.LayerNorm(d)
         #self.layer_norm2 = nn.LayerNorm(d)
     
@@ -155,9 +119,9 @@ class MultiheadAttentionBlock(nn.Module):
 
 class SetAttentionBlock(nn.Module):
 
-    def __init__(self, d, h, use_scale, scaling_rate):
+    def __init__(self, d, h):
         super().__init__()
-        self.mab = MultiheadAttentionBlock(d, h, use_scale, scaling_rate)
+        self.mab = MultiheadAttentionBlock(d, h)
 
     def forward(self, x):
         """
@@ -168,10 +132,24 @@ class SetAttentionBlock(nn.Module):
         """
         return self.mab(x, x)
 
+class CrossattentionBlock(nn.Module):
+
+    def __init__(self, d, h):
+        super().__init__()
+        self.mab = MultiheadAttentionBlock(d, h)
+
+    def forward(self, x, y):
+        """
+        Arguments:
+            x: a float tensor with shape [b, n, d].
+        Returns:
+            a float tensor with shape [b, n, d].
+        """
+        return self.mab(x, y)
 
 class PoolingMultiheadAttention(nn.Module):
 
-    def __init__(self, d, k, h, use_scale, scaling_rate):
+    def __init__(self, d, k, h):
         """
         Arguments:
             d: an integer, input dimension.
@@ -182,7 +160,7 @@ class PoolingMultiheadAttention(nn.Module):
                 returns a float tensor with the same shape.
         """
         super().__init__()
-        self.mab = MultiheadAttentionBlock(d, h, use_scale, scaling_rate)
+        self.mab = MultiheadAttentionBlock(d, h)
         self.seed_vectors = nn.Parameter(torch.randn(1, k, d))
 
     def forward(self, z):
@@ -199,3 +177,52 @@ class PoolingMultiheadAttention(nn.Module):
         # note that in the original paper
         # they return mab(s, rff(z))
         return self.mab(s, z)
+
+
+class ActBlock(nn.Module):
+    def __init__(self, d):
+        super().__init__()
+        
+        self.project_queries = nn.Sequential(
+            nn.Linear(d, d),
+            nn.ReLU(inplace = True),
+            nn.Linear(d, d),
+        )
+        self.project_keys = nn.Sequential(
+            nn.Linear(d, d),
+            nn.ReLU(inplace = True),
+            nn.Linear(d, d),
+        )
+        
+        self.temperature = d**0.5
+          
+    def forward(self, queries, keys):
+        b, n, d = queries.size()
+        _, m, _ = keys.size()
+    
+        queries = self.project_queries(queries)  # shape [b, n, d]
+        keys = self.project_keys(keys)  # shape [b, m, d]
+
+        queries = queries.view(b, n, 1, d)
+        keys = keys.view(b, m, 1, d)
+
+        queries = queries.permute(2, 0, 1, 3).contiguous().view(b, n, d)
+        keys = keys.permute(2, 0, 1, 3).contiguous().view(b, m, d)
+        
+        return (torch.bmm(queries, keys.transpose(1, 2)) / self.temperature).reshape(b * n, m)
+
+class CrossAttention(nn.Module):
+    
+    def __init__(self, d, k):
+        super().__init__()
+        
+        self.act_block = ActBlock(d)
+        
+        self.no_attack_act = nn.Parameter(torch.randn(1, k, d))
+        
+
+    def forward(self, agent_query, object_key):
+        batch_size = object_key.size(0)
+        seed_vectors = self.no_attack_act.repeat([batch_size, 1, 1])
+        object_keys = torch.cat((seed_vectors, object_key), dim=1)
+        return self.act_block(agent_query, object_keys)

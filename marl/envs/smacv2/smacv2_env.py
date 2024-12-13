@@ -75,6 +75,7 @@ class SMACv2Env:
         obs_shape = env_info["obs_shape"]
         self.n_agents = env_info["n_agents"]
         self.timeouts = self.env.env.timeouts
+        self.n_actions_no_attack = self.env.env.n_actions_no_attack
 
         self.share_observation_space = self.repeat(
             Box(low=-np.inf, high=np.inf, shape=(state_shape,))
@@ -84,7 +85,7 @@ class SMACv2Env:
         )
         self.action_space = self.repeat(Discrete(n_actions))
         
-        self.objects = self.env.n_agents + self.env.n_enemies
+        self.num_objects = self.env.n_agents + self.env.n_enemies
 
     def close(self):
         self.env.close()

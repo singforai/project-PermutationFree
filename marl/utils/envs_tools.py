@@ -79,10 +79,7 @@ def make_render_env(env_name, seed, env_args):
         raise NotImplementedError
     return env, manual_render, manual_expand_dims, manual_delay, env_num
 
-
 def get_num_agents(env, env_args, envs):
     """Get the number of agents in the environment."""
-    if env == "smacv2":
-        return envs.n_agents
-    else:
-        NotImplementedError
+
+    return envs.n_agents, envs.n_actions_no_attack, envs.num_objects

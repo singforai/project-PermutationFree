@@ -8,7 +8,9 @@ from algorithms.utils.util import check
 from algorithms.mast.algorithm.setransformer import  Actor, Critic
 
 class MastPolicy:
-    def __init__(self, args, obs_space, share_obs_space, act_space, num_agents, num_objects, device=torch.device("cpu")):
+    def __init__(
+        self, args, obs_space, share_obs_space, act_space, num_agents, num_objects, n_actions_no_attack, device=torch.device("cpu")
+    ):
         self.device = device
         self.lr = args["lr"]
         self.critic_lr = args["critic_lr"]
@@ -20,6 +22,7 @@ class MastPolicy:
 
         self.num_agents: int = num_agents
         self.num_objects: int = num_objects  
+        self.n_actions_no_attack: int = n_actions_no_attack
         
         self.obs_shape = get_shape_from_obs_space(obs_space)[0]
         self.share_obs_shape = get_shape_from_obs_space(share_obs_space)[0]
@@ -35,9 +38,9 @@ class MastPolicy:
         self.actor = Actor(
             args = args, 
             obs_space = self.obs_shape, 
-            action_space = act_space, 
             num_agents = self.num_agents,
             num_objects = self.num_objects,
+            n_actions_no_attack = self.n_actions_no_attack,
             device = self.device
         )
         self.critic = Critic(
@@ -168,21 +171,27 @@ class MastPolicy:
         share_obs = share_obs.reshape(share_obs.shape[0], self.num_objects, self.input_dim)
         
         x = self.actor.base(obs)
-        x = self.actor._feature_PF_Block(x)
+        object_key = self.actor._feature_SAB(x)
+        x = self.actor._feature_PMA(object_key)
         x = x.mean(dim = 1)
         if self._use_recurrent_policy:
             x = x.squeeze(dim=1)
             x, rnn_states = self.actor.rnn(x, rnn_states, masks)
-        x = x.reshape(-1, self.num_agents, self.hidden_size)
-        x = self.actor._agent_PE_Block(x)
-        x = x.reshape(-1, self.hidden_size)
-        action_log_probs, dist_entropy = self.actor.act_layer.evaluate_actions(
-            x,
-            action,
-            available_actions, 
-            active_masks = active_masks if self._use_policy_active_masks else None
-        )
+            x = x.reshape(-1, self.num_agents, self.hidden_size)
+        agent_query = self.actor._agent_PE_Block(x)
+
+        object_key = object_key.reshape(-1, self.num_agents, self.num_objects, self.hidden_size).permute(0, 2, 1, 3)
+        object_key = self.actor._object_PMA(object_key.reshape(-1, self.num_agents, self.hidden_size))
+        object_key = object_key.mean(dim = 1).reshape(-1, self.num_objects, self.hidden_size)
         
+        output = self.actor._act_CAB(agent_query, object_key)
+        
+        action_log_probs, dist_entropy = self.actor.act_layer.evaluate_actions(
+            output,
+            action, 
+            available_actions,
+            active_masks=active_masks if self._use_policy_active_masks else None
+        )
         values, _ = self.critic(
             share_obs,
             rnn_states_critic,

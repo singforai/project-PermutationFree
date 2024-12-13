@@ -11,8 +11,8 @@ echo "jobid: $SLURM_JOB_ID"
 
 env="smacv2"
 algo="mast" 
-exp_name="PFN"
-group_name="PFN_notscale"
+exp_name="PFT"
+group_name="PFT"
 map_name=terran_5_vs_5
 
 for seed in 42; do

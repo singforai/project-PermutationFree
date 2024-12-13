@@ -213,6 +213,10 @@ def shareworker(remote, parent_remote, env_fn_wrapper):
             remote.send((fr))
         elif cmd == "get_num_agents":
             remote.send((env.n_agents))
+        elif cmd == "get_num_objects":
+            remote.send((env.num_objects))
+        elif cmd == "get_n_actions_no_attack":
+            remote.send((env.n_actions_no_attack))  
         else:
             raise NotImplementedError
 
@@ -248,6 +252,10 @@ class ShareSubprocVecEnv(ShareVecEnv):
         observation_space, share_observation_space, action_space = self.remotes[
             0
         ].recv()
+        self.remotes[0].send(("get_num_objects", None))
+        self.num_objects = self.remotes[0].recv()
+        self.remotes[0].send(("get_n_actions_no_attack", None))
+        self.n_actions_no_attack = self.remotes[0].recv()
     
         ShareVecEnv.__init__(
             self, len(env_fns), observation_space, share_observation_space, action_space

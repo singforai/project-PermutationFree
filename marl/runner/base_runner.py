@@ -137,7 +137,7 @@ class Runner(object):
                 else None
             )
             
-        self.num_agents = get_num_agents(
+        self.num_agents, n_actions_no_attack, self.num_objects = get_num_agents(
             env = self.env_name, 
             env_args = self.env_args, 
             envs = self.envs
@@ -181,6 +181,7 @@ class Runner(object):
         observation_space = self.envs.observation_space[0]
         share_observation_space = self.envs.share_observation_space[0] 
         action_space = self.envs.action_space[0]
+        
         self.num_objects = sum(map(int, re.findall('\d+', self.map_name)))
         
         # policy network
@@ -201,6 +202,7 @@ class Runner(object):
                 act_space = action_space, 
                 num_agents = self.num_agents, 
                 num_objects = self.num_objects, 
+                n_actions_no_attack = n_actions_no_attack,
                 device = self.device
             )
         else:
@@ -214,7 +216,7 @@ class Runner(object):
             )
 
         if self.model_dir is not None and self.algorithm_name == "mast":  # restore model
-            self.restore(model_dir = self.exp_args["model_dir"], action_space = action_space)
+            self.restore(model_dir = self.exp_args["model_dir"])
 
         # algorithm
 
@@ -319,19 +321,13 @@ class Runner(object):
         else:
             raise NotImplementedError
 
-    def restore(self, model_dir, action_space):
+    def restore(self, model_dir):
         """Restore policy's networks from a saved model."""
         if self.algorithm_name == "mat" or self.algorithm_name == "mat_dec":
             self.policy.restore(model_dir)
         else:
             policy_actor_state_dict = torch.load(str(self.model_dir) + '/actor.pt')
-            names = []
-            for name in policy_actor_state_dict.keys():
-                if "act_layer.action_out" in name:
-                    names.append(name)
-            for name in names:
-                del policy_actor_state_dict[name]
-            self.policy.actor.load_state_dict(policy_actor_state_dict, strict=False)
+            self.policy.actor.load_state_dict(policy_actor_state_dict)
 
             policy_critic_state_dict = torch.load(str(self.model_dir) + '/critic.pt')
             self.policy.critic.load_state_dict(policy_critic_state_dict)

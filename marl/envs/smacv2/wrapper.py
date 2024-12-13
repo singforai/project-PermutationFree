@@ -26,7 +26,7 @@ class StarCraftCapabilityEnvWrapper(MultiAgentEnv):
             config["n_enemies"] = self.distribution_config["n_enemies"]
             distribution = get_distribution(config["dist_type"])(config)
             self.env_key_to_distribution_map[env_key] = distribution
-
+            
     def reset(self):
         try:
             reset_config = {}
@@ -50,14 +50,9 @@ class StarCraftCapabilityEnvWrapper(MultiAgentEnv):
     def create_obs(self):
         return self.env.create_obs()
     
-    def get_obs(self):
-        return self.env.get_obs()
 
     def get_obs_feature_names(self):
         return self.env.get_obs_feature_names()
-
-    def get_state(self):
-        return self.env.get_state()
 
     def get_state_feature_names(self):
         return self.env.get_state_feature_names()
@@ -76,12 +71,6 @@ class StarCraftCapabilityEnvWrapper(MultiAgentEnv):
 
     def get_total_actions(self):
         return self.env.get_total_actions()
-
-    def get_capabilities(self):
-        return self.env.get_capabilities()
-
-    def get_obs_agent(self, agent_id):
-        return self.env.get_obs_agent(agent_id)
 
     def get_avail_agent_actions(self, agent_id):
         return self.env.get_avail_agent_actions(agent_id)
