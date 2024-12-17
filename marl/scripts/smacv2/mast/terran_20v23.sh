@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 GRES="gpu:1"
 mkdir -p ../_log/$SLURM_JOB_ID
 SLURM_JOB_PARTITION="gpu1"
@@ -10,11 +11,11 @@ echo "node: $HOSTNAME"
 echo "jobid: $SLURM_JOB_ID"
 
 env="smacv2"
-algo="mast" 
+algo="mast"
 exp_name="PFT"
-group_name="PFT_mask"
-map_name=terran_5_vs_5
-
+group_name="PFT_curriculum"
+map_name=terran_20_vs_23
+# "# --model_dir "../../../models/terran_5v5/PFT/3124"
 for seed in 42; do
     srun --partition=$SLURM_JOB_PARTITION \
         --gres=$GRES \

@@ -13,15 +13,15 @@ echo "jobid: $SLURM_JOB_ID"
 env="smacv2"
 algo="mast"
 exp_name="PFT"
-group_name="PFT_curriculum"
+group_name="PFT_mask"
 map_name=terran_20_vs_20
-# "
+# --model_dir "../../../models/terran_5v5/PFT/3124"
 for seed in 42; do
     srun --partition=$SLURM_JOB_PARTITION \
         --gres=$GRES \
         --cpus-per-task=$cpus_per_task \
         -o ../_log/%j/%N.out \
         -e ../_log/%j/%N.err \
-        python ../../../train.py --env_name ${env} --algorithm_name ${algo} --experiment_name ${exp_name} --model_dir "../../../models/terran_5v5/PFT/3124"\
+        python ../../../train.py --env_name ${env} --algorithm_name ${algo} --experiment_name ${exp_name} \
         --map_name ${map_name} --seed ${seed} --use_wandb --group_name ${group_name} --log_dir "../../../examples/results";
 done

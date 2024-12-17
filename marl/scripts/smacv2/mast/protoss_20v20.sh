@@ -12,8 +12,8 @@ echo "jobid: $SLURM_JOB_ID"
 
 env="smacv2"
 algo="mast" 
-exp_name="PFT"
-group_name="PFT_curriculum"
+exp_name="PFT_mask"
+group_name="PFT_mask_curriculum"
 map_name=protoss_20_vs_20
 # 
 for seed in 42; do
@@ -22,6 +22,6 @@ for seed in 42; do
         --cpus-per-task=$cpus_per_task \
         -o ../_log/%j/%N.out \
         -e ../_log/%j/%N.err \
-        python ../../../train.py --env_name ${env} --algorithm_name ${algo} --experiment_name ${exp_name} --model_dir "../../../models/protoss_5v5/PFT/3124"\
+        python ../../../train.py --env_name ${env} --algorithm_name ${algo} --experiment_name ${exp_name} --model_dir "../../../models/protoss_5v5/PFT_mask/3124"\
         --map_name ${map_name} --seed ${seed} --use_wandb --group_name ${group_name} --log_dir "../../../examples/results";
 done

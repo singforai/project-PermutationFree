@@ -3,27 +3,26 @@ from functools import reduce
 import numpy as np
 
 class SMACv2Logger():
-    def __init__(self, exp_args, algo_args, env_args, num_agents, wandb):
-        self.exp_args = exp_args
-        self.algo_args = algo_args
-        self.env_args = env_args
-        self.num_agents = num_agents
-        self.wandb = wandb
+    def __init__(self, exp_args, algo_args, env_args, wandb):
         
+        self.wandb = wandb
+        self.exp_args = exp_args
+        self.num_env_steps = env_args["num_env_steps"]
+        self.n_rollout_threads = algo_args["train"]["n_rollout_threads"]
+        self.n_eval_rollout_threads = algo_args["eval"]["n_eval_rollout_threads"]
         self.game_key = "battles_game"
         self.win_key = "battles_won"
 
-    def init(self, episodes):
-        self.episodes = episodes
+    def init(self):
         self.episode_lens = []
         self.one_episode_len = np.zeros(
-            self.algo_args["train"]["n_rollout_threads"], dtype=np.int32
+            self.n_rollout_threads, dtype=np.int32
         )
         self.last_battles_game = np.zeros(
-            self.algo_args["train"]["n_rollout_threads"], dtype=np.float32
+            self.n_rollout_threads, dtype=np.float32
         )
         self.last_battles_won = np.zeros(
-            self.algo_args["train"]["n_rollout_threads"], dtype=np.float32
+            self.n_rollout_threads, dtype=np.float32
         )
         
     def episode_init(self, episode):
@@ -35,41 +34,30 @@ class SMACv2Logger():
         self.infos = infos
         self.one_episode_len += 1
         done_env = np.all(dones, axis=1)
-        for i in range(self.algo_args["train"]["n_rollout_threads"]):
+        for i in range(self.n_rollout_threads):
             if done_env[i]:
                 self.episode_lens.append(self.one_episode_len[i].copy())
                 self.one_episode_len[i] = 0
 
     def episode_log(
-        self, total_num_steps, train_infos, buffer, modules
+        self, total_num_steps, train_infos, buffer
     ):
         self.total_num_steps = total_num_steps
         print(
-            "Env {} Task {} Algo {} Exp {} updates {}/{} episodes, total num timesteps.".format(
+            "Env {} Task {} Algo {} Exp {} updates {}/{} total num timesteps.".format(
                 self.exp_args["env_name"],
                 self.exp_args["map_name"],
                 self.exp_args["algorithm_name"],
                 self.exp_args["experiment_name"],
-                self.episode,
-                self.episodes,
                 self.total_num_steps,
-                self.env_args["num_env_steps"],
+                self.num_env_steps,
             )
         )
-        
-        for module_dict in modules:
-            for name, module in module_dict.items():
-                module_weights = np.concatenate([
-                    param.detach().cpu().numpy().flatten() 
-                    for _, param in module.named_parameters() 
-                    if param.requires_grad
-                ])
-                train_infos[f'{name}_params_distribution'] = wandb.Histogram(module_weights)
                 
-        battles_won = [0 for _ in range(self.algo_args["train"]["n_rollout_threads"])]    
-        battles_game = [0 for _ in range(self.algo_args["train"]["n_rollout_threads"])]   
-        incre_battles_won = [0 for _ in range(self.algo_args["train"]["n_rollout_threads"])]   
-        incre_battles_game = [0 for _ in range(self.algo_args["train"]["n_rollout_threads"])]   
+        battles_won = [0 for _ in range(self.n_rollout_threads)]    
+        battles_game = [0 for _ in range(self.n_rollout_threads)]   
+        incre_battles_won = [0 for _ in range(self.n_rollout_threads)]   
+        incre_battles_game = [0 for _ in range(self.n_rollout_threads)]   
 
         for i, info in enumerate(self.infos):
             if self.win_key in info[0].keys():
@@ -106,14 +94,15 @@ class SMACv2Logger():
 
         self.log_train(train_infos, total_num_steps)
 
-    def eval_init(self, total_num_steps):
+    def eval_init(self, total_num_steps, curriculum_level):
         """Initialize the logger for evaluation."""
         
         self.total_num_steps = total_num_steps
+        self.curriculum_level = curriculum_level
         
         self.eval_episode_rewards = []
         self.one_episode_rewards = []
-        for _ in range(self.algo_args["eval"]["n_eval_rollout_threads"]):
+        for _ in range(self.n_eval_rollout_threads):
             self.one_episode_rewards.append([])
             
         self.eval_battles_won = 0
@@ -121,7 +110,7 @@ class SMACv2Logger():
     def eval_per_step(self, eval_rewards, eval_infos):
         """Log evaluation information per step."""
 
-        for eval_i in range(self.algo_args["eval"]["n_eval_rollout_threads"]):
+        for eval_i in range(self.n_eval_rollout_threads):
             self.one_episode_rewards[eval_i].append(eval_rewards[eval_i])
         self.eval_infos = eval_infos
 
@@ -145,6 +134,7 @@ class SMACv2Logger():
             "eval_average_episode_rewards": eval_mean_rewards,
             "eval_max_episode_rewards": eval_max_rewards,
             "eval_win_rate": eval_win_rate,
+            "curriculum_level" :  self.curriculum_level,
         }
         print(
             "Evaluation win rate is {}, evaluation average episode reward is {}.\n".format(
@@ -152,6 +142,8 @@ class SMACv2Logger():
             )
         )
         self.log_env(eval_env_infos, self.total_num_steps)
+        
+        return eval_win_rate
         
     def log_train(self, train_infos, total_num_steps):
         """

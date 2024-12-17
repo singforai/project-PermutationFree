@@ -79,7 +79,7 @@ def make_render_env(env_name, seed, env_args):
         raise NotImplementedError
     return env, manual_render, manual_expand_dims, manual_delay, env_num
 
-def get_num_agents(env, env_args, envs):
+def get_num_agents(envs):
     """Get the number of agents in the environment."""
 
     return envs.n_agents, envs.n_actions_no_attack, envs.num_objects

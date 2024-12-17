@@ -34,7 +34,7 @@ def get_config(args):
     
     parser.add_argument("--check_permutation_free", action = "store_true", default = False, help = "whether to check permutation free")
     
-    parser.add_argument("--map_name", type=str, default='protoss_5_vs_5', choices = [
+    parser.add_argument("--map_name", type=str, default='curriculum_learning', choices = [
         "protoss_5_vs_5",
         "terran_5_vs_5",
         "zerg_5_vs_5",
@@ -49,7 +49,15 @@ def get_config(args):
         "zerg_20_vs_20",
         "protoss_20_vs_23",
         "terran_20_vs_23",
-        "zerg_20_vs_23"
+        "zerg_20_vs_23",
+        "curriculum_learning",
     ])
+    parser.add_argument(
+        "--curriculum_envs", 
+        type=str, 
+        nargs='+',
+        default=["protoss_3_vs_3", "protoss_5_vs_5"], 
+        help="List of envs to use for curriculum"
+    )
     args = parser.parse_known_args(args)[0]
     return args

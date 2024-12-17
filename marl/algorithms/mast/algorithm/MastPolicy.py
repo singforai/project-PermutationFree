@@ -22,6 +22,7 @@ class MastPolicy:
 
         self.num_agents: int = num_agents
         self.num_objects: int = num_objects  
+        self.num_seed_vector: int = args["n_seed_vector"]
         self.n_actions_no_attack: int = n_actions_no_attack
         
         self.obs_shape = get_shape_from_obs_space(obs_space)[0]
@@ -170,21 +171,30 @@ class MastPolicy:
         obs = obs.reshape(obs.shape[0], self.num_objects, self.input_dim)
         share_obs = share_obs.reshape(share_obs.shape[0], self.num_objects, self.input_dim)
         
+        mask = (obs != 0.0).any(dim=-1).int()
+        
+        mask_obxob = mask.unsqueeze(1).repeat(1, self.num_objects, 1) 
+        mask_obxob = mask_obxob * mask_obxob.permute(0, 2, 1)
+        mask_pma_obj = mask.unsqueeze(1).repeat(1, self.num_seed_vector, 1) 
+        mask_agxag = mask[:, :self.num_agents].reshape(-1, self.num_agents, self.num_agents)
+        mask_agxag = mask_agxag * mask_agxag.permute(0, 2, 1)
+        mask_pma_ag = mask.reshape(-1, self.num_agents, self.num_objects).permute(0, 2, 1).reshape(-1, self.num_agents).unsqueeze(1).repeat(1, self.num_seed_vector, 1)
+        
         x = self.actor.base(obs)
-        object_key = self.actor._feature_SAB(x)
-        x = self.actor._feature_PMA(object_key)
+        object_key = self.actor._feature_SAB(x, mask = mask_obxob)
+        x = self.actor._feature_PMA(object_key, mask = mask_pma_obj)
         x = x.mean(dim = 1)
         if self._use_recurrent_policy:
             x = x.squeeze(dim=1)
             x, rnn_states = self.actor.rnn(x, rnn_states, masks)
             x = x.reshape(-1, self.num_agents, self.hidden_size)
-        agent_query = self.actor._agent_PE_Block(x)
+        x = self.actor._agent_PE_Block(x, mask = mask_agxag)
 
         object_key = object_key.reshape(-1, self.num_agents, self.num_objects, self.hidden_size).permute(0, 2, 1, 3)
-        object_key = self.actor._object_PMA(object_key.reshape(-1, self.num_agents, self.hidden_size))
+        object_key = self.actor._object_PMA(object_key.reshape(-1, self.num_agents, self.hidden_size), mask = mask_pma_ag)
         object_key = object_key.mean(dim = 1).reshape(-1, self.num_objects, self.hidden_size)
         
-        output = self.actor._act_CAB(agent_query, object_key)
+        output = self.actor._act_CAB(x, object_key)
         
         action_log_probs, dist_entropy = self.actor.act_layer.evaluate_actions(
             output,

@@ -9,8 +9,10 @@ class Attention(nn.Module):
         self.softmax = nn.Softmax(dim=2)
 
 
-    def forward(self, queries, keys, values):
+    def forward(self, queries, keys, values, mask = None):
         attention = torch.bmm(queries, keys.transpose(1, 2)) / self.temperature
+        if mask is not None:
+            attention = attention.masked_fill(mask == 0, float(-1e10))
         attention = self.softmax(attention) # it has shape [b, n, m]
         return torch.bmm(attention, values) # it has shape [b, n, d]
             
@@ -49,7 +51,7 @@ class MultiheadAttention(nn.Module):
         )
         self.attention = Attention(temperature=p**0.5)
 
-    def forward(self, queries, keys, values):
+    def forward(self, queries, keys, values, mask = None):
         """
         Arguments:
             queries: a float tensor with shape [b, n, d].
@@ -78,7 +80,7 @@ class MultiheadAttention(nn.Module):
         keys = keys.permute(2, 0, 1, 3).contiguous().view(h * b, m, p)
         values = values.permute(2, 0, 1, 3).contiguous().view(h * b, m, p)
 
-        output = self.attention(queries, keys, values)  # shape [h * b, n, p]
+        output = self.attention(queries, keys, values, mask)  # shape [h * b, n, p]
         output = output.view(h, b, n, p)
         output = output.permute(1, 2, 0, 3).contiguous().view(b, n, d) # shape [b, n, d]
 
@@ -101,7 +103,7 @@ class MultiheadAttentionBlock(nn.Module):
         self.layer_norm1 = nn.LayerNorm(d)
         #self.layer_norm2 = nn.LayerNorm(d)
     
-    def forward(self, x, y):
+    def forward(self, x, y, mask = None):
         """
         It is equivariant to permutations of the
         second dimension of tensor x (`n`).
@@ -115,7 +117,7 @@ class MultiheadAttentionBlock(nn.Module):
         Returns:
             a float tensor with shape [b, n, d].
         """
-        return self.layer_norm1(x + self.multihead(x, y, y))
+        return self.layer_norm1(x + self.multihead(x, y, y, mask))
 
 class SetAttentionBlock(nn.Module):
 
@@ -123,14 +125,14 @@ class SetAttentionBlock(nn.Module):
         super().__init__()
         self.mab = MultiheadAttentionBlock(d, h)
 
-    def forward(self, x):
+    def forward(self, x, mask = None):
         """
         Arguments:
             x: a float tensor with shape [b, n, d].
         Returns:
             a float tensor with shape [b, n, d].
         """
-        return self.mab(x, x)
+        return self.mab(x, x, mask)
 
 class CrossattentionBlock(nn.Module):
 
@@ -138,14 +140,14 @@ class CrossattentionBlock(nn.Module):
         super().__init__()
         self.mab = MultiheadAttentionBlock(d, h)
 
-    def forward(self, x, y):
+    def forward(self, x, y, mask = None):
         """
         Arguments:
             x: a float tensor with shape [b, n, d].
         Returns:
             a float tensor with shape [b, n, d].
         """
-        return self.mab(x, y)
+        return self.mab(x, y, mask)
 
 class PoolingMultiheadAttention(nn.Module):
 
@@ -163,7 +165,7 @@ class PoolingMultiheadAttention(nn.Module):
         self.mab = MultiheadAttentionBlock(d, h)
         self.seed_vectors = nn.Parameter(torch.randn(1, k, d))
 
-    def forward(self, z):
+    def forward(self, z, mask = None):
         """
         Arguments:
             z: a float tensor with shape [b, n, d].
@@ -176,7 +178,7 @@ class PoolingMultiheadAttention(nn.Module):
 
         # note that in the original paper
         # they return mab(s, rff(z))
-        return self.mab(s, z)
+        return self.mab(s, z, mask)
 
 
 class ActBlock(nn.Module):

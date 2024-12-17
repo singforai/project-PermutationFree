@@ -4,7 +4,7 @@ from algorithms.utils.mlp import MLPBase
 from algorithms.utils.rnn import RNNLayer
 from algorithms.utils.act import ActLayer
 
-from algorithms.utils.mast_utils import SetAttentionBlock, PoolingMultiheadAttention, CrossAttention, CrossattentionBlock
+from algorithms.utils.mast_utils import SetAttentionBlock, PoolingMultiheadAttention, CrossAttention
 
 class Actor(nn.Module):
     def __init__(self, args, obs_space, num_agents, num_objects, n_actions_no_attack, device):
@@ -13,7 +13,7 @@ class Actor(nn.Module):
         self.num_agents: int = num_agents
         self.num_objects: int = num_objects 
         self.n_actions_no_attack: int = n_actions_no_attack
-        
+
         self._gain: float = args["gain"]
         self.num_head: int = args["n_head"]
         
@@ -28,13 +28,11 @@ class Actor(nn.Module):
         
         self.base = MLPBase(args, self.input_dim)
         
-        if self._use_recurrent_policy:
-            self.rnn = RNNLayer(self.hidden_size, self.hidden_size, self._recurrent_N, self._use_orthogonal)
-
         self._feature_SAB = SetAttentionBlock(
             d =  self.hidden_size,
             h = self.num_head,
         )
+        
         self._feature_PMA = PoolingMultiheadAttention(
             d =  self.hidden_size,
             k = self.num_seed_vector,
@@ -49,37 +47,49 @@ class Actor(nn.Module):
 
         self._agent_PE_Block = SetAttentionBlock(
             d =  self.hidden_size,
-            h = self.num_head,
+            h = self.num_head
         )
         
         self._act_CAB = CrossAttention(
             d =  self.hidden_size,
             k = self.n_actions_no_attack
         )
-        
+
+        if self._use_recurrent_policy:
+            self.rnn = RNNLayer(self.hidden_size, self.hidden_size, self._recurrent_N, self._use_orthogonal)
+
         self.act_layer = ActLayer()
 
         self.to(device)
 
     def forward(self, obs, rnn_states, masks, available_actions=None, deterministic=False):
         
-        
         x = obs.reshape(obs.shape[0], self.num_objects, self.input_dim) # (B * N_A) x N_O x D
+        
+        mask = (x != 0.0).any(dim=-1).int()
+        
+        mask_obxob = mask.unsqueeze(1).repeat(1, self.num_objects, 1) 
+        mask_obxob = mask_obxob * mask_obxob.permute(0, 2, 1)
+        mask_pma_obj = mask.unsqueeze(1).repeat(1, self.num_seed_vector, 1) 
+        mask_agxag = mask[:, :self.num_agents].reshape(-1, self.num_agents, self.num_agents)
+        mask_agxag = mask_agxag * mask_agxag.permute(0, 2, 1)
+        mask_pma_ag = mask.reshape(-1, self.num_agents, self.num_objects).permute(0, 2, 1).reshape(-1, self.num_agents).unsqueeze(1).repeat(1, self.num_seed_vector, 1)
+        
         x = self.base(x)
-        object_key = self._feature_SAB(x)
-        x = self._feature_PMA(object_key)
-        x = x.mean(dim = 1)
+        object_key = self._feature_SAB(x, mask = mask_obxob)
+        x = self._feature_PMA(object_key, mask =  mask_pma_obj)
+        x = x.mean(dim = 1) 
         if self._use_recurrent_policy:
             x = x.squeeze(dim=1)
             x, rnn_states = self.rnn(x, rnn_states, masks)
-            x = x.reshape(-1 ,self.num_agents, self.hidden_size)
-        agent_query = self._agent_PE_Block(x)
-     
+        x = self._agent_PE_Block(x.reshape(-1 ,self.num_agents, self.hidden_size), mask = mask_agxag)
+
         object_key = object_key.reshape(-1, self.num_agents, self.num_objects, self.hidden_size).permute(0, 2, 1, 3)
-        object_key = self._object_PMA(object_key.reshape(-1, self.num_agents, self.hidden_size))
+        object_key = self._object_PMA(object_key.reshape(-1, self.num_agents, self.hidden_size), mask = mask_pma_ag)
         object_key = object_key.mean(dim = 1).reshape(-1, self.num_objects, self.hidden_size)
         
-        output = self._act_CAB(agent_query, object_key)
+        output = self._act_CAB(x, object_key)
+        
         actions, action_log_probs = self.act_layer(
             output,
             available_actions,

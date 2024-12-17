@@ -16,18 +16,11 @@ class SMACv2Runner(Runner):
     """Runner class to perform training, evaluation. and data collection for SMAC. See parent class for details."""
     def __init__(self, exp_args, algo_args, env_args):
         super().__init__(exp_args, algo_args, env_args)
-
+ 
     def run(self):
         
-        start = time.time()
         episodes = int(float(self.num_env_steps) // self.episode_length // self.n_rollout_threads)
-
-        timer = timer_start()
-        self.warmup()  
-        timer_cancel(timer = timer)
-
-        self.logger.init(episodes = episodes)
-        
+        self.init_env()
         for episode in range(episodes):
             timer = timer_start()
             self.logger.episode_init(episode)
@@ -60,20 +53,11 @@ class SMACv2Runner(Runner):
             total_num_steps = (episode + 1) * self.episode_length * self.n_rollout_threads           
             
             # log information
-            if episode % self.log_interval == 0:
-                modules = []
-                for module in self.module_names:
-                    network = getattr(self.policy, module, None)
-                    if network is None:
-                        raise NotImplementedError("U have to check the 'modules' hyperparameter of algo yaml file!")
-                    else:
-                        modules.append({module : network})
-                        
+            if episode % self.log_interval == 0:    
                 self.logger.episode_log(
                     total_num_steps,
                     train_infos,
                     self.buffer,
-                    modules
                 )
 
             if self.save_model and (episode % self.save_interval == 0):
@@ -81,11 +65,20 @@ class SMACv2Runner(Runner):
 
             # eval
             if self.use_eval and episode % self.eval_interval == 0:
-                self.eval(total_num_steps)
+                eval_win_rate = self.eval(total_num_steps)
+                if self.use_curriculum:
+                    self.curriculum_manager(eval_win_rate = eval_win_rate)
+                    self.init_env()
             
             timer_cancel(timer = timer)
         
         self.save(episode = episode)
+        
+    def init_env(self):
+        timer = timer_start()
+        self.warmup()  
+        timer_cancel(timer = timer)
+        self.logger.init()
         
     def warmup(self):
         # reset env
@@ -161,7 +154,7 @@ class SMACv2Runner(Runner):
     @torch.no_grad()
     def eval(self, total_num_steps = 0):
 
-        self.logger.eval_init(total_num_steps)
+        self.logger.eval_init(total_num_steps, curriculum_level = self.curriculum_level)
         
         eval_episode = 0
 
@@ -187,7 +180,7 @@ class SMACv2Runner(Runner):
             
             # Obser reward and next obs
             eval_obs, eval_share_obs, eval_rewards, eval_dones, eval_infos, eval_available_actions = self.eval_envs.step(eval_actions)
-            
+
             self.logger.eval_per_step(
                 eval_rewards,
                 eval_infos
@@ -206,10 +199,9 @@ class SMACv2Runner(Runner):
                     self.logger.eval_thread_done(eval_i)
                         
             if eval_episode >= self.eval_episodes: 
-                self.logger.eval_log(
+                return self.logger.eval_log(
                     eval_episode
                 )  
-                break
 
     def close(self):
         """Close environment, writter, and logger."""
